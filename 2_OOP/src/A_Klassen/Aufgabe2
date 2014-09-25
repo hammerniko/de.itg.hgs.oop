@@ -2,7 +2,7 @@
    Attributen Name, Vorname, Kürzel
 
 2. Wenden Sie für alle Attribute das Prinzip der 
-   Datenkapselung an.
+   Datenkapselung an. Alle Attribute dürfen gelesen und 
    Name und Vorname dürfen geändert werden.
    
 3. Damit ein Lehrerobjekt erzeugt werden kann, 

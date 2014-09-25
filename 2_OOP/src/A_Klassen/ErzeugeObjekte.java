@@ -6,18 +6,23 @@ public class ErzeugeObjekte {
 
 	public static void main(String[] args) {
 		
-		//Array von Schülerobjekten
+		
+		//Array von Schülerobjekten anlegen
 		Schueler dieSchueler[] = new Schueler[3];
 		
-		//erzeugt Schülerobjekt
-		dieSchueler[0] = new Schueler("Mueller","Sven",new Date(81,0,1));
-		dieSchueler[1] = new Schueler("Romanek","Steven");
-		dieSchueler[2] = new Schueler("Maier","Max");
 		
-		dieSchueler[0].setName("Müller");
+		//Schuelerobjekt erzeugen und in das Array einfügen
+		dieSchueler[0] = new Schueler("Müller","Sven");
+		dieSchueler[1] = new Schueler("Maier","Max");
+		dieSchueler[2] = new Schueler("Brehmer","Steven");
 		
 		
-		//Ausgabe aller Schüler
+		//Ändern eines Objektwertes
+		dieSchueler[1].setName("Mayer");
+		dieSchueler[2].setGebDatum( new Date(89,11,3));
+		
+		
+		//Ausgabe aller Schülerobjekte
 		for (int i = 0; i < dieSchueler.length; i++) {
 			System.out.println(dieSchueler[i]);
 		}

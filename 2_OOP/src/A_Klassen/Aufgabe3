@@ -1,0 +1,8 @@
+1. Kopieren Sie die Datei "com.umlet.plugin..." 
+   in das Verzeichnis "dropins" im Ordner von Eclipse.
+   
+2. Starten Sie Eclipse neu
+
+3. Erzeugen Sie ein Klassendiagramm der Klassen Schueler 
+   und Lehrer mit dem Umlet Plugin.
+   (File->new->other->umlet diagram)

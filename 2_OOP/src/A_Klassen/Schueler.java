@@ -1,5 +1,6 @@
 package A_Klassen;
 
+
 import java.util.Date;
 
 //A1 Klasse 
@@ -65,6 +66,11 @@ public class Schueler {
 				+ ", gebDatum=" + gebDatum + "]";
 	}
 
+
+	
+
+
+	
 
 	
 
