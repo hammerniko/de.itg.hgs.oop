@@ -1,0 +1,16 @@
+1. Anlegen einer Klasse Schueler
+
+2. Attribute Name, Vorname und Geburtsdatum anlegen (private)
+
+3. Es dürfen nur Schülerobjekte erzeugt werden können, dessen
+   Namen und Vornamen bekannt sind.
+   
+4. Alle Attribute sollen gelesen und geändert werden können.
+
+5. Erzeugen Sie 2 Schülerobjekte (Maier, Max / Müller Sven)
+
+6. Ändern Sie den Namen von Max in "Mayer" nach der Erzeugung
+Der Name soll nur geändert werden dürfen, wenn der neue Name mindestens 3 Zeichen hat.
+
+7. Implementieren sie die Methode toString() um alle Attribute eines 
+   Schülers auszugeben.

@@ -1,0 +1,16 @@
+1. Erstellen Sie eine Klasse Lehrer mit den 
+   Attributen Name, Vorname, Kürzel
+
+2. Wenden Sie für alle Attribute das Prinzip der 
+   Datenkapselung an.
+   Name und Vorname dürfen geändert werden.
+   
+3. Damit ein Lehrerobjekt erzeugt werden kann, 
+   müssen alle Atrribute bekannt sein.
+   
+4. Erzeugen Sie Objekte von Ihren Lehrern und 
+   speichern sie dieses in einer Liste ab.
+   
+5. Geben Sie alle Informationen aller Lehrer 
+   in einer Liste aus (toString)
+ 
