@@ -59,14 +59,12 @@ public class ErzeugeSchueler {
 			System.out.println(dieSchueler[i]);
 		}
 		
-		
+		//Ausgabe Anzahl Schüler
+		System.out.println("\nAnzahl:"+Schueler.getAnzahlSchueler());
 		//Ausgabe Klassensprecher
 		System.out.println("Klassensprecher:\t"+Schueler.getKlassensprecher());
 		System.out.println("Stv. Klassensprecher:\t"+Schueler.getStvKlassensprecher());
 		System.out.println("-------------------------------------------------");
-		
-		//Ausgabe Anzahl Schüler
-		System.out.println("Anzahl:"+Schueler.getAnzahlSchueler());
 
 	}
 }
