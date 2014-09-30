@@ -21,6 +21,11 @@ public class ErzeugeSchueler {
 
 }
 
+	private static void ausgabeSchueler(Schueler[] dieSchueler) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	private static void erzeugeSchueler(Schueler[] dieSchueler) {
 		dieSchueler[0]= new Schueler("Müller","Sven", Schueler.gruppeA);
 		dieSchueler[1]= new Schueler("Maier","Michael", Schueler.gruppeA);
