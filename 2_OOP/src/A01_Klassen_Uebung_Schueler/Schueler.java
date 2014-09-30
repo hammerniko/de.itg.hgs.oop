@@ -1,40 +1,37 @@
 package A01_Klassen_Uebung_Schueler;
-
+/**
+ * Nur ein Schueler darf Klassensprecher, bzw. stvKlassensprecher sein.
+ * 
+ * @author nikolaihammer
+ *
+ */
+// Klassensprecher sein.
 public class Schueler {
 	// KONSTANTEN
-	public static final String rolleSchueler = "Schueler";
-	public static final String rolleKlassensprecher = "Klassensprecher";
-	public static final String rolleStvKlassensprecher = "stv. Klassensprecher";
-
 	public static final char gruppeA = 'A';
 	public static final char gruppeB = 'B';
 
 	// KLASSENVARIABLEN
 	private static int anzahlSchueler = 0;
+	private static String klassensprecher = "";
+	private static String stvKlassensprecher = "";
 
 	// OBJEKTATTRIBUTE
 	private String name;
 	private String vorname;
 	private char gruppe;
-	private String rolle; // Nur ein Sch?ler darf Klassensprecher, bzw. stv
-							// Klassensprecher sein.
+	
 
 	// KONSTRUKTOR
-	public Schueler(String name, String vorname, char gruppe, String rolle) {
+	public Schueler(String name, String vorname, char gruppe) {
 		anzahlSchueler++;
 		this.name = name;
 		this.vorname = vorname;
-		this.gruppe = gruppe;
-		this.rolle = rolle;
+		setGruppe(gruppe);
+		
 	}
 
-	public Schueler(String name, String vorname, char gruppe) {
-		super();
-		this.name = name;
-		this.vorname = vorname;
-		this.gruppe = gruppe;
-		this.rolle = rolleSchueler;
-	}
+	
 
 	public String getName() {
 		return name;
@@ -62,31 +59,43 @@ public class Schueler {
 		}
 	}
 
-	public String getRolle() {
-		return rolle;
-	}
-	/**
-	 * Erlaubt das setzen einer Rolle, wenn sie den gegebenen Konstanten entspreicht.
-	 * @param rolle
-	 */
-	public void setRolle(String rolle) {
-		if(rolle==rolleKlassensprecher || rolle == rolleSchueler || rolle == rolleStvKlassensprecher){
-			this.rolle = rolle;
-		}
-		
-	}
-
+	
+	
 	public static int getAnzahlSchueler() {
 		return anzahlSchueler;
 	}
 
+	
+
+	public static String getKlassensprecher() {
+		return klassensprecher;
+	}
+	
+	public static void setKlassensprecher(Schueler schueler){
+		klassensprecher = schueler.getName();
+	}
+
+
+
+	public static String getStvKlassensprecher() {
+		return stvKlassensprecher;
+	}
+
+
+
+	public static void setStvKlassensprecher(Schueler schueler) {
+		stvKlassensprecher=schueler.getName();
+	}
+
+
+
 	@Override
 	public String toString() {
 		
-		String str = "Schueler [n=" + name + ",\tvn=" + vorname + ",\tgrp="
-				+ gruppe + ",\trolle=" + rolle + "]";
-		
-		return str;
+		return "Schueler [name=" + name + ", vorname=" + vorname + ", gruppe="
+				+ gruppe + "]";
 	}
+	
+	
 
 }
