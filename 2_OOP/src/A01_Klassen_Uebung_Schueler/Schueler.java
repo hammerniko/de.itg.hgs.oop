@@ -1,6 +1,10 @@
 package A01_Klassen_Uebung_Schueler;
 /**
  * Nur ein Schueler darf Klassensprecher, bzw. stvKlassensprecher sein.
+ * Problematik mehrerer Klassen wird in dieser Übung noch nicht berücksichtigt,
+ * da Assoziationen zu anderen Java-Klassen noch folgen.
+ * Ferner wird angenommen, dass alle Schüler in einem Array in der Klasse ErzeugeSchueler.java 
+ * verwaltet werden.
  * 
  * @author nikolaihammer
  *
