@@ -21,7 +21,6 @@ public class Schueler {
 	
 	//KONSTRUKTOR
 	public Schueler(String name, String vorname, char gruppe) {
-		super();
 		this.name = name;
 		this.vorname = vorname;
 		this.gruppe = gruppe;
