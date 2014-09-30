@@ -1,4 +1,4 @@
-package A01_Klassen_Übung_Schüler;
+package A01_Klassen_Uebung_Schueler;
 
 
 
@@ -6,13 +6,13 @@ public class ErzeugeSchueler {
 
 	public static void main(String[] args) {
 		
-		//Array für Schülerobjekte
+		//Array fuer Schuelerobjekte
 		Schueler dieSchueler[] = new Schueler[3];
 
-		//Schülerobjekte erzeugen
+		//Schuelerobjekte erzeugen
 		erzeugeSchueler(dieSchueler);
 		
-		//Objekte ändern
+		//Objekte uendern
 		
 		
 		
@@ -27,7 +27,7 @@ public class ErzeugeSchueler {
 	}
 
 	private static void erzeugeSchueler(Schueler[] dieSchueler) {
-		dieSchueler[0]= new Schueler("Müller","Sven", Schueler.gruppeA);
+		dieSchueler[0]= new Schueler("Mueller","Sven", Schueler.gruppeA);
 		dieSchueler[1]= new Schueler("Maier","Michael", Schueler.gruppeA);
 		dieSchueler[2]= new Schueler("Borges","Ben", Schueler.gruppeB);
 	}

@@ -1,8 +1,8 @@
-package A01_Klassen_Übung_Schüler;
+package A01_Klassen_Uebung_Schueler;
 
 public class Schueler {
 	//KONSTANTEN
-	public static final String rolleSchüler = "Schüler";
+	public static final String rolleSchueler = "Schueler";
 	public static final String rolleKlassensprecher = "Klassensprecher";
 	public static final String rolleStvKlassensprecher = "stv. Klassensprecher";
 
@@ -16,7 +16,7 @@ public class Schueler {
 	private String name;
 	private String vorname;
 	private char gruppe;
-	private String rolle; //Nur ein Schüler darf Klassensprecher, bzw. stv Klassensprecher sein.
+	private String rolle; //Nur ein Sch?ler darf Klassensprecher, bzw. stv Klassensprecher sein.
 	
 	
 	//KONSTRUKTOR
