@@ -99,6 +99,20 @@ public class Schueler {
 		return "Schueler [name=" + name + ", vorname=" + vorname + ", gruppe="
 				+ gruppe + "]";
 	}
+
+
+
+	/**
+	 * wird aufgerufen, wenn ein Schülerobjekt gelöscht wird.
+	 * Damit der Garbagecollector direkt ausgeführt wird, und somit die Anzahl der Objekte
+	 * stimmt, sollte nach dem Aufruf dieser Methode System.gc() aufgerufen werden.
+	 */
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("Schueler gelöscht");
+       
+		anzahlSchueler--;
+	}
 	
 	
 
