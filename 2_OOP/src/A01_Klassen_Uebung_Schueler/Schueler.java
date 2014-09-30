@@ -9,7 +9,7 @@ package A01_Klassen_Uebung_Schueler;
  * @author nikolaihammer
  *
  */
-// Klassensprecher sein.
+
 public class Schueler {
 	// KONSTANTEN
 	public static final char gruppeA = 'A';
