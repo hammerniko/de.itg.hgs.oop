@@ -4,22 +4,20 @@ public class ErzeugeSchueler {
 
 	public static void main(String[] args) {
 
-		//Array fuer Schuelerobjekte
+		// Array fuer Schuelerobjekte
 		Schueler dieSchueler[] = new Schueler[4];
 
-		//Schuelerobjekte erzeugen
+		// Schuelerobjekte erzeugen
 		erzeugeSchueler(dieSchueler);
 
-		//Objekte ausgeben
+		// Objekte ausgeben
 		ausgabeSchueler(dieSchueler);
-		
-		//Objekte uendern
+
+		// Objekte uendern
 		aendereSchueler(dieSchueler);
 
-		//geänderte Objekte ausgeben
+		// geänderte Objekte ausgeben
 		ausgabeSchueler(dieSchueler);
-		
-		
 
 	}
 
@@ -27,18 +25,16 @@ public class ErzeugeSchueler {
 		dieSchueler[1].setGruppe(Schueler.gruppeB);
 		Schueler.setKlassensprecher(dieSchueler[1]);
 		Schueler.setStvKlassensprecher(dieSchueler[0]);
-		dieSchueler[3]=null;
+		dieSchueler[3] = null;
 		aktualisiereStatus();
-		
-		
-		
+
 	}
 
 	private static void aktualisiereStatus() {
-		//Garbage Collector aufrufen
+		// Garbage Collector aufrufen
 		System.gc();
-		
-		//kurz warten, damit löschen (finalize Methode) registriert wird
+
+		// kurz warten, damit löschen (finalize Methode) registriert wird
 		try {
 			Thread.sleep(100);
 		} catch (InterruptedException e) {
@@ -53,17 +49,19 @@ public class ErzeugeSchueler {
 		dieSchueler[2] = new Schueler("Borges", "Benni", Schueler.gruppeB);
 		dieSchueler[3] = new Schueler("Dür", "Detlef", Schueler.gruppeB);
 	}
-	
+
 	private static void ausgabeSchueler(Schueler[] dieSchueler) {
 		for (int i = 0; i < dieSchueler.length; i++) {
 			System.out.println(dieSchueler[i]);
 		}
-		
-		//Ausgabe Anzahl Schüler
-		System.out.println("\nAnzahl:"+Schueler.getAnzahlSchueler());
-		//Ausgabe Klassensprecher
-		System.out.println("Klassensprecher:\t"+Schueler.getKlassensprecher());
-		System.out.println("Stv. Klassensprecher:\t"+Schueler.getStvKlassensprecher());
+
+		// Ausgabe Anzahl Schüler
+		System.out.println("\nAnzahl:" + Schueler.getAnzahlSchueler());
+		// Ausgabe Klassensprecher
+		System.out
+				.println("Klassensprecher:\t" + Schueler.getKlassensprecher());
+		System.out.println("Stv. Klassensprecher:\t"
+				+ Schueler.getStvKlassensprecher());
 		System.out.println("-------------------------------------------------");
 
 	}

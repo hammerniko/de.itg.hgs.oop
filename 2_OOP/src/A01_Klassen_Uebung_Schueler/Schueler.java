@@ -1,13 +1,14 @@
 package A01_Klassen_Uebung_Schueler;
+
 /**
  * Nur ein Schueler darf Klassensprecher, bzw. stvKlassensprecher sein.
  * Problematik mehrerer Klassen wird in dieser Übung noch nicht berücksichtigt,
- * da Assoziationen zu anderen Java-Klassen noch folgen.
- * Ferner wird angenommen, dass alle Schüler in einem Array in der Klasse ErzeugeSchueler.java 
- * verwaltet werden.
+ * da Assoziationen zu anderen Java-Klassen noch folgen. Ferner wird angenommen,
+ * dass alle Schüler in einem Array in der Klasse ErzeugeSchueler.java verwaltet
+ * werden.
  * 
  * @author nikolaihammer
- *
+ * 
  */
 
 public class Schueler {
@@ -24,7 +25,6 @@ public class Schueler {
 	private String name;
 	private String vorname;
 	private char gruppe;
-	
 
 	// KONSTRUKTOR
 	public Schueler(String name, String vorname, char gruppe) {
@@ -32,10 +32,8 @@ public class Schueler {
 		this.name = name;
 		this.vorname = vorname;
 		setGruppe(gruppe);
-		
-	}
 
-	
+	}
 
 	public String getName() {
 		return name;
@@ -63,57 +61,44 @@ public class Schueler {
 		}
 	}
 
-	
-	
 	public static int getAnzahlSchueler() {
 		return anzahlSchueler;
 	}
 
-	
-
 	public static String getKlassensprecher() {
 		return klassensprecher;
 	}
-	
-	public static void setKlassensprecher(Schueler schueler){
+
+	public static void setKlassensprecher(Schueler schueler) {
 		klassensprecher = schueler.getName();
 	}
-
-
 
 	public static String getStvKlassensprecher() {
 		return stvKlassensprecher;
 	}
 
-
-
 	public static void setStvKlassensprecher(Schueler schueler) {
-		stvKlassensprecher=schueler.getName();
+		stvKlassensprecher = schueler.getName();
 	}
-
-
 
 	@Override
 	public String toString() {
-		
+
 		return "Schueler [name=" + name + ", vorname=" + vorname + ", gruppe="
 				+ gruppe + "]";
 	}
 
-
-
 	/**
-	 * wird aufgerufen, wenn ein Schülerobjekt gelöscht wird.
-	 * Damit der Garbagecollector direkt ausgeführt wird, und somit die Anzahl der Objekte
-	 * stimmt, sollte nach dem Aufruf dieser Methode System.gc() aufgerufen werden.
+	 * wird aufgerufen, wenn ein Schülerobjekt gelöscht wird. Damit der
+	 * Garbagecollector direkt ausgeführt wird, und somit die Anzahl der Objekte
+	 * stimmt, sollte nach dem Aufruf dieser Methode System.gc() aufgerufen
+	 * werden.
 	 */
 	@Override
 	protected void finalize() throws Throwable {
 		System.out.println("Schueler gelöscht");
-       
+
 		anzahlSchueler--;
 	}
-	
-	
 
 }
