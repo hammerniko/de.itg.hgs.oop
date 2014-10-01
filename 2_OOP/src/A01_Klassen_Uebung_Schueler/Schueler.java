@@ -2,9 +2,9 @@ package A01_Klassen_Uebung_Schueler;
 
 /**
  * Nur ein Schueler darf Klassensprecher, bzw. stvKlassensprecher sein.
- * Problematik mehrerer Klassen wird in dieser Übung noch nicht berücksichtigt,
+ * Problematik mehrerer Klassen wird in dieser Übung noch nicht beruecksichtigt,
  * da Assoziationen zu anderen Java-Klassen noch folgen. Ferner wird angenommen,
- * dass alle Schüler in einem Array in der Klasse ErzeugeSchueler.java verwaltet
+ * dass alle Schueler in einem Array in der Klasse ErzeugeSchueler.java verwaltet
  * werden.
  * 
  * @author nikolaihammer
@@ -89,14 +89,14 @@ public class Schueler {
 	}
 
 	/**
-	 * wird aufgerufen, wenn ein Schülerobjekt gelöscht wird. Damit der
-	 * Garbagecollector direkt ausgeführt wird, und somit die Anzahl der Objekte
+	 * wird aufgerufen, wenn ein Schuelerobjekt geloescht wird. Damit der
+	 * Garbagecollector direkt ausgefuehrt wird, und somit die Anzahl der Objekte
 	 * stimmt, sollte nach dem Aufruf dieser Methode System.gc() aufgerufen
 	 * werden.
 	 */
 	@Override
 	protected void finalize() throws Throwable {
-		System.out.println("Schueler gelöscht");
+		System.out.println("Schueler geloescht");
 
 		anzahlSchueler--;
 	}

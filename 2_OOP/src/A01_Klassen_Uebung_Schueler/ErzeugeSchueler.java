@@ -16,7 +16,7 @@ public class ErzeugeSchueler {
 		// Objekte uendern
 		aendereSchueler(dieSchueler);
 
-		// geänderte Objekte ausgeben
+		// geaenderte Objekte ausgeben
 		ausgabeSchueler(dieSchueler);
 
 	}
