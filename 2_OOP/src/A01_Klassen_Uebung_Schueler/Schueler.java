@@ -32,7 +32,6 @@ public class Schueler {
 		this.name = name;
 		this.vorname = vorname;
 		setGruppe(gruppe);
-
 	}
 
 	public String getName() {
