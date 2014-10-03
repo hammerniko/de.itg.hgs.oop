@@ -1,4 +1,4 @@
-package A1_OOP;
+package A10_KlassenUndObjekteMitGui;
 
 import java.awt.Event;
 import java.awt.EventQueue;
@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.SwingUtilities;
+
+import D02_VererbungBeiButton.GuiHauptprogramm;
 
 public class GuiPasswort extends JFrame implements ActionListener {
 

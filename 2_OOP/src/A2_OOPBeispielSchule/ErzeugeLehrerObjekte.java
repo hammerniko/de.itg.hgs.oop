@@ -1,6 +1,5 @@
-package A1_OOP;
+package A2_OOPBeispielSchule;
 
-import A2_OOPBeispielSchule.Lehrer;
 
 public class ErzeugeLehrerObjekte {
 

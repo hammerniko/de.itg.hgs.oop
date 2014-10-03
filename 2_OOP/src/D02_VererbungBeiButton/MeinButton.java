@@ -1,4 +1,4 @@
-package A1_OOP;
+package D02_VererbungBeiButton;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,4 +1,5 @@
-package A1_OOP;
+package A10_KlassenUndObjekteMitGui;
+
 
 public class StartePasswort {
 
