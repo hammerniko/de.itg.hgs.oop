@@ -1,4 +1,4 @@
-package A02_Wetter;
+package A02_Klassen_Uebung_Wetter;
 
 public class Wetter {
     
