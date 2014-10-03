@@ -22,10 +22,10 @@ public class ErzeugeSchueler {
 	}
 
 	private static void aendereSchueler(Schueler[] dieSchueler) {
-		dieSchueler[1].setGruppe(Schueler.gruppeB);
+		dieSchueler[1].setGruppe(Schueler.GRUPPE_B);
 		Schueler.setKlassensprecher(dieSchueler[1]);
 		Schueler.setStvKlassensprecher(dieSchueler[0]);
-		dieSchueler[3] = null;
+		dieSchueler[2] = null;
 		aktualisiereStatus();
 
 	}
@@ -44,10 +44,10 @@ public class ErzeugeSchueler {
 	}
 
 	private static void erzeugeSchueler(Schueler[] dieSchueler) {
-		dieSchueler[0] = new Schueler("Mueller", "Sven", Schueler.gruppeA);
-		dieSchueler[1] = new Schueler("Maier", "Michael", Schueler.gruppeA);
-		dieSchueler[2] = new Schueler("Borges", "Benni", Schueler.gruppeB);
-		dieSchueler[3] = new Schueler("Dür", "Detlef", Schueler.gruppeB);
+		dieSchueler[0] = new Schueler("Mueller", "Sven", Schueler.GRUPPE_A);
+		dieSchueler[1] = new Schueler("Maier", "Michael", Schueler.GRUPPE_A);
+		dieSchueler[2] = new Schueler("Borges", "Benni", Schueler.GRUPPE_B);
+		dieSchueler[3] = new Schueler("Dür", "Detlef", Schueler.GRUPPE_B);
 	}
 
 	private static void ausgabeSchueler(Schueler[] dieSchueler) {

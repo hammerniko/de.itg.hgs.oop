@@ -13,8 +13,8 @@ package A01_Klassen_Uebung_Schueler;
 
 public class Schueler {
 	// KONSTANTEN
-	public static final char gruppeA = 'A';
-	public static final char gruppeB = 'B';
+	public static final char GRUPPE_A = 'A';
+	public static final char GRUPPE_B = 'B';
 
 	// KLASSENVARIABLEN
 	private static int anzahlSchueler = 0;
@@ -22,6 +22,7 @@ public class Schueler {
 	private static String stvKlassensprecher = "";
 
 	// OBJEKTATTRIBUTE
+	private int id;          //Zur eindeutigen Identifikaten im Falle gleicher Namen
 	private String name;
 	private String vorname;
 	private char gruppe;
@@ -29,6 +30,7 @@ public class Schueler {
 	// KONSTRUKTOR
 	public Schueler(String name, String vorname, char gruppe) {
 		anzahlSchueler++;
+		id=anzahlSchueler; //Auch wenn ein Schueler gelöscht wird, wird die id weiter hoch gezählt.
 		this.name = name;
 		this.vorname = vorname;
 		setGruppe(gruppe);
@@ -55,7 +57,7 @@ public class Schueler {
 	}
 
 	public void setGruppe(char gruppe) {
-		if (gruppe == gruppeA || gruppe == gruppeB) {
+		if (gruppe == GRUPPE_A || gruppe == GRUPPE_B) {
 			this.gruppe = gruppe;
 		}
 	}
@@ -69,7 +71,8 @@ public class Schueler {
 	}
 
 	public static void setKlassensprecher(Schueler schueler) {
-		klassensprecher = schueler.getName();
+		String ks = schueler.getId()+" "+schueler.getName()+" "+schueler.getVorname();
+		klassensprecher = ks;
 	}
 
 	public static String getStvKlassensprecher() {
@@ -77,14 +80,26 @@ public class Schueler {
 	}
 
 	public static void setStvKlassensprecher(Schueler schueler) {
-		stvKlassensprecher = schueler.getName();
+		String ks = schueler.getId()+" "+schueler.getName()+" "+schueler.getVorname();
+		stvKlassensprecher = ks;
 	}
+	
+	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
 
 	@Override
 	public String toString() {
-
-		return "Schueler [name=" + name + ", vorname=" + vorname + ", gruppe="
-				+ gruppe + "]";
+		return "Schueler [id=" + id + ", name=" + name + ", vorname=" + vorname
+				+ ", gruppe=" + gruppe + "]";
 	}
 
 	/**
