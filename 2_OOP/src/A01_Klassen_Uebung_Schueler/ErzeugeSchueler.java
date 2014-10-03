@@ -30,6 +30,7 @@ public class ErzeugeSchueler {
 
 	}
 
+	
 	private static void aktualisiereStatus() {
 		// Garbage Collector aufrufen
 		System.gc();
