@@ -1,0 +1,6 @@
+Für eine Wetterstation sollen die Wetterdaten für verschiedene Orte erfasst werden.
+Dabei werden Niederschlagsmengen, Windstarke und -richtung sowie die Regenwahrscheinlichkeit erfasst.
+
+1. Erzeugen Sie die Klasse Wetter, welche für jeden erfassten Ort ein Wetterobjekt erzeugen kann.
+
+2. Zeichnen Sie das zugehörige UML-Klassendiagramm
