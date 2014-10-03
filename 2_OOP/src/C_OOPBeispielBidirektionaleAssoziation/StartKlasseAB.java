@@ -1,4 +1,5 @@
-package A1_OOP;
+package C_OOPBeispielBidirektionaleAssoziation;
+
 
 public class StartKlasseAB {
 

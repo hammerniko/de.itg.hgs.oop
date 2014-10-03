@@ -1,4 +1,5 @@
-package A1_OOP;
+package A02_Wetter;
+
 
 public class ErzeugeWetterObjekte {
 
