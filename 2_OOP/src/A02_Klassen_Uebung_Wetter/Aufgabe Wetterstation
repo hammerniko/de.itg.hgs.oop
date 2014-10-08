@@ -1,6 +1,30 @@
-Für eine Wetterstation sollen die Wetterdaten für verschiedene Orte erfasst werden.
-Dabei werden Niederschlagsmengen, Windstarke und -richtung sowie die Regenwahrscheinlichkeit erfasst.
+Für Wetterstationen sollen die Wetterdaten für 
+verschiedene Orte erfasst werden.
+Dabei werden zu bestimmten Zeiten Niederschlagsmengen, 
+Windstaerke und -richtung 
+sowie die Regenwahrscheinlichkeit erfasst.
+Jede Wetterstation hat eine eigene Id.
 
-1. Erzeugen Sie die Klasse Wetter, welche für jeden erfassten Ort ein Wetterobjekt erzeugen kann.
+Klasse Wetterdaten:
+1. Erzeugen Sie die Klasse Wetter, 
+   welche für jeden erfassten Ort ein Wetterobjekt 
+   erzeugen kann.
+   
+2. Die Anzahl der erfassten Wetterobjekte 
+   soll mitgezählt werden. 
+   (Hinweis: finalize() überschreiben.)
+   
+3. Alle Daten eines Wetterbjektes sollen über
+   die toString()-Methode ausgegeben werden.
+4. Die Wetterdaten sind lesbar aber nicht veränderbar.
+5. Auch wenn ein Sensor der WS ausfällt, soll
+   ein Wetterobjekt erstellt werden können.
+   Es muss mindestens ein Sensor Daten liefern.
 
-2. Zeichnen Sie das zugehörige UML-Klassendiagramm.
+Klasse ErzeugeWetterobjekte:
+6. Erzeugen Sie ein array für 3 Wetterobjekte
+7. Geben Sie alle Objekte auf der Konsole aus
+8. Löschen Sie ein Wetterobjekt und überprüfen
+   sie die korrekte Anzahl der Wetterobjekte.
+
+9. Zeichnen Sie der zugehörigen UML-Klassendiagramme.
