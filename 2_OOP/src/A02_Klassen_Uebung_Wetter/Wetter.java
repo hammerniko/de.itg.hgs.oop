@@ -121,9 +121,19 @@ public class Wetter {
     }
 
     public Date getDate(){
+    	
+    	//lokales Datumsobjekt erzeugen
     	Date date = new Date();
+    	
+    	//Calendarobjekt des Systemkalenders erzeugen
         Calendar cal = Calendar.getInstance();
+        
+        //Um get- und set-Methoden des Kalenderobjektes zu
+        //verwenden, wird das Datumsobjekt mit der Methode
+        //setTime() gesetzt.
         cal.setTime( date );
+        
+        //weitere setMethoden um die Zeit bei Bedarf zu verändern 
         //cal.set( Calendar.HOUR_OF_DAY, 0 );
         //cal.set( Calendar.MINUTE, 0 );
         //cal.set( Calendar.SECOND, 0 );
@@ -141,12 +151,15 @@ public class Wetter {
 
 	@Override
 	public String toString() {
-		return "Wetter [id=" + id + ", ort=" + ort + ", \ndate=" + date
+		String str = "Wetter [id=" + id + ", ort=" + ort + ", \ndate=" + date
 				+ ", \ntemperatur=" + temperatur + ", niederschlagsmenge="
 				+ niederschlagsmenge + ", \nregenwahrscheinlichkeit="
 				+ regenwahrscheinlichkeit + ", windrichtung=" + windrichtung
 				+ ", \nwindstaerke=" + windstaerke + "]"
-						+ "\n--------------------------";
+						+ "\n--------------------------\n";
+		str = str + "Anzahl Wetterobjekte:"+anzahl;
+		str = str+ "\n**************************************";
+		return str;
 	}
     
     

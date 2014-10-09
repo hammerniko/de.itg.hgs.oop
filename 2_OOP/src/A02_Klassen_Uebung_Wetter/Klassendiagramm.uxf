@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>42</y>
+      <w>238</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>Wetter
+--
+_+SUED:GZ=0_
+_+NORD:GZ=1_
+_+OST:GZ=2_
+_+WEST:GZ=3_
+_+anzahl:GZ=0_
+-id:GZ=0
+-ort:Text=null
+-date:Datum=null
+-temperatur:FKZ=0
+-niederschlagsmenge:GZ = 0
+-regenwahrscheinlichkeit:GZ = 0
+-windrichtung:GZ=0
+--
++Wetter(ort:Text)
++Wetter(ort:Text, temp:FKZ)
++Wetter(ort:Text, temp:FKZ, niederschlagsmenge:FKZ)
+...
++getTemperatur():FKZ
+#finalize()
++getDate():Datum
++toString():Text
+
+
+
+
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>112</y>
+      <w>238</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>ErzeugeWetterobjekte
+--
+
+--
+_+main(args:Text[])_
+-erstelleObjekte(wetterliste:Wetter[])
+-modifiziereObjekte(wetterlIste:Wetter[])
+-ausgabeObjekte(wetterliste:Wetter[])
+
+
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>119</y>
+      <w>133</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>385</x>
+      <y>273</y>
+      <w>161</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Die Beziehung zwischen der Klasse 
+ErzeugeWetterobjekte und der Klasse Wetter
+wird "Dependency" genannt.
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
