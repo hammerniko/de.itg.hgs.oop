@@ -16,7 +16,9 @@ Klasse Wetterdaten:
    
 3. Alle Daten eines Wetterbjektes sollen über
    die toString()-Methode ausgegeben werden.
+   
 4. Die Wetterdaten sind lesbar aber nicht veränderbar.
+
 5. Auch wenn ein Sensor der WS ausfällt, soll
    ein Wetterobjekt erstellt werden können.
    Es muss mindestens ein Sensor Daten liefern.

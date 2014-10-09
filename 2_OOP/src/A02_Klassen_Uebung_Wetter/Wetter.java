@@ -37,7 +37,11 @@ public class Wetter {
     	anzahl++;
     	id=anzahl;
     	this.date = getDate();
+    	this.ort = ort;
     }
+    
+    
+    
     
     
     public Wetter(String ort, double temperatur,
