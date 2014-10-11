@@ -19,7 +19,7 @@ public class Kunde {
         this.vorname = vorname;
     }
 
-    //Verwaltungsmehtoden f?r Konto
+    //Verwaltungsmehtoden fuer Konten
     public void addKonto(Konto konto){
         dieKonten.add(konto);
     }
