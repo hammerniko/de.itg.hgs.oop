@@ -20,8 +20,7 @@ public class Schulklasse {
 
 	@Override
 	public String toString() {
-		return "Schulklasse [klasse=" + klasse + ", beschreibung="
-				+ beschreibung + "]";
+		return klasse + "\t" + beschreibung;
 	}
 
 	public String getBeschreibung() {

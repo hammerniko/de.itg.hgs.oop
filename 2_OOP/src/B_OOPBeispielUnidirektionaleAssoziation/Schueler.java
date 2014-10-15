@@ -65,8 +65,7 @@ public class Schueler {
      */
 	@Override
 	public String toString() {
-		return "Schueler [name=" + name + ", vorname=" + vorname
-				+ ", dieSchulklasse=" + dieSchulklasse + "]";
+		return dieSchulklasse.getKlasse()+ " \t"+ name + " " + vorname;
 	}
     
 
