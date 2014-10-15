@@ -1,0 +1,14 @@
+1. Erweitern Sie das Klassendiagramm mit den
+   neuen Methoden.
+
+2. Legen Sie für die Verwaltung der Klassen und Schüler 
+   jeweils ein Array an.
+
+3. Geben Sie die Daten aller Schüler mithilfe einer 
+   for-Schleife aus.
+
+4. Ändern Sie die to-String Methoden so ab, 
+   das folgende Ausgabeform erreicht wird.
+   "Max   , Maier , TG113"
+   "Dirk  , Bach  , Bktk"
+   ...
