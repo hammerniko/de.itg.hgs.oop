@@ -1,0 +1,30 @@
+1. Zeichnen Sie das UML Diagramm mit dem UMLET-Plugin nach
+
+2. Erstellen Sie die Klassen Schueler und Schulklasse
+
+3. Fügen Sie die Attribute in die Klassen ein.
+   Jeder Schueler hat einen Namen und Vornamen. Jeder Schüler ist in
+   einer Schulklasse. Eine Schulklasse hat eine Bezeichnung ("klasse") 
+   und eine Beschreibung.
+
+4. Erstellen Sie die Konstruktoren der Klassen
+   über "Source - Generate Constructor using Fields".
+   Ein Schüler kann nur angelegt werden, wenn Name,Vorname 
+   und Schulklasse bekannt sind.
+   
+5. Erstellen Sie die get- und set-Methoden
+   über "Source - Generate Getter...."
+   Alle Attribute sollen sichtbar und änderbar sein.
+   
+6. Alle Objekte sollen über eine Methode verfügen, welche Ihre 
+   Informationen auf der Konsole ausgibt. Ergänzen Sie die Klassen
+   mit "Source - Generate toString().
+   
+7. Erzeugen Sie die Klassen TG11-3 und BKTK 
+   jeweils mit einer Kurzbeschreibung. 
+   
+8. Erzeugen Sie 2 Schüler je Klasse.
+
+9. Geben Sie die Daten aller Schüler aus.
+   
+    

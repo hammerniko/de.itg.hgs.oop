@@ -5,20 +5,21 @@ public class Schueler {
     String name;
     String vorname;
     
-    
-    
-    
-    public Schueler(String name, String vorname) {
-		
-		this.name = name;
-		this.vorname = vorname;
-	}
-
-
-	//Schulklasse Assoziation
+    //Schulklasse Assoziation
     Schulklasse dieSchulklasse;
     
     
+    
+    public Schueler(String name, String vorname, Schulklasse schulklasse) {
+		
+		this.name = name;
+		this.vorname = vorname;
+		dieSchulklasse = schulklasse;
+	}
+
+
+	
+    //getter setter
     public void setSchulklasse(Schulklasse schulklasse){
         dieSchulklasse = schulklasse;
     }

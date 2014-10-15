@@ -3,6 +3,7 @@ package B_OOPBeispielUnidirektionaleAssoziation;
 public class Schulklasse {
 	
 	String klasse;
+	String beschreibung;
 
 	public Schulklasse(String klasse) {
 		super();
@@ -19,8 +20,19 @@ public class Schulklasse {
 
 	@Override
 	public String toString() {
-		return "Schulklasse [klasse=" + klasse + "]";
+		return "Schulklasse [klasse=" + klasse + ", beschreibung="
+				+ beschreibung + "]";
 	}
+
+	public String getBeschreibung() {
+		return beschreibung;
+	}
+
+	public void setBeschreibung(String beschreibung) {
+		this.beschreibung = beschreibung;
+	}
+
+	
 	
 	
 
