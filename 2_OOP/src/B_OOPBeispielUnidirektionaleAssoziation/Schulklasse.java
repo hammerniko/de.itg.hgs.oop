@@ -6,7 +6,6 @@ public class Schulklasse {
 	String beschreibung;
 
 	public Schulklasse(String klasse) {
-		super();
 		this.klasse = klasse;
 	}
 

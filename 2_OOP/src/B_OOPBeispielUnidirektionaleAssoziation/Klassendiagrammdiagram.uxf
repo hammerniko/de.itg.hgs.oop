@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>20</y>
+      <w>420</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Schueler
+--
+-name: text
+-vname: text
+--
++Schueler(name:text, vname:text, schulKlasse:SchulKlasse)
++getName():text
++setName(name:text)
++getVname():text
++setVname(vname:text)
++getSchulKlasse():SchulKlasse
++setSchulKlasse(schulKlasse:SchulKlasse)
++toString():text
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>400</y>
+      <w>390</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Schulklasse
+--
+-beschreibung:text
+-bezeichnung:text
+--
++Schuelklasse(beschreibung:text, bezeichnung:text)
++getBeschreibung():text
++setBeschreibung(beschreibung:text)
++getBezeichnung():text
++setBezeichung(bezeichnung:text)
++toString():text
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>230</y>
+      <w>170</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1 dieSchulklasse
+</panel_attributes>
+    <additional_attributes>10.0;170.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>380</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Schulart
+--
+-name:text
+-beschreibung:
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>470</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=dieSchulart
+             1</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

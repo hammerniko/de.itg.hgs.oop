@@ -24,7 +24,7 @@ public class StartKlasse {
         schueler[2] = new Schueler("Max","Bohr",klassen[4]);
         
         ausgabeSchueler(schueler);
-        ausgabeKlassen(klassen);
+        //ausgabeKlassen(klassen);
         
 
     }
