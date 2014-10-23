@@ -28,8 +28,8 @@ bg=light_gray</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>400</y>
+      <x>30</x>
+      <y>390</y>
       <w>390</w>
       <h>170</h>
     </coordinates>
@@ -50,15 +50,15 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
+      <x>210</x>
       <y>230</y>
-      <w>170</w>
-      <h>190</h>
+      <w>140</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1 dieSchulklasse
 </panel_attributes>
-    <additional_attributes>10.0;170.0;150.0;10.0</additional_attributes>
+    <additional_attributes>10.0;160.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -79,14 +79,14 @@ m1=1 dieSchulklasse
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>380</x>
-      <y>470</y>
-      <w>170</w>
-      <h>50</h>
+      <x>410</x>
+      <y>460</y>
+      <w>140</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=dieSchulart
              1</panel_attributes>
-    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>120.0;30.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
