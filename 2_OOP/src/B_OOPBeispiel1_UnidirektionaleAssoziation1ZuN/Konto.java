@@ -1,4 +1,4 @@
-package B_OOPBeispielUnidirektionaleAssoziation1ZuN;
+package B_OOPBeispiel1_UnidirektionaleAssoziation1ZuN;
 
 public class Konto {
     private int kontoNr;
