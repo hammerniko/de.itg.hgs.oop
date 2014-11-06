@@ -1,11 +1,11 @@
 package B_OOPBeispiel2_UnidirektionaleAssoziation1ZuN;
 
-public class Konto2 {
+public class Konto {
 	
 	private int kontoNr;
 	private double saldo;
 	
-	public Konto2(int kontoNr, double saldo){
+	public Konto(int kontoNr, double saldo){
 		this.kontoNr = kontoNr;
 		this.saldo = saldo;
 	}

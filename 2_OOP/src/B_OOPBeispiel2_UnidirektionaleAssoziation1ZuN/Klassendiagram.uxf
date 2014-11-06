@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
-      <y>90</y>
+      <x>430</x>
+      <y>80</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -13,7 +13,8 @@
 --
 kontoNr:GZ
 
-</panel_attributes>
+
+bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -32,12 +33,14 @@ vorname:text
 +getKonto(pos:GZ):Konto2
 +addKonto(Konto2 konto)
 +removeKonto(kontoNr:GZ)
+
 +getName():text
 +setName(name:text)
 +getVorname():text
 +setVorname(vorname:text)
 +toString():text
-</panel_attributes>
+
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -45,12 +48,12 @@ vorname:text
     <coordinates>
       <x>250</x>
       <y>160</y>
-      <w>240</w>
-      <h>60</h>
+      <w>200</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
            dieKonten[ ]</panel_attributes>
-    <additional_attributes>220.0;30.0;10.0;20.0</additional_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>

@@ -2,7 +2,7 @@ package B_OOPBeispiel2_UnidirektionaleAssoziation1ZuN;
 
 import java.util.Vector;
 
-public class Kunde2 {
+public class Kunde {
 	
 	private String name;
 	private String vorname;
@@ -10,21 +10,22 @@ public class Kunde2 {
 	
 	
 	//Keklaration f?r die Aussoziation 1zuN
-	Vector<Konto2> dieKonten;
+	Vector<Konto> dieKonten;
 	
 	
-	public Kunde2(String name, String vorname){
+	public Kunde(String name, String vorname){
 		this.name = name;
 		this.vorname = vorname;
-		dieKonten = new Vector<Konto2>();
+		dieKonten = new Vector<Konto>();
 	}
 	
 	
-	public Konto2 getKonto(int pos){
+	public Konto getKonto(int pos){
 		return dieKonten.elementAt(pos);
+		
 	}
 	
-	public void addKonto(Konto2 konto){
+	public void addKonto(Konto konto){
 		dieKonten.add(konto);
 	}
 	
