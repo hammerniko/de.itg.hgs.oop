@@ -13,9 +13,9 @@ public class Verzeichnis {
 	Vector<Datei> dieDateien;
 
 	public Verzeichnis() {
-		if (dieDateien == null) {
-			dieDateien = new Vector<Datei>();
-		}
+		
+		dieDateien = new Vector<Datei>();
+		
 		erstelltAm = new Date();
 
 		if (anzNeueOrdner == 0) {

@@ -6,7 +6,7 @@ public class StartKlasse {
 	public static void main(String[] args) {
 		
 		Verzeichnis v1 = new Verzeichnis();
-		Verzeichnis v2 = new Verzeichnis("a");
+		Verzeichnis v2 = new Verzeichnis("TG");
 		Verzeichnis v3 = new Verzeichnis();
 						
 		Datei d1 = new Datei("Lehrer", "txt");
