@@ -1,5 +1,7 @@
 package B_OOPBeispiel3_UnidirektionaleAssoziation1ZuN;
 
+import java.util.Vector;
+
 
 public class StartKlasse {
 	
@@ -17,6 +19,7 @@ public class StartKlasse {
 		v1.addDatei(d2);
 		v1.addDatei(d3);
 		
+		Vector<Datei> dieDateien = new Vector<Datei>();
 		
 		System.out.println(v1);
 		System.out.println(v2);

@@ -1,1 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><umlet_diagram></umlet_diagram>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>160</y>
+      <w>210</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Verzeichnis
+--
+-name:text
+-erstelltAm:Datum
+_-anzahlNeuerOrdner:GZ=0_
+--
++Verzeichnis()
++Verzeichnis(name:text)
+
+...
+
++addDatei(Datei datei)
++removeDatei(index:GZ)
++getDatei(index:GZ):Datei
+
++toString():text
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>160</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Datei
+--
+-name:text
+-endung:text
+-erstelltAm:Datum
+-groesse:GZ
+--
++Datei(name:text, endung:text)
+
+...
+
++toString():text
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>260</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+         dieDateien [ ]
+           </panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
