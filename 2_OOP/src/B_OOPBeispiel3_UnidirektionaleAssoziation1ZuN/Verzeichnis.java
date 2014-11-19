@@ -15,7 +15,6 @@ public class Verzeichnis {
 	public Verzeichnis() {
 		
 		dieDateien = new Vector<Datei>();
-		
 		erstelltAm = new Date();
 
 		if (anzNeueOrdner == 0) {
@@ -27,11 +26,10 @@ public class Verzeichnis {
 	}
 
 	public Verzeichnis(String name) {
-		if (dieDateien == null) {
-			dieDateien = new Vector<Datei>();
-		}
+		
+		dieDateien = new Vector<Datei>();
 		erstelltAm = new Date();
-		this.name = name;
+		setName(name);
 	}
 
 	public String getName() {
@@ -39,9 +37,11 @@ public class Verzeichnis {
 	}
 
 	public void setName(String name) {
+		name = name.trim(); //Entfernt Leerzeichen am Anfang und Ende
 		if (!(name.isEmpty() || name == null)) {
 			this.name = name;
 		}
+		
 	}
 
 	public Date getErstelltAm() {
