@@ -9,15 +9,27 @@ public class Rechner {
 	public double addiere(double zahlA, double zahlB){
 		
 		
+		dieGui.aktualisiereStatus("berechne...");
+		
 		
 		double erg = zahlA+zahlB;
 		
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		Runnable r = new Runnable() {
+			
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+		};
+		Thread t = new Thread(r);
+		t.start();
 		
 		
 		dieGui.aktualisiereStatus("fertig");

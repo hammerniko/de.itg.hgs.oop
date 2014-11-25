@@ -14,7 +14,7 @@ public class Gui extends JFrame {
 	//Assoziation 
 	Rechner derRechner;
 	
-	//Komponenten die in der Klasse beötigt werden
+	//Komponenten die in der Klasse beï¿½tigt werden
 	JButton btBerechnen;
 	JTextField tfZahlA;
 	JTextField tfZahlB;
@@ -36,7 +36,7 @@ public class Gui extends JFrame {
 	private void init() {
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		this.setTitle("Rechner");
-		//Graue Fläche/ Behälter für Buttons, Textfelder ...
+		//Graue Flï¿½che/ Behï¿½lter fï¿½r Buttons, Textfelder ...
 		JPanel contenPane = new JPanel();
 		JPanel pEingabe = new JPanel();
 		JPanel pButtons = new JPanel();
@@ -45,7 +45,7 @@ public class Gui extends JFrame {
 		this.setSize(400, 100);
 		this.setContentPane(contenPane);
 		
-		//Komponenten für PanelEingabe erstellen
+		//Komponenten fï¿½r PanelEingabe erstellen
 		tfZahlA = new JTextField();
 		tfZahlA.setColumns(20);
 		tfZahlB = new JTextField();
@@ -57,7 +57,7 @@ public class Gui extends JFrame {
 		tfErgebnis.setColumns(20);
 		tfErgebnis.setEnabled(false);
 		
-		//Komponenten einem Panel hinzufügen
+		//Komponenten einem Panel hinzufï¿½gen
 		pEingabe.add(labelA);
 		pEingabe.add(tfZahlA);
 		pEingabe.add(labelB);
@@ -65,7 +65,7 @@ public class Gui extends JFrame {
 		pEingabe.add(labelErgebnis);
 		pEingabe.add(tfErgebnis);
 		
-		//Komponenten für Panel Buttons
+		//Komponenten fï¿½r Panel Buttons
 		btBerechnen = new JButton("Berechnen");
 		btBerechnen.addActionListener(new ActionListener() {
 			
@@ -101,7 +101,7 @@ public class Gui extends JFrame {
 	}
 
 	private void clickedBerechnen() {
-		System.out.println("Berechnen geklickt");
+		
 		//Daten holen
 		double a = Double.parseDouble(tfZahlA.getText());
 		double b = Double.parseDouble(tfZahlB.getText());
@@ -120,6 +120,7 @@ public class Gui extends JFrame {
 	public void aktualisiereStatus(String msg) {
 		
 		lbStatus.setText(msg);
+		
 	}
 
 	
