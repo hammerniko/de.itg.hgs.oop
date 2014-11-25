@@ -21,6 +21,11 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	JButton btNeustart;
 	JLabel lbStatus;
 	JButton[][] buttons;
+	
+	//Konstanten
+	public static final int ANZAHL_FELDER = 6;
+	public static final int SIZE_X=800;
+	public static final int SIZE_Y=400;
 
 	/**
 	 * Konstruktor
@@ -67,8 +72,11 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 				//und der Methode actionPerformed() übergeben.
 				buttons[x][y].addActionListener(this);
 				
+				
+				
 				//Hinzufügen der Buttons zum Container
 				pSpielfeld.add(buttons[x][y]);
+				
 			}
 		}
 
@@ -81,9 +89,10 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		pContenPane.add(pButtons);
 
 		setContentPane(pContenPane);
+		setSize(SIZE_X,SIZE_Y);
 		
 		//Allen Komponenten ausreichend Platz  geben
-		pack();
+		//pack();
 	}
 
 	
@@ -97,7 +106,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	 * @param y
 	 */
 	public void feldClick(int x, int y) {
-
+		System.out.println("feldClick("+x+","+y+")");
 		//Botschaft an die Spielsteuerung
 		dieSpielSteuerung.bearbeiteFeldClick(x, y);
 
