@@ -120,4 +120,52 @@ public class SpielDaten {
 		// TODO Auto-generated method stub
 		return wert[x][y];
 	}
+
+	/**
+	 * Wird aufgerufen, wenn eine Gruppe erweitert 
+	 * wird.
+	 * @param x2
+	 * @param y2
+	 * @param grpNr
+	 */
+	public void fuegeZuGruppe(int x2, int y2, int grpNr) {
+		gruppe[x2][y2]=grpNr;
+		
+	}
+
+	/**
+	 * Erhoeht den aktuellen Summenwert einer
+	 * Gruppe um den Wert des neu hinzugefügten Feldes.
+	 * @param x1
+	 * @param y1
+	 * @param grpNr
+	 */
+	public void erhoeheGruppenSum(int x1, int y1, int grpNr) {
+		int alterWert = gruppenSum.elementAt(grpNr);
+		
+		
+		gruppenSum.set(grpNr, alterWert+gibWert(x1, y1));
+		
+	}
+
+	/**
+	 * Berechnet wieviel Prozent der Spielfelder bereits belegt
+	 * sind
+	 * 100% = 36 Felder
+	 * x%   = x freie Felder mit 
+	 * @return
+	 */
+	public double berechneSpielstand() {
+		int anzahlFreieFelder = 0;
+		for (int y = 0; y < gruppe.length; y++) {
+			for (int x = 0; x < gruppe.length; x++) {
+				if(gruppe[x][y]==0){
+					anzahlFreieFelder++;
+				}
+			}
+		}
+		
+		
+		return anzahlFreieFelder/36.0;
+	}
 }

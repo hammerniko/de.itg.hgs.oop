@@ -43,6 +43,7 @@ public class SpielSteuerung {
 	
 	private void erstelleNeueGruppe(int x, int y){
 		
+		
 	}
 	
 	private void schliesseGruppe(int x1, int y1, int x2, int y2){
@@ -87,20 +88,29 @@ public class SpielSteuerung {
 	public void neustartClick(){
 		dieSpielDaten.initialisiereSpielDaten();
 		dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWert());
-	}
-	
-	public void ausgebenAufFeld(int x, int y, int wert, int gruppe){
-		
-	}
-	
-	public void ausgebenText(int textNr, double spielstand){
-		
+		dieBenutzeroberflaeche.ausgebenText(0, 0);
 	}
 	
 	
-	private void erweitereGruppe(int x1, int y1, int x2, int nbYpos) {
-		// TODO Auto-generated method stub
+	
+	
+	/**
+	 * Ordnet das Feld mit den Koordinaten x1,y1 der Gruppe mit den Koordinaten
+	 * x2,y2 zu.
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 */
+	private void erweitereGruppe(int x1, int y1, int x2, int y2) {
+		int grpNr = dieSpielDaten.gibGruppe(x1, y2);
+		dieSpielDaten.fuegeZuGruppe(x2,y2,grpNr);
+		dieSpielDaten.erhoeheGruppenSum(x1,y1,grpNr);
 		
+		int wert = dieSpielDaten.gibWert(x1, y1);
+		double spielstand = dieSpielDaten.berechneSpielstand();
+		dieBenutzeroberflaeche.ausgebenAufFeld(x1,y1,wert,grpNr);
+		dieBenutzeroberflaeche.ausgebenText(2, spielstand);
 	}
 
 	

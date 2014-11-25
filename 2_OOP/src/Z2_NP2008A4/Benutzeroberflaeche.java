@@ -1,6 +1,9 @@
 package Z2_NP2008A4;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -20,7 +23,9 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	JPanel pButtons;
 	JButton btNeustart;
 	JLabel lbStatus;
+	JLabel lbErgebnis;
 	JButton[][] buttons;
+	String[] text;
 	
 	//Konstanten
 	public static final int ANZAHL_FELDER = 6;
@@ -33,8 +38,22 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	public Benutzeroberflaeche() {
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		this.setTitle("Fifteen");
+		
+		initText();
+		
 		initKomponents();
 
+	}
+
+
+	private void initText() {
+		text = new String[5];
+		text[0]="<html><body>Klicke zusammenhängende Felder an,<br>\n die in der Summe 15 ergeben</body></html>";
+		text[1]="Neue Gruppe!";
+		text[2]="Gruppe erweitert";
+		text[3]="15 sind voll";
+		text[4]="Welcher Gruppe soll das Feld zugeordnet werden? Klicke auf Gruppe!";
+		
 	}
 
 	
@@ -50,8 +69,9 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		pButtons = new JPanel();
 		btNeustart = new JButton("Neustart");
 		btNeustart.addActionListener(this);
-		lbStatus = new JLabel("ready");
+		lbStatus = new JLabel();
 		lbStatus.setFont(new Font("Verdana", Font.PLAIN, 20));
+		lbErgebnis = new JLabel();
 
 		pSpielfeld.setLayout(new GridLayout(6, 6));
 
@@ -80,9 +100,19 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 			}
 		}
 
-		pButtons.setLayout(new FlowLayout(FlowLayout.LEFT));
+		pButtons.setLayout(new BoxLayout(pButtons, BoxLayout.Y_AXIS));
+		
+		btNeustart.setAlignmentX(CENTER_ALIGNMENT);
+		lbStatus.setAlignmentX(CENTER_ALIGNMENT);
+		lbErgebnis.setAlignmentX(CENTER_ALIGNMENT);
+		
+		pButtons.add(Box.createRigidArea(new Dimension(0,20)));
 		pButtons.add(btNeustart);
+		pButtons.add(Box.createRigidArea(new Dimension(0,20)));
 		pButtons.add(lbStatus);
+		pButtons.add(Box.createRigidArea(new Dimension(0,20)));
+		pButtons.add(lbErgebnis);
+		pButtons.add(Box.createRigidArea(new Dimension(0,20)));
 
 		pContenPane.setLayout(new GridLayout(1, 2));
 		pContenPane.add(pSpielfeld);
@@ -172,6 +202,17 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		}
 		this.revalidate();
 		this.repaint();
+	}
+
+
+	public void ausgebenAufFeld(int x, int y, int wert, int grpNr) {
+		buttons[x][y].setBackground(new Color(grpNr));
+		
+	}
+	
+	public void ausgebenText(int textNr, double spielstand){
+		lbStatus.setText(text[textNr]);
+		lbErgebnis.setText("Spielstand:\t"+spielstand);
 	}
 
 }
