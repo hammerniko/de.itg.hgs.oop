@@ -22,11 +22,14 @@ public class SpielSteuerung {
 		
 		//Assoziation auf Spieldaten
 		dieSpielDaten = new SpielDaten();
+		
+		start();
+		
 	}
 
 	
 	public void start(){
-		
+		neustartClick();
 	}
 	
 	private void gibSpielfeldAus(){
@@ -34,7 +37,7 @@ public class SpielSteuerung {
 		int[][] sf = dieSpielDaten.getWert();
 		
 		//sende Spielfelddaten an Oberfläche
-		//dieBenutzeroberflaeche.
+		dieBenutzeroberflaeche.aktualisiereSpiefeld(sf);
 		
 	}
 	
@@ -83,6 +86,7 @@ public class SpielSteuerung {
 	
 	public void neustartClick(){
 		dieSpielDaten.initialisiereSpielDaten();
+		dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWert());
 	}
 	
 	public void ausgebenAufFeld(int x, int y, int wert, int gruppe){
