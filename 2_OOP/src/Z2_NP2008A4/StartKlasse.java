@@ -12,7 +12,7 @@ public class StartKlasse {
 			public void run() {
 				
 				Benutzeroberflaeche b = new Benutzeroberflaeche();
-				
+				b.setVisible(true);
 				/**
 				 * Spielsteuerung kennt die Benutzeroberflaeche
 				 */
