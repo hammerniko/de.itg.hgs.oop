@@ -30,6 +30,11 @@ public class SpielSteuerung {
 	}
 	
 	private void gibSpielfeldAus(){
+		//hole Spielfelddaten
+		int[][] sf = dieSpielDaten.getWert();
+		
+		//sende Spielfelddaten an Oberfläche
+		//dieBenutzeroberflaeche.
 		
 	}
 	

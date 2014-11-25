@@ -26,13 +26,20 @@ public class SpielDaten {
 	public void initialisiereSpielDaten(){
 		for (int y = 0; y < wert.length; y++) {
 			for (int x = 0; x < wert.length; x++) {
+				
+				//Erzeuge eine Zufallszahl zwischen 1 und 9
 				wert[x][y] = (int) (Math.random()*9+1);
+				
+				//Lösche alle gruppen
 				gruppe[x][y]=0;
 			}
 			
 		}
 		
+		//Initialisiere die Gruppennummer
 		gruppennummer = 0;
+		
+		//Lösche alle Gruppensumme
 		gruppenSum.removeAllElements();
 	}
 
