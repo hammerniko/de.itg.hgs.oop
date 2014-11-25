@@ -8,11 +8,7 @@ public class Lehrer extends Mitarbeiter {
         super(name, vorname);
         gehaltsgruppe = "A13";
     }
-
-
-    
-    
-    
+  
     @Override
     public double gehaltBerechnen() {
         double wert=0;

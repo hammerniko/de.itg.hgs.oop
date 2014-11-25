@@ -1,4 +1,4 @@
-package Z1_AbituraufgabeNP2006A3;
+package Z1_NP2006A3;
 
 public class Kunde {
 

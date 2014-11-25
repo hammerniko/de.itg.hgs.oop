@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.5.1">
-  <zoom_level>15</zoom_level>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>405</x>
-      <y>240</y>
-      <w>435</w>
-      <h>135</h>
+      <x>360</x>
+      <y>190</y>
+      <w>290</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>/Mitarbeiter &lt;&lt;abstract &gt;&gt;/
 --
@@ -19,12 +19,12 @@ eingesteslltAm:Datum
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>375</x>
-      <y>45</y>
-      <w>420</w>
-      <h>135</h>
+      <x>350</x>
+      <y>70</y>
+      <w>280</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Person
 --
@@ -36,12 +36,12 @@ vorname:text
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>105</x>
-      <y>465</y>
-      <w>465</w>
-      <h>255</h>
+      <x>170</x>
+      <y>350</y>
+      <w>310</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>Lehrer
 --
@@ -53,12 +53,12 @@ gehaltsgruppierung:Text
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>630</x>
-      <y>465</y>
-      <w>420</w>
-      <h>180</h>
+      <x>520</x>
+      <y>350</y>
+      <w>280</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>Angestellte
 --
@@ -71,12 +71,12 @@ _tarifLohn:FKZ=12,50_
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>630</x>
-      <y>735</y>
-      <w>435</w>
-      <h>135</h>
+      <x>520</x>
+      <y>530</y>
+      <w>290</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Hausmeister
 --
@@ -88,70 +88,70 @@ zulageNachtdienst:FKZ
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>480</x>
-      <y>135</y>
-      <w>89</w>
-      <h>134</h>
+      <x>420</x>
+      <y>130</y>
+      <w>50</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>45;45;60;105</additional_attributes>
+    <additional_attributes>30;30;30;60</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
       <x>300</x>
-      <y>330</y>
-      <w>164</w>
-      <h>164</h>
+      <y>250</y>
+      <w>100</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>135;45;45;135</additional_attributes>
+    <additional_attributes>80;30;30;100</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>525</x>
-      <y>330</y>
-      <w>224</w>
-      <h>164</h>
+      <x>440</x>
+      <y>250</y>
+      <w>160</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>45;45;195;135</additional_attributes>
+    <additional_attributes>30;30;140;100</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>720</x>
-      <y>600</y>
-      <w>90</w>
-      <h>150</h>
+      <x>580</x>
+      <y>440</y>
+      <w>70</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>45;45;75;135</additional_attributes>
+    <additional_attributes>30;30;50;90</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Note</type>
+    <type>com.baselet.element.old.element.Note</type>
     <coordinates>
-      <x>15</x>
-      <y>330</y>
-      <w>345</w>
-      <h>105</h>
+      <x>90</x>
+      <y>210</y>
+      <w>230</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>gehaltsgruppierung = "A13"
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>75</x>
-      <y>390</y>
-      <w>149</w>
-      <h>104</h>
+      <x>130</x>
+      <y>250</y>
+      <w>120</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>45;45;120;75</additional_attributes>
+    <additional_attributes>30;30;100;100</additional_attributes>
   </element>
 </diagram>

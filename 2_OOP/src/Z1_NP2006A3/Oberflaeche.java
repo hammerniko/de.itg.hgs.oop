@@ -1,4 +1,4 @@
-package Z1_AbituraufgabeNP2006A3;
+package Z1_NP2006A3;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
