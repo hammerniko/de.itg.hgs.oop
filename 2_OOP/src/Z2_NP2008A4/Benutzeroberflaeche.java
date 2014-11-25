@@ -90,9 +90,8 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 		setContentPane(pContenPane);
 		setSize(SIZE_X,SIZE_Y);
+		setResizable(false);
 		
-		//Allen Komponenten ausreichend Platz  geben
-		//pack();
 	}
 
 	
@@ -161,8 +160,8 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	 * gedrückt wurde.
 	 */
 	private void neustartClick() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Neustart Click");
+		dieSpielSteuerung.neustartClick();
 	}
 
 }

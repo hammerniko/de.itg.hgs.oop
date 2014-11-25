@@ -64,13 +64,13 @@ public class SpielSteuerung {
 		
 		erweitereGruppe(x1,y1,x2,y2);
 		
-		
+		//...
 		
 	}
 
 	
 	public void neustartClick(){
-		
+		dieSpielDaten.initialisiereSpielDaten();
 	}
 	
 	public void ausgebenAufFeld(int x, int y, int wert, int gruppe){

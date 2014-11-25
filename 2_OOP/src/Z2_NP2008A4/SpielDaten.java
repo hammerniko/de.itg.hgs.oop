@@ -17,8 +17,25 @@ public class SpielDaten {
 		
 	}
 	
+	/**
+	 * alle werte werden mit einer Zufallszahl initialisiert
+	 * alle Gruppen werden gelöscht
+	 * alle Gruppensummen werden gelöscht
+	 */
 	public void initialisiereSpielDaten(){
+		for (int y = 0; y < wert.length; y++) {
+			for (int x = 0; x < wert.length; x++) {
+				wert[x][y] = (int) (Math.random()*9+1);
+				gruppe[x][y]=0;
+			}
+			
+		}
 		
+		gruppenSum.removeAllElements();
+	}
+
+	public int[][] getWert() {
+		return wert;
 	}
 
 	public int gibNeueGruppe(){
@@ -55,6 +72,6 @@ public class SpielDaten {
 
 	public int gibWert(int x, int y) {
 		// TODO Auto-generated method stub
-		return 0;
+		return wert[x][y];
 	}
 }
