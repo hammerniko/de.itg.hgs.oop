@@ -3,6 +3,8 @@ package Z2_NP2008A4;
 import javax.swing.*;
 
 public class Benutzeroberflaeche extends JFrame {
+	
+	//Deklaration für die Assoziation zur Steuerung
 	SpielSteuerung dieSpielSteuerung;
 	
 	
@@ -15,6 +17,14 @@ public class Benutzeroberflaeche extends JFrame {
 		
 		dieSpielSteuerung.bearbeiteFeldClick(x,y);
 		
+	}
+
+	/**
+	 * zur Herstellung der bidirektionalen Assoziation
+	 * @param spielSteuerung
+	 */
+	public void linkSteuerung(SpielSteuerung spielSteuerung) {
+		dieSpielSteuerung = spielSteuerung;
 	}
 
 }

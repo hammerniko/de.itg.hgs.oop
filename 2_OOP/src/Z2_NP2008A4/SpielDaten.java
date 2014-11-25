@@ -1,7 +1,34 @@
 package Z2_NP2008A4;
 
-public class SpielDaten {
+import java.util.Vector;
 
+public class SpielDaten {
+	
+	//Attribute
+	private int[][] wert;
+	private int[][] gruppe;
+	private Vector<Integer> gruppenSum;
+	
+	
+	public SpielDaten(){
+		wert = new int[6][6];
+		gruppe = new int[6][6];
+		gruppenSum = new Vector<Integer>();
+		
+	}
+	
+	public void initialisiereSpielDaten(){
+		
+	}
+
+	public int gibNeueGruppe(){
+		return 0;
+	}
+	
+	public void gibGruppeFrei(int gruppe){
+		
+	}
+	
 	public int gibGruppe(int x, int y){
 		return 0;
 	}
