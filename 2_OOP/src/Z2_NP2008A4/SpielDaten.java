@@ -5,9 +5,10 @@ import java.util.Vector;
 public class SpielDaten {
 	
 	//Attribute
-	private int[][] wert;
-	private int[][] gruppe;
-	private Vector<Integer> gruppenSum;
+	private int gruppennummer=0;
+	private int[][] wert=null;
+	private int[][] gruppe=null;
+	private Vector<Integer> gruppenSum=null;
 	
 	
 	public SpielDaten(){
@@ -31,6 +32,7 @@ public class SpielDaten {
 			
 		}
 		
+		gruppennummer = 0;
 		gruppenSum.removeAllElements();
 	}
 
@@ -38,19 +40,56 @@ public class SpielDaten {
 		return wert;
 	}
 
+	
+	
+	/**
+	 * Erstellt eine neue Gruppennummer
+	 * und gibt sie zurück.
+	 */
 	public int gibNeueGruppe(){
-		return 0;
+		gruppennummer++;
+		return gruppennummer;
 	}
 	
-	public void gibGruppeFrei(int gruppe){
-		
+	/**
+	 * Durchsucht alle Gruppenfelder nach der freizugebenden
+	 * Gruppe und setzt sie zurück
+	 * @param gruppenr
+	 */
+	public void gibGruppeFrei(int gruppenr){
+		for (int y = 0; y < gruppe.length; y++) {
+			for (int x = 0; x < gruppe.length; x++) {
+				if(gruppe[x][y]==gruppenr){
+					gruppe[x][y]=0;
+					
+				}
+			}
+			
+		}
 	}
 	
+	/**
+	 * Ergebnis = -1 --> Feld erledigt
+	 * Ergebnis = 0  --> Feld frei
+	 * Ergebnis > 0  --> Gruppennummer bei unvollständiger Gruppe
+	 * @param x
+	 * @param y
+	 * @return
+	 */
 	public int gibGruppe(int x, int y){
-		return 0;
+		return gruppe[x][y];
 	}
 
-	public int gibNachbarn(int x, int y) {
+	/**
+	 * Prüfz Anzahl unvollständiger Nachbargruppen
+	 * Ergebnis 0 -> keine
+	 * Ergebnis 1 -> eine
+	 * Ergebnis 2 -> mehr als eine
+	 * @param x
+	 * @param y
+	 * @return
+	 */
+	public int gibAnzahlNachbarn(int x, int y) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -67,7 +106,7 @@ public class SpielDaten {
 
 	public int gibGruppenSum(int nbGruppe) {
 		// TODO Auto-generated method stub
-		return 0;
+		return gruppenSum.elementAt(nbGruppe);
 	}
 
 	public int gibWert(int x, int y) {

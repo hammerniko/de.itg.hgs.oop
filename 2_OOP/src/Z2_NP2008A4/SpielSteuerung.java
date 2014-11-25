@@ -53,18 +53,25 @@ public class SpielSteuerung {
 	
 	
 	public void bearbeiteFeldClick(int x1, int y1) {
+		
 		int gruppe = dieSpielDaten.gibGruppe(x1, y1);
-		int nachbarn = dieSpielDaten.gibNachbarn(x1,y1);
-		int x2 = dieSpielDaten.gibEindeutNachbar_XPos(x1,y1);
-		int y2 = dieSpielDaten.gibEindeutNachbar_YPos(x1,y1);
+		int nachbarn = dieSpielDaten.gibAnzahlNachbarn(x1,y1);
 		
-		int nbGruppe = dieSpielDaten.gibGruppe(x2, y2);
-		int gruppenSum = dieSpielDaten.gibGruppenSum(nbGruppe);
-		int wert = dieSpielDaten.gibWert(x1,y1);
+		if(nachbarn==1){
+			int x2 = dieSpielDaten.gibEindeutNachbar_XPos(x1,y1);
+			int y2 = dieSpielDaten.gibEindeutNachbar_YPos(x1,y1);
+			
+			int nbGruppe = dieSpielDaten.gibGruppe(x2, y2);
+			int gruppenSum = dieSpielDaten.gibGruppenSum(nbGruppe);
+			int wert = dieSpielDaten.gibWert(x1,y1);
+			
+			erweitereGruppe(x1,y1,x2,y2);
+			
+			//...
+		}
 		
-		erweitereGruppe(x1,y1,x2,y2);
 		
-		//...
+		
 		
 	}
 
