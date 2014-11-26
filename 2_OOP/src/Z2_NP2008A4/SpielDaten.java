@@ -109,21 +109,21 @@ public class SpielDaten {
 		}
 
 		if (x < 4)
-			grpNb[0] = gibGruppe(x++, y); // rechts
+			grpNb[0] = gibGruppe(x+1, y); // rechts
 		if (x > 0)
-			grpNb[1] = gibGruppe(x--, y); // links
+			grpNb[1] = gibGruppe(x-1, y); // links
 		if (y < 4)
-			grpNb[2] = gibGruppe(x, y++); // unten
+			grpNb[2] = gibGruppe(x, y+1); // unten
 		if (y > 0)
-			grpNb[3] = gibGruppe(x, y--); // oben
+			grpNb[3] = gibGruppe(x, y-1); // oben
 		if (y > 0 && x > 0)
-			grpNb[4] = gibGruppe(x--, y--); // linke untere Ecke
+			grpNb[4] = gibGruppe(x-1, y-1); // linke untere Ecke
 		if (y < 4 && x < 4)
-			grpNb[5] = gibGruppe(x++, y++); // rechte untere Ecke
+			grpNb[5] = gibGruppe(x+1, y+1); // rechte untere Ecke
 		if (y > 0 && x < 4)
-			grpNb[6] = gibGruppe(x++, y--); // rechte obere Ecke
+			grpNb[6] = gibGruppe(x+1, y-1); // rechte obere Ecke
 		if (y < 4 && x > 0)
-			grpNb[7] = gibGruppe(x--, y++); // linke obere Ecke
+			grpNb[7] = gibGruppe(x-1, y+1); // linke obere Ecke
 
 		for (int i = 0; i < grpNb.length; i++) {
 			if (grpNb[i] >= 0) {
