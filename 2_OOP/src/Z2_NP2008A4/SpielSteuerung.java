@@ -80,63 +80,55 @@ public class SpielSteuerung {
 
 	}
 
-	public void bearbeiteFeldClick(int x1, int y1) {
-		boolean work = true;
-
-		while (work) {
+	public void bearbeiteFeldClick(int x, int y) {
+		
+		int xNb;
+		int yNb;
+		int grpNrNb;
+		int grpSummeNb;
+		
+		double spielstand;
+		int wert;
+		int grpNr;
+		int grpSumme;
+		int anzahlNachbarGruppen;
+		
+		grpNr = dieSpielDaten.gibGruppe(x, y);
+		anzahlNachbarGruppen = dieSpielDaten.gibAnzahlNachbarn(x, y);
+		
+		System.out.println("anzNBGRp:"+anzahlNachbarGruppen);
+		
+		
+		//Feld ist noch keiner Gruppe zugeordnet und nachbargruppe ist eindeutig
+		if(grpNr==0 && anzahlNachbarGruppen == 1){
 			
-			switch (zustand) {
-			case KEIN_FELD_GEKLICKT:
-				dieBenutzeroberflaeche.ausgebenText(0,
-						dieSpielDaten.berechneSpielstand());
-
-				//Wenn es keine Nachbargruppe gibt
-				if (dieSpielDaten.gibGruppe(x1, y1) == 0) {
-					work = true;
-					setZustand(NEUE_GRUPPE);
-					break;
-				}
-
-			case NEUE_GRUPPE:
-				erstelleNeueGruppe(x1, y1);
-
-				int grpNr = dieSpielDaten.gibGruppe(x1, y1);
-				int grpSumme = dieSpielDaten.gibGruppenSum(grpNr);
-				
-				// Wenn Anzahl unvollständiger Nachbargruppen genau 1 und 15 (nicht) voll
-				if (dieSpielDaten.gibAnzahlNachbarn(x1, y1)==1){
-					if(grpSumme<15) {
-						setZustand(GRUPPE_ERWEITERT);
-						work = true;
-						break;
-					}
-					else{
-						setZustand(FUENFZEHN_SIND_VOLL);
-						work=true;
-						break;
-					}
-				}
-
-				work = false;
-				break;
-
-			case GRUPPE_ERWEITERT:
-				
-				work = false;
-				break;
-
-			case FUENFZEHN_SIND_VOLL:
-				work = false;
-				break;
-
-			case ZU_GRUPPE_ZUORDNEN:
-
-				break;
-
-			default:
-				break;
+			
+			//Daten der Nachbargruppe prüfen
+			xNb = dieSpielDaten.gibEindeutNachbar_XPos(x, y);
+			yNb = dieSpielDaten.gibEindeutNachbar_YPos(x, y);
+			
+			grpNrNb = dieSpielDaten.gibGruppe(xNb, yNb);
+			grpSummeNb = dieSpielDaten.gibGruppenSum(grpNrNb);
+			
+			wert = dieSpielDaten.gibWert(x, y);
+			
+			if(grpSummeNb + wert < 15){
+				erweitereGruppe(x, y, xNb, yNb);
 			}
-		}// end while
+						
+		}
+		
+		//Feld ist erledigt
+		else if(grpNr == -1){
+			return;
+		}
+		
+		//Gruppe ist noch unvollständig
+		else if(grpNr>0 && dieSpielDaten.gibGruppenSum(grpNr)<15){
+			
+		}
+
+		
 
 	}
 
@@ -156,7 +148,7 @@ public class SpielSteuerung {
 	 * @param y2
 	 */
 	private void erweitereGruppe(int x1, int y1, int x2, int y2) {
-		setZustand(2);
+		setZustand(SpielSteuerung.GRUPPE_ERWEITERT);
 
 		int grpNr = dieSpielDaten.gibGruppe(x1, y2);
 		dieSpielDaten.fuegeZuGruppe(x2, y2, grpNr);
@@ -170,6 +162,7 @@ public class SpielSteuerung {
 
 	private void initialisiereSpielfeld() {
 		dieSpielDaten.initialisiereSpielDaten();
+		
 
 	}
 
