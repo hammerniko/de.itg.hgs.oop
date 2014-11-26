@@ -31,6 +31,7 @@ public class SpielSteuerung {
 	 * Wird aufgerufen wenn das Spiel zum ersten mal gestartet wird.
 	 */
 	public void start() {
+		
 		neustartClick();
 	}
 
@@ -101,13 +102,16 @@ public class SpielSteuerung {
 
 			// Feld ist frei und es gibt keine Nachbarn
 			else if (nachbarn == 0) {
+				zustand = 1;
 				erstelleNeueGruppe(x1, y1);
+				
 			}
 
 			// Feld ist frei und es gibt mehr als eine unvollständige
-			// Nachbargruppe
+			// Nachbargruppe. Nachbargruppe nicht eindeutig
 			else if (nachbarn == 2) {
-
+				zustand = 5;
+				dieBenutzeroberflaeche.ausgebenText(4, dieSpielDaten.berechneSpielstand());
 			}
 		}
 		
@@ -119,7 +123,7 @@ public class SpielSteuerung {
 	}
 
 	public void neustartClick() {
-		dieSpielDaten.initialisiereSpielDaten();
+		initialisiereSpielfeld();
 		dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWerte());
 		dieBenutzeroberflaeche.ausgebenText(0, 0);
 	}
@@ -142,6 +146,11 @@ public class SpielSteuerung {
 		double spielstand = dieSpielDaten.berechneSpielstand();
 		dieBenutzeroberflaeche.ausgebenAufFeld(x1, y1, wert, grpNr);
 		dieBenutzeroberflaeche.ausgebenText(2, spielstand);
+	}
+	
+	private void initialisiereSpielfeld(){
+		dieSpielDaten.initialisiereSpielDaten();
+		
 	}
 
 }
