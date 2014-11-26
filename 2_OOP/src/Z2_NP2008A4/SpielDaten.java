@@ -127,7 +127,7 @@ public class SpielDaten {
 			grpNb[7] = gibGruppe(x-1, y+1); // linke obere Ecke
 
 		for (int i = 0; i < grpNb.length; i++) {
-			if (grpNb[i] >= 0) {
+			if (grpNb[i] > 0) {
 				anzahl++;
 			}
 		}

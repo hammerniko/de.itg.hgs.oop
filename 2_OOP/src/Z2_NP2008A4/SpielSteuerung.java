@@ -8,6 +8,11 @@ public class SpielSteuerung implements Runnable{
 	private int x2;
 	private int y2;
 	private Thread t;
+	private boolean work;
+
+	public void setWork(boolean work) {
+		this.work = work;
+	}
 
 	// Assoziationen
 	Benutzeroberflaeche dieBenutzeroberflaeche;
@@ -19,6 +24,7 @@ public class SpielSteuerung implements Runnable{
 	public static final int GRUPPE_ERWEITERT = 2;
 	public static final int FUENFZEHN_SIND_VOLL = 3;
 	public static final int ZU_GRUPPE_ZUORDNEN = 4;
+	public static final int UNZULAESSIG = 5;
 
 	/**
 	 * Konstruktor
@@ -62,8 +68,6 @@ public class SpielSteuerung implements Runnable{
 	}
 
 	private void erstelleNeueGruppe(int x, int y) {
-		setZustand(NEUE_GRUPPE);
-
 		// Neue Gruppennummer holen
 		int neueGrp = dieSpielDaten.gibNeueGruppe();
 
@@ -80,7 +84,7 @@ public class SpielSteuerung implements Runnable{
 		double spielstand = dieSpielDaten.berechneSpielstand();
 
 		dieBenutzeroberflaeche.ausgebenAufFeld(x, y, wert, neueGrp);
-		dieBenutzeroberflaeche.ausgebenText(1, spielstand);
+		
 
 	}
 
@@ -95,10 +99,27 @@ public class SpielSteuerung implements Runnable{
 		xPos = x;
 		yPos = y;
 		int grpNr = dieSpielDaten.gibGruppe(x, y);
+		System.out.println("gehört zu Gruppe:"+grpNr);
+		
 		int anzahlNachbarGruppen = dieSpielDaten.gibAnzahlNachbarn(x, y);
-
 		System.out.println("anzNBGRp:" + anzahlNachbarGruppen);
-
+		
+		dieBenutzeroberflaeche.start();
+		
+		//Wenn auf ein zulässiges Feld geklickt wurde
+		if(grpNr == 0){
+			
+			//Wenn keine Nachbargruppen bestehen
+			if(anzahlNachbarGruppen == 0){
+				setZustand(NEUE_GRUPPE);
+			}
+			
+			
+		}
+		else{
+			setZustand(KEIN_FELD_GEKLICKT);
+		}
+		
 	
 
 	}
@@ -126,9 +147,9 @@ public class SpielSteuerung implements Runnable{
 		dieSpielDaten.erhoeheGruppenSum(x1, y1, grpNr);
 
 		int wert = dieSpielDaten.gibWert(x1, y1);
-		double spielstand = dieSpielDaten.berechneSpielstand();
+		
 		dieBenutzeroberflaeche.ausgebenAufFeld(x1, y1, wert, grpNr);
-		dieBenutzeroberflaeche.ausgebenText(2, spielstand);
+		
 	}
 
 	private void initialisiereSpielfeld() {
@@ -141,9 +162,15 @@ public class SpielSteuerung implements Runnable{
 		System.out.println("Zustand:" + zustand);
 	}
 
+	/**
+	 * Zustände der Steuerung werden in einem eigenen Thread überwacht.
+	 * Dabei wartet der Thread immer auf die Benutzeroberfläche.
+	 * Wird ein Feld geklickt, wird der Thread benachrichtigt und 
+	 * macht weiter, solange work auf true steht.
+	 */
 	@Override
 	public void run() {
-	boolean work = true;	
+	work = true;	
 	while (work) {
 			System.out.println("Steuerung runs...");
 			try {
@@ -158,22 +185,32 @@ public class SpielSteuerung implements Runnable{
 					erstelleNeueGruppe(xPos, yPos);
 					dieBenutzeroberflaeche.ausgebenText(1, dieSpielDaten.berechneSpielstand());
 					dieBenutzeroberflaeche.waitFor();
+					
+					
+					
 					break;
 
 				case GRUPPE_ERWEITERT:
 					erweitereGruppe(xPos, yPos, x2, y2);
+					dieBenutzeroberflaeche.ausgebenText(2, dieSpielDaten.berechneSpielstand());
 					dieBenutzeroberflaeche.waitFor();
 					break;
 
 				case FUENFZEHN_SIND_VOLL:
-
+					schliesseGruppe(xPos, yPos, x2, y2);
+					dieBenutzeroberflaeche.ausgebenText(3, dieSpielDaten.berechneSpielstand());
 					dieBenutzeroberflaeche.waitFor();
 					break;
 
 				case ZU_GRUPPE_ZUORDNEN:
-
+					dieBenutzeroberflaeche.ausgebenText(4, dieSpielDaten.berechneSpielstand());
 					dieBenutzeroberflaeche.waitFor();
 					break;
+					
+				case UNZULAESSIG:
+					dieBenutzeroberflaeche.ausgebenText(5, dieSpielDaten.berechneSpielstand());
+					dieBenutzeroberflaeche.waitFor();
+					break;	
 
 				default:
 					break;

@@ -39,7 +39,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	 */
 	public Benutzeroberflaeche() {
 		setLookAndFeel();
-		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setTitle("Fifteen");
 		
 		initText();
@@ -50,12 +50,13 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 
 	private void initText() {
-		text = new String[5];
+		text = new String[6];
 		text[0]="<html><body>Klicke zusammenhängende Felder an,<br>\n die in der Summe 15 ergeben</body></html>";
 		text[1]="Neue Gruppe!";
 		text[2]="Gruppe erweitert";
 		text[3]="15 sind voll";
 		text[4]="Welcher Gruppe soll das Feld zugeordnet werden? Klicke auf Gruppe!";
+		text[5]="bereits belegt";
 		
 	}
 
@@ -141,7 +142,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	public void feldClick(int x, int y) {
 		System.out.println("feldClick("+x+","+y+")");
 		//Botschaft an die Spielsteuerung
-		start();
+		
 		dieSpielSteuerung.bearbeiteFeldClick(x, y);
 
 	}
@@ -258,6 +259,9 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		    ready = true;
 		    notify();
 		  }
+
+
 		
+		  
 	}
 
