@@ -166,7 +166,6 @@ public class SpielDaten {
 	 */
 	public void fuegeZuGruppe(int x, int y, int grpNr) {
 		gruppe[x][y] = grpNr;
-
 	}
 
 	/**
@@ -202,5 +201,11 @@ public class SpielDaten {
 		spielstand = Math.round(spielstand * 100.0) / 100.0;
 
 		return spielstand;
+	}
+
+	public void schliesseGruppe(int x1, int y1, int x2, int y2) {
+		gruppe[x1][y1]=-1;
+		gruppe[x2][y2]=-1;
+		
 	}
 }

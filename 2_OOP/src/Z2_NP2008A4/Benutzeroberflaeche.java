@@ -13,7 +13,9 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Benutzeroberflaeche extends JFrame implements ActionListener {
-
+	boolean ready = false;
+	
+	
 	// Deklaration fuer die Assoziation zur Steuerung
 	SpielSteuerung dieSpielSteuerung;
 
@@ -139,6 +141,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	public void feldClick(int x, int y) {
 		System.out.println("feldClick("+x+","+y+")");
 		//Botschaft an die Spielsteuerung
+		start();
 		dieSpielSteuerung.bearbeiteFeldClick(x, y);
 
 	}
@@ -210,7 +213,15 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 	public void ausgebenAufFeld(int x, int y, int wert, int grpNr) {
 		System.out.println("ausgabe auf Button");
-		buttons[x][y].setBackground(new Color(255-(grpNr*wert),255-(grpNr*10),255-(grpNr*10)));
+		if(grpNr==-1){
+			buttons[x][y].setBackground(Color.green);
+		}
+		else{
+			buttons[x][y].setBackground(new Color(255-(grpNr*wert),255-(grpNr*10),255-(grpNr*10)));
+		}
+		
+		
+		
 		buttons[x][y].setText(wert+"["+grpNr+"]");
 		
 	}
@@ -231,4 +242,22 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		            e.printStackTrace();
 		 }
 	}
-}
+
+
+
+		synchronized void waitFor() throws Exception {
+		    System.out.println(Thread.currentThread().getName()+ " is entering waitFor().");
+		     
+		        wait();
+		        
+
+		    System.out.println(Thread.currentThread().getName() + " resuming execution.");
+		  }
+		  
+		  synchronized void start() {
+		    ready = true;
+		    notify();
+		  }
+		
+	}
+

@@ -1,10 +1,13 @@
 package Z2_NP2008A4;
 
-public class SpielSteuerung {
+public class SpielSteuerung implements Runnable{
 	// Attribute
 	private int zustand;
 	private int xPos;
 	private int yPos;
+	private int x2;
+	private int y2;
+	private Thread t;
 
 	// Assoziationen
 	Benutzeroberflaeche dieBenutzeroberflaeche;
@@ -22,15 +25,18 @@ public class SpielSteuerung {
 	 * 
 	 * @param b
 	 */
-	public SpielSteuerung(Benutzeroberflaeche b) {
+	public SpielSteuerung(String name, Benutzeroberflaeche b) {
 		// bidirektionale Assoziation
 		dieBenutzeroberflaeche = b;
 		dieBenutzeroberflaeche.linkSteuerung(this);
 
 		// Assoziation auf Spieldaten
 		dieSpielDaten = new SpielDaten();
+		
+		//Spielsteuerung als ZUstandsautomat
+		new Thread(this, name).start();
 
-		start();
+		
 
 	}
 
@@ -40,6 +46,7 @@ public class SpielSteuerung {
 	public void start() {
 		setZustand(0);
 		neustartClick();
+		
 	}
 
 	/**
@@ -78,58 +85,21 @@ public class SpielSteuerung {
 	}
 
 	private void schliesseGruppe(int x1, int y1, int x2, int y2) {
+		dieSpielDaten.schliesseGruppe(x1, y1, x2, y2);
+		dieBenutzeroberflaeche.ausgebenAufFeld(x1, y1,
+				dieSpielDaten.gibWert(x1, y1), dieSpielDaten.gibGruppe(x1, y1));
 
 	}
 
 	public void bearbeiteFeldClick(int x, int y) {
-		
-		int xNb;
-		int yNb;
-		int grpNrNb;
-		int grpSummeNb;
-		
-		double spielstand;
-		int wert;
-		int grpNr;
-		int grpSumme;
-		int anzahlNachbarGruppen;
-		
-		grpNr = dieSpielDaten.gibGruppe(x, y);
-		anzahlNachbarGruppen = dieSpielDaten.gibAnzahlNachbarn(x, y);
-		
-		System.out.println("anzNBGRp:"+anzahlNachbarGruppen);
-		
-		
-		//Feld ist noch keiner Gruppe zugeordnet und nachbargruppe ist eindeutig
-		if(grpNr==0 && anzahlNachbarGruppen == 1){
-			
-			
-			//Daten der Nachbargruppe prüfen
-			xNb = dieSpielDaten.gibEindeutNachbar_XPos(x, y);
-			yNb = dieSpielDaten.gibEindeutNachbar_YPos(x, y);
-			
-			grpNrNb = dieSpielDaten.gibGruppe(xNb, yNb);
-			grpSummeNb = dieSpielDaten.gibGruppenSum(grpNrNb);
-			
-			wert = dieSpielDaten.gibWert(x, y);
-			
-			if(grpSummeNb + wert < 15){
-				erweitereGruppe(x, y, xNb, yNb);
-			}
-						
-		}
-		
-		//Feld ist erledigt
-		else if(grpNr == -1){
-			return;
-		}
-		
-		else if(grpNr==0 && anzahlNachbarGruppen > 1){
-			erstelleNeueGruppe(x, y);
-			
-			
-		}
-		
+		xPos = x;
+		yPos = y;
+		int grpNr = dieSpielDaten.gibGruppe(x, y);
+		int anzahlNachbarGruppen = dieSpielDaten.gibAnzahlNachbarn(x, y);
+
+		System.out.println("anzNBGRp:" + anzahlNachbarGruppen);
+
+	
 
 	}
 
@@ -163,7 +133,6 @@ public class SpielSteuerung {
 
 	private void initialisiereSpielfeld() {
 		dieSpielDaten.initialisiereSpielDaten();
-		
 
 	}
 
@@ -171,5 +140,52 @@ public class SpielSteuerung {
 		this.zustand = zustand;
 		System.out.println("Zustand:" + zustand);
 	}
+
+	@Override
+	public void run() {
+	boolean work = true;	
+	while (work) {
+			System.out.println("Steuerung runs...");
+			try {
+				switch (zustand) {
+				case KEIN_FELD_GEKLICKT:
+					dieBenutzeroberflaeche.ausgebenText(0, dieSpielDaten.berechneSpielstand());
+				    dieBenutzeroberflaeche.waitFor();
+					
+					break;
+
+				case NEUE_GRUPPE:
+					erstelleNeueGruppe(xPos, yPos);
+					dieBenutzeroberflaeche.ausgebenText(1, dieSpielDaten.berechneSpielstand());
+					dieBenutzeroberflaeche.waitFor();
+					break;
+
+				case GRUPPE_ERWEITERT:
+					erweitereGruppe(xPos, yPos, x2, y2);
+					dieBenutzeroberflaeche.waitFor();
+					break;
+
+				case FUENFZEHN_SIND_VOLL:
+
+					dieBenutzeroberflaeche.waitFor();
+					break;
+
+				case ZU_GRUPPE_ZUORDNEN:
+
+					dieBenutzeroberflaeche.waitFor();
+					break;
+
+				default:
+					break;
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
+	
 
 }
