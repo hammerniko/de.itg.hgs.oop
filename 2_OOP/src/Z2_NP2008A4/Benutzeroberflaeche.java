@@ -198,6 +198,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		for (int y = 0; y < buttons.length; y++) {
 			for (int x = 0; x < buttons.length; x++) {
 				buttons[x][y].setText(""+spielfeld[x][y]);
+				buttons[x][y].setBackground(null);
 			}
 		}
 		this.revalidate();

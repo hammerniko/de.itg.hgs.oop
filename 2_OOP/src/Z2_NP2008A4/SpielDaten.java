@@ -1,5 +1,6 @@
 package Z2_NP2008A4;
 
+import java.text.NumberFormat;
 import java.util.Vector;
 
 public class SpielDaten {
@@ -8,13 +9,13 @@ public class SpielDaten {
 	private int gruppennummer=0;
 	private int[][] wert=null;
 	private int[][] gruppe=null;
-	private Vector<Integer> gruppenSum=null;
+	private int[] gruppenSum=null;
 	
 	
 	public SpielDaten(){
 		wert = new int[6][6];
 		gruppe = new int[6][6];
-		gruppenSum = new Vector<Integer>();
+		gruppenSum = new int[36]; //summen der Gruppe 0,1,2,3
 		
 	}
 	
@@ -39,11 +40,13 @@ public class SpielDaten {
 		//Initialisiere die Gruppennummer
 		gruppennummer = 0;
 		
-		//Lösche alle Gruppensumme
-		gruppenSum.removeAllElements();
+		//Lösche alle Gruppensummen
+		for (int i = 0; i < gruppenSum.length; i++) {
+			gruppenSum[i]=0;
+		}
 	}
 
-	public int[][] getWert() {
+	public int[][] getWerte() {
 		return wert;
 	}
 
@@ -111,9 +114,9 @@ public class SpielDaten {
 		return 0;
 	}
 
-	public int gibGruppenSum(int nbGruppe) {
+	public int gibGruppenSum(int grpNr) {
 		// TODO Auto-generated method stub
-		return gruppenSum.elementAt(nbGruppe);
+		return gruppenSum[grpNr-1];
 	}
 
 	public int gibWert(int x, int y) {
@@ -128,8 +131,8 @@ public class SpielDaten {
 	 * @param y2
 	 * @param grpNr
 	 */
-	public void fuegeZuGruppe(int x2, int y2, int grpNr) {
-		gruppe[x2][y2]=grpNr;
+	public void fuegeZuGruppe(int x, int y, int grpNr) {
+		gruppe[x][y]=grpNr;
 		
 	}
 
@@ -141,10 +144,8 @@ public class SpielDaten {
 	 * @param grpNr
 	 */
 	public void erhoeheGruppenSum(int x1, int y1, int grpNr) {
-		int alterWert = gruppenSum.elementAt(grpNr);
-		
-		
-		gruppenSum.set(grpNr, alterWert+gibWert(x1, y1));
+				
+		gruppenSum[grpNr-1]+=gibWert(x1, y1);
 		
 	}
 
@@ -164,8 +165,9 @@ public class SpielDaten {
 				}
 			}
 		}
+		double spielstand = (1-anzahlFreieFelder/36.0);
+		spielstand= Math.round(spielstand * 100.0) / 100.0;
 		
-		
-		return anzahlFreieFelder/36.0;
+		return spielstand;
 	}
 }
