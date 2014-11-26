@@ -55,6 +55,7 @@ public class SpielSteuerung {
 	}
 
 	private void erstelleNeueGruppe(int x, int y) {
+		setZustand(NEUE_GRUPPE);
 
 		// Neue Gruppennummer holen
 		int neueGrp = dieSpielDaten.gibNeueGruppe();
@@ -123,11 +124,11 @@ public class SpielSteuerung {
 			return;
 		}
 		
-		//Gruppe ist noch unvollständig
-		else if(grpNr>0 && dieSpielDaten.gibGruppenSum(grpNr)<15){
+		else if(grpNr==0 && anzahlNachbarGruppen > 1){
+			erstelleNeueGruppe(x, y);
+			
 			
 		}
-
 		
 
 	}

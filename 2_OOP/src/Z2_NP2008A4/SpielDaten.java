@@ -15,7 +15,6 @@ public class SpielDaten {
 		wert = new int[6][6];
 		gruppe = new int[6][6];
 		gruppenSum = new int[36]; // summen der Gruppe 0,1,2,3
-
 	}
 
 	/**
@@ -82,7 +81,7 @@ public class SpielDaten {
 	 * @return
 	 */
 	public int gibGruppe(int x, int y) {
-		System.out.println(gruppe[x][y]);
+		//System.out.println(gruppe[x][y]);
 		return gruppe[x][y];
 	}
 
@@ -104,6 +103,8 @@ public class SpielDaten {
 		// Wenn Inhalt der Gruppe bei xNachbar > 0
 		// anzahl erhöhen
 		int[] grpNb = new int[8];
+		
+		
 		for (int i = 0; i < grpNb.length; i++) {
 			grpNb[i]=-1;
 		}
@@ -135,7 +136,9 @@ public class SpielDaten {
 	}
 
 	public int gibEindeutNachbar_XPos(int x, int y) {
-		// TODO Auto-generated method stub
+		
+		
+		
 		return 0;
 	}
 

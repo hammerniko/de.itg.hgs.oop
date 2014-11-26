@@ -36,6 +36,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	 * Konstruktor
 	 */
 	public Benutzeroberflaeche() {
+		setLookAndFeel();
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		this.setTitle("Fifteen");
 		
@@ -208,7 +209,9 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 
 	public void ausgebenAufFeld(int x, int y, int wert, int grpNr) {
-		buttons[x][y].setBackground(new Color(grpNr));
+		System.out.println("ausgabe auf Button");
+		buttons[x][y].setBackground(new Color(255-(grpNr*wert),255-(grpNr*10),255-(grpNr*10)));
+		buttons[x][y].setText(wert+"["+grpNr+"]");
 		
 	}
 	
@@ -217,4 +220,15 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		lbErgebnis.setText("Spielstand:\t"+spielstand);
 	}
 
+	/**
+	 * Für Buttons mit Hintergrundfarbe auf dem Mac
+	 */
+	private void setLookAndFeel() {
+		
+		try {
+		    UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName() );
+		 } catch (Exception e) {
+		            e.printStackTrace();
+		 }
+	}
 }
