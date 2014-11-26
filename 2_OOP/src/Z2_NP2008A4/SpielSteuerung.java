@@ -109,9 +109,36 @@ public class SpielSteuerung implements Runnable{
 		//Wenn auf ein zulässiges Feld geklickt wurde
 		if(grpNr == 0){
 			
-			//Wenn keine Nachbargruppen bestehen
+			//Ereignis 1 -> Wenn keine Nachbargruppen bestehen
 			if(anzahlNachbarGruppen == 0){
 				setZustand(NEUE_GRUPPE);
+			}
+			//Nachbargruppe eindeutig
+			else if(anzahlNachbarGruppen == 1){
+				
+				x2 = dieSpielDaten.gibEindeutNachbar_XPos(x, y);
+				y2 = dieSpielDaten.gibEindeutNachbar_YPos(x, y);
+				System.out.println("x2="+x2);
+				System.out.println("y2="+y2);
+				
+				
+				int summe = dieSpielDaten.gibGruppenSum(grpNr)+dieSpielDaten.gibWert(x, y); 
+				
+				//Fuenfzehn nicht voll
+				if(summe < 15){
+					setZustand(GRUPPE_ERWEITERT);
+				}
+				//Funefzehn ist voll
+				else if(summe == 15){
+					setZustand(FUENFZEHN_SIND_VOLL);
+				}
+				//Summe ist größer als Fuenfzehn
+				else{
+					
+
+				}
+				
+				
 			}
 			
 			
