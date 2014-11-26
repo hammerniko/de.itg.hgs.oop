@@ -10,6 +10,13 @@ public class SpielSteuerung {
 	Benutzeroberflaeche dieBenutzeroberflaeche;
 	SpielDaten dieSpielDaten;
 
+	// Konstanten
+	public static final int KEIN_FELD_GEKLICKT = 0;
+	public static final int NEUE_GRUPPE = 1;
+	public static final int GRUPPE_ERWEITERT = 2;
+	public static final int FUENFZEHN_SIND_VOLL = 3;
+	public static final int ZU_GRUPPE_ZUORDNEN = 4;
+
 	/**
 	 * Konstruktor
 	 * 
@@ -31,7 +38,7 @@ public class SpielSteuerung {
 	 * Wird aufgerufen wenn das Spiel zum ersten mal gestartet wird.
 	 */
 	public void start() {
-		
+		setZustand(0);
 		neustartClick();
 	}
 
@@ -48,21 +55,22 @@ public class SpielSteuerung {
 	}
 
 	private void erstelleNeueGruppe(int x, int y) {
-		//Neue Gruppennummer holen
+
+		// Neue Gruppennummer holen
 		int neueGrp = dieSpielDaten.gibNeueGruppe();
-		
-		//Gruppendaten speichern
+
+		// Gruppendaten speichern
 		dieSpielDaten.fuegeZuGruppe(x, y, neueGrp);
-		
-		//Gruppensumme erhöhen
+
+		// Gruppensumme erhöhen
 		dieSpielDaten.erhoeheGruppenSum(x, y, neueGrp);
-		
-		//Wert holen
+
+		// Wert holen
 		int wert = dieSpielDaten.gibWert(x, y);
-		
-		//Spielstand berechnen
+
+		// Spielstand berechnen
 		double spielstand = dieSpielDaten.berechneSpielstand();
-		
+
 		dieBenutzeroberflaeche.ausgebenAufFeld(x, y, wert, neueGrp);
 		dieBenutzeroberflaeche.ausgebenText(1, spielstand);
 
@@ -73,52 +81,62 @@ public class SpielSteuerung {
 	}
 
 	public void bearbeiteFeldClick(int x1, int y1) {
+		boolean work = true;
 
-		int gruppe = dieSpielDaten.gibGruppe(x1, y1);
-
-		// Feld ist erledigt
-		if (gruppe == -1) {
-
-		}
-
-		// feld ist noch frei
-		else if (gruppe == 0) {
-
-			int nachbarn = dieSpielDaten.gibAnzahlNachbarn(x1, y1);
-
-			// Wenn Anzahl unvollständiger Nachbargruppen ==
-			if (nachbarn == 1) {
-				int x2 = dieSpielDaten.gibEindeutNachbar_XPos(x1, y1);
-				int y2 = dieSpielDaten.gibEindeutNachbar_YPos(x1, y1);
-
-				int nbGruppe = dieSpielDaten.gibGruppe(x2, y2);
-				int gruppenSum = dieSpielDaten.gibGruppenSum(nbGruppe);
-				int wert = dieSpielDaten.gibWert(x1, y1);
-
-				erweitereGruppe(x1, y1, x2, y2);
-
-				// ...
-			}
-
-			// Feld ist frei und es gibt keine Nachbarn
-			else if (nachbarn == 0) {
-				zustand = 1;
-				erstelleNeueGruppe(x1, y1);
-				
-			}
-
-			// Feld ist frei und es gibt mehr als eine unvollständige
-			// Nachbargruppe. Nachbargruppe nicht eindeutig
-			else if (nachbarn == 2) {
-				zustand = 5;
-				dieBenutzeroberflaeche.ausgebenText(4, dieSpielDaten.berechneSpielstand());
-			}
-		}
-		
-		//Gruppenummer bei unvollständiger Gruppe
-		else{
+		while (work) {
 			
-		}
+			switch (zustand) {
+			case KEIN_FELD_GEKLICKT:
+				dieBenutzeroberflaeche.ausgebenText(0,
+						dieSpielDaten.berechneSpielstand());
+
+				//Wenn es keine Nachbargruppe gibt
+				if (dieSpielDaten.gibGruppe(x1, y1) == 0) {
+					work = true;
+					setZustand(NEUE_GRUPPE);
+					break;
+				}
+
+			case NEUE_GRUPPE:
+				erstelleNeueGruppe(x1, y1);
+
+				int grpNr = dieSpielDaten.gibGruppe(x1, y1);
+				int grpSumme = dieSpielDaten.gibGruppenSum(grpNr);
+				
+				// Wenn Anzahl unvollständiger Nachbargruppen genau 1 und 15 (nicht) voll
+				if (dieSpielDaten.gibAnzahlNachbarn(x1, y1)==1){
+					if(grpSumme<15) {
+						setZustand(GRUPPE_ERWEITERT);
+						work = true;
+						break;
+					}
+					else{
+						setZustand(FUENFZEHN_SIND_VOLL);
+						work=true;
+						break;
+					}
+				}
+
+				work = false;
+				break;
+
+			case GRUPPE_ERWEITERT:
+				
+				work = false;
+				break;
+
+			case FUENFZEHN_SIND_VOLL:
+				work = false;
+				break;
+
+			case ZU_GRUPPE_ZUORDNEN:
+
+				break;
+
+			default:
+				break;
+			}
+		}// end while
 
 	}
 
@@ -138,6 +156,8 @@ public class SpielSteuerung {
 	 * @param y2
 	 */
 	private void erweitereGruppe(int x1, int y1, int x2, int y2) {
+		setZustand(2);
+
 		int grpNr = dieSpielDaten.gibGruppe(x1, y2);
 		dieSpielDaten.fuegeZuGruppe(x2, y2, grpNr);
 		dieSpielDaten.erhoeheGruppenSum(x1, y1, grpNr);
@@ -147,10 +167,15 @@ public class SpielSteuerung {
 		dieBenutzeroberflaeche.ausgebenAufFeld(x1, y1, wert, grpNr);
 		dieBenutzeroberflaeche.ausgebenText(2, spielstand);
 	}
-	
-	private void initialisiereSpielfeld(){
+
+	private void initialisiereSpielfeld() {
 		dieSpielDaten.initialisiereSpielDaten();
-		
+
+	}
+
+	private void setZustand(int zustand) {
+		this.zustand = zustand;
+		System.out.println("Zustand:" + zustand);
 	}
 
 }

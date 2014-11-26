@@ -92,7 +92,8 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 				//und der Methode actionPerformed() übergeben.
 				buttons[x][y].addActionListener(this);
 				
-				
+				//Hintergundfarbe erlauben
+				buttons[x][y].setOpaque(true);
 				
 				//Hinzufügen der Buttons zum Container
 				pSpielfeld.add(buttons[x][y]);

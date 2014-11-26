@@ -99,8 +99,15 @@ public class SpielDaten {
 	 * @param y
 	 * @return
 	 */
-	public int gibAnzahlNachbarn(int x, int y) {
-		// TODO Auto-generated method stub
+	public int gibAnzahlNachbarn(int x1, int y1) {
+		for (int y = 0; y < gruppe.length; y++) {
+			for (int x = 0; x < gruppe.length; x++) {
+				if(gruppe[x][y]==0){
+					
+				}
+			}
+		}
+		
 		return 0;
 	}
 
