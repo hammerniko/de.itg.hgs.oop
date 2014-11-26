@@ -113,6 +113,7 @@ public class SpielDaten {
 
 		if (x < 4)
 			grpNb[0] = gibGruppe(x+1, y); // rechts
+
 		if (x > 0)
 			grpNb[1] = gibGruppe(x-1, y); // links
 		if (y < 4)
@@ -131,6 +132,7 @@ public class SpielDaten {
 		for (int i = 0; i < grpNb.length; i++) {
 			if (grpNb[i] > 0) {
 				anzahl++;
+				
 			}
 		}
 		grpNb = null;
@@ -138,58 +140,15 @@ public class SpielDaten {
 	}
 
 	public int gibEindeutNachbar_XPos(int x, int y) {
-		int xNB=-1;
-		// x nur erhöhen wenn x < xmax-1 = 4
-		// y nur erhöhen wenn y y ymax-1 = 4
-		// x nur erniedrigen wenn x > 1
-		// y nur erniedrigen wenn y > 1
-
-		if (x < 4  && gibGruppe(x+1, y) > 0)
-			xNB = x+1; // rechts
-		if (x > 0  && gibGruppe(x-1, y) > 0)
-			xNB = x-1;
-		if (y < 4  && gibGruppe(x, y+1) > 0)
-			xNB = x;
-		if (y > 0 && gibGruppe(x, y-1) > 0)
-			xNB = x;
-		if (y > 0 && x > 0 && gibGruppe(x-1, y-1) > 0)
-			xNB = x-1;
-		if (y < 4 && x < 4 && gibGruppe(x+1, y+1) > 0)
-			xNB = x+1;
-		if (y > 0 && x < 4 && gibGruppe(x+1, y-1) > 0)
-			xNB = x+1;
-		if (y < 4 && x > 0 && gibGruppe(x-1, y+1) > 0)
-			xNB = x-1;
-
-		return xNB;
+		
+		
+		
+		return 0;
 		
 	}
 
 	public int gibEindeutNachbar_YPos(int x, int y) {
-		int yNB=0;
-		// x nur erhöhen wenn x < xmax-1 = 4
-		// y nur erhöhen wenn y y ymax-1 = 4
-		// x nur erniedrigen wenn x > 1
-		// y nur erniedrigen wenn y > 1
-
-		if (x < 4  && gibGruppe(x+1, y) > 0)
-			yNB = y; // rechts
-		if (x > 0  && gibGruppe(x-1, y) > 0)
-			yNB = y;
-		if (y < 4  && gibGruppe(x, y+1) > 0)
-			yNB = y+1;
-		if (y > 0 && gibGruppe(x, y-1) > 0)
-			yNB = y-1;
-		if (y > 0 && x > 0 && gibGruppe(x-1, y-1) > 0)
-			yNB = y-1;
-		if (y < 4 && x < 4 && gibGruppe(x+1, y+1) > 0)
-			yNB = y+1;
-		if (y > 0 && x < 4 && gibGruppe(x+1, y-1) > 0)
-			yNB = y-1;
-		if (y < 4 && x > 0 && gibGruppe(x-1, y+1) > 0)
-			yNB = y+1;
-
-		return yNB;
+		return 0;
 	}
 
 	public int gibGruppenSum(int grpNr) {
