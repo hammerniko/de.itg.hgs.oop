@@ -104,7 +104,7 @@ public class SpielSteuerung implements Runnable{
 		int anzahlNachbarGruppen = dieSpielDaten.gibAnzahlNachbarn(x, y);
 		System.out.println("anzNBGRp:" + anzahlNachbarGruppen);
 		
-		dieBenutzeroberflaeche.start();
+		
 		
 		//Wenn auf ein zulässiges Feld geklickt wurde
 		if(grpNr == 0){
@@ -147,7 +147,9 @@ public class SpielSteuerung implements Runnable{
 			setZustand(KEIN_FELD_GEKLICKT);
 		}
 		
-	
+		//Nachricht von der Gui zum weiterarbeiten
+		dieBenutzeroberflaeche.start();
+		
 
 	}
 
@@ -169,8 +171,8 @@ public class SpielSteuerung implements Runnable{
 	private void erweitereGruppe(int x1, int y1, int x2, int y2) {
 		setZustand(SpielSteuerung.GRUPPE_ERWEITERT);
 
-		int grpNr = dieSpielDaten.gibGruppe(x1, y2);
-		dieSpielDaten.fuegeZuGruppe(x2, y2, grpNr);
+		int grpNr = dieSpielDaten.gibGruppe(x2, y2);
+		dieSpielDaten.fuegeZuGruppe(x1, y1, grpNr);
 		dieSpielDaten.erhoeheGruppenSum(x1, y1, grpNr);
 
 		int wert = dieSpielDaten.gibWert(x1, y1);

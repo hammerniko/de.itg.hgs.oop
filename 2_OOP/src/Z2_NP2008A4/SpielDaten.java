@@ -12,11 +12,13 @@ public class SpielDaten {
 	private int[][] wert = null;
 	private int[][] gruppe = null;
 	private int[] gruppenSum = null;
+	private int[] grpNb;
 
 	public SpielDaten() {
 		wert = new int[6][6];
 		gruppe = new int[6][6];
 		gruppenSum = new int[36]; // summen der Gruppe 0,1,2,3
+		grpNb = new int[8];
 	}
 
 	/**
@@ -104,9 +106,8 @@ public class SpielDaten {
 
 		// Wenn Inhalt der Gruppe bei xNachbar > 0
 		// anzahl erhöhen
-		int[] grpNb = new int[8];
 		
-		
+		//Initialisieren
 		for (int i = 0; i < grpNb.length; i++) {
 			grpNb[i]=-1;
 		}
@@ -135,20 +136,68 @@ public class SpielDaten {
 				
 			}
 		}
-		grpNb = null;
+		
 		return anzahl;
 	}
 
 	public int gibEindeutNachbar_XPos(int x, int y) {
+		int nachbargruppennummer=0;
+		int xPos=0;
+		
+		for (int i = 0; i < grpNb.length; i++) {
+			if(grpNb[i]>0){
+				nachbargruppennummer = grpNb[i];
+				break;
+			}
+			
+		}
+		
+		for (int i = 0; i < gruppe.length; i++) {
+			for (int j = 0; j < gruppe.length; j++) {
+				if(gruppe[j][i]==nachbargruppennummer && (x-1<i && i<=x+1 && j<=y+1 && j>y-1)) {
+					xPos = j;
+					break;
+				}
+			}
+		}
 		
 		
 		
-		return 0;
+		
+		return xPos;
 		
 	}
 
 	public int gibEindeutNachbar_YPos(int x, int y) {
-		return 0;
+		int nachbargruppennummer=0;
+		int yPos=0;
+		
+		//In einer der grpNB muss ein Wert größer 0 stehen
+		//Wenn der gefunden wurde, kann abgebrochen werden.
+		for (int i = 0; i < grpNb.length; i++) {
+			if(grpNb[i]>0){
+				nachbargruppennummer = grpNb[i];
+				break;
+			}
+			
+		}
+		
+		//Suche im Array gruppe nach dem Feld mit der gefundenen Gruppennummer
+		//Liegt dieses im Bereich +-1 Feld zum geklickten Feld x,y
+		//ist es das Nachbarfeld
+		for (int i = 0; i < gruppe.length; i++) {
+			for (int j = 0; j < gruppe.length; j++) {
+				if(gruppe[j][i]==nachbargruppennummer && (x-1<i && i<=x+1 && j<=y+1 && j>y-1)) {
+					yPos = i;
+					break;
+				}
+			}
+		}
+		
+		
+		
+		
+		return yPos;
 	}
 
 	public int gibGruppenSum(int grpNr) {
