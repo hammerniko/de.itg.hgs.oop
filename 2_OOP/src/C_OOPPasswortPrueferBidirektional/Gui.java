@@ -180,7 +180,7 @@ public class Gui extends JFrame {
 		lbStatus.setText(meldung[meldungNr]);
 	}
 	
-	public void clickedOk(){
+	private void clickedOk(){
 		String name = tfBenutzername.getText();
 		String pwd = pfPasswort.getText();
 		
@@ -190,7 +190,7 @@ public class Gui extends JFrame {
 		
 	}
 	
-	public void clickedCancel(){
+	private void clickedCancel(){
 		tfBenutzername.setText("");
 		pfPasswort.setText("");
 		aktualisiereStatus(0);
