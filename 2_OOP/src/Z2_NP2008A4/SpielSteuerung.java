@@ -7,6 +7,8 @@ public class SpielSteuerung implements Runnable{
 	private int yPos;
 	private int x2;
 	private int y2;
+	private int grpNr;
+	private int nbGrpNr;
 	private Thread t;
 	private boolean work;
 
@@ -61,9 +63,10 @@ public class SpielSteuerung implements Runnable{
 	private void gibSpielfeldAus() {
 		// hole Spielfelddaten
 		int[][] sf = dieSpielDaten.getWerte();
+		
 
 		// sende Spielfelddaten an Oberfläche
-		dieBenutzeroberflaeche.aktualisiereSpiefeld(sf);
+		dieBenutzeroberflaeche.aktualisiereSpiefeld(sf, dieSpielDaten.getGruppe());
 
 	}
 
@@ -88,17 +91,16 @@ public class SpielSteuerung implements Runnable{
 
 	}
 
-	private void schliesseGruppe(int x1, int y1, int x2, int y2) {
-		dieSpielDaten.schliesseGruppe(x1, y1, x2, y2);
-		dieBenutzeroberflaeche.ausgebenAufFeld(x1, y1,
-				dieSpielDaten.gibWert(x1, y1), dieSpielDaten.gibGruppe(x1, y1));
+	private void schliesseGruppe(int grpNr) {
+		dieSpielDaten.schliesseGruppe(grpNr);
+		
 
 	}
 
 	public void bearbeiteFeldClick(int x, int y) {
 		xPos = x;
 		yPos = y;
-		int grpNr = dieSpielDaten.gibGruppe(x, y);
+		grpNr = dieSpielDaten.gibGruppe(x, y);
 		System.out.println("gehört zu Gruppe:"+grpNr);
 		
 		int anzahlNachbarGruppen = dieSpielDaten.gibAnzahlNachbarn(x, y);
@@ -121,7 +123,9 @@ public class SpielSteuerung implements Runnable{
 				System.out.println("x2="+x2);
 				System.out.println("y2="+y2);
 				
-				int nbGrpNr = dieSpielDaten.gibGruppe(x2, y2);
+				nbGrpNr = dieSpielDaten.gibGruppe(x2, y2);
+				System.out.println("Nachbargruppe:="+nbGrpNr);
+				
 				int summe = dieSpielDaten.gibGruppenSum(nbGrpNr)+dieSpielDaten.gibWert(x, y); 
 				
 				//Fuenfzehn nicht voll
@@ -131,11 +135,14 @@ public class SpielSteuerung implements Runnable{
 				//Funefzehn ist voll
 				else if(summe == 15){
 					setZustand(FUENFZEHN_SIND_VOLL);
+					
+					
+					
 				}
 				//Summe ist größer als Fuenfzehn
 				else{
-					schliesseGruppe(x, y, x2, y2);
-					setZustand(KEIN_FELD_GEKLICKT);
+					
+					setZustand(NEUE_GRUPPE);
 				}
 				
 				
@@ -143,8 +150,14 @@ public class SpielSteuerung implements Runnable{
 			
 			
 		}
-		else{
-			setZustand(KEIN_FELD_GEKLICKT);
+		else if(anzahlNachbarGruppen>1){
+			int xalt = x;
+			int yalt = y;
+			
+			
+			System.out.println("Auswahl der Nachbargruppe");
+			
+			setZustand(ZU_GRUPPE_ZUORDNEN);
 		}
 		
 		//Nachricht von der Gui zum weiterarbeiten
@@ -155,7 +168,7 @@ public class SpielSteuerung implements Runnable{
 
 	public void neustartClick() {
 		initialisiereSpielfeld();
-		dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWerte());
+		dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWerte(),dieSpielDaten.getGruppe());
 		dieBenutzeroberflaeche.ausgebenText(0, 0);
 	}
 
@@ -226,8 +239,15 @@ public class SpielSteuerung implements Runnable{
 					break;
 
 				case FUENFZEHN_SIND_VOLL:
-					schliesseGruppe(xPos, yPos, x2, y2);
+					
+					dieSpielDaten.fuegeZuGruppe(xPos, yPos, nbGrpNr);
+					dieSpielDaten.erhoeheGruppenSum(xPos, yPos, nbGrpNr);
+
+					int wert = dieSpielDaten.gibWert(xPos, yPos);
+					dieBenutzeroberflaeche.ausgebenAufFeld(xPos, yPos, wert, nbGrpNr);
+					schliesseGruppe(nbGrpNr);
 					dieBenutzeroberflaeche.ausgebenText(3, dieSpielDaten.berechneSpielstand());
+					dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWerte(),dieSpielDaten.getGruppe());
 					dieBenutzeroberflaeche.waitFor();
 					break;
 

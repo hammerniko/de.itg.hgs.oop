@@ -200,11 +200,15 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		dieSpielSteuerung.neustartClick();
 	}
 	
-	public void aktualisiereSpiefeld(int[][] spielfeld){
+	public void aktualisiereSpiefeld(int[][] spielfeld, int gruppe[][]){
 		for (int y = 0; y < buttons.length; y++) {
 			for (int x = 0; x < buttons.length; x++) {
 				buttons[x][y].setText(""+spielfeld[x][y]);
-				buttons[x][y].setBackground(null);
+				if(gruppe[x][y]==-1){
+					buttons[x][y].setBackground(Color.GREEN);
+				}
+				
+				
 			}
 		}
 		this.revalidate();
@@ -247,12 +251,12 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 
 		synchronized void waitFor() throws Exception {
-		    System.out.println(Thread.currentThread().getName()+ " is entering waitFor().");
+		    //System.out.println(Thread.currentThread().getName()+ " is entering waitFor().");
 		     
 		        wait();
 		        
 
-		    System.out.println(Thread.currentThread().getName() + " resuming execution.");
+		    //System.out.println(Thread.currentThread().getName() + " resuming execution.");
 		  }
 		  
 		  synchronized void start() {

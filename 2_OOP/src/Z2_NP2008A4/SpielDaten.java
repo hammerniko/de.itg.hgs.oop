@@ -189,12 +189,12 @@ public class SpielDaten {
 		switch (nachbargruppennummer) {
 		case 0: yPos = y; break;
 		case 1: yPos = y; break;
-		case 2: yPos = y-1; break;
-		case 3: yPos = y+1; break;
-		case 4: yPos = y+1; break;
-		case 5: yPos = y-1; break;
-		case 6: yPos = y+1; break;
-		case 7: yPos = y-1; break;
+		case 2: yPos = y+1; break;
+		case 3: yPos = y-1; break;
+		case 4: yPos = y-1; break;
+		case 5: yPos = y+1; break;
+		case 6: yPos = y-1; break;
+		case 7: yPos = y+1; break;
 
 		default:
 			break;
@@ -235,9 +235,14 @@ public class SpielDaten {
 	 * @param grpNr
 	 */
 	public void erhoeheGruppenSum(int x1, int y1, int grpNr) {
+		
+		gruppenSum[grpNr] = gruppenSum[grpNr]+gibWert(x1, y1);
+		System.out.println("Neue Gruppensumme von "+grpNr+" = "+gruppenSum[grpNr]);
 
-		gruppenSum[grpNr - 1] += gibWert(x1, y1);
+	}
 
+	public int[][] getGruppe() {
+		return gruppe;
 	}
 
 	/**
@@ -261,9 +266,14 @@ public class SpielDaten {
 		return spielstand;
 	}
 
-	public void schliesseGruppe(int x1, int y1, int x2, int y2) {
-		gruppe[x1][y1]=-1;
-		gruppe[x2][y2]=-1;
+	public void schliesseGruppe(int grpNr) {
+		for (int i = 0; i < gruppe.length; i++) {
+			for (int j = 0; j < gruppe.length; j++) {
+				if(gruppe[i][j]==grpNr && grpNr > 0 ){
+					gruppe[i][j] = -1;
+				}
+			}
+		}
 		
 	}
 }
