@@ -141,34 +141,38 @@ public class SpielDaten {
 	}
 
 	public int gibEindeutNachbar_XPos(int x, int y) {
+		
 		int nachbargruppennummer=0;
 		int xPos=0;
 		
 		for (int i = 0; i < grpNb.length; i++) {
 			if(grpNb[i]>0){
-				nachbargruppennummer = grpNb[i];
+				nachbargruppennummer = i;
 				break;
 			}
 			
 		}
 		
-		for (int i = 0; i < gruppe.length; i++) {
-			for (int j = 0; j < gruppe.length; j++) {
-				if(gruppe[j][i]==nachbargruppennummer && (x-1<i && i<=x+1 && j<=y+1 && j>y-1)) {
-					xPos = j;
-					break;
-				}
-			}
+		switch (nachbargruppennummer) {
+		case 0: xPos = x+1; break;
+		case 1: xPos = x-1; break;
+		case 2: xPos = x; break;
+		case 3: xPos = x; break;
+		case 4: xPos = x-1; break;
+		case 5: xPos = x+1; break;
+		case 6: xPos = x+1; break;
+		case 7: xPos = x-1; break;
+
+		default:
+			break;
 		}
-		
-		
-		
 		
 		return xPos;
 		
 	}
 
 	public int gibEindeutNachbar_YPos(int x, int y) {
+		
 		int nachbargruppennummer=0;
 		int yPos=0;
 		
@@ -176,25 +180,26 @@ public class SpielDaten {
 		//Wenn der gefunden wurde, kann abgebrochen werden.
 		for (int i = 0; i < grpNb.length; i++) {
 			if(grpNb[i]>0){
-				nachbargruppennummer = grpNb[i];
+				nachbargruppennummer = i;
 				break;
 			}
 			
 		}
 		
-		//Suche im Array gruppe nach dem Feld mit der gefundenen Gruppennummer
-		//Liegt dieses im Bereich +-1 Feld zum geklickten Feld x,y
-		//ist es das Nachbarfeld
-		for (int i = 0; i < gruppe.length; i++) {
-			for (int j = 0; j < gruppe.length; j++) {
-				if(gruppe[j][i]==nachbargruppennummer && (x-1<i && i<=x+1 && j<=y+1 && j>y-1)) {
-					yPos = i;
-					break;
-				}
-			}
+		switch (nachbargruppennummer) {
+		case 0: yPos = y; break;
+		case 1: yPos = y; break;
+		case 2: yPos = y-1; break;
+		case 3: yPos = y+1; break;
+		case 4: yPos = y+1; break;
+		case 5: yPos = y-1; break;
+		case 6: yPos = y+1; break;
+		case 7: yPos = y-1; break;
+
+		default:
+			break;
+		
 		}
-		
-		
 		
 		
 		return yPos;

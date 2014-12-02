@@ -121,8 +121,8 @@ public class SpielSteuerung implements Runnable{
 				System.out.println("x2="+x2);
 				System.out.println("y2="+y2);
 				
-				
-				int summe = dieSpielDaten.gibGruppenSum(grpNr)+dieSpielDaten.gibWert(x, y); 
+				int nbGrpNr = dieSpielDaten.gibGruppe(x2, y2);
+				int summe = dieSpielDaten.gibGruppenSum(nbGrpNr)+dieSpielDaten.gibWert(x, y); 
 				
 				//Fuenfzehn nicht voll
 				if(summe < 15){
@@ -134,8 +134,8 @@ public class SpielSteuerung implements Runnable{
 				}
 				//Summe ist größer als Fuenfzehn
 				else{
-					
-
+					schliesseGruppe(x, y, x2, y2);
+					setZustand(KEIN_FELD_GEKLICKT);
 				}
 				
 				
