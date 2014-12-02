@@ -16,7 +16,8 @@ public class StartKlasse {
 				/**
 				 * Spielsteuerung kennt die Benutzeroberflaeche
 				 */
-				SpielSteuerung s = new SpielSteuerung(b);
+				SpielSteuerung s = new SpielSteuerung("steuerung",b);
+				s.start();
 
 			}
 		});

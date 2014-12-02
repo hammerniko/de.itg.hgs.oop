@@ -4,18 +4,21 @@ import java.text.NumberFormat;
 import java.util.Vector;
 
 public class SpielDaten {
+	
+	
 
 	// Attribute
 	private int gruppennummer = 0;
 	private int[][] wert = null;
 	private int[][] gruppe = null;
 	private int[] gruppenSum = null;
+	private int[] grpNb;
 
 	public SpielDaten() {
 		wert = new int[6][6];
 		gruppe = new int[6][6];
 		gruppenSum = new int[36]; // summen der Gruppe 0,1,2,3
-
+		grpNb = new int[8];
 	}
 
 	/**
@@ -82,7 +85,7 @@ public class SpielDaten {
 	 * @return
 	 */
 	public int gibGruppe(int x, int y) {
-		System.out.println(gruppe[x][y]);
+		//System.out.println(gruppe[x][y]);
 		return gruppe[x][y];
 	}
 
@@ -103,50 +106,103 @@ public class SpielDaten {
 
 		// Wenn Inhalt der Gruppe bei xNachbar > 0
 		// anzahl erhöhen
-		int[] grpNb = new int[8];
+		
+		//Initialisieren
 		for (int i = 0; i < grpNb.length; i++) {
 			grpNb[i]=-1;
 		}
 
 		if (x < 4)
-			grpNb[0] = gibGruppe(x++, y); // rechts
+			grpNb[0] = gibGruppe(x+1, y); // rechts
+
 		if (x > 0)
-			grpNb[1] = gibGruppe(x--, y); // links
+			grpNb[1] = gibGruppe(x-1, y); // links
 		if (y < 4)
-			grpNb[2] = gibGruppe(x, y++); // unten
+			grpNb[2] = gibGruppe(x, y+1); // unten
 		if (y > 0)
-			grpNb[3] = gibGruppe(x, y--); // oben
+			grpNb[3] = gibGruppe(x, y-1); // oben
 		if (y > 0 && x > 0)
-			grpNb[4] = gibGruppe(x--, y--); // linke untere Ecke
+			grpNb[4] = gibGruppe(x-1, y-1); // linke untere Ecke
 		if (y < 4 && x < 4)
-			grpNb[5] = gibGruppe(x++, y++); // rechte untere Ecke
+			grpNb[5] = gibGruppe(x+1, y+1); // rechte untere Ecke
 		if (y > 0 && x < 4)
-			grpNb[6] = gibGruppe(x++, y--); // rechte obere Ecke
+			grpNb[6] = gibGruppe(x+1, y-1); // rechte obere Ecke
 		if (y < 4 && x > 0)
-			grpNb[7] = gibGruppe(x--, y++); // linke obere Ecke
+			grpNb[7] = gibGruppe(x-1, y+1); // linke obere Ecke
 
 		for (int i = 0; i < grpNb.length; i++) {
-			if (grpNb[i] >= 0) {
+			if (grpNb[i] > 0) {
 				anzahl++;
+				
 			}
 		}
-		grpNb = null;
+		
 		return anzahl;
 	}
 
 	public int gibEindeutNachbar_XPos(int x, int y) {
-		// TODO Auto-generated method stub
-		return 0;
+		int nachbargruppennummer=0;
+		int xPos=0;
+		
+		for (int i = 0; i < grpNb.length; i++) {
+			if(grpNb[i]>0){
+				nachbargruppennummer = grpNb[i];
+				break;
+			}
+			
+		}
+		
+		for (int i = 0; i < gruppe.length; i++) {
+			for (int j = 0; j < gruppe.length; j++) {
+				if(gruppe[j][i]==nachbargruppennummer && (x-1<i && i<=x+1 && j<=y+1 && j>y-1)) {
+					xPos = j;
+					break;
+				}
+			}
+		}
+		
+		
+		
+		
+		return xPos;
+		
 	}
 
 	public int gibEindeutNachbar_YPos(int x, int y) {
-		// TODO Auto-generated method stub
-		return 0;
+		int nachbargruppennummer=0;
+		int yPos=0;
+		
+		//In einer der grpNB muss ein Wert größer 0 stehen
+		//Wenn der gefunden wurde, kann abgebrochen werden.
+		for (int i = 0; i < grpNb.length; i++) {
+			if(grpNb[i]>0){
+				nachbargruppennummer = grpNb[i];
+				break;
+			}
+			
+		}
+		
+		//Suche im Array gruppe nach dem Feld mit der gefundenen Gruppennummer
+		//Liegt dieses im Bereich +-1 Feld zum geklickten Feld x,y
+		//ist es das Nachbarfeld
+		for (int i = 0; i < gruppe.length; i++) {
+			for (int j = 0; j < gruppe.length; j++) {
+				if(gruppe[j][i]==nachbargruppennummer && (x-1<i && i<=x+1 && j<=y+1 && j>y-1)) {
+					yPos = i;
+					break;
+				}
+			}
+		}
+		
+		
+		
+		
+		return yPos;
 	}
 
 	public int gibGruppenSum(int grpNr) {
 		// TODO Auto-generated method stub
-		return gruppenSum[grpNr - 1];
+		return gruppenSum[grpNr];
 	}
 
 	public int gibWert(int x, int y) {
@@ -163,7 +219,6 @@ public class SpielDaten {
 	 */
 	public void fuegeZuGruppe(int x, int y, int grpNr) {
 		gruppe[x][y] = grpNr;
-
 	}
 
 	/**
@@ -199,5 +254,11 @@ public class SpielDaten {
 		spielstand = Math.round(spielstand * 100.0) / 100.0;
 
 		return spielstand;
+	}
+
+	public void schliesseGruppe(int x1, int y1, int x2, int y2) {
+		gruppe[x1][y1]=-1;
+		gruppe[x2][y2]=-1;
+		
 	}
 }

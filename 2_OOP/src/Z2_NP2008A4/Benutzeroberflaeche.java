@@ -13,7 +13,9 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Benutzeroberflaeche extends JFrame implements ActionListener {
-
+	boolean ready = false;
+	
+	
 	// Deklaration fuer die Assoziation zur Steuerung
 	SpielSteuerung dieSpielSteuerung;
 
@@ -36,7 +38,8 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	 * Konstruktor
 	 */
 	public Benutzeroberflaeche() {
-		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setLookAndFeel();
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setTitle("Fifteen");
 		
 		initText();
@@ -47,12 +50,13 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 
 	private void initText() {
-		text = new String[5];
+		text = new String[6];
 		text[0]="<html><body>Klicke zusammenhängende Felder an,<br>\n die in der Summe 15 ergeben</body></html>";
 		text[1]="Neue Gruppe!";
 		text[2]="Gruppe erweitert";
 		text[3]="15 sind voll";
 		text[4]="Welcher Gruppe soll das Feld zugeordnet werden? Klicke auf Gruppe!";
+		text[5]="bereits belegt";
 		
 	}
 
@@ -138,6 +142,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	public void feldClick(int x, int y) {
 		System.out.println("feldClick("+x+","+y+")");
 		//Botschaft an die Spielsteuerung
+		
 		dieSpielSteuerung.bearbeiteFeldClick(x, y);
 
 	}
@@ -208,7 +213,17 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 
 	public void ausgebenAufFeld(int x, int y, int wert, int grpNr) {
-		buttons[x][y].setBackground(new Color(grpNr));
+		System.out.println("ausgabe auf Button");
+		if(grpNr==-1){
+			buttons[x][y].setBackground(Color.green);
+		}
+		else{
+			buttons[x][y].setBackground(new Color(255-(grpNr*wert),255-(grpNr*10),255-(grpNr*10)));
+		}
+		
+		
+		
+		buttons[x][y].setText(wert+"["+grpNr+"]");
 		
 	}
 	
@@ -217,4 +232,36 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		lbErgebnis.setText("Spielstand:\t"+spielstand);
 	}
 
-}
+	/**
+	 * Für Buttons mit Hintergrundfarbe auf dem Mac
+	 */
+	private void setLookAndFeel() {
+		
+		try {
+		    UIManager.setLookAndFeel( UIManager.getCrossPlatformLookAndFeelClassName() );
+		 } catch (Exception e) {
+		            e.printStackTrace();
+		 }
+	}
+
+
+
+		synchronized void waitFor() throws Exception {
+		    System.out.println(Thread.currentThread().getName()+ " is entering waitFor().");
+		     
+		        wait();
+		        
+
+		    System.out.println(Thread.currentThread().getName() + " resuming execution.");
+		  }
+		  
+		  synchronized void start() {
+		    ready = true;
+		    notify();
+		  }
+
+
+		
+		  
+	}
+
