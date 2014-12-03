@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>50</x>
-      <y>330</y>
+      <y>320</y>
       <w>360</w>
       <h>310</h>
     </coordinates>
@@ -36,7 +36,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>580</x>
-      <y>370</y>
+      <y>360</y>
       <w>280</w>
       <h>280</h>
     </coordinates>
@@ -58,14 +58,15 @@ bg=yellow</panel_attributes>
 +gibWert(int x, int y): int
 
 
-bg=pink</panel_attributes>
+bg=pink
+layer=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>60</x>
-      <y>10</y>
+      <y>0</y>
       <w>350</w>
       <h>110</h>
     </coordinates>
@@ -84,7 +85,7 @@ bg=orange</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>620</x>
-      <y>150</y>
+      <y>140</y>
       <w>190</w>
       <h>70</h>
     </coordinates>
@@ -100,7 +101,7 @@ bg=light_gray</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>400</x>
-      <y>480</y>
+      <y>470</y>
       <w>200</w>
       <h>50</h>
     </coordinates>
@@ -113,7 +114,7 @@ r1=dieSpieldaten</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>110</y>
+      <y>100</y>
       <w>150</w>
       <h>240</h>
     </coordinates>
@@ -128,7 +129,7 @@ r2=dieBenutzeroberflaeche</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>400</x>
-      <y>170</y>
+      <y>160</y>
       <w>240</w>
       <h>270</h>
     </coordinates>
