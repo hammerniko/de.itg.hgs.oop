@@ -1,18 +1,22 @@
 package Z3_NP2008A4;
 
+import java.util.Vector;
+
 public class SpielSteuerung{
 	
-	
+	// Assoziationen
+	Benutzeroberflaeche dieBenutzeroberflaeche;
+	Vector<Gruppe> gruppen;
 	
 
 	
 
 	public SpielSteuerung(String string, Benutzeroberflaeche b) {
-		// TODO Auto-generated constructor stub
+		dieBenutzeroberflaeche = b;
+		gruppen = new Vector<Gruppe>();
 	}
 
-	// Assoziationen
-	Benutzeroberflaeche dieBenutzeroberflaeche;
+	
 
 	public void bearbeiteFeldClick(int x, int y) {
 		// TODO Auto-generated method stub
@@ -20,9 +24,15 @@ public class SpielSteuerung{
 	}
 
 	public void neustartClick() {
-		// TODO Auto-generated method stub
+		//
 		
 	}
+	
+	public void erstelleNeueGruppe(Feld feld){
+		gruppen.add(new Gruppe(feld));
+		
+	}
+	
 	
 	
 	

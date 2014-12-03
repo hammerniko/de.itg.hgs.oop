@@ -3,6 +3,8 @@ package Z2_NP2008A4;
 public class SpielSteuerung implements Runnable{
 	// Attribute
 	private int zustand;
+	private int xAlt;
+	private int yAlt;
 	private int xPos;
 	private int yPos;
 	private int x2;
@@ -141,7 +143,7 @@ public class SpielSteuerung implements Runnable{
 				}
 				//Summe ist größer als Fuenfzehn
 				else if (summe>15){
-					
+					System.out.println("Gruppe zu groß");
 					setZustand(NEUE_GRUPPE);
 				}
 				
@@ -151,11 +153,11 @@ public class SpielSteuerung implements Runnable{
 			
 		}
 		else if(anzahlNachbarGruppen>1){
-			int xalt = x;
-			int yalt = y;
+			 //merken des zuerst angeklickten Feldes
+			 xAlt = x;
+			 yAlt = y;
 			
-			
-			System.out.println("Auswahl der Nachbargruppe");
+			 
 			
 			setZustand(ZU_GRUPPE_ZUORDNEN);
 		}
@@ -253,6 +255,7 @@ public class SpielSteuerung implements Runnable{
 
 				case ZU_GRUPPE_ZUORDNEN:
 					dieBenutzeroberflaeche.ausgebenText(4, dieSpielDaten.berechneSpielstand());
+					zuordnenZuGruppe();
 					dieBenutzeroberflaeche.waitFor();
 					break;
 					
@@ -269,6 +272,17 @@ public class SpielSteuerung implements Runnable{
 				e.printStackTrace();
 			}
 		}
+	}
+
+	private void zuordnenZuGruppe() {
+		
+		int grp = dieSpielDaten.gibGruppe(xPos, yPos);
+		
+		System.out.println("Zugeordnet zu Gruppe"+grp);
+		
+		
+		
+		
 	}
 	
 	

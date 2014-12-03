@@ -7,7 +7,7 @@ import javax.swing.JButton;
  * @author nikolaihammer
  *
  */
-public class Feld extends JButton{
+public class Feld {
 	
 	private int wert;
 	private int posX;
@@ -15,11 +15,11 @@ public class Feld extends JButton{
 	
 	public Feld( int posX, int posY) {
 	
-		this.wert = 0;
+		this.wert = (int) (Math.random()*9+1);
 		this.posX = posX;
 		this.posY = posY;
 		
-		setOpaque(true);
+		
 	}
 
 	

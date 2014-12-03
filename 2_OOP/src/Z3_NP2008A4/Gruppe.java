@@ -12,28 +12,32 @@ import java.util.Vector;
 
 public class Gruppe {
 	
-	private int nummer;
+	private int nr;
 	private Color farbe;
 	private Vector<Feld> felder;
 	private static int anzahlGruppen=0;
 	private static final int MAX_GRUPPENSUMME = 15;
 	
+	/**
+	 * Eine Gruppe mit mindestens einem Feld
+	 * @param feld
+	 */
 	public Gruppe(Feld feld) {
 		anzahlGruppen++;
-		nummer = anzahlGruppen;
+		nr = anzahlGruppen;
 		
 		felder = new Vector<Feld>();
 		addFeld(feld);
 		
-		farbe = new Color(255-nummer*10,255-nummer*10,255-nummer*10);
+		farbe = new Color(255-nr*10,255-nr*10,255-nr*10);
 	}
 
 	public void addFeld(Feld feld){
 		felder.add(feld);
 	}
 	
-	public void removeFeld(int index){
-		felder.remove(index);
+	public void removeFeld(int x, int y){
+		
 	}
 	
 	
@@ -45,12 +49,12 @@ public class Gruppe {
 
 
 	public int getNummer() {
-		return nummer;
+		return nr;
 	}
 
 
 	public void setNummer(int nummer) {
-		this.nummer = nummer;
+		this.nr = nummer;
 	}
 
 

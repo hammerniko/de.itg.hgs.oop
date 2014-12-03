@@ -220,7 +220,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 
 	public void ausgebenAufFeld(int x, int y, int wert, int grpNr) {
-		System.out.println("ausgabe auf Button");
+		//System.out.println("ausgabe auf Button");
 		if(grpNr==-1){
 			buttons[x][y].setBackground(Color.green);
 		}
