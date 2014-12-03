@@ -9,6 +9,11 @@ import javax.swing.JButton;
  */
 public class Feld {
 	
+	@Override
+	public String toString() {
+		return "Feld [wert=" + wert + ", posX=" + posX + ", posY=" + posY + "]";
+	}
+
 	private int wert;
 	private int posX;
 	private int posY;

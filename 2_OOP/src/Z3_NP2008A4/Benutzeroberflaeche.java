@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Benutzeroberflaeche extends JFrame implements ActionListener {
+	//Variable für Benachrichtigung der Steuerung über notify
 	boolean ready = false;
 
 	// Deklaration fuer die Assoziation zur Steuerung
@@ -25,7 +26,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	JButton btNeustart;
 	JLabel lbStatus;
 	JLabel lbErgebnis;
-	Feld[][] buttons;
+	//Feld[][] buttons;
 	String[] text;
 
 	// Konstanten
@@ -62,7 +63,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	 * Initialisiert die grafischen Komponenten und Container der Oberfl??che
 	 */
 	private void initKomponents() {
-		buttons = new Feld[6][6];
+		
 
 		pContenPane = new JPanel();
 		pSpielfeld = new JPanel();
@@ -78,6 +79,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		for (int y = 0; y < 6; y++) {
 
 			for (int x = 0; x < 6; x++) {
+				
 				pSpielfeld.add(new MyButton(new Feld(x, y)));
 
 			}
@@ -138,18 +140,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(btNeustart)) {
-			neustartClick();
-		} else {
-
-			// Das erste Zeichen des ActionCommands enth??lt den Wert der
-			// xPos im Array buttons[x][y]. Das dritte Zeichen enth??lt den
-			// yPos Wert.
-			int x = Integer.parseInt(e.getActionCommand().substring(0, 1));
-			int y = Integer.parseInt(e.getActionCommand().substring(2, 3));
-
-			feldClick(x, y);
-		}
+	
 	}
 
 	/**

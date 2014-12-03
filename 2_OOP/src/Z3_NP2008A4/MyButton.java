@@ -6,14 +6,18 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
-public class MyButton extends JButton {
-	
+public class MyButton extends JButton{
+		
 		Feld dasFeld;
 	
 	public MyButton(Feld feld){
+		
 		dasFeld = feld;
 		setText(""+dasFeld.getWert());
 		setBackground(Color.GRAY);
 		
+		
 	}
+
+	
 }
