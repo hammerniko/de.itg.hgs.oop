@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.1">
-  <zoom_level>5</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>35</x>
-      <y>260</y>
-      <w>180</w>
-      <h>155</h>
+      <x>50</x>
+      <y>330</y>
+      <w>360</w>
+      <h>310</h>
     </coordinates>
     <panel_attributes>SpielSteuerung
 --
@@ -35,10 +35,39 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>40</x>
-      <y>100</y>
-      <w>175</w>
-      <h>55</h>
+      <x>580</x>
+      <y>370</y>
+      <w>280</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>SpielDaten
+--
+-wert: int[][]
+-gruppe: int[][]
+-gruppenSum: Vector&lt;Integer&gt;
+--
++SpielDaten(): ctor
++initialisiereSpielDaten(): void
++gibNeueGruppe(): int
++gibGruppeFrei(int gruppe): void
++gibGruppe(int x, int y): int
++gibNachbarn(int x, int y): int
++gibEindeutNachbar_XPos(int x, int y): int
++gibEindeutNachbar_YPos(int x, int y): int
++gibGruppenSum(int nbGruppe): int
++gibWert(int x, int y): int
+
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>10</y>
+      <w>350</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>Benutzeroberflaeche
 --
@@ -54,10 +83,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>340</y>
-      <w>95</w>
-      <h>35</h>
+      <x>620</x>
+      <y>150</y>
+      <w>190</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>StartKlasse
 --
@@ -70,10 +99,23 @@ bg=light_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
-      <y>150</y>
-      <w>75</w>
-      <h>120</h>
+      <x>400</x>
+      <y>480</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=dieSpieldaten</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>110</y>
+      <w>150</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -85,35 +127,12 @@ r2=dieBenutzeroberflaeche</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>300</y>
-      <w>150</w>
-      <h>65</h>
+      <x>400</x>
+      <y>170</y>
+      <w>240</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;280.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>320</x>
-      <y>150</y>
-      <w>105</w>
-      <h>95</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
-Package::FatClass
-{Some Properties}
---
--id: Long
-_-ClassAttribute: Long_
---
-#Operation(i: int): int
-/+AbstractOperation()/
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes>
-    <additional_attributes/>
+    <additional_attributes>10.0;250.0;220.0;10.0</additional_attributes>
   </element>
 </diagram>

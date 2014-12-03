@@ -1,4 +1,4 @@
-package Z2_NP2008A4;
+package Z3_NP2008A4;
 
 public class SpielSteuerung implements Runnable{
 	// Attribute
@@ -7,8 +7,6 @@ public class SpielSteuerung implements Runnable{
 	private int yPos;
 	private int x2;
 	private int y2;
-	private int grpNr;
-	private int nbGrpNr;
 	private Thread t;
 	private boolean work;
 
@@ -63,10 +61,9 @@ public class SpielSteuerung implements Runnable{
 	private void gibSpielfeldAus() {
 		// hole Spielfelddaten
 		int[][] sf = dieSpielDaten.getWerte();
-		
 
-		// sende Spielfelddaten an Oberfläche
-		dieBenutzeroberflaeche.aktualisiereSpiefeld(sf, dieSpielDaten.getGruppe());
+		// sende Spielfelddaten an Oberfl??che
+		dieBenutzeroberflaeche.aktualisiereSpiefeld(sf);
 
 	}
 
@@ -77,7 +74,7 @@ public class SpielSteuerung implements Runnable{
 		// Gruppendaten speichern
 		dieSpielDaten.fuegeZuGruppe(x, y, neueGrp);
 
-		// Gruppensumme erhöhen
+		// Gruppensumme erh??hen
 		dieSpielDaten.erhoeheGruppenSum(x, y, neueGrp);
 
 		// Wert holen
@@ -91,24 +88,25 @@ public class SpielSteuerung implements Runnable{
 
 	}
 
-	private void schliesseGruppe(int grpNr) {
-		dieSpielDaten.schliesseGruppe(grpNr);
-		
+	private void schliesseGruppe(int x1, int y1, int x2, int y2) {
+		dieSpielDaten.schliesseGruppe(x1, y1, x2, y2);
+		dieBenutzeroberflaeche.ausgebenAufFeld(x1, y1,
+				dieSpielDaten.gibWert(x1, y1), dieSpielDaten.gibGruppe(x1, y1));
 
 	}
 
 	public void bearbeiteFeldClick(int x, int y) {
 		xPos = x;
 		yPos = y;
-		grpNr = dieSpielDaten.gibGruppe(x, y);
-		System.out.println("gehört zu Gruppe:"+grpNr);
+		int grpNr = dieSpielDaten.gibGruppe(x, y);
+		System.out.println("geh??rt zu Gruppe:"+grpNr);
 		
 		int anzahlNachbarGruppen = dieSpielDaten.gibAnzahlNachbarn(x, y);
 		System.out.println("anzNBGRp:" + anzahlNachbarGruppen);
 		
 		
 		
-		//Wenn auf ein zulässiges Feld geklickt wurde
+		//Wenn auf ein zul??ssiges Feld geklickt wurde
 		if(grpNr == 0){
 			
 			//Ereignis 1 -> Wenn keine Nachbargruppen bestehen
@@ -120,13 +118,11 @@ public class SpielSteuerung implements Runnable{
 				
 				x2 = dieSpielDaten.gibEindeutNachbar_XPos(x, y);
 				y2 = dieSpielDaten.gibEindeutNachbar_YPos(x, y);
-				//System.out.println("x2="+x2);
-				//System.out.println("y2="+y2);
+				System.out.println("x2="+x2);
+				System.out.println("y2="+y2);
 				
-				nbGrpNr = dieSpielDaten.gibGruppe(x2, y2);
-				System.out.println("Nachbargruppe:="+nbGrpNr);
 				
-				int summe = dieSpielDaten.gibGruppenSum(nbGrpNr)+dieSpielDaten.gibWert(x, y); 
+				int summe = dieSpielDaten.gibGruppenSum(grpNr)+dieSpielDaten.gibWert(x, y); 
 				
 				//Fuenfzehn nicht voll
 				if(summe < 15){
@@ -135,14 +131,11 @@ public class SpielSteuerung implements Runnable{
 				//Funefzehn ist voll
 				else if(summe == 15){
 					setZustand(FUENFZEHN_SIND_VOLL);
-					
-					
-					
 				}
-				//Summe ist größer als Fuenfzehn
-				else if (summe>15){
+				//Summe ist gr????er als Fuenfzehn
+				else{
 					
-					setZustand(NEUE_GRUPPE);
+
 				}
 				
 				
@@ -150,14 +143,8 @@ public class SpielSteuerung implements Runnable{
 			
 			
 		}
-		else if(anzahlNachbarGruppen>1){
-			int xalt = x;
-			int yalt = y;
-			
-			
-			System.out.println("Auswahl der Nachbargruppe");
-			
-			setZustand(ZU_GRUPPE_ZUORDNEN);
+		else{
+			setZustand(KEIN_FELD_GEKLICKT);
 		}
 		
 		//Nachricht von der Gui zum weiterarbeiten
@@ -168,7 +155,7 @@ public class SpielSteuerung implements Runnable{
 
 	public void neustartClick() {
 		initialisiereSpielfeld();
-		dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWerte(),dieSpielDaten.getGruppe());
+		dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWerte());
 		dieBenutzeroberflaeche.ausgebenText(0, 0);
 	}
 
@@ -205,8 +192,8 @@ public class SpielSteuerung implements Runnable{
 	}
 
 	/**
-	 * Zustände der Steuerung werden in einem eigenen Thread überwacht.
-	 * Dabei wartet der Thread immer auf die Benutzeroberfläche.
+	 * Zust??nde der Steuerung werden in einem eigenen Thread ??berwacht.
+	 * Dabei wartet der Thread immer auf die Benutzeroberfl??che.
 	 * Wird ein Feld geklickt, wird der Thread benachrichtigt und 
 	 * macht weiter, solange work auf true steht.
 	 */
@@ -239,15 +226,8 @@ public class SpielSteuerung implements Runnable{
 					break;
 
 				case FUENFZEHN_SIND_VOLL:
-					
-					dieSpielDaten.fuegeZuGruppe(xPos, yPos, nbGrpNr);
-					dieSpielDaten.erhoeheGruppenSum(xPos, yPos, nbGrpNr);
-
-					int wert = dieSpielDaten.gibWert(xPos, yPos);
-					dieBenutzeroberflaeche.ausgebenAufFeld(xPos, yPos, wert, nbGrpNr);
-					schliesseGruppe(nbGrpNr);
+					schliesseGruppe(xPos, yPos, x2, y2);
 					dieBenutzeroberflaeche.ausgebenText(3, dieSpielDaten.berechneSpielstand());
-					dieBenutzeroberflaeche.aktualisiereSpiefeld(dieSpielDaten.getWerte(),dieSpielDaten.getGruppe());
 					dieBenutzeroberflaeche.waitFor();
 					break;
 

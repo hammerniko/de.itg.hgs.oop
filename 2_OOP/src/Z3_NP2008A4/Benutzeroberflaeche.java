@@ -1,4 +1,4 @@
-package Z2_NP2008A4;
+package Z3_NP2008A4;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -26,7 +26,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	JButton btNeustart;
 	JLabel lbStatus;
 	JLabel lbErgebnis;
-	JButton[][] buttons;
+	Feld[][] buttons;
 	String[] text;
 	
 	//Konstanten
@@ -51,7 +51,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 	private void initText() {
 		text = new String[6];
-		text[0]="<html><body>Klicke zusammenhängende Felder an,<br>\n die in der Summe 15 ergeben</body></html>";
+		text[0]="<html><body>Klicke zusammenh??ngende Felder an,<br>\n die in der Summe 15 ergeben</body></html>";
 		text[1]="Neue Gruppe!";
 		text[2]="Gruppe erweitert";
 		text[3]="15 sind voll";
@@ -63,10 +63,10 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	
 	/**
 	 * Initialisiert die grafischen Komponenten und
-	 * Container der Oberfläche
+	 * Container der Oberfl??che
 	 */
 	private void initKomponents() {
-		buttons = new JButton[6][6];
+		buttons = new Feld[6][6];
 
 		pContenPane = new JPanel();
 		pSpielfeld = new JPanel();
@@ -81,25 +81,22 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 		for (int y = 0; y < buttons.length; y++) {
 			for (int x = 0; x < buttons.length; x++) {
-				buttons[x][y] = new JButton();
+				buttons[x][y] = new Feld(x,y);
 				
-				//Fügt einen String zum Button hinzu, der mit getActioncommand wieder abgefragt werden kann
-				//wenn auf den Button geklickt wurde
-				buttons[x][y].setActionCommand(x + "," + y);
+				
 				
 				//Gibt dem Button einen Standardlistener.
-				//Der Übergabeparameter this gibt an, das die Methode actionperformed 
+				//Der ??bergabeparameter this gibt an, das die Methode actionperformed 
 				//in dieser Klasse zu finden ist
-				//Die Klasse muss dafür das Interface ActionListener implementieren
-				//und die Methode actionperformed() überschreiben.
-				//Wird der Button gedrückt, wird ein ActionEvent-Objekt erzeugt
-				//und der Methode actionPerformed() übergeben.
+				//Die Klasse muss daf??r das Interface ActionListener implementieren
+				//und die Methode actionperformed() ??berschreiben.
+				//Wird der Button gedr??ckt, wird ein ActionEvent-Objekt erzeugt
+				//und der Methode actionPerformed() ??bergeben.
 				buttons[x][y].addActionListener(this);
 				
-				//Hintergundfarbe erlauben
-				buttons[x][y].setOpaque(true);
 				
-				//Hinzufügen der Buttons zum Container
+				
+				//Hinzuf??gen der Buttons zum Container
 				pSpielfeld.add(buttons[x][y]);
 				
 			}
@@ -154,7 +151,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	/**
 	 * zur Herstellung der bidirektionalen Assoziation.
 	 * Wird von der Steuerung aus aufgerufen.
-	 * Diese übergibt einen Zeiger von sich selbst an die Oberflaeche
+	 * Diese ??bergibt einen Zeiger von sich selbst an die Oberflaeche
 	 * 
 	 * @param spielSteuerung
 	 */
@@ -170,7 +167,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	 * Muss implementiert werden, wenn das Interface ActionListener eingebunden wird.
 	 * Wenn eine Komponente einen ActionListener hat, wird durch ein Standardereignis
 	 * ein ActionEventObjekt erzeugt. Dieses wird dann der Methode actionPerformed() 
-	 * übergeben.
+	 * ??bergeben.
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -178,8 +175,8 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 			neustartClick();
 		} else {
 
-			//Das erste Zeichen des ActionCommands enthält den Wert der
-			//xPos im Array buttons[x][y]. Das dritte Zeichen enthält den
+			//Das erste Zeichen des ActionCommands enth??lt den Wert der
+			//xPos im Array buttons[x][y]. Das dritte Zeichen enth??lt den
 			//yPos Wert.
 			int x = Integer.parseInt(e.getActionCommand().substring(0, 1));
 			int y = Integer.parseInt(e.getActionCommand().substring(2, 3));
@@ -192,26 +189,19 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	
 	
 	/**
-	 * Wird ausgeführt wenn der Button Neustart 
-	 * gedrückt wurde.
+	 * Wird ausgef??hrt wenn der Button Neustart 
+	 * gedr??ckt wurde.
 	 */
 	private void neustartClick() {
 		System.out.println("Neustart Click");
 		dieSpielSteuerung.neustartClick();
 	}
 	
-	public void aktualisiereSpiefeld(int[][] spielfeld, int gruppe[][]){
+	public void aktualisiereSpiefeld(int[][] spielfeld){
 		for (int y = 0; y < buttons.length; y++) {
 			for (int x = 0; x < buttons.length; x++) {
 				buttons[x][y].setText(""+spielfeld[x][y]);
-				if(gruppe[x][y]==-1){
-					buttons[x][y].setBackground(Color.GREEN);
-				}
-				else if(gruppe[x][y]==0){
-					buttons[x][y].setBackground(null);
-				}
-				
-				
+				buttons[x][y].setBackground(null);
 			}
 		}
 		this.revalidate();
@@ -240,7 +230,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 	}
 
 	/**
-	 * Für Buttons mit Hintergrundfarbe auf dem Mac
+	 * F??r Buttons mit Hintergrundfarbe auf dem Mac
 	 */
 	private void setLookAndFeel() {
 		
@@ -254,12 +244,12 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 
 		synchronized void waitFor() throws Exception {
-		    //System.out.println(Thread.currentThread().getName()+ " is entering waitFor().");
+		    System.out.println(Thread.currentThread().getName()+ " is entering waitFor().");
 		     
 		        wait();
 		        
 
-		    //System.out.println(Thread.currentThread().getName() + " resuming execution.");
+		    System.out.println(Thread.currentThread().getName() + " resuming execution.");
 		  }
 		  
 		  synchronized void start() {
