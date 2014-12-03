@@ -1,139 +1,265 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>50</x>
-      <y>320</y>
-      <w>360</w>
-      <h>310</h>
+      <x>42</x>
+      <y>119</y>
+      <w>203</w>
+      <h>133</h>
     </coordinates>
-    <panel_attributes>SpielSteuerung
+    <panel_attributes>Gui
 --
--zustand: int
--xPos: int
--yPos: int
-~dieBenutzeroberflaeche: Benutzeroberflaeche
-~dieSpielDaten: SpielDaten
 --
-+SpielSteuerung(Benutzeroberflaeche b): ctor
-+start(): void
--gibSpielfeldAus(): void
--erstelleNeueGruppe(int x, int y): void
--schliesseGruppe(int x1, int y1, int x2, int y2): void
-+bearbeiteFeldClick(int x1, int y1): void
-+neustartClick(): void
-+ausgebenAufFeld(int x, int y, int wert, int gruppe): void
-+ausgebenText(int textNr, double spielstand): void
--erweitereGruppe(int x1, int y1, int x2, int nbYpos): void
-
-
-bg=yellow</panel_attributes>
++aktualisiereSpielfeld(Gruppe gruppen)
+-clickFeld()
+-clickNeustart()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
-      <y>360</y>
-      <w>280</w>
-      <h>280</h>
+      <x>350</x>
+      <y>119</y>
+      <w>147</w>
+      <h>133</h>
     </coordinates>
-    <panel_attributes>SpielDaten
+    <panel_attributes>pSpielfeld:JPanel
 --
--wert: int[][]
--gruppe: int[][]
--gruppenSum: Vector&lt;Integer&gt;
---
-+SpielDaten(): ctor
-+initialisiereSpielDaten(): void
-+gibNeueGruppe(): int
-+gibGruppeFrei(int gruppe): void
-+gibGruppe(int x, int y): int
-+gibNachbarn(int x, int y): int
-+gibEindeutNachbar_XPos(int x, int y): int
-+gibEindeutNachbar_YPos(int x, int y): int
-+gibGruppenSum(int nbGruppe): int
-+gibWert(int x, int y): int
-
-
-bg=pink
-layer=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>60</x>
-      <y>0</y>
-      <w>350</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>Benutzeroberflaeche
---
-~dieSpielSteuerung: SpielSteuerung
---
-+feldClick(int x, int y): void
-+linkSteuerung(SpielSteuerung spielSteuerung): void
-
-
-bg=orange</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>620</x>
-      <y>140</y>
-      <w>190</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>StartKlasse
---
-+main(String[] args): void
-
-
-bg=light_gray</panel_attributes>
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>470</y>
-      <w>200</w>
-      <h>50</h>
+      <x>238</x>
+      <y>168</y>
+      <w>126</w>
+      <h>28</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
-m1=1
-r1=dieSpieldaten</panel_attributes>
-    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>100</y>
-      <w>150</w>
-      <h>240</h>
+      <x>490</x>
+      <y>168</y>
+      <w>133</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>609</x>
+      <y>112</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>FeldButtons
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>343</y>
+      <w>168</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Steuerung
+--
+_+
+
+--
++neustart()
++bearbeiteFeldklick(x:GZ, y:GZ)
++addGruppe(Gruppe g)
++removeGruppe(xFeld:GZ, yFeld:GZ)
++getGruppe(xFeld:GZ, yFeld:GZ)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>133</x>
+      <y>245</y>
+      <w>21</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
-r1=dieSpielsteuerung
 m2=1
-r2=dieBenutzeroberflaeche</panel_attributes>
-    <additional_attributes>10.0;220.0;10.0;10.0</additional_attributes>
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>364</x>
+      <y>343</y>
+      <w>147</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Gruppe
+--
+-gruppenNr:GZ
+-zustand:GZ
+_+VOLL_
+_+ERWEITERT_
+--
+-gibSumme():GZ
++setZustand(zustand:GZ)
+
++addFeld(Feld feld)
++removeFeld(x:GZ, y:GZ)
++getFeld(x:GZ, y:GZ)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>574</y>
+      <w>147</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Feld
+--
+-x:GZ
+-y:GZ
+-wert:GZ
+--
++getWert():GZ
++getX():GZ
++getY():GZ
++setWert(wert:GZ)
++setX(x:GZ)
++setY(y:GZ)
+
+</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>160</y>
-      <w>240</w>
-      <h>270</h>
+      <x>455</x>
+      <y>490</y>
+      <w>49</w>
+      <h>98</h>
     </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;250.0;220.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1..*
+r2=felder[ ]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>861</x>
+      <y>280</y>
+      <w>42</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Farben
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>294</y>
+      <w>357</w>
+      <h>329</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>490.0;10.0;10.0;450.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>770</x>
+      <y>49</y>
+      <w>161</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>ActionListener
+--
++actionPeformed(ActionEvent e)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>63</y>
+      <w>105</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>371</x>
+      <y>49</y>
+      <w>147</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>GridLayout mit 6x6 Feldern.
+x-y Wert wird über das Layout bestimmt.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>91</y>
+      <w>21</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>392</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=gruppen[]</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>147</x>
+      <y>469</y>
+      <w>259</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=freieFelder[]
+</panel_attributes>
+    <additional_attributes>350.0;240.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
