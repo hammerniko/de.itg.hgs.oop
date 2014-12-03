@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Benutzeroberflaeche extends JFrame implements ActionListener {
-	//Variable für Benachrichtigung der Steuerung über notify
+	//Variable fï¿½r Benachrichtigung der Steuerung ï¿½ber notify
 	boolean ready = false;
 
 	// Deklaration fuer die Assoziation zur Steuerung
@@ -21,7 +21,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 	// Grafische Komponenten
 	JPanel pContenPane;
-	JPanel pSpielfeld;
+	GridButtonPanel pSpielfeld;
 	JPanel pButtons;
 	JButton btNeustart;
 	JLabel lbStatus;
@@ -66,7 +66,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		
 
 		pContenPane = new JPanel();
-		pSpielfeld = new JPanel();
+		pSpielfeld = new GridButtonPanel();
 		pButtons = new JPanel();
 		btNeustart = new JButton("Neustart");
 		btNeustart.addActionListener(this);
@@ -74,17 +74,9 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		lbStatus.setFont(new Font("Verdana", Font.PLAIN, 20));
 		lbErgebnis = new JLabel();
 
-		pSpielfeld.setLayout(new GridLayout(6, 6));
+		
 
-		for (int y = 0; y < 6; y++) {
-
-			for (int x = 0; x < 6; x++) {
-				
-				pSpielfeld.add(new MyButton(new Feld(x, y)));
-
-			}
-		}
-
+		
 		pButtons.setLayout(new BoxLayout(pButtons, BoxLayout.Y_AXIS));
 
 		btNeustart.setAlignmentX(CENTER_ALIGNMENT);
@@ -100,7 +92,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		pButtons.add(Box.createRigidArea(new Dimension(0, 20)));
 
 		pContenPane.setLayout(new GridLayout(1, 2));
-		pContenPane.add(pSpielfeld);
+		pContenPane.add(pSpielfeld.createGridPanel());
 		pContenPane.add(pButtons);
 
 		setContentPane(pContenPane);
@@ -109,6 +101,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 
 	}
 
+	
 	/**
 	 * Wird aufgerufen wenn auf ein feld geklickt wurde.
 	 * 
@@ -151,8 +144,9 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		dieSpielSteuerung.neustartClick();
 	}
 
-	public void aktualisiereSpiefeld(int[][] spielfeld) {
-
+	public void aktualisiereSpiefeld(int[] spielfeld) {
+		
+		
 	}
 
 	public void ausgebenText(int textNr, double spielstand) {

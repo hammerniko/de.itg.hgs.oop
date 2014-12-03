@@ -7,6 +7,7 @@ public class SpielSteuerung{
 	// Assoziationen
 	Benutzeroberflaeche dieBenutzeroberflaeche;
 	Vector<Gruppe> gruppen;
+	Vector<Feld> freiefelder;
 	
 
 	
@@ -14,6 +15,7 @@ public class SpielSteuerung{
 	public SpielSteuerung(String string, Benutzeroberflaeche b) {
 		dieBenutzeroberflaeche = b;
 		gruppen = new Vector<Gruppe>();
+		freiefelder = new Vector<Feld>();
 	}
 
 	
@@ -34,6 +36,9 @@ public class SpielSteuerung{
 	}
 	
 	
+	public Feld[] erstelleSpielfeld(){
+		return null;
+	}
 	
 	
 	

@@ -10,13 +10,11 @@ public class MyButton extends JButton{
 		
 		Feld dasFeld;
 	
-	public MyButton(Feld feld){
+	public MyButton(int x, int y){
 		
-		dasFeld = feld;
+		dasFeld = new Feld(x, y);
 		setText(""+dasFeld.getWert());
 		setBackground(Color.GRAY);
-		
-		
 	}
 
 	
