@@ -14,11 +14,11 @@ import javax.swing.JPanel;
 public class GridButtonPanel {
 
     private static final int N = 6;
-    private final List<MyButton> list = new ArrayList<MyButton>();
+    private final List<MyButton> buttons = new ArrayList<MyButton>();
 
     private MyButton getGridButton(int x, int y) {
         int index = x * N + y;
-        return list.get(index);
+        return buttons.get(index);
     }
 
     private MyButton createGridButton(final int x, final int y) {
@@ -49,7 +49,7 @@ public class GridButtonPanel {
             int x = i / N;
             int y = i % N;
             MyButton gb = createGridButton(x, y);
-            list.add(gb);
+            buttons.add(gb);
             p.add(gb);
         }
         return p;

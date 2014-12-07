@@ -12,9 +12,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Benutzeroberflaeche extends JFrame implements ActionListener {
-	//Variable f�r Benachrichtigung der Steuerung �ber notify
-	boolean ready = false;
+public class Benutzeroberflaeche extends JFrame {
+	
 
 	// Deklaration fuer die Assoziation zur Steuerung
 	SpielSteuerung dieSpielSteuerung;
@@ -43,7 +42,6 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		this.setTitle("Fifteen");
 
 		initText();
-
 		initKomponents();
 
 	}
@@ -69,7 +67,14 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		pSpielfeld = new GridButtonPanel();
 		pButtons = new JPanel();
 		btNeustart = new JButton("Neustart");
-		btNeustart.addActionListener(this);
+		btNeustart.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				neustartClick();
+			}
+		});
+		
 		lbStatus = new JLabel();
 		lbStatus.setFont(new Font("Verdana", Font.PLAIN, 20));
 		lbErgebnis = new JLabel();
@@ -125,22 +130,12 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		dieSpielSteuerung = spielSteuerung;
 	}
 
-	/**
-	 * Muss implementiert werden, wenn das Interface ActionListener eingebunden
-	 * wird. Wenn eine Komponente einen ActionListener hat, wird durch ein
-	 * Standardereignis ein ActionEventObjekt erzeugt. Dieses wird dann der
-	 * Methode actionPerformed() ??bergeben.
-	 */
-	@Override
-	public void actionPerformed(ActionEvent e) {
 	
-	}
 
 	/**
-	 * Wird ausgef??hrt wenn der Button Neustart gedr??ckt wurde.
+	 * Wird ausgefuehrt wenn der Button Neustart gedr??ckt wurde.
 	 */
 	private void neustartClick() {
-		System.out.println("Neustart Click");
 		dieSpielSteuerung.neustartClick();
 	}
 
@@ -167,19 +162,6 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 		}
 	}
 
-	synchronized void waitFor() throws Exception {
-		System.out.println(Thread.currentThread().getName()
-				+ " is entering waitFor().");
-
-		wait();
-
-		System.out.println(Thread.currentThread().getName()
-				+ " resuming execution.");
-	}
-
-	synchronized void start() {
-		ready = true;
-		notify();
-	}
+	
 
 }

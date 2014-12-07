@@ -5,9 +5,11 @@ import java.util.Vector;
 public class SpielSteuerung{
 	
 	// Assoziationen
-	Benutzeroberflaeche dieBenutzeroberflaeche;
-	Vector<Gruppe> gruppen;
-	Vector<Feld> freiefelder;
+	private Benutzeroberflaeche dieBenutzeroberflaeche;
+	private Vector<Gruppe> gruppen;
+	private Vector<Feld> freiefelder;
+	private int zustand;
+	
 	
 
 	
@@ -20,6 +22,7 @@ public class SpielSteuerung{
 		
 		gruppen = new Vector<Gruppe>();
 		freiefelder = new Vector<Feld>();
+		
 	}
 
 	
@@ -27,22 +30,46 @@ public class SpielSteuerung{
 	public void bearbeiteFeldClick(int x, int y) {
 		System.out.println("bearbeiteFeldklick(" +x+", "+y+")");
 		
+		switch (zustand) {
+		case 0:
+			
+			break;
+
+		default:
+			break;
+		}
+		
+		
+		
 	}
 
 	public void neustartClick() {
-		//
+		System.out.println("Neustart...");
+		
+		gruppen.removeAllElements();
+		freiefelder.removeAllElements();
+		
+		for (int i = 0; i < 36; i++) {
+			
+		}
+		
+		
 		
 	}
 	
 	public void erstelleNeueGruppe(Feld feld){
 		gruppen.add(new Gruppe(feld));
+		freiefelder.remove(feld);
 		
 	}
 	
 	
-	public Feld[] erstelleSpielfeld(){
-		return null;
+	public void erstelleSpielfeld(Feld[] felder){
+		
+		
 	}
+	
+	
 	
 	
 	
