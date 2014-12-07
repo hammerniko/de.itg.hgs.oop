@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.Vector;
 
 /**
- * Richtiger objektorientierter Ansatz  der Aufgabe
+ * Datenobjekt für eine Gruppe von Feldern 
  * @author nikolaihammer
  *
  */

@@ -13,7 +13,11 @@ public class SpielSteuerung{
 	
 
 	public SpielSteuerung(String string, Benutzeroberflaeche b) {
+		//Bidirektionale Assoziation
 		dieBenutzeroberflaeche = b;
+		dieBenutzeroberflaeche.linkSteuerung(this);
+		
+		
 		gruppen = new Vector<Gruppe>();
 		freiefelder = new Vector<Feld>();
 	}
@@ -21,7 +25,7 @@ public class SpielSteuerung{
 	
 
 	public void bearbeiteFeldClick(int x, int y) {
-		// TODO Auto-generated method stub
+		System.out.println("bearbeiteFeldklick(" +x+", "+y+")");
 		
 	}
 

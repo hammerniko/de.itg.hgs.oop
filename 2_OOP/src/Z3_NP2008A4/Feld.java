@@ -3,7 +3,7 @@ package Z3_NP2008A4;
 import javax.swing.JButton;
 
 /**
- * Richtiger objektorientierter Ansatz  der Aufgabe
+ * Datenobjekt für ein Spielfeld
  * @author nikolaihammer
  *
  */

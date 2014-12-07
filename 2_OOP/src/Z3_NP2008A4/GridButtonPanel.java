@@ -28,7 +28,14 @@ public class GridButtonPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 MyButton gb = GridButtonPanel.this.getGridButton(x, y);
-                System.out.println("x=" + x + ",y="+y );
+                
+                //Wenn nur ein Frame existiert, kann so
+                //einfach der Parent-Frame geholt werden
+                //Sonst mit der Methode getInvoker(); lösen.
+                Benutzeroberflaeche bo= (Benutzeroberflaeche) JFrame.getFrames()[0];  
+                bo.feldClick(x, y);
+                
+                //System.out.println("x=" + x + ",y="+y );
                 
                    
             }

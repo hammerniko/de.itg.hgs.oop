@@ -18,6 +18,7 @@ public class StartKlasse {
 				 */
 				SpielSteuerung s = new SpielSteuerung("steuerung",b);
 				
+				
 			}
 		});
 
