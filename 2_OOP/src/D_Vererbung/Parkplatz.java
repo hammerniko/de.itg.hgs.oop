@@ -3,11 +3,11 @@ package D_Vererbung;
 public class Parkplatz {
 
 	private int id;
-	private static int anzahlParkplätze=0;
+	private static int anzahlParkplaetze=0;
 
 	public Parkplatz(){
-		anzahlParkplätze++;
-		id=anzahlParkplätze;
+		anzahlParkplaetze++;
+		id=anzahlParkplaetze;
 	}
 	
 	
