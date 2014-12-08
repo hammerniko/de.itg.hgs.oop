@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
+      <x>64</x>
       <y>136</y>
       <w>232</w>
       <h>152</h>
@@ -20,7 +20,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
+      <x>416</x>
       <y>136</y>
       <w>168</w>
       <h>152</h>
@@ -33,7 +33,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>304</x>
+      <x>288</x>
       <y>192</y>
       <w>144</w>
       <h>32</h>
@@ -45,7 +45,7 @@ m2=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>592</x>
+      <x>576</x>
       <y>192</y>
       <w>152</w>
       <h>32</h>
@@ -57,7 +57,7 @@ m2=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>728</x>
+      <x>712</x>
       <y>128</y>
       <w>168</w>
       <h>152</h>
@@ -70,7 +70,7 @@ m2=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>112</x>
+      <x>96</x>
       <y>392</y>
       <w>192</w>
       <h>152</h>
@@ -91,7 +91,7 @@ _+
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>184</x>
+      <x>168</x>
       <y>280</y>
       <w>24</w>
       <h>128</h>
@@ -105,7 +105,7 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
+      <x>432</x>
       <y>392</y>
       <w>168</w>
       <h>176</h>
@@ -130,7 +130,7 @@ _+ERWEITERT_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
+      <x>464</x>
       <y>656</y>
       <w>168</w>
       <h>152</h>
@@ -154,7 +154,7 @@ _+ERWEITERT_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>552</x>
+      <x>536</x>
       <y>560</y>
       <w>56</w>
       <h>112</h>
@@ -167,7 +167,7 @@ r2=felder[ ]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>296</x>
+      <x>280</x>
       <y>448</y>
       <w>168</w>
       <h>40</h>
@@ -180,7 +180,7 @@ r1=gruppen[]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>200</x>
+      <x>184</x>
       <y>536</y>
       <w>296</w>
       <h>208</h>
@@ -194,7 +194,7 @@ r1=freieFelder[]
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
+      <x>704</x>
       <y>0</y>
       <w>168</w>
       <h>48</h>
@@ -206,7 +206,7 @@ r1=freieFelder[]
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>800</x>
+      <x>784</x>
       <y>40</y>
       <w>24</w>
       <h>104</h>
@@ -217,7 +217,7 @@ r1=freieFelder[]
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>120</x>
+      <x>104</x>
       <y>8</y>
       <w>168</w>
       <h>48</h>
@@ -230,7 +230,7 @@ r1=freieFelder[]
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>192</x>
+      <x>176</x>
       <y>48</y>
       <w>24</w>
       <h>104</h>
@@ -241,7 +241,7 @@ r1=freieFelder[]
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
+      <x>488</x>
       <y>40</y>
       <w>24</w>
       <h>112</h>
@@ -252,7 +252,7 @@ r1=freieFelder[]
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>424</x>
+      <x>408</x>
       <y>0</y>
       <w>168</w>
       <h>48</h>

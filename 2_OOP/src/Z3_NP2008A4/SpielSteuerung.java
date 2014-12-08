@@ -7,7 +7,8 @@ public class SpielSteuerung{
 	// Assoziationen
 	private Benutzeroberflaeche dieBenutzeroberflaeche;
 	private Vector<Gruppe> gruppen;
-	private Vector<Feld> freiefelder;
+	private Vector<Feld> freiefelder;	
+	private Feld[] spielfeld;
 	private int zustand;
 	
 	
@@ -19,7 +20,7 @@ public class SpielSteuerung{
 		dieBenutzeroberflaeche = b;
 		dieBenutzeroberflaeche.linkSteuerung(this);
 		
-		
+		spielfeld = new Feld[36];
 		gruppen = new Vector<Gruppe>();
 		freiefelder = new Vector<Feld>();
 		
@@ -30,14 +31,6 @@ public class SpielSteuerung{
 	public void bearbeiteFeldClick(int x, int y) {
 		System.out.println("bearbeiteFeldklick(" +x+", "+y+")");
 		
-		switch (zustand) {
-		case 0:
-			
-			break;
-
-		default:
-			break;
-		}
 		
 		
 		
@@ -46,26 +39,43 @@ public class SpielSteuerung{
 	public void neustartClick() {
 		System.out.println("Neustart...");
 		
-		gruppen.removeAllElements();
-		freiefelder.removeAllElements();
+	
+		dieBenutzeroberflaeche.aktualisiereSpiefeld(erstelleSpielfeld());
 		
-		for (int i = 0; i < 36; i++) {
-			
-		}
+		
 		
 		
 		
 	}
 	
 	public void erstelleNeueGruppe(Feld feld){
+		
 		gruppen.add(new Gruppe(feld));
 		freiefelder.remove(feld);
 		
 	}
 	
 	
-	public void erstelleSpielfeld(Feld[] felder){
+	private Feld[] erstelleSpielfeld(){
 		
+		
+		
+		gruppen.removeAllElements();
+		freiefelder.removeAllElements();
+		int N = 6;
+		int x,y;
+		
+		for (int i = 0; i < N*N; i++) {
+			 x = i / N;
+	         y = i % N;
+	         
+			spielfeld[i]=new Feld(x, y);
+			freiefelder.add(spielfeld[i]);
+		}
+		
+		
+		
+		return spielfeld;
 		
 	}
 	

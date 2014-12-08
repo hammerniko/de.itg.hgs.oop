@@ -7,12 +7,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.sound.sampled.ReverbType;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 
 public class GridButtonPanel {
-
+	private JPanel p;
     private static final int N = 6;
     private final List<MyButton> buttons = new ArrayList<MyButton>();
 
@@ -44,7 +47,7 @@ public class GridButtonPanel {
     }
 
     public JPanel createGridPanel() {
-        JPanel p = new JPanel(new GridLayout(N, N));
+        p = new JPanel(new GridLayout(N, N));
         for (int i = 0; i < N * N; i++) {
             int x = i / N;
             int y = i % N;
@@ -55,7 +58,16 @@ public class GridButtonPanel {
         return p;
     }
 
+    public void setButtonData(Feld[] feld){
+    	for (int i = 0; i < buttons.size(); i++) {
+			buttons.get(i).setFeld(feld[i]);
+			//System.out.println(feld[i]);
+			
+		}
+    	
+    	
+    }
     
-
+   
    
 }

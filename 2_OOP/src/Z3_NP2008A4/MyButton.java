@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.SwingUtilities;
 
 public class MyButton extends JButton{
 		
@@ -21,6 +22,7 @@ public class MyButton extends JButton{
 	//Setzen der Daten 
 	public void setFeld(Feld feld){
 		dasFeld = feld;
+		setText(""+dasFeld.getWert());
 	}
 	
 	//Holen der Daten
@@ -28,9 +30,10 @@ public class MyButton extends JButton{
 		return dasFeld;
 	}
 	
-	public void setWert(int wert){
+	public synchronized void setWert(int wert){
 		dasFeld.setWert(wert);
 		setText(""+wert);
+	
 	}
 	
 	//Vorsicht! Die Methode darf nicht getX() heißen, da dies dann

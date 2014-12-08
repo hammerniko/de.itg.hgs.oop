@@ -14,7 +14,7 @@ public class Gruppe {
 	
 	private int nr;
 	private Color farbe;
-	private Vector<Feld> felder;
+	private Vector<Feld> grpFelder;
 	private static int anzahlGruppen=0;
 	private static final int MAX_GRUPPENSUMME = 15;
 	
@@ -26,18 +26,22 @@ public class Gruppe {
 		anzahlGruppen++;
 		nr = anzahlGruppen;
 		
-		felder = new Vector<Feld>();
+		grpFelder = new Vector<Feld>();
 		addFeld(feld);
 		
 		farbe = new Color(255-nr*10,255-nr*10,255-nr*10);
 	}
 
 	public void addFeld(Feld feld){
-		felder.add(feld);
+		grpFelder.add(feld);
 	}
 	
-	public void removeFeld(int x, int y){
-		
+	public void removeFeld(Feld feld){
+		grpFelder.remove(feld);
+	}
+	
+	public Feld getFeld(int x, int y){
+		return null;
 	}
 	
 	
@@ -69,12 +73,12 @@ public class Gruppe {
 
 
 	public Vector<Feld> getFelder() {
-		return felder;
+		return grpFelder;
 	}
 
 
 	public void setFelder(Vector<Feld> felder) {
-		this.felder = felder;
+		this.grpFelder = felder;
 	}
 	
 	

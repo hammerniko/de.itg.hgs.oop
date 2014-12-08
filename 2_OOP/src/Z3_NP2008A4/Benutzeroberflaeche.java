@@ -139,7 +139,8 @@ public class Benutzeroberflaeche extends JFrame {
 		dieSpielSteuerung.neustartClick();
 	}
 
-	public void aktualisiereSpiefeld(int[] spielfeld) {
+	public void aktualisiereSpiefeld(Feld[] spielfeld) {
+		pSpielfeld.setButtonData(spielfeld);
 		
 		
 	}
