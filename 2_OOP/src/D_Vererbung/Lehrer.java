@@ -5,14 +5,14 @@ public class Lehrer extends Person {
 	protected String kuerzel;
   
 	/**
-	 * Konstruktor muss mindestens mit dem Übergabeparameter
+	 * Konstruktor muss mindestens mit dem Uebergabeparameter
 	 * String name erstellt werden, da die Klasse von Person erbt
 	 * @param name
 	 * @param kuerzel
 	 */
     public Lehrer(String name, String kuerzel) {
     	//Ruft in der Oberklasse Person den Konstruktor
-    	//mit dem Übergabeparameter vom Datentyp String auf
+    	//mit dem Uebergabeparameter vom Datentyp String auf
     	super(name); //muss erste Anweisung sein
 		
 		this.kuerzel = kuerzel;
