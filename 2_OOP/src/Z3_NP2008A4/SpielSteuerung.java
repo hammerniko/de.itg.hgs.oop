@@ -36,7 +36,8 @@ public class SpielSteuerung{
 		if(freiefelder.contains(feld)){
 			
 			//Wenn das Feld genau einen Nachbar hat
-			//if(...()
+			//welcher bereits einer Gruppe zugeordnet ist
+			
 			freiefelder.remove(feld);
 			gruppen.add(new Gruppe(feld));
 			aktualisiereFeld(feld);
@@ -60,21 +61,12 @@ public class SpielSteuerung{
 
 	public void neustartClick() {
 		System.out.println("Neustart...");
-		
-	
 		dieBenutzeroberflaeche.aktualisiereSpiefeld(erstelleSpielfeld());
-		
-		
-		
-		
-		
 	}
 	
 	public void erstelleNeueGruppe(Feld feld){
-		
 		gruppen.add(new Gruppe(feld));
 		freiefelder.remove(feld);
-		
 	}
 	
 	
@@ -109,7 +101,6 @@ public class SpielSteuerung{
 	private void aktualisiereFeld(Feld feld){
 		dieBenutzeroberflaeche.aktualisiereFeld(feld);
 	}
-	
 	
 	
 	

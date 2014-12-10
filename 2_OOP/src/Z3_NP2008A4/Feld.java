@@ -21,7 +21,6 @@ public class Feld {
 	private int posY;
 	private Color farbe;
 	
-
 	private int gruppennummer;
 	public static int anzahlFelder = 0;
 	private int id;

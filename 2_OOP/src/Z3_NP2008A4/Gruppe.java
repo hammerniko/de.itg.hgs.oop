@@ -26,7 +26,7 @@ public class Gruppe {
 		anzGrp++;
 		nr = anzGrp;
 		grpFelder = new Vector<Feld>();
-		feld.setFarbe(gibZufallsfarbe());
+		feld.setFarbe(gibFarbe());
 		addFeld(feld);
 
 		// Jede Gruppe hat eine andere Farbe
@@ -91,8 +91,6 @@ public class Gruppe {
 		this.nr = nummer;
 	}
 
-	
-
 	/**
 	 * Wird benötigt um alle Felder einer Gruppe als solche anzuzeigen
 	 * 
@@ -102,11 +100,27 @@ public class Gruppe {
 		return grpFelder;
 	}
 
-	private Color gibZufallsfarbe() {
-		int z = (int) (Math.random() * 255 + 1);
+	private Color gibFarbe() {
+		Color color=null;
+		if(istGruppeVoll){
+			color =  Color.green;
+		}
+		else{
+			switch (nr%7) {
+			case 1: color =  Color.yellow;break;
+			case 2: color =  Color.blue;break;
+			case 3: color =  Color.orange;break;
+			case 4: color =  Color.darkGray;break;
+			case 5: color =  Color.magenta;break;
+			case 6: color =  Color.pink;break;
+			case 7: color =  Color.red;break;
 
-		return new Color(z, z, z);
+			
+			}
+		}
+		
 
+       return color;	
 	}
 
 	public static void setAnzGrp(int anzGrp) {
