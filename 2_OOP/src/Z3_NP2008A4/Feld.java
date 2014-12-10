@@ -1,5 +1,7 @@
 package Z3_NP2008A4;
 
+import java.awt.Color;
+
 import javax.swing.JButton;
 
 /**
@@ -17,6 +19,9 @@ public class Feld {
 	private int wert;
 	private int posX;
 	private int posY;
+	private Color farbe;
+	
+
 	private int gruppennummer;
 	public static int anzahlFelder = 0;
 	private int id;
@@ -38,7 +43,7 @@ public class Feld {
 		this.wert = (int) (Math.random()*9+1);
 		this.posX = posX;
 		this.posY = posY;
-		
+		this.setFarbe(Color.LIGHT_GRAY);
 		
 	}
 
@@ -67,5 +72,11 @@ public class Feld {
 		this.posY = posY;
 	}
 
+	public void setFarbe(Color farbe) {
+		this.farbe = farbe;
+	}
 
+	public Color getFarbe() {
+		return farbe;
+	}
 }

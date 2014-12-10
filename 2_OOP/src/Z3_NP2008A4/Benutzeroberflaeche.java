@@ -149,6 +149,7 @@ public class Benutzeroberflaeche extends JFrame {
 	public void aktualisiereFeld(Feld feld){
 		MyButton bt = pSpielfeld.getGridButton(feld.getPosX(), feld.getPosY());
 		bt.setFeld(feld);
+		bt.setBackground(feld.getFarbe());
 		System.out.println("Feld gesetzt "+feld);
 	}
 

@@ -61,6 +61,7 @@ public class GridButtonPanel {
     public void setButtonData(Feld[] feld){
     	for (int i = 0; i < buttons.size(); i++) {
 			buttons.get(i).setFeld(feld[i]);
+			buttons.get(i).setBackground(feld[i].getFarbe());
 			//System.out.println(feld[i]);
 			
 		}

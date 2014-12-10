@@ -30,16 +30,18 @@ public class SpielSteuerung{
 	
 
 	public void bearbeiteFeldClick(Feld feld) {
-		System.out.println("bearbeiteFeldklick(" +feld);
+		
 		
 		//Wenn auf ein freies Feld geklickt wurde
 		if(freiefelder.contains(feld)){
 			
 			//Wenn das Feld genau einen Nachbar hat
-			
+			//if(...()
 			freiefelder.remove(feld);
 			gruppen.add(new Gruppe(feld));
 			aktualisiereFeld(feld);
+			
+			
 			
 			
 			//Wenn das Feld mehr als eine Nachbargruppe hat
@@ -78,8 +80,7 @@ public class SpielSteuerung{
 	
 	private Feld[] erstelleSpielfeld(){
 		
-		gruppen.clear();
-		freiefelder.clear();
+		resetContainer();
 		int N = 6;
 		int x,y;
 		
@@ -94,6 +95,15 @@ public class SpielSteuerung{
 		
 		return spielfeld;
 		
+	}
+
+
+
+	private void resetContainer() {
+		
+		Gruppe.setAnzGrp(0);
+		gruppen.clear();
+		freiefelder.clear();
 	}
 	
 	private void aktualisiereFeld(Feld feld){
