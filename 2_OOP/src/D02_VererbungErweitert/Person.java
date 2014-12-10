@@ -1,6 +1,6 @@
 package D02_VererbungErweitert;
 //Oberklasse
-public class Person {
+public abstract class Person {
 
 	private Parkplatz derParkplatz;
     protected String name;
@@ -14,10 +14,7 @@ public class Person {
     	System.out.println("test aus Person");
     }
     
-    //überladene Testmethode
-    public void test(int wert){
-    	System.out.println("test "+wert+" aus Person");
-    }
+    
     
     public void setParkplatz(Parkplatz p){
     	derParkplatz = p;
@@ -25,8 +22,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Parkplatz=" + derParkplatz + ", name=" + name
-				+ ", vorname=" + vorname;
+		return  name +", "+vorname +" P=" + derParkplatz ;
 	}
     
     

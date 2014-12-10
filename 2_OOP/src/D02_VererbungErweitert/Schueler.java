@@ -17,12 +17,7 @@ public class Schueler extends Person {
 		return str;
 	}
 
-	@Override
-	public void test(int wert) {
-		
-		
-		System.out.println("test in Schüler"+(wert*2));
-	}
+	
 	
 	
 	

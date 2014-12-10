@@ -26,10 +26,6 @@ public class Lehrer extends Person {
 		return str;
 	}
 	
-	public void test(){
-		System.out.println("Test aus Lehrer");
-	}
-
-	
+		
 
 }
