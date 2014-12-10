@@ -1,4 +1,4 @@
-package D_Vererbung;
+package D01_Vererbung;
 //Oberklasse
 public class Person {
 

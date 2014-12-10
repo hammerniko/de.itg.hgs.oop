@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.SwingUtilities;
 
-import D02_VererbungBeiButton.GuiHauptprogramm;
+import D03_VererbungBeiButton.GuiHauptprogramm;
 
 public class GuiPasswort extends JFrame implements ActionListener {
 

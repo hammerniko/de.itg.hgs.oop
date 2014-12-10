@@ -1,4 +1,4 @@
-package D_Vererbung;
+package D01_Vererbung;
 
 public class Parkplatz {
 
