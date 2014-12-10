@@ -43,6 +43,7 @@ public class Benutzeroberflaeche extends JFrame {
 
 		initText();
 		initKomponents();
+		
 
 	}
 
@@ -103,7 +104,7 @@ public class Benutzeroberflaeche extends JFrame {
 		setContentPane(pContenPane);
 		setSize(SIZE_X, SIZE_Y);
 		setResizable(false);
-
+		
 	}
 
 	
@@ -113,9 +114,9 @@ public class Benutzeroberflaeche extends JFrame {
 	 * @param x
 	 * @param y
 	 */
-	public void feldClick(int x, int y) {
+	public void feldClick(Feld feld) {
 
-		dieSpielSteuerung.bearbeiteFeldClick(x, y);
+		dieSpielSteuerung.bearbeiteFeldClick(feld);
 
 	}
 
@@ -143,6 +144,12 @@ public class Benutzeroberflaeche extends JFrame {
 		pSpielfeld.setButtonData(spielfeld);
 		
 		
+	}
+	
+	public void aktualisiereFeld(Feld feld){
+		MyButton bt = pSpielfeld.getGridButton(feld.getPosX(), feld.getPosY());
+		bt.setFeld(feld);
+		System.out.println("Feld gesetzt "+feld);
 	}
 
 	public void ausgebenText(int textNr, double spielstand) {

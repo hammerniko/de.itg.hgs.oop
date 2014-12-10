@@ -11,15 +11,30 @@ public class Feld {
 	
 	@Override
 	public String toString() {
-		return "Feld [wert=" + wert + ", posX=" + posX + ", posY=" + posY + "]";
+		return "Feld [grp = "+gruppennummer+" | wert=" + wert + " | x=" + posX + ", y=" + posY + "]";
 	}
 
 	private int wert;
 	private int posX;
 	private int posY;
+	private int gruppennummer;
+	public static int anzahlFelder = 0;
+	private int id;
 	
+	public int getGruppennummer() {
+		return gruppennummer;
+	}
+
+
+	public void setGruppennummer(int gruppennummer) {
+		this.gruppennummer = gruppennummer;
+	}
+
+
 	public Feld( int posX, int posY) {
-	
+		anzahlFelder++;
+		id=anzahlFelder;
+		
 		this.wert = (int) (Math.random()*9+1);
 		this.posX = posX;
 		this.posY = posY;
@@ -51,9 +66,6 @@ public class Feld {
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
-	
-	
-	
-	
+
 
 }

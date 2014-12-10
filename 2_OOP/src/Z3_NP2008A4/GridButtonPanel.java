@@ -19,7 +19,7 @@ public class GridButtonPanel {
     private static final int N = 6;
     private final List<MyButton> buttons = new ArrayList<MyButton>();
 
-    private MyButton getGridButton(int x, int y) {
+    public MyButton getGridButton(int x, int y) {
         int index = x * N + y;
         return buttons.get(index);
     }
@@ -36,7 +36,7 @@ public class GridButtonPanel {
                 //einfach der Parent-Frame geholt werden
                 //Sonst mit der Methode getInvoker(); lösen.
                 Benutzeroberflaeche bo= (Benutzeroberflaeche) JFrame.getFrames()[0];  
-                bo.feldClick(x, y);
+                bo.feldClick(gb.getFeld());
                 
                 //System.out.println("x=" + x + ",y="+y );
                 

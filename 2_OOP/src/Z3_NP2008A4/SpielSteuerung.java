@@ -1,39 +1,59 @@
 package Z3_NP2008A4;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class SpielSteuerung{
 	
 	// Assoziationen
 	private Benutzeroberflaeche dieBenutzeroberflaeche;
-	private Vector<Gruppe> gruppen;
-	private Vector<Feld> freiefelder;	
+	
+	private List<Gruppe> gruppen;
+	private List<Feld> freiefelder;	
 	private Feld[] spielfeld;
+	
 	private int zustand;
 	
-	
-
-	
-
 	public SpielSteuerung(String string, Benutzeroberflaeche b) {
 		//Bidirektionale Assoziation
 		dieBenutzeroberflaeche = b;
 		dieBenutzeroberflaeche.linkSteuerung(this);
 		
 		spielfeld = new Feld[36];
-		gruppen = new Vector<Gruppe>();
-		freiefelder = new Vector<Feld>();
+		gruppen = new ArrayList<Gruppe>();
+		freiefelder = new ArrayList<Feld>();
 		
+		neustartClick();
 	}
 
 	
 
-	public void bearbeiteFeldClick(int x, int y) {
-		System.out.println("bearbeiteFeldklick(" +x+", "+y+")");
+	public void bearbeiteFeldClick(Feld feld) {
+		System.out.println("bearbeiteFeldklick(" +feld);
+		
+		//Wenn auf ein freies Feld geklickt wurde
+		if(freiefelder.contains(feld)){
+			
+			//Wenn das Feld genau einen Nachbar hat
+			
+			freiefelder.remove(feld);
+			gruppen.add(new Gruppe(feld));
+			aktualisiereFeld(feld);
+			
+			
+			//Wenn das Feld mehr als eine Nachbargruppe hat
+			
+			
+			
+			
+			
+			
+		}
 		
 		
 		
-		
+		dieBenutzeroberflaeche.aktualisiereSpiefeld(spielfeld);
 	}
 
 	public void neustartClick() {
@@ -58,10 +78,8 @@ public class SpielSteuerung{
 	
 	private Feld[] erstelleSpielfeld(){
 		
-		
-		
-		gruppen.removeAllElements();
-		freiefelder.removeAllElements();
+		gruppen.clear();
+		freiefelder.clear();
 		int N = 6;
 		int x,y;
 		
@@ -69,14 +87,17 @@ public class SpielSteuerung{
 			 x = i / N;
 	         y = i % N;
 	         
-			spielfeld[i]=new Feld(x, y);
-			freiefelder.add(spielfeld[i]);
+	        Feld feld = new Feld(x,y);
+			spielfeld[i]=feld;
+			freiefelder.add(feld);
 		}
-		
-		
 		
 		return spielfeld;
 		
+	}
+	
+	private void aktualisiereFeld(Feld feld){
+		dieBenutzeroberflaeche.aktualisiereFeld(feld);
 	}
 	
 	

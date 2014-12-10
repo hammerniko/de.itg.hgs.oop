@@ -9,7 +9,7 @@ import javax.swing.SwingUtilities;
 
 public class MyButton extends JButton{
 		
-		Feld dasFeld;
+	private Feld dasFeld;
 	
 	public MyButton(int x, int y){
 		
