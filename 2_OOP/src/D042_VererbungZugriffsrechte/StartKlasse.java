@@ -7,27 +7,36 @@ public class StartKlasse {
 	public static void main(String[] args){
 		
 		//Objekt einer Unterklasse von Zeitung und Redaktuer
+		//zusammengefasst in einerm Array.
+		//Der Datentyp der Objekte muss der einer gemeinsamen
+		//Oberklasse sein.
 		Redakteur fritz = new Redakteur("Schludrie");
-		Sonderausgabe sa = new Sonderausgabe(fritz);
-		Wochenzeitung wz = new Wochenzeitung(fritz);
+		Zeitung zeitungen[] = new Zeitung[2];
+		zeitungen[0] = new Sonderausgabe(fritz);
+		zeitungen[1] = new Wochenzeitung(fritz);
 		
 		//Zugriff auf Delegationsmehtode (Zeitung kennt Redaktuer)
-		System.out.println(sa.getRedakteurname());
+		System.out.println(zeitungen[0].getRedakteurname());
 		
 		//Zugriff auf set-Methoden
-		sa.setWitz("Was ist weiß und rennt bergauf? Ne Lawine mit Heimweh.");
-		wz.setSchlagzeile("Frauenquote ist beschlossene Sache!");
+		Sonderausgabe wz =  (Sonderausgabe) zeitungen[0];
+		wz.setWitz("Was ist weiß und rennt bergauf? Ne Lawine mit Heimweh.");
 		
-		//Zugriff auf geerbte Methoden
-		sa.test();
-		sa.id = 1;
-		//sa.redakteuNr geht nicht, da nur erbende Klassen ZUgriff haben
-		System.out.println(wz.getSchlagzeile());
+		//Ausgabe einer Methode, die in allen Zeitungsklassen
+		//vorhanden ist (geerbt oder überschrieben)
+		for (int i = 0; i < zeitungen.length; i++) {
+			zeitungen[i].test();
+		}
+	
 		
+		//Ausgabe aller Objekte komplett
+		for (int i = 0; i < zeitungen.length; i++) {
+			System.out.println(zeitungen[i]);
+		}
 		
-		//Ausgabe über toString (alle Klassen müssen toString implementieren)
-		System.out.println(sa);
-		System.out.println(wz);
+		//Ausgabe der Anzahl der Objekte
+		System.out.println(Zeitung.getAnzahlZeitungen());
+		
 	}
 	
 	

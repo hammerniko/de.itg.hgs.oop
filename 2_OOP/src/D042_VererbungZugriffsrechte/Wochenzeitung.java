@@ -3,8 +3,7 @@ package D042_VererbungZugriffsrechte;
 public class Wochenzeitung extends Zeitung {
 
 	private String schlagzeile;
-	
-	
+		
 	public Wochenzeitung(Redakteur rd) {
 		super(rd);
 		schlagzeile = "Standardschlagzeile Wochenzeitung";
@@ -13,7 +12,6 @@ public class Wochenzeitung extends Zeitung {
 	@Override
 	public void test() {
 		System.out.println("Test Wochenzeitung");
-
 	}
 	
 	public String getSchlagzeile(){
@@ -23,5 +21,12 @@ public class Wochenzeitung extends Zeitung {
 	public void setSchlagzeile(String schlagzeile){
 		this.schlagzeile=schlagzeile;
 	}
+
+	@Override
+	public String toString() {
+		return "Wochenzeitung [schlagzeile=" + schlagzeile + "]";
+	}
+	
+	
 
 }
