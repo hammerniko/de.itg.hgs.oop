@@ -1,20 +1,32 @@
 package D042_VererbungZugriffsrechte;
 
-public class Zeitung {
+public abstract class Zeitung {
 	
 	
 	
-	public Redakteur derRedakteur;
-	
+	private Redakteur derRedakteur;
+	protected int id;
 	
 
 	public Zeitung(Redakteur rd){
 		derRedakteur = rd;
+		id = 0;
 	}
 	
-	public void test(){
-		System.out.println("test");
+	public abstract void test();
+		
+
+
+	//Delegationsmethode
+	public String getRedakteurname() {
+		return derRedakteur.getName();
 	}
+
+	@Override
+	public String toString() {
+		return "Zeitung [derRedakteur=" + derRedakteur + ", id=" + id + "]";
+	}
+	
 	
 	
 	
