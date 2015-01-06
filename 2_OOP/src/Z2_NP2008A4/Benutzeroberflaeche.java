@@ -214,7 +214,7 @@ public class Benutzeroberflaeche extends JFrame implements ActionListener {
 				
 			}
 		}
-		this.revalidate();
+		//this.revalidate();
 		this.repaint();
 	}
 
