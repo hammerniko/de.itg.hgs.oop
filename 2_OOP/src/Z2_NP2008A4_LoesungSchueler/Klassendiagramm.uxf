@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>384</y>
+      <x>408</x>
+      <y>352</y>
       <w>224</w>
       <h>296</h>
     </coordinates>
@@ -38,8 +38,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>176</x>
-      <y>40</y>
+      <x>232</x>
+      <y>8</y>
       <w>208</w>
       <h>232</h>
     </coordinates>
@@ -67,8 +67,8 @@ farbe:Color
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>736</x>
-      <y>440</y>
+      <x>784</x>
+      <y>408</y>
       <w>168</w>
       <h>232</h>
     </coordinates>
@@ -98,8 +98,8 @@ y:GZ
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>432</y>
+      <x>48</x>
+      <y>400</y>
       <w>224</w>
       <h>144</h>
     </coordinates>
@@ -119,8 +119,8 @@ btn:Button
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>648</x>
-      <y>32</y>
+      <x>696</x>
+      <y>0</y>
       <w>248</w>
       <h>288</h>
     </coordinates>
@@ -151,8 +151,8 @@ _+ main(args:Text[])_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>504</y>
+      <x>264</x>
+      <y>472</y>
       <w>160</w>
       <h>32</h>
     </coordinates>
@@ -163,8 +163,8 @@ m1=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>808</x>
-      <y>312</y>
+      <x>856</x>
+      <y>280</y>
       <w>96</w>
       <h>144</h>
     </coordinates>
@@ -178,8 +178,8 @@ r2=dieGui</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
-      <y>488</y>
+      <x>624</x>
+      <y>456</y>
       <w>176</w>
       <h>40</h>
     </coordinates>
@@ -191,8 +191,8 @@ r1=btnRestart</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
-      <y>536</y>
+      <x>624</x>
+      <y>504</y>
       <w>176</w>
       <h>40</h>
     </coordinates>
@@ -204,14 +204,14 @@ r1=btn[][]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>376</x>
-      <y>152</y>
-      <w>288</w>
+      <x>432</x>
+      <y>120</y>
+      <w>280</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
 r1=dieGruppen[]</panel_attributes>
-    <additional_attributes>10.0;20.0;340.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;330.0;20.0</additional_attributes>
   </element>
 </diagram>
