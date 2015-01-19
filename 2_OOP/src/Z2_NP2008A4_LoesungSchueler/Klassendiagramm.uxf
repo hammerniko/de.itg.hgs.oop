@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>470</y>
+      <w>280</w>
+      <h>370</h>
+    </coordinates>
+    <panel_attributes>Button
+--
+- zeile:GZ
+- spalte:GZ
+- wert:GZ
+- idGruppe:GZ
+- farge:Color
+- text:Text
+--
++ Button(spalte:GZ, zeile:GZ, wert:GZ)
++ Button(text:Text)
++ getZeile():GZ
++ setZeile(zeile:GZ)
++ getSpalte():GZ
++ setSpalt(spalte:GZ)
++ getWert():GZ
++ setWert(wert:GZ)
++ getGruppe():GZ
++ setGruppe(idGruppe:GZ)
++ getFarbe():Color
++ setFarbe(farbe:Color)
++ getText():Text
++ toString():Text
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>40</y>
+      <w>260</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Gruppe
+--
+- idGruppe:GZ
+- status:GZ
+- mwert:GZ
+- buttons:Vector&lt;Button&gt;
+farbe:Color
+--
++ Gruppe(idGruppe:GZ)
++ getIdGruppe():GZ
++ getStatus():GZ
++ setStatus(status:GZ)
++ getMwert():GZ
++ setMwert(mwert:GZ)
++ getButtons():Vector&lt;Button&gt;
++ addButton(button:Button)
++ removeButton(button:Button)
++ toString():Text
+- zZahlFürFarbe():GZ</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1010</x>
+      <y>540</y>
+      <w>210</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Gui
+--
+dieSteuerung:Steuerung
+mainWindow:JFrame
+splittPanel:JSplitPane
+buttonPanel:JPanel
+anzeigePanel:JPanel
+btnRestart:Button
+btn:Button[][]
+lbAnzeiege:JLabel
+textAusgabe:Text[]
+x:GZ
+y:GZ
+--
++ Gui(dieSteuerung:Steuerung)
++ resetField()
++ setAnzeige(zahl:GZ)
++ resetClicked()
++ mouseClicked(btn:Button)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>530</y>
+      <w>280</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>MouseClicked
+--
+parent:Gui
+btnzahl:GZ
+btn:Button
+--
++ MouseClicked(mouseClick:MouseEvent)
++ mouseEntered(arg0:MouseEvent)
++ mouseExited(arg0:MouseEvent)
++ mousePressed(arg0:MouseEvent)
++ mouseReleased(arg0:MouseEvent)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>30</y>
+      <w>310</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>Steuerung
+--
+- dieGruppe:Vector&lt;Gruppe&gt;
+- gruppenAnzahl:GZ
+- dieGui:Gui
+- markedbtn:Button
+- neueGrupppe:Gruppe
+--
+_+ main(args:Text[])_
++ Steuerung()
++ getSteuerung():Steuerung
++ getGruppe():Gruppe
++ zufallsZahl():GZ
++ btncheck(btn:Button)
+- reichweite(btn1:Button, btn2:Button):Boolean
+- reichweiteGruppe(btn1:Button, btn2:Button)
+- wert(wert1:GZ, wert2:GZ):Boolean
+- neueGruppe(btn1:Button, btn2:Button)
+- addbtn(btn:Button, gruppe:Gruppe)
++ setAnzeige(zahl:GZ)
+- getGruppe(idGruppe:Gruppe):Gruppe
++ reset()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>620</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;&gt;&gt;
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>380</y>
+      <w>110</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+r1=dieSteuerung
+r2=dieGui</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>600</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=btnRestart</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>660</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=36
+r1=btn[][]</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>180</y>
+      <w>360</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=dieGruppen[]</panel_attributes>
+    <additional_attributes>10.0;20.0;340.0;20.0</additional_attributes>
+  </element>
+</diagram>
