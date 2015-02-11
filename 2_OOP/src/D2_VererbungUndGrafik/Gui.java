@@ -13,6 +13,7 @@ public class Gui extends JFrame {
 		meinPanel =  new MeinPanel();
 		setContentPane(meinPanel);
 		setSize(300,300);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
 	}
 	
