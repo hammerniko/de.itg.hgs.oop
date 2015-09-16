@@ -1,0 +1,14 @@
+Aufgabe:
+Erstellen Sie eine Swing-Applikation in Java 
+zum Oeffnen und Speichern einer einfachen Datei.
+Der Inhalt dieser Datei soll den Text aus einem Textfield
+sein. Die einmal erzeugte Datei wird immer wieder 
+überschrieben. Es gibt ein Menü "Datei" mit den Menübefehlen
+"Öffnen" und "Speichern". 
+
+1.) Erzeugen Sie eine grafische Swing Oberfläche
+	
+2.) Sorgen Sie dafür das ein Text auf der Konsole den
+    Aufruf der Menübefehle bestätigt.
+    
+3.) 
