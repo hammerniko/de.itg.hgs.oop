@@ -11,6 +11,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 
@@ -26,7 +28,8 @@ public class Gui extends JFrame implements Dateiverwaltung {
 	JMenuItem menuItemOeffnen;
 	JMenuItem menuItemSpeichern;
 	JMenuItem menuItemSpeichernAls;
-	JTextField tfAnzeige;
+	JScrollPane scrollpane;
+	JTextArea taAnzeige;
 	
 	
 	
@@ -41,10 +44,10 @@ public class Gui extends JFrame implements Dateiverwaltung {
 
 	private void initMenu() {
 		menuBar = new JMenuBar();
-		menuDatei = new JMenu("Datei");
+		menuDatei = new JMenu("File");
 		menuBar.add(menuDatei);
 		
-		menuItemOeffnen = new JMenuItem("Öffnen");
+		menuItemOeffnen = new JMenuItem("Open");
 		menuItemOeffnen.addActionListener(new ActionListener() {
 			
 			@Override
@@ -53,9 +56,10 @@ public class Gui extends JFrame implements Dateiverwaltung {
 				openFile();
 			}
 		});
+		
 		menuDatei.add(menuItemOeffnen);
 		
-		menuItemSpeichern = new JMenuItem("Speichern");
+		menuItemSpeichern = new JMenuItem("Save");
 		menuItemSpeichern.addActionListener(new ActionListener() {
 			
 			@Override
@@ -68,7 +72,7 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		
 		menuDatei.add(menuItemSpeichern);
 		
-		menuItemSpeichernAls = new JMenuItem("Speichern als");
+		menuItemSpeichernAls = new JMenuItem("Save As");
 		menuDatei.add(menuItemSpeichernAls);
 		
 		setJMenuBar(menuBar);
@@ -81,10 +85,10 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		
 		//Hauptpanel
 		contentPane = new JPanel();
-		
-		
-		tfAnzeige = new JTextField(30);
-		contentPane.add(tfAnzeige);
+		taAnzeige = new JTextArea("",20,30);
+		scrollpane = new JScrollPane();
+		scrollpane.setViewportView(taAnzeige);
+		contentPane.add(scrollpane);
 		
 		
 		
@@ -96,7 +100,7 @@ public class Gui extends JFrame implements Dateiverwaltung {
 
 	@Override
 	public File openFile() {
-		System.out.println("Datei öffnen ausgewählt");
+		System.out.println("Datei ï¿½ffnen ausgewï¿½hlt");
 		dieSteuerung.dateiOeffnen();
 		return null;
 	}
@@ -114,6 +118,9 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		
 	}
 	
-	
+	public void setText(String str){
+		taAnzeige.setText(str);
+		revalidate();
+	}
 
 }

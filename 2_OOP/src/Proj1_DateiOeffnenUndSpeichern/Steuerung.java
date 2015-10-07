@@ -19,7 +19,7 @@ public class Steuerung {
 	}
 
 	public void dateiOeffnen() {
-		System.out.println("Datei Öffnen in Steuerung aufgerufen.");
+		System.out.println("Datei Oeffnen in Steuerung aufgerufen.");
 		JFileChooser fc = new JFileChooser();
 		int auswahl = fc.showOpenDialog(dieGui);
 
@@ -35,12 +35,15 @@ public class Steuerung {
 				bis = new BufferedInputStream(fis);
 				dis = new DataInputStream(bis);
 
+				String str="";
+				
 				while (dis.available() != 0) {
-					System.out.println(dis.readLine());
+					str = str+"\n"+ dis.readLine();
 				}
 				fis.close();
 				bis.close();
 				dis.close();
+				dieGui.setText(str);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
