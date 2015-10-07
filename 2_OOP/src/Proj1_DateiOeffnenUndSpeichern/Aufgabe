@@ -1,14 +1,32 @@
 Aufgabe:
 Erstellen Sie eine Swing-Applikation in Java 
 zum Oeffnen und Speichern einer einfachen Datei.
-Der Inhalt dieser Datei soll den Text aus einem Textfield
-sein. Die einmal erzeugte Datei wird immer wieder 
-überschrieben. Es gibt ein Menü "Datei" mit den Menübefehlen
-"Öffnen" und "Speichern". 
+Der Inhalt dieser Datei soll in der OberflÃ¤che 
+angezeigt, geÃ¤ndert und wieder gespeichert werden kÃ¶nnen.
 
-1.) Erzeugen Sie eine grafische Swing Oberfläche
+Es gibt ein Menue "File" mit den Menuebefehlen
+"Open","Save" und "Save As". 
+
+1.) Erzeugen Sie eine grafische Swing Oberflaeche
+    Hinweis Klassen: JFrame, JMenu, JMenuBar, JMenuItem, JTextArea, JScrollpane
 	
-2.) Sorgen Sie dafür das ein Text auf der Konsole den
-    Aufruf der Menübefehle bestätigt.
+2.) Erzeugen Sie ein Interface, welches die notwendigen Dateioperationen 
+ 	definiert und implemntieren Sie das Interface in der Gui
+
+3.) Bereiten Sie eine Mehrschichtarchitektur vor. Die Benutzerschicht soll von der Steuerungsschicht getrennt
+    sein. Stellen Sie die benoetigte Assoziation zwischen den Klassen her.
+    Klassen: Gui, Steuerung
     
-3.) 
+4.) Wird ein Menuebefehl ausgewaehlt, soll ein Text ausgegeben werden. z.B."File open" geklickt.
+
+5.) Wenn ein Befehl ausgewÃ¤hlt wurde, soll eine Botschaft an die Steuerung gesendet werden.
+    In der entsprechenden Methode in der Steuerung, soll z.B. der Text "File open" aufgerufen.
+    ausgegeben werden.
+    
+6.) Verwenden Sie in der Steuerung den JFilechooser-Dialog, um Dateien zu laden und zu speichen.
+ 	
+7.) Erweitern Sie ihr Programm so, dass beim Speichern der Inhalt der Textarea in ein File gespeichert wird.
+
+8.) Erweitern Sie ihr Programm so, dass der Inhalt einer geladnen Datei in der Textarea angezeigt wird.
+    Hinweis: Methode setText() in der Gui erstellen und von der Steuerung aus aufrufen.
+
