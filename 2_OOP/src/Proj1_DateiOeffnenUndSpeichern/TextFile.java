@@ -1,5 +1,5 @@
 package Proj1_DateiOeffnenUndSpeichern;
-
+ 
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.File;
@@ -8,26 +8,23 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import javax.swing.JFileChooser;
- 
-public class Steuerung {
 
-	//Assoziation auf 
-	Gui dieGui;
-	TextFile tf;
+public class TextFile {
+	JFileChooser fc;
+	File file;
+	Gui parentGui;
+	StringBuffer sb;
 	
-	public Steuerung(Gui gui) {
-		dieGui = gui;
-		tf = new TextFile(gui);
+	public TextFile(Gui gui){
+		parentGui = gui;
 	}
-
-	public void dateiOeffnen() {
-<<<<<<< HEAD
-		System.out.println("Datei Oeffnen in Steuerung aufgerufen.");
+	
+	public String openTextFile(){
 		JFileChooser fc = new JFileChooser();
-		int auswahl = fc.showOpenDialog(dieGui);
+		int auswahl = fc.showOpenDialog(parentGui);
 
 		if (auswahl == JFileChooser.APPROVE_OPTION) {
-			File file = fc.getSelectedFile();
+			file = fc.getSelectedFile();
 
 			try {
 				FileInputStream fis = null;
@@ -37,16 +34,16 @@ public class Steuerung {
 				fis = new FileInputStream(file);
 				bis = new BufferedInputStream(fis);
 				dis = new DataInputStream(bis);
+				sb = new StringBuffer();
 
-				String str="";
-				
 				while (dis.available() != 0) {
-					str = str+"\n"+ dis.readLine();
+					//System.out.println(dis.readLine());
+					sb.append(dis.readLine());
+				
 				}
 				fis.close();
 				bis.close();
 				dis.close();
-				dieGui.setText(str);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -54,19 +51,17 @@ public class Steuerung {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
+			
+			
 		}
-=======
-		System.out.println("Datei Öffnen in Steuerung aufgerufen.");
-		dieGui.setText(tf.openTextFile());
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
-
+		String str = sb.toString();
+		return str;
 	}
-
-	public void dateiSpeichern() {
-		System.out.println("Datei Speichern in Steurung aufgerufen");
+	
+	public void saveTextFile(){
+		JFileChooser fc = new JFileChooser();
+		fc.showSaveDialog(parentGui);
 		
-
 	}
 
 }

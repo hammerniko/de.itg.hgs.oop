@@ -5,16 +5,34 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 
+import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+<<<<<<< HEAD
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+=======
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JEditorPane;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+import javax.swing.event.UndoableEditEvent;
+import javax.swing.event.UndoableEditListener;
+import javax.swing.text.Document;
+import javax.swing.undo.UndoManager;
+import javax.xml.parsers.DocumentBuilder;
+>>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
 
+
+ 
 
 public class Gui extends JFrame implements Dateiverwaltung {
 	
@@ -29,16 +47,20 @@ public class Gui extends JFrame implements Dateiverwaltung {
 	JMenuItem menuItemSpeichern;
 	JMenuItem menuItemSpeichernAls;
 	JScrollPane scrollpane;
+<<<<<<< HEAD
 	JTextArea taAnzeige;
 	
 	
+=======
+	JTextArea ta;
+>>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
 	
 	//Konstruktor
 	public Gui(){
 		dieSteuerung = new Steuerung(this);
+	
 		initMenu();
 		initGui();
-		
 	}
 	
 
@@ -46,6 +68,7 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		menuBar = new JMenuBar();
 		menuDatei = new JMenu("File");
 		menuBar.add(menuDatei);
+<<<<<<< HEAD
 		
 		menuItemOeffnen = new JMenuItem("Open");
 		menuItemOeffnen.addActionListener(new ActionListener() {
@@ -60,6 +83,23 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		menuDatei.add(menuItemOeffnen);
 		
 		menuItemSpeichern = new JMenuItem("Save");
+=======
+		erstelleMenuItemOeffnen();
+		erstelleMenuItemSpeichern();
+		erstelleMenuItemSpeichernAls();
+		setJMenuBar(menuBar);
+	}
+
+
+	private void erstelleMenuItemSpeichernAls() {
+		menuItemSpeichernAls = new JMenuItem("Speichern als");
+		menuDatei.add(menuItemSpeichernAls);
+	}
+
+
+	private void erstelleMenuItemSpeichern() {
+		menuItemSpeichern = new JMenuItem("Speichern");
+>>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
 		menuItemSpeichern.addActionListener(new ActionListener() {
 			
 			@Override
@@ -71,11 +111,26 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		
 		
 		menuDatei.add(menuItemSpeichern);
+<<<<<<< HEAD
 		
 		menuItemSpeichernAls = new JMenuItem("Save As");
 		menuDatei.add(menuItemSpeichernAls);
 		
 		setJMenuBar(menuBar);
+=======
+	}
+
+
+	private void erstelleMenuItemOeffnen() {
+		menuItemOeffnen = new JMenuItem("Öffnen");
+		menuItemOeffnen.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				openFile();
+			}
+		});
+		menuDatei.add(menuItemOeffnen);
+>>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
 	}
 
 
@@ -85,6 +140,7 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		
 		//Hauptpanel
 		contentPane = new JPanel();
+<<<<<<< HEAD
 		taAnzeige = new JTextArea("",20,30);
 		scrollpane = new JScrollPane();
 		scrollpane.setViewportView(taAnzeige);
@@ -93,8 +149,24 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		
 		
 		
+=======
+		contentPane.setLayout(new BorderLayout());
+		erstelleScrollpane();
+	
+		contentPane.add(scrollpane,BorderLayout.CENTER);
+>>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
 		setContentPane(contentPane);
 		
+	}
+
+
+	private void erstelleScrollpane() {
+		int v = JScrollPane.VERTICAL_SCROLLBAR_ALWAYS;
+		int h = JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS;
+		ta= new JTextArea();
+		scrollpane = new JScrollPane(ta);
+		scrollpane.setVerticalScrollBarPolicy(v);
+		scrollpane.setHorizontalScrollBarPolicy(h);
 	}
 
 
@@ -118,9 +190,16 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		
 	}
 	
+<<<<<<< HEAD
 	public void setText(String str){
 		taAnzeige.setText(str);
 		revalidate();
 	}
+=======
+	public void setText(String text){
+		ta.setText(text);
+	}
+	
+>>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
 
 }

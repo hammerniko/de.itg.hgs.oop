@@ -6,7 +6,7 @@ import java.io.File;
 
 public interface Dateiverwaltung {
 	
-	public File openFile();
+	public File openFile(); 
 	
 	public void saveFile();
 	

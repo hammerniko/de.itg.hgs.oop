@@ -4,13 +4,35 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
-      <y>140</y>
-      <w>210</w>
-      <h>60</h>
+      <x>90</x>
+      <y>190</y>
+      <w>260</w>
+      <h>420</h>
     </coordinates>
     <panel_attributes>Gui
+--
 
+~contentPane: JPanel
+~menuBar: JMenuBar
+~menuDatei: JMenu
+~menuItemOeffnen: JMenuItem
+~menuItemSpeichern: JMenuItem
+~menuItemSpeichernAls: JMenuItem
+~scrollpane: JScrollPane
+~ta: JTextArea
+--
++Gui(): ctor
+-initMenu(): void
+-erstelleMenuItemSpeichernAls(): void
+-erstelleMenuItemSpeichern(): void
+-erstelleMenuItemOeffnen(): void
+-initGui(): void
+-erstelleScrollpane(): void
++openFile(): File
++saveFile(): void
++saveAsFile(File file, String path): void
++setText(String text): void
+--
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -18,57 +40,114 @@
     <id>UMLClass</id>
     <coordinates>
       <x>600</x>
-      <y>140</y>
-      <w>210</w>
-      <h>130</h>
+      <y>550</y>
+      <w>290</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>TextFile
+--
+~fc: JFileChooser
+~file: File
+~parentGui: Gui
+~sb: StringBuffer
+--
++TextFile(Gui gui): ctor
++openTextFile(): String
++saveTextFile(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>240</y>
+      <w>300</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>Steuerung
 --
 
 --
-+saveFile(File file)
-+saveAsFile(File file, Pfad pfad)
-+openFile(File file)
++Steuerung(Gui gui): &lt;&lt;Konstruktor&gt;&gt;
++dateiOeffnen(): void
++dateiSpeichern(): void
+--
 </panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>120</x>
-      <y>70</y>
-      <w>50</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;30.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
+      <x>60</x>
       <y>20</y>
-      <w>210</w>
-      <h>60</h>
+      <w>340</w>
+      <h>120</h>
     </coordinates>
-    <panel_attributes>Dateiverwaltung
-
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Dateiverwaltung
+--
+--
++openFile(): File
++saveFile(): void
++saveAsFile(File file, String path): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>670</y>
+      <w>310</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Proj1_DateiOeffnenUndSpeichern::Startklasse
+--
+--
++main(String[] args): void
+--
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
-      <y>150</y>
-      <w>360</w>
+      <x>210</x>
+      <y>130</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>260</y>
+      <w>260</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-&gt;
+    <panel_attributes>lt=-
 m1=1
-m2=1
 r1=dieGui
+
+m2=1
 r2=dieSteuerung</panel_attributes>
-    <additional_attributes>10.0;20.0;340.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>730</x>
+      <y>370</y>
+      <w>30</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
