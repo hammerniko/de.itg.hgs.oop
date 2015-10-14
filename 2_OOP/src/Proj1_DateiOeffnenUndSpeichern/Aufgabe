@@ -6,8 +6,8 @@ Der Inhalt dieser Datei soll in der OberflÃ¤che
 angezeigt, geÃ¤ndert und wieder gespeichert werden kÃ¶nnen.
 =======
 Der Inhalt dieser Datei soll den Text aus einer TextArea
-sein. Es gibt ein Menü "Datei" mit den Menübefehlen
-"Öffnen","Speichern" und "Speichern unter". 
+sein. Es gibt ein Menue "Datei" mit den Menuebefehlen
+"Oeffnen","Speichern" und "Speichern unter". 
 >>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
 
 Es gibt ein Menue "File" mit den Menuebefehlen
@@ -23,7 +23,7 @@ Es gibt ein Menue "File" mit den Menuebefehlen
     sein. Stellen Sie die benoetigte Assoziation zwischen den Klassen her.
     Klassen: Gui, Steuerung
     
-<<<<<<< HEAD
+
 4.) Wird ein Menuebefehl ausgewaehlt, soll ein Text ausgegeben werden. z.B."File open" geklickt.
 
 5.) Wenn ein Befehl ausgewÃ¤hlt wurde, soll eine Botschaft an die Steuerung gesendet werden.
@@ -37,7 +37,3 @@ Es gibt ein Menue "File" mit den Menuebefehlen
 8.) Erweitern Sie ihr Programm so, dass der Inhalt einer geladnen Datei in der Textarea angezeigt wird.
     Hinweis: Methode setText() in der Gui erstellen und von der Steuerung aus aufrufen.
 
-=======
-3.) 
-  
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
