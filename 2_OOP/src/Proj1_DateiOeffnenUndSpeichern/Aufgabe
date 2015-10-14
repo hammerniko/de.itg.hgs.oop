@@ -1,14 +1,13 @@
 Aufgabe:
 Erstellen Sie eine Swing-Applikation in Java 
 zum Oeffnen und Speichern einer einfachen Datei.
-<<<<<<< HEAD
+
 Der Inhalt dieser Datei soll in der Oberfläche 
 angezeigt, geändert und wieder gespeichert werden können.
-=======
+
 Der Inhalt dieser Datei soll den Text aus einer TextArea
 sein. Es gibt ein Menue "Datei" mit den Menuebefehlen
 "Oeffnen","Speichern" und "Speichern unter". 
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
 
 Es gibt ein Menue "File" mit den Menuebefehlen
 "Open","Save" und "Save As". 
