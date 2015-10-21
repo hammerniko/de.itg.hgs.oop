@@ -140,7 +140,7 @@ public class Gui extends JFrame implements Dateiverwaltung {
 
 	@Override
 	public void saveFile() {
-		System.out.println("File Save angeklickt");
+		System.out.println("File save angeklickt");
 		dieSteuerung.saveFile();
 		
 	}
