@@ -17,12 +17,10 @@ public class Steuerung {
 	
 	public Steuerung(Gui gui) {
 		dieGui = gui;
-		tf = new TextFile(gui);
+		tf = new TextFile();
 	}
 
 	public void openFile() {
-
-
 		System.out.println("Datei Oeffnen in Steuerung aufgerufen.");
 		dieGui.setText(tf.openTextFile());
 

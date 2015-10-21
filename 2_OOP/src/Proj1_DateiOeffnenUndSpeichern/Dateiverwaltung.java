@@ -6,10 +6,10 @@ import java.io.File;
 
 public interface Dateiverwaltung {
 	
-	public File openFile(); 
+	public void openFileClicked(); 
 	
-	public void saveFile();
+	public void saveFileClicked();
 	
-	public void saveAsFile(File file, String path);
+	public void saveAsFileClicked(File file, String path);
 
 }

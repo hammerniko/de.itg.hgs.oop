@@ -75,7 +75,7 @@ public class Gui extends JFrame implements Dateiverwaltung {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				saveFile();
+				saveFileClicked();
 			}
 		});
 	}
@@ -91,7 +91,7 @@ public class Gui extends JFrame implements Dateiverwaltung {
 		menuItemOpen.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				openFile();
+				openFileClicked();
 			}
 		});
 		menuFile.add(menuItemOpen);
@@ -132,21 +132,21 @@ public class Gui extends JFrame implements Dateiverwaltung {
 
 
 	@Override
-	public File openFile() {
+	public void openFileClicked() {
 		System.out.println("File open angeklickt");
 		dieSteuerung.openFile();
-		return null;
+		
 	}
 
 	@Override
-	public void saveFile() {
+	public void saveFileClicked() {
 		System.out.println("File save angeklickt");
 		dieSteuerung.saveFile();
 		
 	}
 
 	@Override
-	public void saveAsFile(File file, String path) {
+	public void saveAsFileClicked(File file, String path) {
 		// TODO Auto-generated method stub
 		
 	}

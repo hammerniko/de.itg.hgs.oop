@@ -12,16 +12,16 @@ import javax.swing.JFileChooser;
 public class TextFile {
 	JFileChooser fc;
 	File file;
-	Gui parentGui;
 	StringBuffer sb;
+	String str="";
 	
-	public TextFile(Gui gui){
-		parentGui = gui;
+	public TextFile(){
+		
 	}
 	
 	public String openTextFile(){
 		JFileChooser fc = new JFileChooser();
-		int auswahl = fc.showOpenDialog(parentGui);
+		int auswahl = fc.showOpenDialog(null);
 
 		if (auswahl == JFileChooser.APPROVE_OPTION) {
 			file = fc.getSelectedFile();
@@ -34,11 +34,14 @@ public class TextFile {
 				fis = new FileInputStream(file);
 				bis = new BufferedInputStream(fis);
 				dis = new DataInputStream(bis);
+				
+				
 				sb = new StringBuffer();
 
 				while (dis.available() != 0) {
 					//System.out.println(dis.readLine());
 					sb.append(dis.readLine());
+					
 				
 				}
 				fis.close();
@@ -52,15 +55,15 @@ public class TextFile {
 				e.printStackTrace();
 			}
 			
+			str = sb.toString();
 			
 		}
-		String str = sb.toString();
 		return str;
 	}
 	
 	public void saveTextFile(){
 		JFileChooser fc = new JFileChooser();
-		fc.showSaveDialog(parentGui);
+		fc.showSaveDialog(null);
 		
 	}
 
