@@ -40,21 +40,17 @@ public class Gui extends JFrame implements Dateiverwaltung {
 	//Grafische Komponenten
 	JPanel contentPane;
 	JMenuBar menuBar;
-	JMenu menuDatei;
-	JMenuItem menuItemOeffnen;
-	JMenuItem menuItemSpeichern;
-	JMenuItem menuItemSpeichernAls;
+	JMenu menuFile;
+	JMenuItem menuItemOpen;
+	JMenuItem menuItemSave;
+	JMenuItem menuItemSaveAs;
 	JScrollPane scrollpane;
-
 	JTextArea taAnzeige;
-	
-
 	JTextArea ta;
 	
 	//Konstruktor
 	public Gui(){
 		dieSteuerung = new Steuerung(this);
-	
 		initMenu();
 		initGui();
 	}
@@ -62,65 +58,43 @@ public class Gui extends JFrame implements Dateiverwaltung {
 
 	private void initMenu() {
 		menuBar = new JMenuBar();
-		menuDatei = new JMenu("File");
-		menuBar.add(menuDatei);
-		
-		menuItemOeffnen = new JMenuItem("Open");
-		menuItemOeffnen.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				openFile();
-			}
-		});
-		
-		menuDatei.add(menuItemOeffnen);
-		
-		menuItemSpeichern = new JMenuItem("Save");
-		erstelleMenuItemOeffnen();
-		erstelleMenuItemSpeichern();
-		erstelleMenuItemSpeichernAls();
+		menuFile = new JMenu("File");
+		menuBar.add(menuFile);
+	
+		erstelleMenuItemOpen();
+		erstelleMenuItemSave();
+		erstelleMenuItemSaveAs();
 		setJMenuBar(menuBar);
 	}
 
 
-	private void erstelleMenuItemSpeichernAls() {
-		menuItemSpeichernAls = new JMenuItem("Speichern als");
-		menuDatei.add(menuItemSpeichernAls);
-	}
 
-
-	private void erstelleMenuItemSpeichern() {
-		menuItemSpeichern = new JMenuItem("Speichern");
-		menuItemSpeichern.addActionListener(new ActionListener() {
+	private void erstelleMenuItemSave() {
+		menuItemSave = new JMenuItem("Save");
+		menuItemSave.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				saveFile();
-				
 			}
 		});
-		
-		
-		menuDatei.add(menuItemSpeichern);
-		
-		menuItemSpeichernAls = new JMenuItem("Save As");
-		menuDatei.add(menuItemSpeichernAls);
-		
-		setJMenuBar(menuBar);
+	}
+
+	private void erstelleMenuItemSaveAs() {
+		menuItemSaveAs = new JMenuItem("SaveAs");
+		menuFile.add(menuItemSaveAs);
 	}
 
 
-	private void erstelleMenuItemOeffnen() {
-		menuItemOeffnen = new JMenuItem("�ffnen");
-		menuItemOeffnen.addActionListener(new ActionListener() {
+	private void erstelleMenuItemOpen() {
+		menuItemOpen = new JMenuItem("Open");
+		menuItemOpen.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				openFile();
 			}
 		});
-		menuDatei.add(menuItemOeffnen);
+		menuFile.add(menuItemOpen);
 	}
 
 
@@ -159,15 +133,15 @@ public class Gui extends JFrame implements Dateiverwaltung {
 
 	@Override
 	public File openFile() {
-		System.out.println("Datei �ffnen ausgew�hlt");
-		dieSteuerung.dateiOeffnen();
+		System.out.println("File open angeklickt");
+		dieSteuerung.openFile();
 		return null;
 	}
 
 	@Override
 	public void saveFile() {
-		System.out.println("Datei speichern angeklickt");
-		dieSteuerung.dateiSpeichern();
+		System.out.println("File Save angeklickt");
+		dieSteuerung.saveFile();
 		
 	}
 

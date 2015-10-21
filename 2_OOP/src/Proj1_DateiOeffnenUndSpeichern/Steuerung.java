@@ -20,7 +20,7 @@ public class Steuerung {
 		tf = new TextFile(gui);
 	}
 
-	public void dateiOeffnen() {
+	public void openFile() {
 
 
 		System.out.println("Datei Oeffnen in Steuerung aufgerufen.");
@@ -28,7 +28,7 @@ public class Steuerung {
 
 	}
 
-	public void dateiSpeichern() {
+	public void saveFile() {
 		System.out.println("Datei Speichern in Steurung aufgerufen");
 		
 
