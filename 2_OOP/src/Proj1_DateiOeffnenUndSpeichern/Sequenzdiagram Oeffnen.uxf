@@ -4,8 +4,8 @@
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>0</x>
-      <y>24</y>
+      <x>114</x>
+      <y>66</y>
       <w>36</w>
       <h>60</h>
     </coordinates>
@@ -15,8 +15,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
-      <y>12</y>
+      <x>240</x>
+      <y>54</y>
       <w>18</w>
       <h>42</h>
     </coordinates>
@@ -26,8 +26,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>102</x>
-      <y>0</y>
+      <x>216</x>
+      <y>42</y>
       <w>60</w>
       <h>18</h>
     </coordinates>
@@ -37,8 +37,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>126</x>
-      <y>42</y>
+      <x>240</x>
+      <y>84</y>
       <w>12</w>
       <h>822</h>
     </coordinates>
@@ -48,8 +48,8 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>132</x>
-      <y>48</y>
+      <x>246</x>
+      <y>90</y>
       <w>138</w>
       <h>24</h>
     </coordinates>
@@ -60,8 +60,8 @@ openFile()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>18</x>
-      <y>36</y>
+      <x>132</x>
+      <y>78</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -73,8 +73,8 @@ openFileClicked()
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>210</x>
-      <y>0</y>
+      <x>324</x>
+      <y>42</y>
       <w>108</w>
       <h>18</h>
     </coordinates>
@@ -84,8 +84,8 @@ openFileClicked()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>258</x>
-      <y>12</y>
+      <x>372</x>
+      <y>54</y>
       <w>18</w>
       <h>54</h>
     </coordinates>
@@ -95,8 +95,8 @@ openFileClicked()
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>258</x>
-      <y>54</y>
+      <x>372</x>
+      <y>96</y>
       <w>12</w>
       <h>804</h>
     </coordinates>
@@ -106,8 +106,8 @@ openFileClicked()
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>354</x>
-      <y>0</y>
+      <x>468</x>
+      <y>42</y>
       <w>108</w>
       <h>18</h>
     </coordinates>
@@ -118,8 +118,8 @@ openFileClicked()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>402</x>
-      <y>12</y>
+      <x>516</x>
+      <y>54</y>
       <w>18</w>
       <h>66</h>
     </coordinates>
@@ -129,8 +129,8 @@ openFileClicked()
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>402</x>
-      <y>66</y>
+      <x>516</x>
+      <y>108</y>
       <w>12</w>
       <h>786</h>
     </coordinates>
@@ -140,8 +140,8 @@ openFileClicked()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
-      <y>60</y>
+      <x>378</x>
+      <y>102</y>
       <w>150</w>
       <h>24</h>
     </coordinates>
@@ -152,8 +152,8 @@ openTextFile()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>732</x>
-      <y>84</y>
+      <x>846</x>
+      <y>126</y>
       <w>108</w>
       <h>30</h>
     </coordinates>
@@ -164,8 +164,8 @@ openTextFile()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>84</y>
+      <x>522</x>
+      <y>126</y>
       <w>336</w>
       <h>24</h>
     </coordinates>
@@ -176,8 +176,8 @@ openTextFile()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>780</x>
-      <y>108</y>
+      <x>894</x>
+      <y>150</y>
       <w>18</w>
       <h>30</h>
     </coordinates>
@@ -187,8 +187,8 @@ openTextFile()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>156</y>
+      <x>522</x>
+      <y>198</y>
       <w>384</w>
       <h>30</h>
     </coordinates>
@@ -200,8 +200,8 @@ getSelectedFile()
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>780</x>
-      <y>162</y>
+      <x>894</x>
+      <y>204</y>
       <w>12</w>
       <h>42</h>
     </coordinates>
@@ -211,8 +211,8 @@ getSelectedFile()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>186</y>
+      <x>522</x>
+      <y>228</y>
       <w>384</w>
       <h>24</h>
     </coordinates>
@@ -223,8 +223,8 @@ file</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>222</y>
+      <x>522</x>
+      <y>264</y>
       <w>354</w>
       <h>24</h>
     </coordinates>
@@ -235,8 +235,8 @@ file</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>750</x>
-      <y>222</y>
+      <x>864</x>
+      <y>264</y>
       <w>84</w>
       <h>18</h>
     </coordinates>
@@ -246,8 +246,8 @@ file</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>258</y>
+      <x>522</x>
+      <y>300</y>
       <w>432</w>
       <h>24</h>
     </coordinates>
@@ -258,8 +258,8 @@ file</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>828</x>
-      <y>258</y>
+      <x>942</x>
+      <y>300</y>
       <w>102</w>
       <h>18</h>
     </coordinates>
@@ -269,8 +269,8 @@ file</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>114</y>
+      <x>522</x>
+      <y>156</y>
       <w>384</w>
       <h>24</h>
     </coordinates>
@@ -281,8 +281,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>780</x>
-      <y>126</y>
+      <x>894</x>
+      <y>168</y>
       <w>12</w>
       <h>18</h>
     </coordinates>
@@ -292,8 +292,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>780</x>
-      <y>138</y>
+      <x>894</x>
+      <y>180</y>
       <w>18</w>
       <h>24</h>
     </coordinates>
@@ -303,8 +303,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>132</y>
+      <x>522</x>
+      <y>174</y>
       <w>384</w>
       <h>24</h>
     </coordinates>
@@ -315,8 +315,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>300</y>
+      <x>522</x>
+      <y>342</y>
       <w>192</w>
       <h>24</h>
     </coordinates>
@@ -327,8 +327,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>588</x>
-      <y>300</y>
+      <x>702</x>
+      <y>342</y>
       <w>102</w>
       <h>18</h>
     </coordinates>
@@ -338,8 +338,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>330</y>
+      <x>522</x>
+      <y>372</y>
       <w>294</w>
       <h>24</h>
     </coordinates>
@@ -350,8 +350,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>690</x>
-      <y>330</y>
+      <x>804</x>
+      <y>372</y>
       <w>102</w>
       <h>18</h>
     </coordinates>
@@ -361,8 +361,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>324</x>
-      <y>354</y>
+      <x>438</x>
+      <y>396</y>
       <w>558</w>
       <h>234</h>
     </coordinates>
@@ -372,8 +372,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>732</x>
-      <y>342</y>
+      <x>846</x>
+      <y>384</y>
       <w>18</w>
       <h>174</h>
     </coordinates>
@@ -383,8 +383,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>732</x>
-      <y>504</y>
+      <x>846</x>
+      <y>546</y>
       <w>12</w>
       <h>36</h>
     </coordinates>
@@ -394,8 +394,8 @@ showOpenDialog()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>492</y>
+      <x>522</x>
+      <y>534</y>
       <w>336</w>
       <h>24</h>
     </coordinates>
@@ -406,8 +406,8 @@ append(text)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>630</x>
-      <y>444</y>
+      <x>744</x>
+      <y>486</y>
       <w>12</w>
       <h>36</h>
     </coordinates>
@@ -417,8 +417,8 @@ append(text)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>312</y>
+      <x>744</x>
+      <y>354</y>
       <w>18</w>
       <h>54</h>
     </coordinates>
@@ -428,8 +428,8 @@ append(text)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>438</y>
+      <x>522</x>
+      <y>480</y>
       <w>234</w>
       <h>24</h>
     </coordinates>
@@ -440,8 +440,8 @@ readline()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>462</y>
+      <x>522</x>
+      <y>504</y>
       <w>234</w>
       <h>24</h>
     </coordinates>
@@ -452,8 +452,8 @@ text</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>522</y>
+      <x>522</x>
+      <y>564</y>
       <w>336</w>
       <h>24</h>
     </coordinates>
@@ -464,8 +464,8 @@ text</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>360</y>
+      <x>522</x>
+      <y>402</y>
       <w>234</w>
       <h>24</h>
     </coordinates>
@@ -476,8 +476,8 @@ available()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>630</x>
-      <y>360</y>
+      <x>744</x>
+      <y>402</y>
       <w>12</w>
       <h>48</h>
     </coordinates>
@@ -487,8 +487,8 @@ available()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>390</y>
+      <x>522</x>
+      <y>432</y>
       <w>234</w>
       <h>30</h>
     </coordinates>
@@ -500,8 +500,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>786</x>
-      <y>234</y>
+      <x>900</x>
+      <y>276</y>
       <w>18</w>
       <h>426</h>
     </coordinates>
@@ -511,8 +511,8 @@ zahl
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>786</x>
-      <y>684</y>
+      <x>900</x>
+      <y>726</y>
       <w>12</w>
       <h>12</h>
     </coordinates>
@@ -522,8 +522,8 @@ zahl
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>786</x>
-      <y>648</y>
+      <x>900</x>
+      <y>690</y>
       <w>12</w>
       <h>30</h>
     </coordinates>
@@ -533,8 +533,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>786</x>
-      <y>672</y>
+      <x>900</x>
+      <y>714</y>
       <w>18</w>
       <h>30</h>
     </coordinates>
@@ -544,8 +544,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>642</y>
+      <x>522</x>
+      <y>684</y>
       <w>390</w>
       <h>24</h>
     </coordinates>
@@ -556,8 +556,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>660</y>
+      <x>522</x>
+      <y>702</y>
       <w>390</w>
       <h>24</h>
     </coordinates>
@@ -568,8 +568,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>870</x>
-      <y>270</y>
+      <x>984</x>
+      <y>312</y>
       <w>18</w>
       <h>438</h>
     </coordinates>
@@ -579,8 +579,8 @@ zahl
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>870</x>
-      <y>696</y>
+      <x>984</x>
+      <y>738</y>
       <w>12</w>
       <h>30</h>
     </coordinates>
@@ -590,8 +590,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>690</y>
+      <x>522</x>
+      <y>732</y>
       <w>474</w>
       <h>24</h>
     </coordinates>
@@ -602,8 +602,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>708</y>
+      <x>522</x>
+      <y>750</y>
       <w>474</w>
       <h>24</h>
     </coordinates>
@@ -614,8 +614,8 @@ zahl
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>870</x>
-      <y>726</y>
+      <x>984</x>
+      <y>768</y>
       <w>12</w>
       <h>12</h>
     </coordinates>
@@ -625,8 +625,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>402</y>
+      <x>744</x>
+      <y>444</y>
       <w>18</w>
       <h>54</h>
     </coordinates>
@@ -636,8 +636,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>474</y>
+      <x>744</x>
+      <y>516</y>
       <w>18</w>
       <h>276</h>
     </coordinates>
@@ -647,8 +647,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>732</y>
+      <x>522</x>
+      <y>774</y>
       <w>234</w>
       <h>24</h>
     </coordinates>
@@ -659,8 +659,8 @@ zahl
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>630</x>
-      <y>738</y>
+      <x>744</x>
+      <y>780</y>
       <w>12</w>
       <h>36</h>
     </coordinates>
@@ -670,8 +670,8 @@ zahl
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>630</x>
-      <y>774</y>
+      <x>744</x>
+      <y>816</y>
       <w>12</w>
       <h>12</h>
     </coordinates>
@@ -681,8 +681,8 @@ zahl
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>816</y>
+      <x>510</x>
+      <y>858</y>
       <w>336</w>
       <h>30</h>
     </coordinates>
@@ -694,8 +694,8 @@ text
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>732</x>
-      <y>534</y>
+      <x>846</x>
+      <y>576</y>
       <w>18</w>
       <h>276</h>
     </coordinates>
@@ -705,8 +705,8 @@ text
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>792</y>
+      <x>522</x>
+      <y>834</y>
       <w>336</w>
       <h>24</h>
     </coordinates>
@@ -717,8 +717,8 @@ toString()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>732</x>
-      <y>798</y>
+      <x>846</x>
+      <y>840</y>
       <w>12</w>
       <h>36</h>
     </coordinates>
@@ -728,8 +728,8 @@ toString()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>768</y>
+      <x>534</x>
+      <y>810</y>
       <w>234</w>
       <h>24</h>
     </coordinates>
@@ -740,8 +740,8 @@ toString()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
-      <y>834</y>
+      <x>378</x>
+      <y>876</y>
       <w>150</w>
       <h>30</h>
     </coordinates>
@@ -753,8 +753,8 @@ text
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>132</x>
-      <y>840</y>
+      <x>246</x>
+      <y>882</y>
       <w>138</w>
       <h>24</h>
     </coordinates>

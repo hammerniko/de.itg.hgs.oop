@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>90</x>
-      <y>190</y>
+      <x>110</x>
+      <y>280</y>
       <w>260</w>
       <h>420</h>
     </coordinates>
@@ -39,8 +39,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>550</y>
+      <x>620</x>
+      <y>640</y>
       <w>290</w>
       <h>180</h>
     </coordinates>
@@ -61,8 +61,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
-      <y>240</y>
+      <x>600</x>
+      <y>330</y>
       <w>300</w>
       <h>140</h>
     </coordinates>
@@ -80,8 +80,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>60</x>
-      <y>20</y>
+      <x>80</x>
+      <y>110</y>
       <w>340</w>
       <h>120</h>
     </coordinates>
@@ -99,8 +99,8 @@ Dateiverwaltung
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>670</y>
+      <x>20</x>
+      <y>760</y>
       <w>310</w>
       <h>70</h>
     </coordinates>
@@ -115,8 +115,8 @@ Dateiverwaltung
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>130</y>
+      <x>230</x>
+      <y>220</y>
       <w>50</w>
       <h>80</h>
     </coordinates>
@@ -126,8 +126,8 @@ Dateiverwaltung
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
-      <y>260</y>
+      <x>360</x>
+      <y>350</y>
       <w>260</w>
       <h>50</h>
     </coordinates>
@@ -142,8 +142,8 @@ r2=dieSteuerung</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>370</y>
+      <x>750</x>
+      <y>460</y>
       <w>30</w>
       <h>200</h>
     </coordinates>
