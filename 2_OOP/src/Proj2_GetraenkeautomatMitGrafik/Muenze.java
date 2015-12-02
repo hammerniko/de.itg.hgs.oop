@@ -4,20 +4,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 
-public class Muenze extends JLabel implements ActionListener{
+public class Muenze extends JLabel {
 	
 	ImageIcon bild;
 	int muenzwert;
 	int anzahl;
+	int wert;
 
 	public Muenze(int wert){
-		anzahl = 1;
+		this.wert = wert;
+		this.anzahl = anzahl = 1;
 		setMuenze(wert);
 	}
 	
 	public void setMuenze(int wert){
+		System.out.println(wert+" gesetzt");
 	String bildname = "";
 	switch (wert) {
 	case 1:
@@ -38,10 +42,6 @@ public class Muenze extends JLabel implements ActionListener{
 
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		anzahl++;
-		
-	}
+	
 
 }
