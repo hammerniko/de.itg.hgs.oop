@@ -1,4 +1,4 @@
-package G2_GrafikMitDragUndDrop;
+package G2_DragUndDrop_TextAufButton;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
