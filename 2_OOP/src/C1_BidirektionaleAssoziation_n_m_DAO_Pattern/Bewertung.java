@@ -15,6 +15,12 @@ public class Bewertung {
 	    this.note = note;
 	    this.gewichtung = gewichtung;
     }
+
+	@Override
+	public String toString() {
+		return "Bewertung [schuelerNr=" + schuelerNr + ", fachNr=" + fachNr
+				+ ", note=" + note + ", gewichtung=" + gewichtung + "]";
+	}
 	
 	
 	

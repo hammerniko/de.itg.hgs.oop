@@ -1,6 +1,12 @@
 package C1_BidirektionaleAssoziation_n_m_DAO_Pattern;
 
 public class Fach {
+	@Override
+	public String toString() {
+		return "Fach [idFach=" + idFach + ", fachname=" + fachname
+				+ ", fachkuezel=" + fachkuezel + "]";
+	}
+
 	private int idFach;
 	private String fachname;
 	private String fachkuezel;

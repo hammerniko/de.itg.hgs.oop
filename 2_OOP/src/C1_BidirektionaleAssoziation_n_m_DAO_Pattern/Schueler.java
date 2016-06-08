@@ -35,6 +35,13 @@ public class Schueler {
 	public void setVorname(String vorname) {
     	this.vorname = vorname;
     }
+
+
+	@Override
+	public String toString() {
+		return "Schueler [idSchueler=" + idSchueler + ", name=" + name
+				+ ", vorname=" + vorname + "]";
+	}
 	
 	
 	
