@@ -1,0 +1,20 @@
+AUFGABE LEHRER
+
+1.) Erstellen Sie eine Klasse Lehrer mit den Attributen
+    Name, Vorname, kuerzel.
+    
+2.) Ein Lehrerobjekt darf nur erstellt werden, wenn
+    Name, Vorname und kuerzel bekannt sind.
+    
+3.) Alle Attributwerte eines Objektes sollen auf
+    der Konsole ausgegeben werden können (toString()-Methode)
+   
+4.) Alle Attribute dürfen gelesen werden. Name und kuerzel dürfen
+    geändert werden. Ein Kuerzel muss aus zwei Zeichen bestehen die im 
+    Namen vorkommen. Der Name darf nicht mit einer Ziffer beginnen.
+
+5.) Erzeugen Sie den Lehrer Herbert Maier (kuerzel=Ma) und geben Sie
+    seine Daten auf der Konsole aus.
+
+6.) Erzeugen Sie mit UMLet das Klassendiagramm für die Klasse Lehrer.
+    

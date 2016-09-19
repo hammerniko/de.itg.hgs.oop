@@ -1,81 +1,77 @@
 package A10_KlassenUndObjekteMitGui;
 
-import java.awt.Event;
-import java.awt.EventQueue;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.SwingUtilities;
+public class GuiPasswort extends JFrame  {
 
-import D03_VererbungBeiButton.GuiHauptprogramm;
-
-public class GuiPasswort extends JFrame implements ActionListener {
-
-    // Objekte f?r die Gui deklarieren
+	//Konstanten
+	public static final String OK 		= "Passwort ok";
+	public static final String NOT_OK 	= "Passwort falsch";
+	public static final String STATUS 	= "Status:";
+	public static final String PWD 		= "Passwort:";
+	
+    // Objekte fuer die Gui deklarieren
     JPanel contentPane;
     JLabel label1, label2;
-    JLabel lbstatus;
-    JPasswordField jpfPasswort;
-    Passwortpruefer pp;
+    JLabel lbStatus;
+    JPasswordField pfPasswort;
+    Passwortpruefer passwortPruefer;
 
     // Konstruktor
     public GuiPasswort() {
-        // Assoziation zu Passwortpr?fer
-        pp = new Passwortpruefer();
+        // Assoziation zu Passwortpruefer
+        passwortPruefer = new Passwortpruefer();
 
-        // Schliessverhalten und Gr??e
+        // Schliessverhalten und Groesse
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setSize(200, 100);
 
         // Objekte erzeugen
         contentPane = new JPanel();
-        label1 = new JLabel("Passwort:");
-        label2 = new JLabel("Status:");
-        lbstatus = new JLabel();
-        jpfPasswort = new JPasswordField();
-        jpfPasswort.setColumns(5);
-        jpfPasswort.addActionListener(this);
+        label1 		= new JLabel(PWD);
+        label2 		= new JLabel(STATUS);
+        lbStatus 	= new JLabel();
+        
+        pfPasswort = new JPasswordField();
+        pfPasswort.setColumns(5);
+        pfPasswort.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				 if (passwortPruefer.pruefePasswort(pfPasswort.getText())) {
+		                System.out.println(OK);
+		                lbStatus.setText(OK);
+		                
+		                GuiHauptprogramm dasHP = new GuiHauptprogramm();
+		                dasHP.setVisible(true);
+		                dispose();
+		                passwortPruefer = null;
+		                
+		            } else {
+		                System.out.println(NOT_OK);
+		                lbStatus.setText(NOT_OK);
+		            }
+				
+			}
+		});
 
-        // Layout f?r die Contentpane
+        // Layout fuer die Contentpane
         contentPane.setLayout(new GridLayout(2, 2));
 
-        // Komponenten zur Contentpane hinzuf?gen
+        // Komponenten zur Contentpane hinzufuegen
         contentPane.add(label1);
-        contentPane.add(jpfPasswort);
+        contentPane.add(pfPasswort);
         contentPane.add(label2);
-        contentPane.add(lbstatus);
+        contentPane.add(lbStatus);
 
         // Contenpane des JFrame setzen
         setContentPane(contentPane);
 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-        if (e.getSource() == jpfPasswort) {
-            if (pp.pruefePasswort(jpfPasswort.getText())) {
-                System.out.println("Passowrt g?ltig");
-
-                lbstatus.setText("Passwort g?ltig");
-               
-
-                
-                GuiHauptprogramm dasHP = new GuiHauptprogramm();
-                dasHP.setVisible(true);
-                dispose();
-            } else {
-                System.out.println("Passwort ung?ltig");
-                lbstatus.setText("Passwort ung?ltig");
-            }
-        }
-
-    }
+    
 
 }
