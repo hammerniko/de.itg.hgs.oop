@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>187</x>
+      <y>55</y>
+      <w>231</w>
+      <h>286</h>
+    </coordinates>
+    <panel_attributes>Schulklasse
+--
+-name:txt
+-beschreibung:txt
+--
+&lt;&lt;Konstruktor&gt;&gt;
++Schulklasse(name:txt)
+
+&lt;&lt;Verwaltungsmethoden&gt;&gt;
++linkLehrer(l:Lehrer)
++unlinkLehrer()
+
+&lt;&lt;Delegationsmehtoden&gt;&gt;
++getNameKlassenLehrer():txt
+
++toString():txt
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>66</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>Schulart
+--
+-name:txt
+-info:txt
+--
+&lt;&lt;Konstruktor&gt;&gt;
++Schulart(name:txt)
+
++toString():txt
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>132</y>
+      <w>187</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=dieSchulart</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>572</x>
+      <y>341</y>
+      <w>231</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>Lehrer
+--
+name:txt
+kuerzel:txt
+--
+&lt;&lt;Konstruktor&gt;&gt;
++Lehrer(name:txt, kuezel:txt)
+
+&lt;&lt;Gettter und Setter&gt;&gt;
++getName():txt
+
++toString():txt
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>286</x>
+      <y>330</y>
+      <w>308</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=derLehrer</panel_attributes>
+    <additional_attributes>260.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>165</x>
+      <y>616</y>
+      <w>176</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>_tg123:Schulklasse_
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>649</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>473</x>
+      <y>616</y>
+      <w>176</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>_derLehrer:Lehrer_
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>649</y>
+      <w>33</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>231</x>
+      <y>715</y>
+      <w>22</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>253</x>
+      <y>715</y>
+      <w>319</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getName()</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>550</x>
+      <y>737</y>
+      <w>22</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>253</x>
+      <y>759</y>
+      <w>319</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+"Hammer"</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>242</x>
+      <y>726</y>
+      <w>22</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>242</x>
+      <y>671</y>
+      <w>275</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+getNameKlassenLehrer()</panel_attributes>
+    <additional_attributes>20.0;50.0;30.0;40.0;80.0;40.0;80.0;10.0;10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>242</x>
+      <y>781</y>
+      <w>198</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+"Hammer"</panel_attributes>
+    <additional_attributes>10.0;50.0;100.0;50.0;100.0;10.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>781</y>
+      <w>33</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>231</x>
+      <y>825</y>
+      <w>33</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>33</x>
+      <y>561</y>
+      <w>154</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>Sequenzdiagramm</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>22</x>
+      <y>22</y>
+      <w>154</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>Klassendiagramm</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
