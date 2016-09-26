@@ -94,6 +94,7 @@ public class Schulklasse {
 	public void addSchueler(Schueler s){
 		int index = 0;
 		
+		//Suche eine freie Stelle
 		for (int i = 0; i < dieSchueler.length; i++) {
 			if(dieSchueler[i]==null){
 				index = i;
@@ -137,7 +138,7 @@ public class Schulklasse {
 		for (int i = 0; i < dieSchueler.length; i++) {
 			if(dieSchueler[i]==s){
 				dieSchueler[i]=null;
-				System.out.println("Schueler entfernt");
+				
 			}
 		}
 		

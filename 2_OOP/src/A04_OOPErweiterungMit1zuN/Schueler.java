@@ -35,6 +35,9 @@ public class Schueler {
 	}
 
 	
+	
+	
+	
 	public void setDieKlasse(Schulklasse klasse) {
 		
 		//Wenn der Schüler bereits einer Klasse zugeordnet wurde
