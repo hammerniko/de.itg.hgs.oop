@@ -1,0 +1,19 @@
+Ergänzen Sie Ihr Klassendiagramm:
+
+1.) Alle Lehrer sollen mit Name, Vorname
+    und Kuerzel erstellt werden können.
+    Alle Mitarbeiter müssen mindestens mit 
+    Vor- und Nachname erfasst werden.
+
+2.) Datenkapselung soll angewendet werden.
+
+3.) Die Mitarbeiter der Verwaltung werden als 
+    Verwaltungsangestellt mit erfasst.
+    Zusätzliches Attribut ist "funktion". 
+    Verwaltungs angestellte bekommen eine 
+    Amtszulage.
+    
+4.) Bei allen Mitarbeitern soll es möglich sein 
+    alle Attributwerte auf einmal auf der 
+    Konsole auszugeben.
+
