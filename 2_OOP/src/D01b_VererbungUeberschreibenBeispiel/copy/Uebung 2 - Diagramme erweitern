@@ -6,9 +6,13 @@ Ergänzen Sie Ihr Klassendiagramm:
     Vor- und Nachname erfasst werden.
 
 2.) Datenkapselung soll angewendet werden.
+    Bei allen Mitarbeitern darf Name und Vorname gelesen werden.
+    Das Lehrerkuerzel soll geändert werden dürfen. Es muss genau 
+    2 Zeichen haben, welche im Namen vorkommen. 
+    Kuerzel aller Lehrer soll gelesen werden können.
 
 3.) Die Mitarbeiter der Verwaltung werden als 
-    Verwaltungsangestellt mit erfasst.
+    Verwaltungsangestellte mit erfasst.
     Zusätzliches Attribut ist "funktion". 
     Verwaltungs angestellte bekommen eine 
     Amtszulage.
@@ -16,4 +20,16 @@ Ergänzen Sie Ihr Klassendiagramm:
 4.) Bei allen Mitarbeitern soll es möglich sein 
     alle Attributwerte auf einmal auf der 
     Konsole auszugeben.
+
+5.) Die Anzahl der Mitarbeiter soll erfasst werden. Die Anzahl soll
+    gelesen werden können.
+    
+6.) Für die Prüfung der Lehrerkuerzel soll die Methode 
+     pruefeKuerzel erstellt werden. Ändern Sie den Methodennamen ab, für den 
+     Fall, das die Methode einen Bool'schen Wert zurückgibt.
+
+7.)	Jeder Lehrer bekommt einen Parkplatz. 
+    Die Parkplätze sind numeriert.  	     
+
+     
 

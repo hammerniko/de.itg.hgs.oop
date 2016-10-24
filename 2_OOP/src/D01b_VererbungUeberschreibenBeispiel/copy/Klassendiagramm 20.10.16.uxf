@@ -4,130 +4,123 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>162</x>
-      <y>45</y>
-      <w>207</w>
-      <h>99</h>
-    </coordinates>
-    <panel_attributes>/Mitarbeiter &lt;&lt;abstract&gt;&gt;/
- 
-
-
---
-+berechneGehalt():FKZ &lt;&lt;abstract&gt;&gt;
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>297</x>
-      <y>189</y>
-      <w>153</w>
+      <x>324</x>
+      <y>270</y>
+      <w>243</w>
       <h>99</h>
     </coordinates>
     <panel_attributes>Angestellter
 --
--name:txt
--vorname:txt
 -alter:GZ
 --
-+berechneGehalt():FKZ</panel_attributes>
++Angestellter(name:txt, vorname:txt)
++berechneGehalt():FKZ
++toString():txt</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>135</y>
-      <w>27</w>
+      <x>342</x>
+      <y>207</y>
+      <w>45</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>18</x>
+      <y>261</y>
+      <w>288</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Lehrer
+--
+-kuerzel:txt
+--
++Lehrer(name:txt, vorname:txt)
++Lehrer(name:txt, vorname:txt, kuerzel:txt)
++berechneGehalt():FKZ
++setKuerzel(krz:txt)
++getKuerzel():txt
+-istKuerzelOK(krz:txt):boolean
++toString():txt
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>207</y>
+      <w>117</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>45</x>
-      <y>243</y>
-      <w>189</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>Lehrer
---
--kuerzel:txt
--fach:txt
---
-+berechneGehalt():FKZ</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>171</x>
-      <y>135</y>
-      <w>63</w>
-      <h>126</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>261</x>
-      <y>414</y>
-      <w>144</w>
-      <h>54</h>
+      <y>576</y>
+      <w>261</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>Reinigungskraft
 --
-+berechneGehalt():FKZ</panel_attributes>
++Reinigungskraft(name:txt, vorname:txt)
++berechneGehalt():FKZ
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>288</x>
-      <y>279</y>
-      <w>63</w>
-      <h>153</h>
+      <x>153</x>
+      <y>360</y>
+      <w>225</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>230.0;10.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>468</x>
-      <y>414</y>
-      <w>189</w>
-      <h>72</h>
+      <x>378</x>
+      <y>612</y>
+      <w>216</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Hausmeister
 --
 -zuschuss:FKZ
 --
-+berechneGehalt():FKZ</panel_attributes>
++Hausmeister(name:txt, vorname:txt)
++berechneGehalt():FKZ
++toString():txt</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>423</x>
-      <y>279</y>
-      <w>72</w>
-      <h>153</h>
+      <x>450</x>
+      <y>360</y>
+      <w>54</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;40.0;280.0</additional_attributes>
   </element>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>873</x>
-      <y>72</y>
+      <x>882</x>
+      <y>90</y>
       <w>54</w>
       <h>99</h>
     </coordinates>
@@ -137,8 +130,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>990</x>
-      <y>189</y>
+      <x>999</x>
+      <y>207</y>
       <w>180</w>
       <h>36</h>
     </coordinates>
@@ -149,8 +142,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1080</x>
-      <y>216</y>
+      <x>1089</x>
+      <y>234</y>
       <w>27</w>
       <h>306</h>
     </coordinates>
@@ -160,8 +153,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>891</x>
-      <y>144</y>
+      <x>900</x>
+      <y>162</y>
       <w>27</w>
       <h>63</h>
     </coordinates>
@@ -171,8 +164,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>891</x>
-      <y>189</y>
+      <x>900</x>
+      <y>207</y>
       <w>18</w>
       <h>513</h>
     </coordinates>
@@ -182,8 +175,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>189</y>
+      <x>909</x>
+      <y>207</y>
       <w>108</w>
       <h>36</h>
     </coordinates>
@@ -194,19 +187,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>999</x>
-      <y>180</y>
-      <w>180</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
       <x>1008</x>
-      <y>171</y>
+      <y>198</y>
       <w>180</w>
       <h>36</h>
     </coordinates>
@@ -216,8 +198,19 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1206</x>
-      <y>234</y>
+      <x>1017</x>
+      <y>189</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>1215</x>
+      <y>252</y>
       <w>180</w>
       <h>36</h>
     </coordinates>
@@ -228,8 +221,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>234</y>
+      <x>909</x>
+      <y>252</y>
       <w>324</w>
       <h>45</h>
     </coordinates>
@@ -241,8 +234,8 @@ Angestellter()
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1386</x>
-      <y>306</y>
+      <x>1395</x>
+      <y>324</y>
       <w>180</w>
       <h>36</h>
     </coordinates>
@@ -253,8 +246,8 @@ Angestellter()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>306</y>
+      <x>909</x>
+      <y>324</y>
       <w>504</w>
       <h>36</h>
     </coordinates>
@@ -265,8 +258,8 @@ Hausmeister()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1287</x>
-      <y>261</y>
+      <x>1296</x>
+      <y>279</y>
       <w>27</w>
       <h>513</h>
     </coordinates>
@@ -276,8 +269,8 @@ Hausmeister()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1476</x>
-      <y>333</y>
+      <x>1485</x>
+      <y>351</y>
       <w>27</w>
       <h>432</h>
     </coordinates>
@@ -287,8 +280,8 @@ Hausmeister()</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>855</x>
-      <y>432</y>
+      <x>864</x>
+      <y>450</y>
       <w>675</w>
       <h>288</h>
     </coordinates>
@@ -300,8 +293,8 @@ für i &lt; Mitarbeider.length [0..10]</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1080</x>
-      <y>504</y>
+      <x>1089</x>
+      <y>522</y>
       <w>18</w>
       <h>54</h>
     </coordinates>
@@ -311,8 +304,8 @@ für i &lt; Mitarbeider.length [0..10]</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>486</y>
+      <x>909</x>
+      <y>504</y>
       <w>198</w>
       <h>36</h>
     </coordinates>
@@ -323,8 +316,8 @@ berechneGehalt()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>540</y>
+      <x>909</x>
+      <y>558</y>
       <w>198</w>
       <h>36</h>
     </coordinates>
@@ -335,8 +328,8 @@ gehalt</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>900</x>
-      <y>594</y>
+      <x>909</x>
+      <y>612</y>
       <w>18</w>
       <h>54</h>
     </coordinates>
@@ -346,8 +339,8 @@ gehalt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>567</y>
+      <x>909</x>
+      <y>585</y>
       <w>189</w>
       <h>45</h>
     </coordinates>
@@ -358,8 +351,8 @@ ausgabe(gehalt)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>900</x>
-      <y>639</y>
+      <x>909</x>
+      <y>657</y>
       <w>189</w>
       <h>45</h>
     </coordinates>
@@ -370,8 +363,8 @@ ausgabe gehalt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>891</x>
-      <y>693</y>
+      <x>900</x>
+      <y>711</y>
       <w>27</w>
       <h>99</h>
     </coordinates>
@@ -381,8 +374,8 @@ ausgabe gehalt</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>891</x>
-      <y>765</y>
+      <x>900</x>
+      <y>783</y>
       <w>18</w>
       <h>18</h>
     </coordinates>
@@ -392,25 +385,112 @@ ausgabe gehalt</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>45</x>
-      <y>396</y>
-      <w>189</w>
-      <h>90</h>
+      <x>27</x>
+      <y>450</y>
+      <w>252</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Vertrauenslehrer
 --
--notfallnummer:txt</panel_attributes>
+
+-notfallnummer:txt
+--
++Vertrauenslehrer(name:txt, vorname:txt)
++toString():txt</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
-      <y>324</y>
-      <w>27</w>
-      <h>90</h>
+      <x>108</x>
+      <y>396</y>
+      <w>36</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>20.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>225</x>
+      <y>0</y>
+      <w>297</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>/Mitarbeiter &lt;&lt;abstract&gt;&gt;/
+--
+-name:txt 
+-vorname:txt
+_-anzahlMitarbeiter:GZ=0_
+
+--
++Mitarbeiter(name:txt, vorname:txt)
++getName():txt
++getVorname:txt
++berechneGehalt():FKZ &lt;&lt;abstract&gt;&gt;
++toString():txt
+_+getAnzahlMitarbeiter():GZ_
+#finalize()
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>459</y>
+      <w>342</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Verwaltungsangestellte
+--
+-funktion:txt
+-amtszulage:FKZ
+--
++Verwaltungsangestellte(name:txt, vorname:txt)
++berechneGehalt():FKZ
++toString():txt
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>360</y>
+      <w>108</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>9</x>
+      <y>99</y>
+      <w>189</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>Parkplatz
+--
+-platzNr:GZ</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>81</x>
+      <y>144</y>
+      <w>99</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=1
+r2=derParkplatz
+</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
