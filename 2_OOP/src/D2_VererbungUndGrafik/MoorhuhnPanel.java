@@ -13,8 +13,17 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 
-public class MeinPanel extends JPanel implements MouseMotionListener {
+public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
+	/**
+	 * Attribute
+	 */
+	private Image img = null; 			//Hintergundbild
+	private int h, b;
+	private int x, y; 					// Mausposition
+	private int xRel, yRel; 			// korrigierte Position abh. vom durchmesser des Fadenkreuzkreises
 
+	
+	
 	/**
 	 * Konstanten
 	 */
@@ -24,14 +33,12 @@ public class MeinPanel extends JPanel implements MouseMotionListener {
 	static final int FADENKREUZ_KREIS_GROSS = 75;
 	static final int FADENKREUZ_LINIE = 50;
 
-	int h, b;
-	int x, y; 		// Mausposition
-	int xRel, yRel; // korrigierte Position abh. vom durchmesser des Fadenkreuzkreises
-
-	private Image img = null; //Hintergundbild
 	
 	
-	public MeinPanel() {
+	/**
+	 * Konstruktor
+	 */
+	public MoorhuhnPanel() {
 		/**
 		 * Fügt dem Panelobjekt einen Listener hinzu, der auf Mausbewegungen hört.
 		 * Der Uebergabeparameter sorgt dafür, das ein erzeugtes MouseMotion Event-Objekt
@@ -39,7 +46,17 @@ public class MeinPanel extends JPanel implements MouseMotionListener {
 		 * Die Methoden sind vorhanden, da das MouseMotionListener Interface implementiert wurde.
 		 */
 		addMouseMotionListener(this);
+		
+		/**
+		 * Lädt das Hintergrundbild, welches mit der paintKomponent()-Methode
+		 * gezeichnet werden soll.
+		 */
 		ladeImage();
+		
+		/**
+		 * Beschleunigt das neuzeichnen der Komponente
+		 */
+		setDoubleBuffered(true);
 	}
 
 	/**
@@ -138,6 +155,10 @@ public class MeinPanel extends JPanel implements MouseMotionListener {
 
 	}
 	
+	/**
+	 * Lädt das Bild aus dem aktuelle Package
+	 * und speichert es in dem Attribut img.
+	 */
 	private void ladeImage(){
 		img = java.awt.Toolkit.getDefaultToolkit().getImage("src/D2_VererbungUndGrafik/hg2.jpg");
 	}

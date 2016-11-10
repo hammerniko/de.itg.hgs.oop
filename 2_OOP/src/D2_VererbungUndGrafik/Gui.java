@@ -10,11 +10,11 @@ import javax.swing.JFrame;
 
 public class Gui extends JFrame {
 	
-	MeinPanel meinPanel;
+	MoorhuhnPanel meinPanel;
 
 	public Gui()  {
 		
-		meinPanel =  new MeinPanel();
+		meinPanel =  new MoorhuhnPanel();
 		
 		setContentPane(meinPanel);
 		setMaximized();
