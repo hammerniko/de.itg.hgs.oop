@@ -4,14 +4,15 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>162</x>
-      <y>45</y>
+      <x>144</x>
+      <y>18</y>
       <w>207</w>
-      <h>99</h>
+      <h>117</h>
     </coordinates>
     <panel_attributes>/Mitarbeiter &lt;&lt;abstract&gt;&gt;/
- 
-
+--
+-name:txt
+-vorname:txt
 
 --
 +berechneGehalt():FKZ &lt;&lt;abstract&gt;&gt;
@@ -24,12 +25,11 @@ bg=yellow</panel_attributes>
       <x>297</x>
       <y>189</y>
       <w>153</w>
-      <h>99</h>
+      <h>117</h>
     </coordinates>
     <panel_attributes>Angestellter
 --
--name:txt
--vorname:txt
+
 -alter:GZ
 --
 +berechneGehalt():FKZ</panel_attributes>
@@ -38,13 +38,13 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>135</y>
-      <w>27</w>
-      <h>72</h>
+      <x>297</x>
+      <y>126</y>
+      <w>45</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;30.0;70.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -66,19 +66,19 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>171</x>
-      <y>135</y>
-      <w>63</w>
-      <h>126</h>
+      <y>126</y>
+      <w>45</w>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>30.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>261</x>
-      <y>414</y>
-      <w>144</w>
+      <y>423</y>
+      <w>162</w>
       <h>54</h>
     </coordinates>
     <panel_attributes>Reinigungskraft
@@ -90,12 +90,12 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>288</x>
-      <y>279</y>
+      <y>297</y>
       <w>63</w>
-      <h>153</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>50.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -116,12 +116,12 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>423</x>
-      <y>279</y>
+      <y>297</y>
       <w>72</w>
-      <h>153</h>
+      <h>135</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;60.0;130.0</additional_attributes>
   </element>
   <element>
     <id>UMLActor</id>

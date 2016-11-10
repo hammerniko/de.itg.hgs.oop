@@ -14,7 +14,6 @@ public class JTableCreatingDemo {
     frame.setTitle("Email Adressen");
     
     Object columnNames[] = { "Name", "Vorname", "Email"  };
-    
     Object rowData[][] = { 
     		{ "Meier", "Max", "max.meier@web.de" },
     		{ "Hammer", "Niko", "niko.hammer@hgs-singen.de" } };
