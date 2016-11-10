@@ -28,6 +28,9 @@ public class MeinPanel extends JPanel implements MouseMotionListener {
 	int x, y; 		// Mausposition
 	int xRel, yRel; // korrigierte Position abh. vom durchmesser des Fadenkreuzkreises
 
+	private Image img = null; //Hintergundbild
+	
+	
 	public MeinPanel() {
 		/**
 		 * Fügt dem Panelobjekt einen Listener hinzu, der auf Mausbewegungen hört.
@@ -36,6 +39,7 @@ public class MeinPanel extends JPanel implements MouseMotionListener {
 		 * Die Methoden sind vorhanden, da das MouseMotionListener Interface implementiert wurde.
 		 */
 		addMouseMotionListener(this);
+		ladeImage();
 	}
 
 	/**
@@ -58,6 +62,9 @@ public class MeinPanel extends JPanel implements MouseMotionListener {
 		 * moeglich.
 		 */
 		Graphics2D g2 = (Graphics2D) g;
+		
+		g2.drawImage(img, 0, 0, b, h,this);
+		
 		
 		/**Setzen der Farbe zum zeichnen */
 		g2.setColor(Color.BLUE);
@@ -129,6 +136,10 @@ public class MeinPanel extends JPanel implements MouseMotionListener {
 		 */
 		repaint();
 
+	}
+	
+	private void ladeImage(){
+		img = java.awt.Toolkit.getDefaultToolkit().getImage("src/D2_VererbungUndGrafik/hg1.png");
 	}
 
 }
