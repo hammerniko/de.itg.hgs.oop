@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 
 public class Gui extends JFrame {
 	
+	private static final String TITEL = "HGS Huhn";
 	MoorhuhnPanel meinPanel;
 
 	public Gui()  {
@@ -19,6 +20,8 @@ public class Gui extends JFrame {
 		setContentPane(meinPanel);
 		setMaximized();
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setTitle(TITEL);
+		
 		
 	}
 

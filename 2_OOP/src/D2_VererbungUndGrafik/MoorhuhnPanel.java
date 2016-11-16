@@ -57,6 +57,8 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 		 * Beschleunigt das neuzeichnen der Komponente
 		 */
 		setDoubleBuffered(true);
+		
+		
 	}
 
 	/**
