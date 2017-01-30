@@ -1,5 +1,11 @@
 package A2_OOPBeispielSchule;
 
+
+/**
+ * 
+ * @author hr
+ *
+ */
 public class Fach {
     
     private String fachname;
@@ -7,7 +13,13 @@ public class Fach {
     private String abkuerzung;
     private static int anzahlFaecher;
     
-    //Konstruktoren
+    
+    /**
+     * Ein Fach an einer Schule mit dem Fachnamen
+     * wie z.B. "Deutsch" und der Abkuerzung "D"
+     * @param pFachname
+     * @param abkuerzung
+     */
     public Fach(String pFachname, String abkuerzung) {
         anzahlFaecher++;
         fachname = pFachname;
