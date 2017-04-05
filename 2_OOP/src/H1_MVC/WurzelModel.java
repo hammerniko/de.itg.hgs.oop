@@ -17,10 +17,10 @@ public class WurzelModel {
     long value;
 
     public WurzelModel(){
-        zurückSetzen();
+        zurueckSetzen();
     }
 
-    public void zurückSetzen(){
+    public void zurueckSetzen(){
         this.value = 0;
     }
 

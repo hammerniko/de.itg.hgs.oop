@@ -62,7 +62,7 @@ public class WurzelController {
     	
         public void actionPerformed(ActionEvent e) {
             dieGuiKomponente.resetView();
-            dasModel.zurückSetzen();
+            dasModel.zurueckSetzen();
         }
     }
 }
