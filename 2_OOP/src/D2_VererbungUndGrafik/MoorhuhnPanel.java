@@ -163,6 +163,8 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 	 */
 	private void ladeImage(){
 		img = java.awt.Toolkit.getDefaultToolkit().getImage("src/D2_VererbungUndGrafik/hg2.jpg");
+		
+		
 	}
 
 }
