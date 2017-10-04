@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>76</x>
+      <y>272</y>
+      <w>112</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>A3::Mannschaft
+--
+-name: String
+-anzahlToreErzielt: int
+-anzahlToreBekommen: int
+-anzahlSiege: int
+-anzahlUnentschieden: int
+-anzahlNiederlagen: int
+-punkte: int
+--
++Mannschaft(): ctor
+-setzeAttributeAufNull(): void
++eintragenName(String pName): void
++addiereToreErzeilt(int pAnzahl): void
++addiereToreBekommen(int pAnzahl): void
++erhoeheAnzahlSiege(): void
++erhoerheAnzahlUnentschieden(): void
++erhoheAnzahlNiederlagen(): void
++addierePunkte(int pPunkte): void
++gibName(): String
++gibAnzahlToreErzielt(): int
++gibAnzahlToreBekommen(): int
++gibAnzahlSiege(): int
++gibAnzahlUnentschieden(): int
++gibAnzahlNiederlagen(): int
++gibPunkte(): int
++berechneAnzahlSpiele(): int
+--
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>28</x>
+      <y>64</y>
+      <w>300</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>A3::GUI
+--
+~dieSteuerung: Steuerung
+--
++GUI(Steuerung pSteuerung): ctor
++clickInit(): void
++clickSpeichernEinstellungen(): void
++clickSpeichernManschaften(): void
++clickErmittelnPaarungen(): void
++clickZusammenfassenErgebnis(): void
++clickBestimmeRangfolge(): void
++clickBeenden(): void
++gibNameMannschaft(int pZeile): String
++gibErgebnisPaarung(int pZeile, int Mannschaft): int
++anzeigenPaarung(int pZeile, String pM1, String pM2): void
++anzeigenInTab(int pZeile, int pRang, String pMannschaft, int pSpiele, int pPunkte, int pTorePlus, int pToreMinus): void
++sichtbarEinstellungen(): void
++sichtbarReg1_Mannschaften(): void
++sichtbarReg2_Ergebnisse(): void
++sichtbarReg3_Tabelle(): void
++gibPunkteRegel(): int
++gibAnzahlMannschaften(): int
++eintragenReg1_Index(int anzahlMannschaften): void
+--
+
+bg=green
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>152</y>
+      <w>116</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>A3::Steuerung
+--
+-anzahlMannschaften: int
+-anzahlPaarungen: int
+-zustand: int
+~dieTabelle: Tabelle
+~diePaarung[]: Paarung
+~dieGui: GUI
+~dieMannschaft[]: Mannschaft
+--
++Steuerung(): ctor
++speichereEinstellungen(): void
++speichereMannschaften(): void
++zusammenfassenErgebnisse(): void
++bestimmeRangfolge(): void
+-erstellePaarungObjekte(): void
+-ausgebenPaarungen(): void
+-einlesenSpielErgebnisse(): void
+-berechneStatusMannschften(): void
+-eintragenMannschafteninTabelle(): void
+-ausgebenTabelle(boolean pMitRang): void
++resetProg(): void
+--
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>32</y>
+      <w>140</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>A3::Paarung
+--
+-index_M1: int
+-index_M2: int
+-tore_M1: int
+-tore_M2: int
+--
++Paarung(int pIndex_M1, int pIndex_M2): ctor
++eintragenErgebnis(int pTore_M1, int pTore_M2): void
++gibIndex_Mx(int x): int
++gibTore_Mx(int x): int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>416</y>
+      <w>156</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>/A3::Tabelle/
+--
+#anzahlZeilen: int
+~inTabZeile: Mannschaft[]
+--
++Tabelle(): ctor
++berechnePunkte(int pAnzMannschaften): void
++hinzufuegenMannschaften(Mannschaft pMannschaft): void
++sortierenTabelle(): void
++gibMannschaftInZeile(int pZeile): Mannschaft
+--
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>356</x>
+      <y>528</y>
+      <w>124</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>A3::Tab_2PktRegel
+--
+--
++Tab_2PktRegel(): ctor
++berechnePunkte(int pAnzMannschaften): void
+--
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>508</x>
+      <y>528</y>
+      <w>124</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>A3::Tab_3PktRegel
+--
+--
++Tab_3PktRegel(): ctor
++berechnePunkte(int pAnzMannschaften): void
+--
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>352</y>
+      <w>68</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>A3::StartKlasse
+--
+--
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>524</x>
+      <y>484</y>
+      <w>48</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>484</y>
+      <w>28</w>
+      <h>52</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>300</y>
+      <w>36</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=dieTabelle
+m1=1</panel_attributes>
+    <additional_attributes>10.0;290.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>464</x>
+      <y>104</y>
+      <w>44</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=diePaarung[]
+m1=3..15</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>132</y>
+      <w>100</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=dieGui
+m1=1
+r2=dieSteuerung
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;230.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>184</x>
+      <y>256</y>
+      <w>240</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=dieMannschaft[]
+m1=*</panel_attributes>
+    <additional_attributes>10.0;130.0;580.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>292</x>
+      <y>292</y>
+      <w>132</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+instance of</panel_attributes>
+    <additional_attributes>310.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+</diagram>
