@@ -11,7 +11,7 @@ public class Tab_2PktRegel extends Tabelle {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	
 
 }

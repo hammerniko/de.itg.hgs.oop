@@ -41,6 +41,7 @@ public class Steuerung {
 		dieGui.sichtbarReg1_Mannschaften();
 		dieGui.eintragenReg1_Index(anzahlMannschaften);
 		
+		
 	}
 	
 	public void speichereMannschaften() {

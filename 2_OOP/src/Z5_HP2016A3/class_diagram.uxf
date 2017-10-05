@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2.0">
-  <zoom_level>4</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>76</x>
-      <y>272</y>
-      <w>112</w>
-      <h>184</h>
+      <x>108</x>
+      <y>540</y>
+      <w>252</w>
+      <h>414</h>
     </coordinates>
     <panel_attributes>A3::Mannschaft
 --
@@ -44,10 +44,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>28</x>
-      <y>64</y>
-      <w>300</w>
-      <h>160</h>
+      <x>0</x>
+      <y>72</y>
+      <w>675</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>A3::GUI
 --
@@ -81,10 +81,10 @@ fg=black</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>152</y>
-      <w>116</w>
-      <h>152</h>
+      <x>873</x>
+      <y>270</y>
+      <w>261</w>
+      <h>342</h>
     </coordinates>
     <panel_attributes>A3::Steuerung
 --
@@ -116,10 +116,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>32</y>
-      <w>140</w>
-      <h>76</h>
+      <x>819</x>
+      <y>0</y>
+      <w>315</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>A3::Paarung
 --
@@ -139,10 +139,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>416</y>
-      <w>156</w>
-      <h>72</h>
+      <x>837</x>
+      <y>864</y>
+      <w>351</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>/A3::Tabelle/
 --
@@ -162,10 +162,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>356</x>
-      <y>528</y>
-      <w>124</w>
-      <h>36</h>
+      <x>738</x>
+      <y>1116</y>
+      <w>279</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>A3::Tab_2PktRegel
 --
@@ -180,10 +180,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>508</x>
-      <y>528</y>
-      <w>124</w>
-      <h>36</h>
+      <x>1080</x>
+      <y>1116</y>
+      <w>279</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>A3::Tab_3PktRegel
 --
@@ -198,10 +198,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>260</x>
-      <y>352</y>
-      <w>68</w>
-      <h>28</h>
+      <x>522</x>
+      <y>720</y>
+      <w>153</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>A3::StartKlasse
 --
@@ -214,10 +214,10 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>524</x>
-      <y>484</y>
-      <w>48</w>
-      <h>52</h>
+      <x>1116</x>
+      <y>1017</y>
+      <w>108</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;100.0;110.0</additional_attributes>
@@ -225,10 +225,10 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>484</y>
-      <w>28</w>
-      <h>52</h>
+      <x>837</x>
+      <y>1017</y>
+      <w>63</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>50.0;10.0;10.0;110.0</additional_attributes>
@@ -236,10 +236,10 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>472</x>
-      <y>300</y>
-      <w>36</w>
-      <h>124</h>
+      <x>999</x>
+      <y>603</y>
+      <w>81</w>
+      <h>279</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=dieTabelle
@@ -249,10 +249,10 @@ m1=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>104</y>
-      <w>44</w>
-      <h>56</h>
+      <x>981</x>
+      <y>162</y>
+      <w>99</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=diePaarung[]
@@ -262,10 +262,10 @@ m1=3..15</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
-      <y>132</y>
-      <w>100</w>
-      <h>76</h>
+      <x>666</x>
+      <y>225</y>
+      <w>225</w>
+      <h>171</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=dieGui
@@ -278,10 +278,10 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>184</x>
-      <y>256</y>
-      <w>240</w>
-      <h>64</h>
+      <x>351</x>
+      <y>504</y>
+      <w>540</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=dieMannschaft[]
@@ -291,10 +291,10 @@ m1=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>292</x>
-      <y>292</y>
-      <w>132</w>
-      <h>68</h>
+      <x>594</x>
+      <y>585</y>
+      <w>297</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 instance of</panel_attributes>
