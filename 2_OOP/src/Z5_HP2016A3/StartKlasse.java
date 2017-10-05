@@ -6,6 +6,7 @@ public class StartKlasse {
 
 		//Steuerungsobjekt erstellen
 		Steuerung s = new Steuerung();
+		s.erstellePaarungObjekte();
 
 	}
 

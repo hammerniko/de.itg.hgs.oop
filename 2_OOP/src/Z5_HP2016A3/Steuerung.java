@@ -56,7 +56,22 @@ public class Steuerung {
 		
 	}
 	
-	private void erstellePaarungObjekte() {
+	public void erstellePaarungObjekte() {
+		
+		//Algorithmus aus Aufgabe 3.2
+		diePaarung = new Paarung[15];
+		anzahlMannschaften = 4; //Test für Aufgabe 3.2a
+		int i = 0;
+		for (int j = 0; j <= anzahlMannschaften-2; j++) {
+			for (int k = j+1; k <= anzahlMannschaften-1; k++) {
+				diePaarung[i]=new Paarung(j, k);
+				i++;
+			}
+		}
+		anzahlPaarungen = i;
+		
+		//Test für Aufgabe 3.2a
+		System.out.println(i);
 		
 	}
 	
