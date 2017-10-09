@@ -9,7 +9,7 @@ public class StartKlasse {
 		Schueler s1 = new Schueler("Mueller","Det", tg123);
 		
 		//Szenario
-		String k = s1.getDieSchulklasse();
+		String k = s1.getSchulklasse();
 		
 		s1.ausgabeText(k);
 

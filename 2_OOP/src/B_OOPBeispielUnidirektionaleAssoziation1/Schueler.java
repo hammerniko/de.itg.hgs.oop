@@ -32,7 +32,7 @@ public class Schueler {
 		this.vorname = vorname;
 	}
 
-	public String getDieSchulklasse() {
+	public String getSchulklasse() {
 		return dieSchulklasse.getKuerzelStdPlan();
 	}
 	
