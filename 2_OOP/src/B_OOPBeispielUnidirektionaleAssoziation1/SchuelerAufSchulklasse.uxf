@@ -5,7 +5,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>144</x>
-      <y>64</y>
+      <y>0</y>
       <w>320</w>
       <h>184</h>
     </coordinates>
@@ -28,7 +28,7 @@ bg=light_gray</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>592</x>
-      <y>64</y>
+      <y>0</y>
       <w>168</w>
       <h>152</h>
     </coordinates>
@@ -45,7 +45,7 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>456</x>
-      <y>136</y>
+      <y>72</y>
       <w>152</w>
       <h>40</h>
     </coordinates>
@@ -58,7 +58,7 @@ r1=dieSchulklasse</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>368</x>
-      <y>520</y>
+      <y>456</y>
       <w>80</w>
       <h>24</h>
     </coordinates>
@@ -70,7 +70,7 @@ bg=pink</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>400</x>
-      <y>568</y>
+      <y>504</y>
       <w>24</w>
       <h>48</h>
     </coordinates>
@@ -81,7 +81,7 @@ bg=pink</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>400</x>
-      <y>600</y>
+      <y>536</y>
       <w>16</w>
       <h>56</h>
     </coordinates>
@@ -93,7 +93,7 @@ bg=pink</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>152</x>
-      <y>592</y>
+      <y>528</y>
       <w>264</w>
       <h>32</h>
     </coordinates>
@@ -105,7 +105,7 @@ getSchulklasse()</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>512</x>
-      <y>392</y>
+      <y>328</y>
       <w>152</w>
       <h>24</h>
     </coordinates>
@@ -117,7 +117,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>576</x>
-      <y>440</y>
+      <y>376</y>
       <w>24</w>
       <h>176</h>
     </coordinates>
@@ -128,7 +128,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>408</x>
-      <y>584</y>
+      <y>520</y>
       <w>184</w>
       <h>32</h>
     </coordinates>
@@ -140,7 +140,7 @@ getKuerzelStdPlan()</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>576</x>
-      <y>600</y>
+      <y>536</y>
       <w>16</w>
       <h>40</h>
     </coordinates>
@@ -152,7 +152,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>408</x>
-      <y>624</y>
+      <y>560</y>
       <w>184</w>
       <h>32</h>
     </coordinates>
@@ -164,7 +164,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>400</x>
-      <y>648</y>
+      <y>584</y>
       <w>24</w>
       <h>64</h>
     </coordinates>
@@ -175,7 +175,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>152</x>
-      <y>680</y>
+      <y>616</y>
       <w>264</w>
       <h>32</h>
     </coordinates>
@@ -187,7 +187,7 @@ ausgabeText("TG12-3")</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>400</x>
-      <y>696</y>
+      <y>632</y>
       <w>16</w>
       <h>48</h>
     </coordinates>
@@ -199,7 +199,7 @@ bg=pink</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>400</x>
-      <y>736</y>
+      <y>672</y>
       <w>24</w>
       <h>64</h>
     </coordinates>
@@ -210,7 +210,7 @@ bg=pink</panel_attributes>
     <id>UMLSpecialState</id>
     <coordinates>
       <x>400</x>
-      <y>784</y>
+      <y>720</y>
       <w>16</w>
       <h>16</h>
     </coordinates>
@@ -221,7 +221,7 @@ bg=pink</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>608</x>
-      <y>624</y>
+      <y>560</y>
       <w>240</w>
       <h>112</h>
     </coordinates>
@@ -239,7 +239,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>104</x>
-      <y>296</y>
+      <y>232</y>
       <w>96</w>
       <h>24</h>
     </coordinates>
@@ -253,7 +253,7 @@ bg=dark_gray</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>144</x>
-      <y>320</y>
+      <y>256</y>
       <w>16</w>
       <h>416</h>
     </coordinates>
@@ -265,7 +265,7 @@ bg=dark_gray</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>144</x>
-      <y>728</y>
+      <y>664</y>
       <w>24</w>
       <h>144</h>
     </coordinates>
@@ -276,7 +276,7 @@ bg=dark_gray</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>32</x>
-      <y>288</y>
+      <y>224</y>
       <w>88</w>
       <h>32</h>
     </coordinates>
@@ -288,7 +288,7 @@ main(..)</panel_attributes>
     <id>UMLActor</id>
     <coordinates>
       <x>0</x>
-      <y>272</y>
+      <y>208</y>
       <w>64</w>
       <h>88</h>
     </coordinates>
@@ -299,7 +299,7 @@ main(..)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>152</x>
-      <y>384</y>
+      <y>320</y>
       <w>376</w>
       <h>32</h>
     </coordinates>
@@ -311,7 +311,7 @@ Schulklasse("TG ... JS1", "TG12-3")</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>152</x>
-      <y>512</y>
+      <y>448</y>
       <w>232</w>
       <h>32</h>
     </coordinates>
@@ -323,7 +323,7 @@ Schueler("Mueller","Det", tg123)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>152</x>
-      <y>720</y>
+      <y>656</y>
       <w>264</w>
       <h>32</h>
     </coordinates>
@@ -335,7 +335,7 @@ Schueler("Mueller","Det", tg123)</panel_attributes>
     <id>UMLSpecialState</id>
     <coordinates>
       <x>144</x>
-      <y>848</y>
+      <y>784</y>
       <w>16</w>
       <h>16</h>
     </coordinates>
@@ -346,19 +346,19 @@ Schueler("Mueller","Det", tg123)</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>152</x>
-      <y>632</y>
+      <y>568</y>
       <w>264</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
-</panel_attributes>
+"TG 12-3"</panel_attributes>
     <additional_attributes>310.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>576</x>
-      <y>416</y>
+      <y>352</y>
       <w>16</w>
       <h>32</h>
     </coordinates>
@@ -370,7 +370,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>152</x>
-      <y>424</y>
+      <y>360</y>
       <w>440</w>
       <h>32</h>
     </coordinates>
@@ -382,7 +382,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>152</x>
-      <y>552</y>
+      <y>488</y>
       <w>264</w>
       <h>32</h>
     </coordinates>
@@ -394,7 +394,7 @@ bg=red</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>400</x>
-      <y>544</y>
+      <y>480</y>
       <w>16</w>
       <h>32</h>
     </coordinates>
@@ -406,7 +406,7 @@ bg=pink</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>600</x>
-      <y>424</y>
+      <y>360</y>
       <w>320</w>
       <h>112</h>
     </coordinates>
@@ -423,7 +423,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>576</x>
-      <y>632</y>
+      <y>568</y>
       <w>24</w>
       <h>64</h>
     </coordinates>
@@ -434,7 +434,7 @@ bg=yellow</panel_attributes>
     <id>UMLSpecialState</id>
     <coordinates>
       <x>576</x>
-      <y>680</y>
+      <y>616</y>
       <w>16</w>
       <h>16</h>
     </coordinates>
