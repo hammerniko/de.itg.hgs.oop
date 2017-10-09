@@ -10,7 +10,6 @@ public class StartKlasse {
 		
 		//Szenario
 		String k = s1.getSchulklasse();
-		
 		s1.ausgabeText(k);
 
 	}
