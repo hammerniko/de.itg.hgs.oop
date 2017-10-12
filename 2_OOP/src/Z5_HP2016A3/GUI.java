@@ -1,14 +1,68 @@
 package Z5_HP2016A3;
 
-public class GUI {
+import java.awt.BorderLayout;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class GUI extends JFrame {
+
+	boolean debug;
+	
 	// Attribut für Assoziation zur Steuerung
 	Steuerung dieSteuerung;
+	
+	//Objekte für die Gui
+	JPanel contentPane;
+	JPanel pTitel;
+	JLabel lbTitel;
+	JPanel pAnzeige;
+	JMenu mEinstellungen;
+	JMenuBar menuBar;
+	JMenuItem miEinstellungen;
 
 	// Konstruktor
 	public GUI(Steuerung pSteuerung) {
-		super();
+		debug = true;
+		initComponents();
+		addComponents();
+		setVisible(true);
+		setSize(600, 600);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		dieSteuerung = pSteuerung;
+	}
+
+	private void addComponents() {
+		pTitel.add(lbTitel);
+		contentPane.add(pTitel, BorderLayout.NORTH);
+		contentPane.add(pAnzeige, BorderLayout.CENTER);
+		
+		menuBar.add(mEinstellungen);
+		setJMenuBar(menuBar);
+		
+	}
+
+	private void initComponents() {
+		setTitle("Organisation Ballsportturnier in der Schule");
+		contentPane = new JPanel();
+		contentPane.setLayout(new BorderLayout());
+		pTitel = new JPanel();
+		lbTitel = new JLabel("Turnierplanung, Organisation, Auswertung");
+		
+		
+		pAnzeige = new JPanelEinstellungen(this);
+		
+		menuBar = new JMenuBar();
+		mEinstellungen = new JMenu("Einstellungen");
+		
+		
+		this.setContentPane(contentPane);
+		
 	}
 
 	public void clickInit() {
@@ -19,6 +73,8 @@ public class GUI {
 
 	public void clickSpeichernEinstellungen() {
 		//aus Sequenzdiagramm 2 oben Seite 2
+		System.out.println("Speichern Einstellungen geclickt");
+		
 		dieSteuerung.speichereEinstellungen();
 		
 		
@@ -84,17 +140,22 @@ public class GUI {
 
 	public int gibPunkteRegel() {
 		
-		int regel = 0;
 		// Regel ermitteln und zurückgeben 
-		
+		//Typcast ist notwendig, da das Anzeigepanel als
+		//normales JPanel deklariert wurde
+		int regel =  ((JPanelEinstellungen) pAnzeige).getRegel();
+
+		trace("Regel = "+regel);
 		
 		return regel;
 	}
 
 	public int gibAnzahlMannschaften() {
-		int anzahlManschften = 0;
 		//anzahl Mannschaften ermitteln
 		//und zurückgeben
+		int anzahlManschften = ((JPanelEinstellungen) pAnzeige).getAnzahlMannschaften();
+		
+		trace("Anzahl Mannschaften = "+anzahlManschften);
 		return anzahlManschften;
 	}
 
@@ -103,6 +164,19 @@ public class GUI {
 		
 	}
 
+	
+	public void trace(String meldung) {
+		if(debug) {
+			System.out.println(meldung);
+		}
+	}
+	
+	public void showInputError(String message) {
+		JOptionPane.showMessageDialog(this,
+			    message,
+			    "Eingabefehler",
+			    JOptionPane.ERROR_MESSAGE);
+	}
 	
 
 }

@@ -26,17 +26,27 @@ public class Steuerung {
 		
 		if(regel == 2) {
 			dieTabelle = new Tab_2PktRegel();
+			dieGui.trace("Tabelle 2PkteRegel erstellt");
 		}
 		else if (regel == 3) {
 			dieTabelle = new Tab_3PktRegel();
+			dieGui.trace("Tabelle 3PkteRegel erstellt");
 		}
 		
 		anzahlMannschaften = dieGui.gibAnzahlMannschaften();
+		
+		if(anzahlMannschaften >6 || anzahlMannschaften < 3) {
+			dieGui.showInputError("Anzahl Mannschaften falsch");
+			return;
+		}
+		
 		dieMannschaft = new Mannschaft[anzahlMannschaften];
 		
 		for (int i = 0; i <anzahlMannschaften; i++) {
 			dieMannschaft[i] = new Mannschaft();
 		}
+		
+		dieGui.trace("Mannschaften erstellt");
 		
 		dieGui.sichtbarReg1_Mannschaften();
 		dieGui.eintragenReg1_Index(anzahlMannschaften);
