@@ -1,6 +1,7 @@
 package Z5_HP2016A3;
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,6 +23,11 @@ public class GUI extends JFrame {
 	JPanel pTitel;
 	JLabel lbTitel;
 	JPanel pAnzeige;
+	JPanelEinstellungen card1;
+	JPanelMannschaften card2;
+	JPanel card3;
+	JPanel card4;
+	
 	JMenu mEinstellungen;
 	JMenuBar menuBar;
 	JMenuItem miEinstellungen;
@@ -32,12 +38,15 @@ public class GUI extends JFrame {
 		initComponents();
 		addComponents();
 		setVisible(true);
-		setSize(600, 600);
+		setSize(600, 350);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		dieSteuerung = pSteuerung;
+		
+		
 	}
 
 	private void addComponents() {
+		sichtbarEinstellungen();
 		pTitel.add(lbTitel);
 		contentPane.add(pTitel, BorderLayout.NORTH);
 		contentPane.add(pAnzeige, BorderLayout.CENTER);
@@ -54,8 +63,16 @@ public class GUI extends JFrame {
 		pTitel = new JPanel();
 		lbTitel = new JLabel("Turnierplanung, Organisation, Auswertung");
 		
+		card1 = new JPanelEinstellungen(this);
+		card2 = new JPanelMannschaften(this);
 		
-		pAnzeige = new JPanelEinstellungen(this);
+		
+		pAnzeige = new JPanel(new CardLayout());
+		pAnzeige.add(card1,"Einstellungen");
+		pAnzeige.add(card2,"Mannschaften");
+				
+		
+		
 		
 		menuBar = new JMenuBar();
 		mEinstellungen = new JMenu("Einstellungen");
@@ -83,7 +100,7 @@ public class GUI extends JFrame {
 	}
 
 	public void clickSpeichernManschaften() {
-
+		sichtbarEinstellungen();
 	}
 
 	public void clickErmittelnPaarungen() {
@@ -123,11 +140,15 @@ public class GUI extends JFrame {
 	}
 
 	public void sichtbarEinstellungen() {
-
+		  CardLayout cl = (CardLayout)(pAnzeige.getLayout());
+          cl.show(pAnzeige,"Einstellungen" );
+		
 	}
 
 	public void sichtbarReg1_Mannschaften() {
-
+		CardLayout cl = (CardLayout)(pAnzeige.getLayout());
+        cl.show(pAnzeige,"Mannschaften" );
+		
 	}
 
 	public void sichtbarReg2_Ergebnisse() {
@@ -143,7 +164,7 @@ public class GUI extends JFrame {
 		// Regel ermitteln und zurückgeben 
 		//Typcast ist notwendig, da das Anzeigepanel als
 		//normales JPanel deklariert wurde
-		int regel =  ((JPanelEinstellungen) pAnzeige).getRegel();
+		int regel =   card1.getRegel();
 
 		trace("Regel = "+regel);
 		
@@ -153,7 +174,7 @@ public class GUI extends JFrame {
 	public int gibAnzahlMannschaften() {
 		//anzahl Mannschaften ermitteln
 		//und zurückgeben
-		int anzahlManschften = ((JPanelEinstellungen) pAnzeige).getAnzahlMannschaften();
+		int anzahlManschften = card1.getAnzahlMannschaften();
 		
 		trace("Anzahl Mannschaften = "+anzahlManschften);
 		return anzahlManschften;
