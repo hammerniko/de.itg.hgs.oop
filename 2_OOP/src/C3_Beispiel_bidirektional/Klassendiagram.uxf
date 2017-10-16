@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>72</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Steuerung
+--
+
+--
++Steuerung()
++clickedOK()
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>72</y>
+      <w>168</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Gui
+--
+
+--
++Gui(pSteuerung:Steuerung)
+-clickedButtonOK()
+-clickedButtonAbbrechen()
++zeigeSchueler(pSchueler:txt)
+
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>368</x>
+      <y>352</y>
+      <w>208</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Schueler
+--
+-name:txt
+-vorname:txt
+--
++Schueler(pName:txt, pVorname:txt)
++getName():txt
++getVorname():txt
+
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>128</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=dieGui
+m1=1
+r2=dieSteuerung
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>216</y>
+      <w>32</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=1
+m1=s1
+</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
