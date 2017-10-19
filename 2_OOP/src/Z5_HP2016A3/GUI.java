@@ -11,7 +11,13 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import javafx.scene.text.Font;
+
 public class GUI extends JFrame {
+	
+	//Konstanten
+	public static final float SCHRIFTGROESSE_TITEL = 18;
+	
 
 	boolean debug;
 	
@@ -61,7 +67,11 @@ public class GUI extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setLayout(new BorderLayout());
 		pTitel = new JPanel();
+		
 		lbTitel = new JLabel("Turnierplanung, Organisation, Auswertung");
+		lbTitel.setFont (lbTitel.getFont ().deriveFont (SCHRIFTGROESSE_TITEL));
+		
+		
 		
 		card1 = new JPanelEinstellungen(this);
 		card2 = new JPanelMannschaften(this);
@@ -100,19 +110,19 @@ public class GUI extends JFrame {
 	}
 
 	public void clickSpeichernManschaften() {
-		sichtbarEinstellungen();
+		dieSteuerung.speichereMannschaften();
 	}
 
 	public void clickErmittelnPaarungen() {
-
+		
 	}
 
 	public void clickZusammenfassenErgebnis() {
-
+		sichtbarReg3_Tabelle();
 	}
 
 	public void clickBestimmeRangfolge() {
-
+		dieSteuerung.bestimmeRangfolge();
 	}
 
 	public void clickBeenden() {
@@ -152,11 +162,11 @@ public class GUI extends JFrame {
 	}
 
 	public void sichtbarReg2_Ergebnisse() {
-
+		
 	}
 
 	public void sichtbarReg3_Tabelle() {
-
+		
 	}
 
 	public int gibPunkteRegel() {
@@ -174,10 +184,10 @@ public class GUI extends JFrame {
 	public int gibAnzahlMannschaften() {
 		//anzahl Mannschaften ermitteln
 		//und zurückgeben
-		int anzahlManschften = card1.getAnzahlMannschaften();
+		int anzahlMannschaften = card1.getAnzahlMannschaften();
 		
-		trace("Anzahl Mannschaften = "+anzahlManschften);
-		return anzahlManschften;
+		trace("Anzahl Mannschaften = "+anzahlMannschaften);
+		return anzahlMannschaften;
 	}
 
 	public void eintragenReg1_Index(int anzahlMannschaften) {

@@ -1,5 +1,6 @@
 package Z5_HP2016A3;
 
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,30 +15,64 @@ import javax.swing.JTable;
 
 public class JPanelMannschaften extends JPanel {
 	
-	JScrollPane scrollPane;
-	JLabel lbReistertitel;
-	JTabbedPane tabbedPane;
-	JTable tableMannschaften;
-	JButton btMannschaftenSpeichern;
-	GUI dieGui;
+	private JScrollPane scrollPane;
+	private JLabel lbReistertitel;
+	private JTabbedPane tabbedPane;
+	private JTable tableMannschaften;
+	private JPanel pButton;
+	private JButton btMannschaftenSpeichern;
+	private JButton btErgebnisseZusammenfassen;
+	private JButton btRangfolgeBestimmen;
+	private JButton btAllesZuruecksetzen;
+	private GUI dieGui;
 	
 	public JPanelMannschaften(GUI parent) {
 		dieGui = parent;
 		
 		this.setLayout(new GridLayout(3, 1));
-		
+		pButton = new JPanel();
 		lbReistertitel = new JLabel("Register 1 bis 3 nacheinander bearbeiten");
-		
-		
 		tabbedPane = new JTabbedPane();
-		
-				
 		tableMannschaften = new JTable(new TableModelMannschaft());
+		
+		//Ist notwendig, damit Überschriften der tabbedPane angezeigt werden können
 		scrollPane = new JScrollPane(tableMannschaften);
 		
 		tabbedPane.addTab("1.Mannschaften", scrollPane);
 		tabbedPane.addTab("2.Ergebnisse", null);
 		tabbedPane.addTab("3.Tabelle", null);
+		
+		btErgebnisseZusammenfassen = new JButton("Ergebnisse zusammenfassen");
+		btErgebnisseZusammenfassen.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				dieGui.clickZusammenfassenErgebnis();
+				
+			}
+		});
+		
+		
+		
+		btAllesZuruecksetzen = new JButton("Alles zurücksetzen");
+		btAllesZuruecksetzen.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				dieGui.clickInit();
+				
+			}
+		});
+		
+		btRangfolgeBestimmen = new JButton("Rangfolge bestimmen");
+		btRangfolgeBestimmen.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				dieGui.clickBestimmeRangfolge();
+				
+			}
+		});
 		
 		
 		
@@ -51,9 +86,10 @@ public class JPanelMannschaften extends JPanel {
 			}
 		});
 		
+		pButton.add(btMannschaftenSpeichern, new FlowLayout());
 		this.add(lbReistertitel);
 		this.add(tabbedPane);
-		this.add(btMannschaftenSpeichern);
+		this.add(pButton);
 	}
 	
 	

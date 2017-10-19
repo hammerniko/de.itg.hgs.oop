@@ -1,5 +1,6 @@
 package Z5_HP2016A3;
 
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,8 +24,10 @@ public class JPanelEinstellungen extends JPanel {
 	JRadioButton rbFussball;
 	JRadioButton rbHandball;
 	ButtonGroup gruppe = new ButtonGroup();
+	JPanel pButtons;
 	JButton btEinstellungenSpeichern;
 	JTextField tfAnzahlMannschaften;
+	
 	GUI dieGui;
 	private int regel;
 	
@@ -50,9 +53,11 @@ public class JPanelEinstellungen extends JPanel {
 		gruppe.add(rbHandball);
 		rbFussball.setSelected(true);
 		
+		pButtons.add(btEinstellungenSpeichern, new FlowLayout());
+		
 		this.add(lbAnzahlManschaften);
 		this.add(tfAnzahlMannschaften);
-		this.add(btEinstellungenSpeichern);
+		this.add(pButtons);
 		
 	}
 
@@ -60,6 +65,7 @@ public class JPanelEinstellungen extends JPanel {
 
 
 	private void initComponents() {
+		pButtons = new JPanel();
 		lbTitel = new JLabel("Einstellungen");
 		lbAuswahl = new JLabel("Sportart wählen");
 		lbAnzahlManschaften = new JLabel("Anz. Mannschaft,(3..6):");
