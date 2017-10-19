@@ -62,11 +62,9 @@ public class WurzelController {
     	
         public void actionPerformed(ActionEvent e) {
             dieGuiKomponente.resetView();
-<<<<<<< HEAD
+
             dasModel.zurückSetzen();
-=======
-            dasModel.zurueckSetzen();
->>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
+
         }
     }
 }
