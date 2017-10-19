@@ -17,10 +17,17 @@ public class WurzelModel {
     long value;
 
     public WurzelModel(){
+<<<<<<< HEAD
         zurückSetzen();
     }
 
     public void zurückSetzen(){
+=======
+        zurueckSetzen();
+    }
+
+    public void zurueckSetzen(){
+>>>>>>> branch 'master' of https://github.com/hammerniko/de.itg.hgs.oop.git
         this.value = 0;
     }
 
