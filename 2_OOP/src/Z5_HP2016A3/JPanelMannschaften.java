@@ -15,10 +15,12 @@ import javax.swing.JTable;
 
 public class JPanelMannschaften extends JPanel {
 	
-	private JScrollPane scrollPane;
+	private JScrollPane scrollPaneMannschaften;
+	private JScrollPane scrollPaneErgebnisse;
 	private JLabel lbReistertitel;
 	private JTabbedPane tabbedPane;
 	private JTable tableMannschaften;
+	JTable tableErgebnisse;
 	private JPanel pButton;
 	private JButton btMannschaftenSpeichern;
 	private JButton btErgebnisseZusammenfassen;
@@ -26,20 +28,24 @@ public class JPanelMannschaften extends JPanel {
 	private JButton btAllesZuruecksetzen;
 	private GUI dieGui;
 	
-	public JPanelMannschaften(GUI parent) {
+	public JPanelMannschaften(GUI parent, Mannschaft dieMannschfaft[]) {
 		dieGui = parent;
 		
 		this.setLayout(new GridLayout(3, 1));
 		pButton = new JPanel();
 		lbReistertitel = new JLabel("Register 1 bis 3 nacheinander bearbeiten");
 		tabbedPane = new JTabbedPane();
-		tableMannschaften = new JTable(new TableModelMannschaft());
+		
+		tableMannschaften = new JTable(new TableModelMannschaft(dieMannschfaft));
 		
 		//Ist notwendig, damit Überschriften der tabbedPane angezeigt werden können
-		scrollPane = new JScrollPane(tableMannschaften);
+		scrollPaneMannschaften = new JScrollPane(tableMannschaften);
+		tableMannschaften.setFillsViewportHeight(true);
 		
-		tabbedPane.addTab("1.Mannschaften", scrollPane);
-		tabbedPane.addTab("2.Ergebnisse", null);
+		
+		
+		tabbedPane.addTab("1.Mannschaften", scrollPaneMannschaften);
+		tabbedPane.addTab("2.Ergebnisse", scrollPaneErgebnisse);
 		tabbedPane.addTab("3.Tabelle", null);
 		
 		btErgebnisseZusammenfassen = new JButton("Ergebnisse zusammenfassen");
@@ -90,7 +96,11 @@ public class JPanelMannschaften extends JPanel {
 		this.add(lbReistertitel);
 		this.add(tabbedPane);
 		this.add(pButton);
+		
+		
 	}
+	
+	 
 	
 	
 

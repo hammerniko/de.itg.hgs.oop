@@ -7,10 +7,10 @@ public class Steuerung {
 	private int zustand;
 
 	// Assoziationen Steuerung
-	Tabelle dieTabelle;
-	Paarung diePaarung[];
-	GUI dieGui;
-	Mannschaft dieMannschaft[];
+	private Tabelle dieTabelle;
+	private Paarung diePaarung[];
+	private GUI dieGui;
+	private Mannschaft dieMannschaft[];
 
 	public Steuerung() {
 
@@ -79,7 +79,7 @@ public class Steuerung {
 
 		// Algorithmus aus Aufgabe 3.2
 		diePaarung = new Paarung[15];
-		anzahlMannschaften = dieGui.gibAnzahlMannschaften(); // Test für Aufgabe 3.2a
+		
 		int i = 0;
 		for (int j = 0; j <= anzahlMannschaften - 2; j++) {
 			for (int k = j + 1; k <= anzahlMannschaften - 1; k++) {
@@ -121,7 +121,7 @@ public class Steuerung {
 	}
 
 	private void ausgebenTabelle(boolean pMitRang) {
-
+		
 	}
 
 	public void resetProg() {
@@ -133,5 +133,15 @@ public class Steuerung {
 
 		dieGui.sichtbarEinstellungen();
 	}
+
+	public Mannschaft[] getDieMannschaft() {
+		return dieMannschaft;
+	}
+	
+	public String gibNameMannschaft(int index) {
+		return dieMannschaft[index].gibName();
+	}
+	
+	
 
 }

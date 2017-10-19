@@ -17,8 +17,9 @@ public class GUI extends JFrame {
 	
 	//Konstanten
 	public static final float SCHRIFTGROESSE_TITEL = 18;
+	public static final int BREITE = 600;
+	public static final int HOEHE = 450;
 	
-
 	boolean debug;
 	
 	// Attribut für Assoziation zur Steuerung
@@ -44,7 +45,7 @@ public class GUI extends JFrame {
 		initComponents();
 		addComponents();
 		setVisible(true);
-		setSize(600, 350);
+		setSize(BREITE, HOEHE);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		dieSteuerung = pSteuerung;
 		
@@ -74,12 +75,12 @@ public class GUI extends JFrame {
 		
 		
 		card1 = new JPanelEinstellungen(this);
-		card2 = new JPanelMannschaften(this);
+		
 		
 		
 		pAnzeige = new JPanel(new CardLayout());
 		pAnzeige.add(card1,"Einstellungen");
-		pAnzeige.add(card2,"Mannschaften");
+		
 				
 		
 		
@@ -130,9 +131,8 @@ public class GUI extends JFrame {
 	}
 
 	public String gibNameMannschaft(int pZeile) {
-		// ermittle Name der Mannschaft
-
-		return "Mannschaftsname...";
+			
+		return dieSteuerung.gibNameMannschaft(pZeile);
 	}
 
 	public int gibErgebnisPaarung(int pZeile, int Mannschaft) {
@@ -141,7 +141,7 @@ public class GUI extends JFrame {
 	}
 
 	public void anzeigenPaarung(int pZeile, String pM1, String pM2) {
-
+		
 	}
 
 	public void anzeigenInTab(int pZeile, int pRang, String pMannschaft, int pSpiele, int pPunkte, int pTorePlus,
@@ -156,6 +156,9 @@ public class GUI extends JFrame {
 	}
 
 	public void sichtbarReg1_Mannschaften() {
+		card2 = new JPanelMannschaften(this,dieSteuerung.getDieMannschaft());
+		pAnzeige.add(card2,"Mannschaften");
+		
 		CardLayout cl = (CardLayout)(pAnzeige.getLayout());
         cl.show(pAnzeige,"Mannschaften" );
 		
@@ -184,10 +187,10 @@ public class GUI extends JFrame {
 	public int gibAnzahlMannschaften() {
 		//anzahl Mannschaften ermitteln
 		//und zurückgeben
-		int anzahlMannschaften = card1.getAnzahlMannschaften();
+		int anzahlManschaften = card1.getAnzahlMannschaften();
 		
-		trace("Anzahl Mannschaften = "+anzahlMannschaften);
-		return anzahlMannschaften;
+		trace("Anzahl Mannschaften = "+anzahlManschaften);
+		return anzahlManschaften;
 	}
 
 	public void eintragenReg1_Index(int anzahlMannschaften) {
