@@ -1,12 +1,9 @@
-package Z5_HP2016A3;
+package C_OOPLoginOhneButtons;
 
 public class StartKlasse {
 
 	public static void main(String[] args) {
-
-		//Steuerungsobjekt erstellen
 		Steuerung s = new Steuerung();
-		
 
 	}
 

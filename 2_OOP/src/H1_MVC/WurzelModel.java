@@ -18,13 +18,12 @@ public class WurzelModel {
 
     public WurzelModel(){
 
-        zurückSetzen();
-    }
-
-    public void zurückSetzen(){
 
         zurueckSetzen();
     }
+
+   
+    
 
     public void zurueckSetzen(){
 
