@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-public class JTableCreatingDemo {
+public class JTableCreatingDemo1 {
 	
   public static void main(String args[]) {
 	  

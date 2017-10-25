@@ -12,6 +12,8 @@ public class Steuerung {
 	
 	public Steuerung() {
 		dieGui = new Gui(this);
+		
+		
 	}
 	
 	public void pruefeBenutzername(String pName) {
