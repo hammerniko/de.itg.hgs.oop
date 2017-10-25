@@ -12,6 +12,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
  
 public class JTableDefaultTableModel{
+	
 	public static void main( String[] args ){
 		// Die Namen der Columns
 		String[] titles = new String[]{ "A", "B", "C", "D" };
@@ -34,37 +35,19 @@ public class JTableDefaultTableModel{
 		// Den Buttons ein paar Reaktionen geben
 		buttonAddRow.addActionListener( new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				// Die Anzahl Columns (Breite) der Tabelle
-				int size = model.getColumnCount();
- 
-				// einen neuen Vector mit Daten herstellen
-				Vector newDatas = createDataVector( "row", size );
- 
-				// eine neue Row hinzufügen
-				model.addRow( newDatas );
- 
- 
-				// das Entfernen erlauben
-				buttonRemRow.setEnabled( true );
+				clickedAddRow(model, buttonRemRow);
 			}
 		});
  
 		buttonAddCol.addActionListener( new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				int size = model.getRowCount();
-				Vector newDatas = createDataVector( "column", size );
-				String name = String.valueOf( model.getColumnCount() );
-				model.addColumn( name, newDatas );
+				clickedAddCol(model);
 			}
 		});
  
 		buttonRemRow.addActionListener( new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
-				int size = model.getRowCount();
-				int index = (int)(Math.random() * size);
-				model.removeRow( index );
- 
-				buttonRemRow.setEnabled( size > 1 );
+				clickedRemRow(model, buttonRemRow);
 			}
 		});
  
@@ -88,5 +71,34 @@ public class JTableDefaultTableModel{
 			vector.add( prefix + " : " + size + " : " + i );
  
 		return vector;
+	}
+
+	public static void clickedAddRow(final DefaultTableModel model, final JButton buttonRemRow) {
+		// Die Anzahl Columns (Breite) der Tabelle
+		int size = model.getColumnCount();
+ 
+		// einen neuen Vector mit Daten herstellen
+		Vector newDatas = createDataVector( "row", size );
+ 
+		// eine neue Row hinzufügen
+		model.addRow( newDatas );
+ 
+ 
+		// das Entfernen erlauben
+		buttonRemRow.setEnabled( true );
+	}
+
+	public static void clickedAddCol(final DefaultTableModel model) {
+		int size = model.getRowCount();
+		Vector newDatas = createDataVector( "column", size );
+		String name = String.valueOf( model.getColumnCount() );
+		model.addColumn( name, newDatas );
+	}
+
+	public static void clickedRemRow(final DefaultTableModel model, final JButton buttonRemRow) {
+		int size = model.getRowCount();
+		int index = (int)(Math.random() * size);
+		model.removeRow( index );
+		buttonRemRow.setEnabled( size > 1 );
 	}
 }

@@ -55,8 +55,8 @@ class Model implements TableModel{
 
 		switch( columnIndex ){
 			case 0: return vehicle.getName();
-			case 1: return new Integer( vehicle.getPlaces() );
-			case 2: return new Integer( vehicle.getWheels() );
+			case 1: return vehicle.getPlaces() ;
+			case 2: return vehicle.getWheels() ;
 			case 3: return vehicle.hasMotor() ? Boolean.TRUE : Boolean.FALSE; 
 			default: return null;
 		}
@@ -87,6 +87,7 @@ class Model implements TableModel{
 	public boolean isCellEditable(int rowIndex, int columnIndex) {
 		return false;
 	}
+	
 	public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
 		// nicht beachten
 	}
