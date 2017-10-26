@@ -6,6 +6,10 @@
 package G6_DefaultTableModel;
 
 import java.util.Vector;
+
+import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -44,6 +48,26 @@ public class Gui extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        
+        /*
+        ListSelectionModel cellSelectionModel = jTable2.getSelectionModel();
+        cellSelectionModel.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+
+        cellSelectionModel.addListSelectionListener(new ListSelectionListener() {
+			
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				
+				
+				m = (DefaultTableModel) jTable2.getModel();
+				int row = jTable2.getSelectedRow();
+			        
+			        jTextFieldName.setText(""+m.getValueAt(row, 0));
+			        jTextFieldVorname.setText(""+m.getValueAt(row, 1));
+			        jTextFieldEmail.setText(""+m.getValueAt(row, 2));
+			}
+		});
+        */
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
