@@ -2,6 +2,8 @@ package Z5_HP2016A3_Ismail_Nikolai;
 
 public class Steuerung {
 
+	private static final int MIN_ANZAHL_MANNSCHAFTEN = 3;
+	public static final int MAX_ANZAHL_MANNSCHAFTEN = 10;
 	GUI dieGUI;
 	Tabelle dieTabelle;
 	Mannschaft dieMannschaft[];
@@ -26,7 +28,7 @@ public class Steuerung {
 
 		anzahlMannschaften = dieGUI.gibAnzahlMannschaften();
 
-		if (anzahlMannschaften > 6 || anzahlMannschaften < 3) {
+		if (anzahlMannschaften > MAX_ANZAHL_MANNSCHAFTEN || anzahlMannschaften < MIN_ANZAHL_MANNSCHAFTEN) {
 			dieGUI.showInputError("Anzahl Mannschaften falsch!");
 			return;
 		}
