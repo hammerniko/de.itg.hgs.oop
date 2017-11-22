@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>10</y>
+      <w>280</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Mitarbeiter
+--
+-name:txt
+-vorname:txt
+-stundenlohn:FKZ
+-aussendienstzulage:FKZ
+
+_+MINDESTLOHN:FKZ=8.0_
+
+--
++Mitarbeiter(pName:txt, pVorname:txt)
++berechneGehalt():FKZ
++addStunden(pStunden:FKZ)
++toString():txt
+
+&lt;&lt;getter und setter&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>320</y>
+      <w>280</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Installateur
+--
+
+--
++Installateur(pName:txt, pVorname:txt)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>260</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>60</x>
+      <y>40</y>
+      <w>280</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Aufgabe
+bg=yellow
+Ab sofort werden Elektroinstallateure
+erfasst. 
+
+Diese bekommen eine 
+Gefahrenzulage von 90 Cent je
+gearbeitete Stunde bei bis zu 
+10 Arbeitsstunden. 
+
+Ab 11h bekommen sie
+1.10 Euro Gefahrenzulage.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>470</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>EInstallateur
+--
+-gefahrenZulage:FKZ
+--
++berechneGehalt():FKZ
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>410</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>
