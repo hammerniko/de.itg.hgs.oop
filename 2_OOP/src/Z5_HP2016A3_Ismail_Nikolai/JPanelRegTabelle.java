@@ -1,7 +1,11 @@
 package Z5_HP2016A3_Ismail_Nikolai;
 
 import javax.swing.*;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -76,7 +80,9 @@ public class JPanelRegTabelle extends JPanelReg {
 		};
 
 		model.setColumnIdentifiers(columnName);
+
 		table.setModel(model);
+		
 		pane = new JScrollPane(table);
 		pane.setLayout(new ScrollPaneLayout());
 	}
