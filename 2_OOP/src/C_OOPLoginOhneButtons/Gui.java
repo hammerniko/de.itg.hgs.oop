@@ -20,16 +20,16 @@ public class Gui extends JFrame {
 	
 	JPanel contentPane;
 	JTextField tfBN;
-	JPasswordField tfKW;
+	JPasswordField pfKW;
 	JLabel lbBN;
 	JLabel lbKW;
 	JLabel lbStatus;
 	JPanel pStatus;
 	JPanel pAnzeige;
 	
-	public Gui(Steuerung steuerung) {
+	public Gui(Steuerung s) {
 		
-		dieSteuerung = steuerung;
+		dieSteuerung = s;
 		
 		contentPane = new JPanel();
 		pAnzeige = new JPanel();
@@ -40,14 +40,14 @@ public class Gui extends JFrame {
 		lbStatus = new JLabel("Status:");
 		
 		tfBN = new JTextField(10);
-		tfKW = new JPasswordField(10);
+		pfKW = new JPasswordField(10);
 		
 		pAnzeige.setLayout(new GridLayout(2,2));
 		
 		pAnzeige.add(lbBN);
 		pAnzeige.add(tfBN);
 		pAnzeige.add(lbKW);
-		pAnzeige.add(tfKW);
+		pAnzeige.add(pfKW);
 		
 		pStatus.add(lbStatus);
 		pStatus.setLayout(new FlowLayout());
@@ -75,7 +75,7 @@ public class Gui extends JFrame {
 			}
 		});
 		
-		tfKW.addActionListener(new ActionListener() {
+		pfKW.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -87,7 +87,7 @@ public class Gui extends JFrame {
 	}
 
 	protected void enteredKW() {
-		String kw = tfKW.getText();
+		String kw = pfKW.getText();
 		dieSteuerung.pruefeKennwort(kw);
 		
 		
@@ -110,8 +110,8 @@ public class Gui extends JFrame {
 	}
 	
 	public void setzeFocusAufKW() {
-		tfKW.requestFocus();
-		tfKW.selectAll();
+		pfKW.requestFocus();
+		pfKW.selectAll();
 		
 	}
 
