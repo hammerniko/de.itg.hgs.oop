@@ -36,7 +36,7 @@ public class Gui extends JFrame {
 	JTextField tfPunkte2;
 	JButton btWuerfeln;
 	JButton btSpielerWechsel;
-	JButton bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9;
+	JButtonKlappe bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9;
 	
 	JButtonWuerfel w1,w2;
 	
@@ -70,15 +70,15 @@ public class Gui extends JFrame {
 		tfPunkte2= new JTextField(4);
 		btWuerfeln = new JButton(WUERFELN);
 		btSpielerWechsel= new JButton(SPIELER_WECHSELN);
-		bt1 = new JButton("1");
-		bt2 = new JButton("2");
-		bt3 = new JButton("3");
-		bt4 = new JButton("4");
-		bt5 = new JButton("5");
-		bt6 = new JButton("6");
-		bt7 = new JButton("7");
-		bt8 = new JButton("8");
-		bt9 = new JButton("9");
+		bt1 = new JButtonKlappe(1);
+		bt2 = new JButtonKlappe(2);
+		bt3 = new JButtonKlappe(3);
+		bt4 = new JButtonKlappe(4);
+		bt5 = new JButtonKlappe(5);
+		bt6 = new JButtonKlappe(6);
+		bt7 = new JButtonKlappe(7);
+		bt8 = new JButtonKlappe(0);
+		bt9 = new JButtonKlappe(9);
 		
 		w1 = new JButtonWuerfel(6);
 		w2 = new JButtonWuerfel(5);

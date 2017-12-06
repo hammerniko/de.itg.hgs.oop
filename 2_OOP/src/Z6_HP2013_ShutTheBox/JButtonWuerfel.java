@@ -1,11 +1,15 @@
 package Z6_HP2013_ShutTheBox;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Insets;
 import java.awt.RenderingHints;
+import java.awt.Shape;
+import java.awt.Stroke;
 
 import javax.swing.JButton;
 import javax.swing.border.Border;
@@ -15,29 +19,46 @@ public class JButtonWuerfel extends JButton {
 	private int wert;
 	private int width, height;
 	private int mitteX, mitteY, spalteLinks, spalteRechts,reihe1, reihe2, reihe3, gap;
-	
-	public static final int RADIUS_CIRCLE = 7;
+	private static final int HEIGHT = 80;
+	private static final int WIDTH = 80;
+	public static final int RADIUS_CIRCLE = 15;
 
 	public JButtonWuerfel(int wert) {
 		super();
 		this.wert = wert;
-		setBackground(Color.WHITE);
-		setText(" ");
+			
+		//this.setBorderPainted(false);
+		this.setOpaque(true);
+		//this.setContentAreaFilled(false);
+		this.setBorder(new RoundedBorder(10)); //10 is the radius
+		this.setForeground(Color.white);
+		setPreferredSize(new Dimension(WIDTH, HEIGHT));
+		revalidate();
 	}
 
+	
+	
+	
 	@Override
 	protected void paintComponent(Graphics g) {
 		// TODO Auto-generated method stub
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D) g;
 
-		g2.setColor(Color.BLACK);
+		
 		g2.setRenderingHint(
                  RenderingHints.KEY_ANTIALIASING, 
                  RenderingHints.VALUE_ANTIALIAS_ON);
-
+		
+		
+				
+		g2.setColor(Color.BLACK);
+		
+		
 		width = getSize().width;
 		height = getSize().height;
+		
+		
 		
 		mitteX = width/2 - RADIUS_CIRCLE/2;
 		mitteY = height/2 - RADIUS_CIRCLE/2;
@@ -126,6 +147,29 @@ public class JButtonWuerfel extends JButton {
 		this.wert = wert;
 	}
 	
-	
+	private static class RoundedBorder implements Border {
+
+	    private int radius;
+
+
+	    RoundedBorder(int radius) {
+	        this.radius = radius;
+	    }
+
+
+	    public Insets getBorderInsets(Component c) {
+	        return new Insets(this.radius+1, this.radius+1, this.radius+2, this.radius);
+	    }
+
+
+	    public boolean isBorderOpaque() {
+	        return true;
+	    }
+
+
+	    public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
+	        g.drawRoundRect(x, y, width-1, height-1, radius, radius);
+	    }
+	}
 
 }
