@@ -14,16 +14,16 @@ import java.awt.Stroke;
 import javax.swing.JButton;
 import javax.swing.border.Border;
 
-public class JButtonWuerfel extends JButton {
+public class MeinButtonWuerfel extends JButton {
 
 	private int wert;
 	private int width, height;
 	private int mitteX, mitteY, spalteLinks, spalteRechts,reihe1, reihe2, reihe3, gap;
-	private static final int HEIGHT = 80;
-	private static final int WIDTH = 80;
+	private static final int HEIGHT = 100;
+	private static final int WIDTH = 100;
 	public static final int RADIUS_CIRCLE = 15;
 
-	public JButtonWuerfel(int wert) {
+	public MeinButtonWuerfel(int wert) {
 		super();
 		this.wert = wert;
 			

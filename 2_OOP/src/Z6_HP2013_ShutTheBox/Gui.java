@@ -1,7 +1,9 @@
 package Z6_HP2013_ShutTheBox;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,25 +22,21 @@ public class Gui extends JFrame {
 	
 	JPanel jpLinks;
 	JPanel jpRechts;
-	JPanel jpSpieler1;
-	JPanel jpSpieler2;
+	JPanelSpieler jpSpieler1;
+	JPanelSpieler jpSpieler2;
 	JPanel jpWuerfel;
-	JPanel jpButtons;
+	JPanel jpUnten;
 	JPanel jpKlappen;
+	JPanel jpButtons;
 	JPanel contentPane;
-	JLabel lbName1;
-	JLabel lbName2;
-	JLabel lbPunkte1;
-	JLabel lbPunkte2;
-	JTextField tfName1;
-	JTextField tfName2;
+	
 	JTextField tfPunkte1;
 	JTextField tfPunkte2;
 	JButton btWuerfeln;
 	JButton btSpielerWechsel;
-	JButtonKlappe bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9;
+	ButtonKlappe klappeButtons[]; 
 	
-	JButtonWuerfel w1,w2;
+	MeinButtonWuerfel w1,w2;
 	
 	
 	public static final String TITEL = "Shut the Box";
@@ -54,65 +52,72 @@ public class Gui extends JFrame {
 		contentPane = new JPanel();
 		jpLinks = new JPanel();
 		jpRechts = new JPanel();
-		jpSpieler1 = new JPanel();
-		jpSpieler2 = new JPanel();
+		jpSpieler1 = new JPanelSpieler(1);
+		jpSpieler2 = new JPanelSpieler(2);
 		jpWuerfel  = new JPanel();
+		jpUnten = new JPanel();
 		jpButtons = new JPanel();
 		jpKlappen = new JPanel();
 		
-		lbName1 = new JLabel("Name1:");
-		lbName2 = new JLabel("Name2:");
-		lbPunkte1 = new JLabel("Punkte1:");
-		lbPunkte2 = new JLabel("Punkte2:");
-		tfName1 = new JTextField(10);
-		tfName2 = new JTextField(10);
-		tfPunkte1= new JTextField(4);
-		tfPunkte2= new JTextField(4);
-		btWuerfeln = new JButton(WUERFELN);
-		btSpielerWechsel= new JButton(SPIELER_WECHSELN);
-		bt1 = new JButtonKlappe(1);
-		bt2 = new JButtonKlappe(2);
-		bt3 = new JButtonKlappe(3);
-		bt4 = new JButtonKlappe(4);
-		bt5 = new JButtonKlappe(5);
-		bt6 = new JButtonKlappe(6);
-		bt7 = new JButtonKlappe(7);
-		bt8 = new JButtonKlappe(0);
-		bt9 = new JButtonKlappe(9);
 		
-		w1 = new JButtonWuerfel(6);
-		w2 = new JButtonWuerfel(5);
 		
-		contentPane.setLayout(new BorderLayout());
+		btWuerfeln = new MeinButton(WUERFELN);
+		btSpielerWechsel= new MeinButton(SPIELER_WECHSELN);
+		
+		klappeButtons = new ButtonKlappe[9];
+		
+		for (int i = 0; i < klappeButtons.length; i++) {
+			klappeButtons[i]= new ButtonKlappe(i+1, this);
+			jpKlappen.add(klappeButtons[i]);
+		}
+		
+		
+		
+		w1 = new MeinButtonWuerfel(6);
+		w2 = new MeinButtonWuerfel(5);
+		
+		
+		contentPane.setLayout(new BorderLayout(10,10));
 		contentPane.add(jpLinks,BorderLayout.WEST);
 		contentPane.add(jpRechts,BorderLayout.CENTER);
 		
 		
-		jpRechts.setLayout(new BorderLayout());
+		jpRechts.setLayout(new BorderLayout(10,10));
 		jpRechts.add(jpKlappen,BorderLayout.CENTER);
-		jpRechts.add(jpButtons,BorderLayout.SOUTH);
+		jpRechts.add(jpUnten,BorderLayout.SOUTH);
 		
-		jpButtons.setLayout(new FlowLayout());
+		jpUnten.setLayout(new FlowLayout(FlowLayout.LEFT,0,10));
+		jpButtons.setLayout(new FlowLayout(FlowLayout.LEFT,10,10));
+		
 		jpButtons.add(btWuerfeln);
 		jpButtons.add(btSpielerWechsel);
-		jpButtons.add(jpWuerfel);
-		jpWuerfel.setLayout(new FlowLayout());
+		
+		
+		jpWuerfel.setLayout(new FlowLayout(FlowLayout.RIGHT,10,10));
 		jpWuerfel.add(w1);
 		jpWuerfel.add(w2);
+
+		jpUnten.add(jpButtons);
+		jpUnten.add(jpWuerfel);
+		
+		
+		jpKlappen.setLayout(new FlowLayout(FlowLayout.LEFT,10,10));
 		
 		
 		
-		jpKlappen.setLayout(new FlowLayout());
-		jpKlappen.add(bt1);
-		jpKlappen.add(bt2);
-		jpKlappen.add(bt3);
-		jpKlappen.add(bt4);
-		jpKlappen.add(bt5);
-		jpKlappen.add(bt6);
-		jpKlappen.add(bt7);
-		jpKlappen.add(bt8);
-		jpKlappen.add(bt9);
+		
 				
+		
+		GridLayout gridLayoutLinks = new GridLayout(4, 1,20,10);
+		jpLinks.setLayout(gridLayoutLinks);
+		gridLayoutLinks.setVgap(20);
+		gridLayoutLinks.setHgap(50);
+		
+		
+		jpLinks.add(jpSpieler1);
+		jpLinks.add(jpSpieler2);
+		
+		
 		setContentPane(contentPane);
 		pack();
 		
@@ -142,17 +147,20 @@ public class Gui extends JFrame {
 	
 	public void oeffneAlleKlappen() {
 		
+		//alle Klappen öffnen
+		
 	}
 	
 	public void schliesseKlappe(int pWert) {
-		
+				klappeButtons[pWert-1].setText("X");
+				
 	}
 	
-	public void aktiviereWuerfelTaste() {
-		
+	public void aktiviereWuerfelTaste(boolean b) {
+		btWuerfeln.setEnabled(b);
 	}
 	
-	public void aktiviereWechselTaste() {
+	public void aktiviereWechselTaste(boolean b) {
 		
 	}
 
@@ -175,5 +183,14 @@ public class Gui extends JFrame {
 		w1.repaint();
 		w2.repaint();
 		
+	}
+	
+	public void klickKlappe(int wert) {
+		System.out.println("Klappe"+wert+"  geklickt");
+		dieSteuerung.klickKlappe(wert);
+	}
+	
+	public int gibAugensumme() {
+		return w1.getWert()+w2.getWert();
 	}
 }
