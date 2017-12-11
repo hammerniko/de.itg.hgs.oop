@@ -34,6 +34,7 @@ public class Gui extends JFrame {
 	JTextField tfPunkte2;
 	JButton btWuerfeln;
 	JButton btSpielerWechsel;
+	
 	ButtonKlappe klappeButtons[]; 
 	
 	MeinButtonWuerfel w1,w2;
@@ -44,7 +45,9 @@ public class Gui extends JFrame {
 	private static final String SPIELER_WECHSELN = "Spielerwechsel";
 	
 	public Gui(String pName1, String pName2) {
-		dieSteuerung = new Steuerung(this);
+		dieSteuerung = new Steuerung(this,pName1,pName2);
+		
+		
 		
 		setTitle(TITEL);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -59,6 +62,7 @@ public class Gui extends JFrame {
 		jpButtons = new JPanel();
 		jpKlappen = new JPanel();
 		
+				
 		
 		
 		btWuerfeln = new MeinButton(WUERFELN);
@@ -118,6 +122,7 @@ public class Gui extends JFrame {
 		jpLinks.add(jpSpieler2);
 		
 		
+		
 		setContentPane(contentPane);
 		pack();
 		
@@ -141,6 +146,8 @@ public class Gui extends JFrame {
 		
 	}
 	
+	
+
 	public void zeigePunkte(int pIdxSpieler, int pMinusPunkte) {
 		
 	}
@@ -165,6 +172,7 @@ public class Gui extends JFrame {
 	}
 
 	public void klickWechsleSpieler() {
+		dieSteuerung.wechsleSpieler();
 		
 	}
 	

@@ -13,7 +13,7 @@ public class Steuerung {
 
 	private Gui dieGui;
 
-	public Steuerung(Gui gui) {
+	public Steuerung(Gui gui,String pName1, String pName2) {
 		aIdxAktiverSpieler = 0;
 		aMinusPunkte = 0;
 		aKLappenSumme = 0;
@@ -24,6 +24,10 @@ public class Steuerung {
 		derWuerfel[0] = new Wuerfel();
 		derWuerfel[1] = new Wuerfel();
 
+		
+		derSpieler[0]=new Spieler(pName1);
+		derSpieler[1]=new Spieler(pName2);
+		
 		dieKlappe = new Klappe[9];
 
 		for (int i = 0; i < dieKlappe.length; i++) {
@@ -77,6 +81,7 @@ public class Steuerung {
 			}
 		}
 
+		aKLappenSumme = 0;
 		dieGui.aktiviereWuerfelTaste(true);
 
 	}
@@ -89,23 +94,45 @@ public class Steuerung {
 		int w1 = derWuerfel[0].wuerfeln();
 		int w2 = derWuerfel[1].wuerfeln();
 
+		aAugensumme = w1+w2;
+		
+		System.out.println("Augensumme:"+aAugensumme);
+		
 		dieGui.zeichneWuerfel(w1, w2);
-
 		dieGui.aktiviereWuerfelTaste(false);
 
 	}
 
 	public void klickKlappe(int klappeNr) {
+		
+				
+		Klappe klappe = dieKlappe[klappeNr-1];
 
-		if (dieKlappe[klappeNr - 1].gibZustand() == 0) {
-			dieKlappe[klappeNr - 1].setzeZustand(1);
-			int wert = dieKlappe[klappeNr - 1].gibWert();
-
+		if (klappe.gibZustand() == 0) {
+					
+			klappe.setzeZustand(1);
+			
 			// Prüfungob Summe der Augenzahlen
 			// dem Wert der gewählten Klappe entspricht
-			if (dieGui.gibAugensumme() == wert) {
+			if (aAugensumme == klappe.gibWert()) {
 				setzeKlappenEndgueltigGeschlossen();
+				
 			}
+			else {
+				aKLappenSumme = aKLappenSumme + klappe.gibWert();
+				
+				if(aAugensumme >= aKLappenSumme) {
+					System.out.println("Klappe schliessen Summe:"+aKLappenSumme);
+				}
+				else if(aAugensumme == aKLappenSumme) {
+					System.out.println("Klappen SchliessenSumme:"+aKLappenSumme);
+				}
+				else {
+					System.out.println("spielerWechsel");
+				}
+			}
+			
+				
 		}
 
 	}
