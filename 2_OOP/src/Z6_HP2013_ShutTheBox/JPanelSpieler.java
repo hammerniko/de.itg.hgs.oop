@@ -15,8 +15,6 @@ import javax.swing.JSeparator;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
 
-
-
 public class JPanelSpieler extends JPanel {
 	
 	JLabel lbTitel;

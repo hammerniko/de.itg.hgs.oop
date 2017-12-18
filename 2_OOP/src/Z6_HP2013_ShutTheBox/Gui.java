@@ -66,6 +66,16 @@ public class Gui extends JFrame {
 		
 		
 		btWuerfeln = new MeinButton(WUERFELN);
+		btWuerfeln.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				klickWuerfeln();
+				
+			}
+		});
+		
+		
 		btSpielerWechsel= new MeinButton(SPIELER_WECHSELN);
 		
 		klappeButtons = new ButtonKlappe[9];
