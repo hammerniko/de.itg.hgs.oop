@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>42</x>
+      <y>60</y>
+      <w>108</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>START
+--
+zustand = 1
+
+--
+do / warte auf Karte
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>336</x>
+      <y>60</y>
+      <w>108</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>KARTENPRÜFUNG
+--
+zustand = 2
+
+--
+entry / pruefeKarte()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>72</y>
+      <w>204</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[karteErkannt==true]</panel_attributes>
+    <additional_attributes>10.0;20.0;320.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>90</y>
+      <w>204</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[istKarteGueltig=false]/karteAuswerfen()</panel_attributes>
+    <additional_attributes>320.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>348</x>
+      <y>204</y>
+      <w>108</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>PIN_EINGABE
+--
+zustand = 3
+--
+entry / prüfePin()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>120</y>
+      <w>96</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[istKarteGueltig=true]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>84</x>
+      <y>120</y>
+      <w>276</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[istPinGueltig=false &amp;&amp; AnzahlVersuiche &gt;= 3]/karteAuswerfen()</panel_attributes>
+    <additional_attributes>440.0;180.0;10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>252</y>
+      <w>228</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[istPinGueltig=false &amp;&amp; AnzahlVersuiche &lt; 3]
+</panel_attributes>
+    <additional_attributes>360.0;30.0;360.0;60.0;10.0;60.0;10.0;10.0;310.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>390</x>
+      <y>480</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>264</y>
+      <w>66</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[istPinGueltig]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>534</x>
+      <y>462</y>
+      <w>108</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Ueberweisen
+--
+zustand = 4
+
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>192</x>
+      <y>462</y>
+      <w>108</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Auszahlen
+--
+zustand = 5
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>294</x>
+      <y>480</y>
+      <w>108</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[wahl = Auszahlen]</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>480</y>
+      <w>138</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[wahl = Ueberweisen]</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>354</x>
+      <y>330</y>
+      <w>108</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>AuswahlAnzeigen
+--
+zustand = 6
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>378</y>
+      <w>84</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[wahl ist 1 oder 2]</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+</diagram>
