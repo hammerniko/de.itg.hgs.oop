@@ -1,7 +1,8 @@
 package Z6_HP2013_ShutTheBox;
 
 public class Steuerung {
-
+	
+	private Gui dieGui;
 	Spieler derSpieler[];
 	Wuerfel derWuerfel[];
 	Klappe dieKlappe[];
@@ -11,14 +12,16 @@ public class Steuerung {
 	private int aIdxAktiverSpieler;
 	private int aMinusPunkte;
 
-	private Gui dieGui;
+	
 
 	public Steuerung(Gui gui,String pName1, String pName2) {
 		aIdxAktiverSpieler = 0;
 		aMinusPunkte = 0;
 		aKLappenSumme = 0;
 		aAugensumme = 0;
+		
 		dieGui = gui;
+		
 		derSpieler = new Spieler[2];
 		derWuerfel = new Wuerfel[2];
 		derWuerfel[0] = new Wuerfel();

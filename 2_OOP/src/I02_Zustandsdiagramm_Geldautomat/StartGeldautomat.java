@@ -4,7 +4,7 @@ public class StartGeldautomat {
 
 	public static void main(String[] args) {
 		Geldautomat ga = new Geldautomat();
-		ga.run();
+		ga.starteThread();
 		System.out.println("Programmende");
 		
 
