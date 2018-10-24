@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>240</x>
+      <y>140</y>
+      <w>90</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Stop
+--
+z=0
+--
+entry / stoppeLied()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>125</x>
+      <y>185</y>
+      <w>10</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>245</x>
+      <y>290</y>
+      <w>90</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>Play
+--
+z=1
+--
+do / spieleLied()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>245</x>
+      <y>495</y>
+      <w>90</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>Pause
+--
+z=2
+--
+entry / pauseLied()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>160</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>190</y>
+      <w>125</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+taste Play / waehleMarkiertesLied()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>350</y>
+      <w>50</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+taste Pause</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>265</x>
+      <y>350</y>
+      <w>45</w>
+      <h>155</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+taste Play</panel_attributes>
+    <additional_attributes>10.0;290.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>190</y>
+      <w>45</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+taste Stop</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>325</y>
+      <w>95</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[lied gewählt]</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>315</y>
+      <w>95</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+taste Previous</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>65</x>
+      <y>295</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>VorigesLiedWaehlen
+--
+z=3
+--
+entry / waehleVorigesLied()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>460</x>
+      <y>295</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>NaechstesLiedWaehlen
+--
+z=4
+--
+entry / waehleNachstesLied()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>325</y>
+      <w>140</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[lied gewählt]</panel_attributes>
+    <additional_attributes>260.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>315</y>
+      <w>140</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+taste Next</panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>490</x>
+      <y>375</y>
+      <w>90</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>waehleZeit
+--
+z=5
+--
+exit / ermittleZeit()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>315</x>
+      <y>350</y>
+      <w>185</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+timeSliderPressed()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;350.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>340</y>
+      <w>170</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[timeslider released]</panel_attributes>
+    <additional_attributes>320.0;100.0;150.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>465</x>
+      <y>135</y>
+      <w>90</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>WaehleLiedAusPlaylist
+--
+z=6
+--
+entry / waehleGeklicktesLied()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>185</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+klickListe()</panel_attributes>
+    <additional_attributes>10.0;240.0;140.0;240.0;320.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>185</y>
+      <w>195</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+[liedgewarehlt()</panel_attributes>
+    <additional_attributes>370.0;10.0;190.0;250.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>325</x>
+      <y>160</y>
+      <w>150</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+klickListe()</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>165</y>
+      <w>320</w>
+      <h>375</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+klickListe()</panel_attributes>
+    <additional_attributes>10.0;730.0;560.0;730.0;560.0;10.0;450.0;10.0</additional_attributes>
+  </element>
+</diagram>
