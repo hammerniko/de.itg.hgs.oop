@@ -1,0 +1,8 @@
+Es gibt Schulklassen mit Klassennamen. Jede Klasse kennt sein Klassenzimmer. Jedes Zimmer hat eine Raumnummer (Text) und eine Anzahl von Sitzplätzen.
+
+1.	Erstellen Sie ein UML Klassendiagramm mit UMLET.
+2.	Eine Schulklasse benötigt immer einen Klassennamen.
+3.	Ein Zimmer benötigt immer eine Raumnummer.
+4.	Auf alle Attribute soll die Datenkapselung angewendet werden. Alle Attribute sind lesbar und änderbar.
+5.	Erzeugen Sie die benötigten Klassen und eine ausführbare Startklasse.
+6.	Erstellen Sie je ein Objekt einer Klasse und geben Sie die Daten der Objekte über die toString()-Methode aus.
