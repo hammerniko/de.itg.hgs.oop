@@ -1,4 +1,4 @@
-package A05_OOPBeispielUnidirektionak1Zu1SchulklasseUndRaum;
+package A05_OOPBeispielUnidirektional1Zu1SchulklasseUndRaum;
 
 import java.util.ArrayList;
 
