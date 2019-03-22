@@ -11,13 +11,11 @@ public class ServiceMitarbeiter extends Mitarbeiter {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString()+" ServiceZulage:"+serviceZulage;
 	}
 	
 	@Override
 	public double berechneGehalt() {
-		// TODO Auto-generated method stub
 		return super.berechneGehalt()+serviceZulage;
 	}
 	

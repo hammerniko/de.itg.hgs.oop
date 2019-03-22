@@ -56,7 +56,6 @@ public class Mitarbeiter {
 		this.ueberstundensatz = ueberstundensatz;
 	}
 	
-	
 	public double berechneGehalt() {
 		double gehalt = 4*STUNDEN_PRO_WOCHE * stundenlohn+ueberstunden*ueberstundensatz;
 		return gehalt;
@@ -68,8 +67,6 @@ public class Mitarbeiter {
 				+ ", ueberstundensatz=" + ueberstundensatz + ", ueberstunden=" + ueberstunden + ", Gehalt="
 				+ berechneGehalt();
 	}
-
-	
 	
 	public double getUeberstunden() {
 		return ueberstunden;

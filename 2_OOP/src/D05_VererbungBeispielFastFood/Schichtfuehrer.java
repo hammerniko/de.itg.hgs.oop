@@ -23,7 +23,6 @@ public class Schichtfuehrer extends Mitarbeiter {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString()+" Schichtzulage:"+schichtzulage;
 	}
 

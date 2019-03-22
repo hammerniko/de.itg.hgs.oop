@@ -4,7 +4,7 @@ public class Reinigungskraft extends Mitarbeiter {
 
 	public Reinigungskraft(String name, String vorname) {
 		super(name, vorname);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }
