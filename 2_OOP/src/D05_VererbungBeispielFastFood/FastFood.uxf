@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
-  <zoom_level>9</zoom_level>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>72</x>
-      <y>504</y>
-      <w>189</w>
-      <h>90</h>
+      <x>24</x>
+      <y>272</y>
+      <w>84</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Reinigungskraft
 --
 
 --
-+Reinigungskraft(name:txt, vorname:txt)</panel_attributes>
++Reinigungskraft(name:txt, vorname:txt)
+bg=light_gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>9</y>
-      <w>243</w>
-      <h>225</h>
+      <x>168</x>
+      <y>48</y>
+      <w>108</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>Mitarbeiter
 -
@@ -37,100 +38,105 @@ _STUNDEN_PRO_WOCHE:FKZ=38.5_
 +getVorname():txt
 +setName(neuerName:txt)
 +setVorname(neuerVorname:txt)
-+berechneGehalt():FKZ</panel_attributes>
++berechneGehalt():FKZ
+bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>747</x>
-      <y>306</y>
-      <w>252</w>
-      <h>90</h>
+      <x>324</x>
+      <y>184</y>
+      <w>112</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>KuechenMitarbeiter
 --
 -kuechenZulage:FKZ
 --
 +KuechenMitarbeiter(name:txt, vorname:txt)
-+berechneGehalt():FKZ</panel_attributes>
++berechneGehalt():FKZ
+bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>576</x>
-      <y>486</y>
-      <w>279</w>
-      <h>90</h>
+      <x>248</x>
+      <y>264</y>
+      <w>124</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>MacCoffeMitarbeiter
 --
 
 --
-+MacCoffeMitarbeiter(name:txt, vorname:txt)</panel_attributes>
++MacCoffeMitarbeiter(name:txt, vorname:txt)
+bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>486</y>
-      <w>252</w>
-      <h>90</h>
+      <x>132</x>
+      <y>264</y>
+      <w>112</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>DriveInMitarbeiter
 --
 
 --
-+DriveInMitarbeiter(name:txt, vorname:txt)</panel_attributes>
++DriveInMitarbeiter(name:txt, vorname:txt)
+bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>360</y>
-      <w>234</w>
-      <h>90</h>
+      <x>12</x>
+      <y>184</y>
+      <w>104</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Schichtfuehrer
 --
 -schichtzulage:FKZ
 --
 +Schichtfuehrer(name:txt, vorname:txt)
-+berechneGehalt()</panel_attributes>
++berechneGehalt()
+bg=cyan</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>225</y>
-      <w>360</w>
-      <h>153</h>
+      <x>44</x>
+      <y>144</y>
+      <w>140</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>380.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>330.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>144</x>
-      <y>225</y>
-      <w>351</w>
-      <h>297</h>
+      <x>56</x>
+      <y>144</y>
+      <w>156</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>370.0;10.0;10.0;310.0</additional_attributes>
+    <additional_attributes>370.0;10.0;10.0;320.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>387</y>
-      <w>54</w>
-      <h>117</h>
+      <x>192</x>
+      <y>220</y>
+      <w>24</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>40.0;10.0;10.0;110.0</additional_attributes>
@@ -138,10 +144,10 @@ _STUNDEN_PRO_WOCHE:FKZ=38.5_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>387</y>
-      <w>63</w>
-      <h>117</h>
+      <x>272</x>
+      <y>220</y>
+      <w>28</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;50.0;110.0</additional_attributes>
@@ -149,38 +155,40 @@ _STUNDEN_PRO_WOCHE:FKZ=38.5_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>567</x>
-      <y>225</y>
-      <w>288</w>
-      <h>99</h>
+      <x>244</x>
+      <y>144</y>
+      <w>128</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;300.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;300.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>414</x>
-      <y>306</y>
-      <w>279</w>
-      <h>90</h>
+      <x>176</x>
+      <y>184</y>
+      <w>124</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>ServiceMitarbeiter
 --
--serviceZUlage:FKZ
+-serviceZulage:FKZ
 --
-+ServiceMitarbeiter(name:txt, vorname:txt)</panel_attributes>
++ServiceMitarbeiter(name:txt, vorname:txt)
++berechneGehalt()
+bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>513</x>
-      <y>225</y>
-      <w>54</w>
-      <h>99</h>
+      <x>220</x>
+      <y>144</y>
+      <w>24</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>40.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>40.0;10.0;10.0;100.0</additional_attributes>
   </element>
 </diagram>
