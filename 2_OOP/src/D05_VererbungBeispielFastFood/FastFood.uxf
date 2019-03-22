@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>504</y>
+      <w>189</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Reinigungskraft
+--
+
+--
++Reinigungskraft(name:txt, vorname:txt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>9</y>
+      <w>243</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>Mitarbeiter
+-
+-name:txt
+-vorname:txt
+-stundenlohn:FKZ
+-ueberstundensatz:FKZ
+_STUNDEN_PRO_WOCHE:FKZ=38.5_
+--
++Mitarbeiter(name:txt, vorname:txt)
++getName():txt
++getVorname():txt
++setName(neuerName:txt)
++setVorname(neuerVorname:txt)
++berechneGehalt():FKZ</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>747</x>
+      <y>306</y>
+      <w>252</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>KuechenMitarbeiter
+--
+-kuechenZulage:FKZ
+--
++KuechenMitarbeiter(name:txt, vorname:txt)
++berechneGehalt():FKZ</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>486</y>
+      <w>279</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>MacCoffeMitarbeiter
+--
+
+--
++MacCoffeMitarbeiter(name:txt, vorname:txt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>486</y>
+      <w>252</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>DriveInMitarbeiter
+--
+
+--
++DriveInMitarbeiter(name:txt, vorname:txt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>360</y>
+      <w>234</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Schichtfuehrer
+--
+-schichtzulage:FKZ
+--
++Schichtfuehrer(name:txt, vorname:txt)
++berechneGehalt()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>72</x>
+      <y>225</y>
+      <w>360</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>225</y>
+      <w>351</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>370.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>387</y>
+      <w>54</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>387</y>
+      <w>63</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>225</y>
+      <w>288</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;300.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>414</x>
+      <y>306</y>
+      <w>279</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ServiceMitarbeiter
+--
+-serviceZUlage:FKZ
+--
++ServiceMitarbeiter(name:txt, vorname:txt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>225</y>
+      <w>54</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+</diagram>
