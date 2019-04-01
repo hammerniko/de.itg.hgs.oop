@@ -8,22 +8,28 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JPanel;
 
-public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
-	/**
-	 * Attribute
-	 */
+public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseListener {
+	/** Attribute*/
 	private Image img = null; 			//Hintergundbild
 	private int h, b;
 	private int x, y; 					// Mausposition
 	private int xRel, yRel; 			// korrigierte Position abh. vom durchmesser des Fadenkreuzkreises
-
-	
-	
+    private int dxy;
+	private boolean hasShot;
+	private int schussWDH;
+	private Musikplayer mp;
 	/**
 	 * Konstanten
 	 */
@@ -32,8 +38,10 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 	static final int FADENKREUZ_KREIS_MITTEL = 50;
 	static final int FADENKREUZ_KREIS_GROSS = 75;
 	static final int FADENKREUZ_LINIE = 50;
+	static final int SCHUSS_WDH = 3;
+	static final String URL_SHOT = "./src/D2_VererbungUndGrafik/GUNFIRE.mp3";
+	static final String URL_LOAD = "./src/D2_VererbungUndGrafik/shotgunreload.mp3";
 
-	
 	
 	/**
 	 * Konstruktor
@@ -45,8 +53,9 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 		 * an die Methoden mouseMoved bzw. mouseDragged uebergeben wird.
 		 * Die Methoden sind vorhanden, da das MouseMotionListener Interface implementiert wurde.
 		 */
+		hasShot = false;
 		addMouseMotionListener(this);
-		
+		addMouseListener(this);
 		/**
 		 * Lädt das Hintergrundbild, welches mit der paintKomponent()-Methode
 		 * gezeichnet werden soll.
@@ -58,6 +67,7 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 		 */
 		setDoubleBuffered(true);
 		
+		mp = new Musikplayer();
 		
 	}
 
@@ -70,7 +80,8 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 	protected void paintComponent(Graphics g) {
 		/**Das JPanel soll erst mal gezeichnet werden wie ein Standard JPanel*/
 		super.paintComponent(g);
-
+		g.drawLine(0, 0, 50, 50);
+		
 		/**Merken der aktuellen breite und höhe*/
 		b = getWidth();
 		h = getHeight();
@@ -81,7 +92,6 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 		 * moeglich.
 		 */
 		Graphics2D g2 = (Graphics2D) g;
-		
 		g2.drawImage(img, 0, 0, b, h,this);
 		
 		
@@ -91,6 +101,9 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 		setzeLinienstaerke(g2);
 		zeichneFadenkreuz(g2);
 
+		if(hasShot) {
+			zeichneSchuss(g2);
+		}
 	}
 
 	private void setzeLinienstaerke(Graphics2D g2) {
@@ -115,6 +128,7 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 		g2.drawLine(x, y - FADENKREUZ_LINIE, x, y + FADENKREUZ_LINIE);
 		g2.drawLine(x - FADENKREUZ_LINIE, y, x + FADENKREUZ_LINIE, y);
 
+		
 		hideCursor();
 
 	}
@@ -149,6 +163,8 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 		x = e.getX();
 		y = e.getY();
 		
+		
+		
 		/**
 		 * ganzes Panel neu zeichen, wenn die Maus bewegt wird.
 		 * D.h. die Methode paintKomponent() wird aufgerufen.
@@ -163,7 +179,72 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener {
 	 */
 	private void ladeImage(){
 		img = java.awt.Toolkit.getDefaultToolkit().getImage("src/D2_VererbungUndGrafik/hg2.jpg");
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		System.out.println("Schuss");
+		dxy = FADENKREUZ_KREIS_GROSS;
+		schussWDH = SCHUSS_WDH;
+		hasShot = true;
+		repaint();
+		loadMP3(URL_SHOT);
 		
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void zeichneSchuss(Graphics g2) {
+		
+		xRel = x - (dxy / 2);
+		yRel = y - (dxy / 2);
+		g2.setColor(Color.YELLOW);
+		dxy--;
+		
+		
+		//insgesamt 3x je Schuss
+		if(dxy<=1) {
+			dxy = FADENKREUZ_KREIS_GROSS;
+			schussWDH--;
+		}
+		
+		if(schussWDH<=0) {
+			schussWDH = SCHUSS_WDH;
+			hasShot = false;
+			loadMP3(URL_LOAD);
+		}
+		
+		
+		g2.fillOval(xRel, yRel, dxy, dxy);
+
+		repaint();
+	}
+	
+	public void loadMP3(String url) {
+		mp.starteAbspielen(url);
 		
 	}
 
