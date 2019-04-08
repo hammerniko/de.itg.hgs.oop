@@ -8,7 +8,7 @@ public class StartKlasse {
 		KuechenMitarbeiter k1 = new KuechenMitarbeiter("Bolika", "Anna");
 		Reinigungskraft r1 = new Reinigungskraft("Macht", "Sauber");
 		KuechenMitarbeiter k2 = new KuechenMitarbeiter("Bolika", "Berta");
-		DriveInMitarbeiter d1 = new DriveInMitarbeiter("Speck", "Casrten");
+		DriveInMitarbeiter d1 = new DriveInMitarbeiter("Speck", "Carsten");
 		MacCoffeeMitarbeiter m1 = new MacCoffeeMitarbeiter("Berg", "Ben");
 	
 		//2. Überstunden setzen

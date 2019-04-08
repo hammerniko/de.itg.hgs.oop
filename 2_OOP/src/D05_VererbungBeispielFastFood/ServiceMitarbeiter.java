@@ -18,6 +18,14 @@ public class ServiceMitarbeiter extends Mitarbeiter {
 	public double berechneGehalt() {
 		return super.berechneGehalt()+serviceZulage;
 	}
+
+	public int getServiceZulage() {
+		return serviceZulage;
+	}
+
+	public void setServiceZulage(int serviceZulage) {
+		this.serviceZulage = serviceZulage;
+	}
 	
 
 }

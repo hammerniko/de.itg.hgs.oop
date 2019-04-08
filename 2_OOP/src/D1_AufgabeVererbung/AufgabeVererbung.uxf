@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="11.3">
+<diagram program="umlet" version="14.2.0">
   <zoom_level>10</zoom_level>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>310</x>
-      <y>20</y>
+      <x>300</x>
+      <y>0</y>
       <w>410</w>
       <h>190</h>
     </coordinates>
@@ -27,10 +27,10 @@ stammFarbe:Farbe
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>630</x>
-      <y>260</y>
+      <x>620</x>
+      <y>240</y>
       <w>590</w>
       <h>120</h>
     </coordinates>
@@ -46,10 +46,10 @@ blattFarbe:Farbe
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>510</x>
-      <y>180</y>
+      <x>500</x>
+      <y>160</y>
       <w>140</w>
       <h>140</h>
     </coordinates>
@@ -57,10 +57,10 @@ blattFarbe:Farbe
     <additional_attributes>30;30;120;120</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>180</x>
-      <y>430</y>
+      <x>170</x>
+      <y>410</y>
       <w>550</w>
       <h>190</h>
     </coordinates>
@@ -76,10 +76,10 @@ nadelFarbe:Farbe
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>360</x>
-      <y>180</y>
+      <x>350</x>
+      <y>160</y>
       <w>140</w>
       <h>270</h>
     </coordinates>
@@ -87,10 +87,10 @@ nadelFarbe:Farbe
     <additional_attributes>120;30;30;250</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>800</x>
-      <y>460</y>
+      <x>790</x>
+      <y>440</y>
       <w>620</w>
       <h>190</h>
     </coordinates>
@@ -105,10 +105,10 @@ groesseFruechte:GZ
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>870</x>
-      <y>350</y>
+      <x>860</x>
+      <y>330</y>
       <w>50</w>
       <h>130</h>
     </coordinates>

@@ -7,6 +7,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Point;
+import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -34,14 +37,16 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 	 * Konstanten
 	 */
 	private static final long serialVersionUID = 1L;
-	static final int FADENKREUZ_KREIS_KLEIN = 25;
-	static final int FADENKREUZ_KREIS_MITTEL = 50;
-	static final int FADENKREUZ_KREIS_GROSS = 75;
-	static final int FADENKREUZ_LINIE = 50;
+	static final int FADENKREUZ_KREIS_KLEIN = 10;
+	static final int FADENKREUZ_KREIS_MITTEL = 20;
+	static final int FADENKREUZ_KREIS_GROSS = 30;
+	static final int FADENKREUZ_LINIE = 35;
 	static final int SCHUSS_WDH = 3;
 	static final String URL_SHOT = "./src/D2_VererbungUndGrafik/GUNFIRE.mp3";
 	static final String URL_LOAD = "./src/D2_VererbungUndGrafik/shotgunreload.mp3";
-
+	static final String URL_BILD = "src/D2_VererbungUndGrafik/hg2.jpg"; 
+		;
+	static final int LINIENDICKE = 2;
 	
 	/**
 	 * Konstruktor
@@ -57,7 +62,7 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 		addMouseMotionListener(this);
 		addMouseListener(this);
 		/**
-		 * Lädt das Hintergrundbild, welches mit der paintKomponent()-Methode
+		 * Laedt das Hintergrundbild, welches mit der paintKomponent()-Methode
 		 * gezeichnet werden soll.
 		 */
 		ladeImage();
@@ -76,25 +81,31 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 	 * Ueber das graphics-Objekt lassen sich die Standard Methoden zum zeichnen
 	 * von Linien, Rechteckecken, Kreises usw. aufrufen.
 	 */
+	
+	
+	
 	@Override
 	protected void paintComponent(Graphics g) {
 		/**Das JPanel soll erst mal gezeichnet werden wie ein Standard JPanel*/
 		super.paintComponent(g);
-		g.drawLine(0, 0, 50, 50);
 		
-		/**Merken der aktuellen breite und höhe*/
-		b = getWidth();
-		h = getHeight();
-
 		/**
 		 * Fuer komplexere grafische darstellungen kann die Graphics2d Klasse
 		 * verwendet werden. Damit sind z.b: dickere Linien, Schatten usw.
 		 * moeglich.
 		 */
 		Graphics2D g2 = (Graphics2D) g;
-		g2.drawImage(img, 0, 0, b, h,this);
 		
+		g2.setRenderingHint(
+				RenderingHints.KEY_ANTIALIASING, 
+				RenderingHints.VALUE_ANTIALIAS_ON);
 		
+		/**Merken der aktuellen breite und hoehe*/
+		b = getWidth();
+		h = getHeight();
+		
+		g2.drawImage(img, 0, 0, b, h,null);
+				
 		/**Setzen der Farbe zum zeichnen */
 		g2.setColor(Color.BLUE);
 
@@ -104,14 +115,18 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 		if(hasShot) {
 			zeichneSchuss(g2);
 		}
+		
+		g.drawLine(0, 0, 50, 50);
 	}
 
 	private void setzeLinienstaerke(Graphics2D g2) {
-		BasicStroke linienstaerke = new BasicStroke(2.0f,BasicStroke.CAP_SQUARE, BasicStroke.JOIN_BEVEL);
+		BasicStroke linienstaerke 
+		= new BasicStroke(2.0f,BasicStroke.CAP_SQUARE, BasicStroke.JOIN_BEVEL);
 		g2.setStroke(linienstaerke);
 	}
 
 	private void zeichneFadenkreuz(Graphics2D g2) {
+				
 		xRel = x - (FADENKREUZ_KREIS_GROSS / 2);
 		yRel = y - (FADENKREUZ_KREIS_GROSS / 2);
 		g2.drawOval(xRel, yRel, FADENKREUZ_KREIS_GROSS, FADENKREUZ_KREIS_GROSS);
@@ -127,24 +142,30 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 
 		g2.drawLine(x, y - FADENKREUZ_LINIE, x, y + FADENKREUZ_LINIE);
 		g2.drawLine(x - FADENKREUZ_LINIE, y, x + FADENKREUZ_LINIE, y);
-
-		
+	
 		hideCursor();
 
 	}
 
 	/**
 	 * Versteckt den Mouse-Cursor 
+	 * und wird in der paintComponent()-Methode aufgerufen
+	 * {@link paintComponent()}
 	 */
 	private void hideCursor() {
 		Image cursorImage = new BufferedImage(1, 1, BufferedImage.TYPE_4BYTE_ABGR);
 		Point cursorPoint = new java.awt.Point(0, 0);
-		Cursor cursor = java.awt.Toolkit.getDefaultToolkit().createCustomCursor(cursorImage, cursorPoint, "nocursor");
+		Cursor cursor = 
+				java.awt.Toolkit.getDefaultToolkit()
+				.createCustomCursor(cursorImage, cursorPoint, "nocursor");
 		setCursor(cursor);
+		//Cursor auf anderen Cursor umstellen
+		//setCursor(new Cursor(Cursor.HAND_CURSOR));
 	}
 
 	/**
-	 * Methoden mouseDragged,mouseMoved die das Interface MouseMotionListener erzwingt.
+	 * Methoden mouseDragged,mouseMoved die das Interface 
+	 * MouseMotionListener erzwingt.
 	 */
 	@Override
 	public void mouseDragged(MouseEvent e) {
@@ -152,7 +173,8 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 	}
 
 	/**
-	 * Diese Methode wird aufgerufen, wenn die Maus über das Panel bewegt wird.
+	 * Diese Methode wird aufgerufen, 
+	 * wenn die Maus ueber das Panel bewegt wird.
 	 * 
 	 */
 	@Override
@@ -160,6 +182,8 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 		/**
 		 * aktuellen x-y Wert der Maus merken.
 		 */
+		
+		
 		x = e.getX();
 		y = e.getY();
 		
@@ -178,7 +202,7 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 	 * und speichert es in dem Attribut img.
 	 */
 	private void ladeImage(){
-		img = java.awt.Toolkit.getDefaultToolkit().getImage("src/D2_VererbungUndGrafik/hg2.jpg");
+		img = java.awt.Toolkit.getDefaultToolkit().getImage(URL_BILD);
 	}
 
 	@Override
@@ -247,5 +271,7 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 		mp.starteAbspielen(url);
 		
 	}
+
+	
 
 }
