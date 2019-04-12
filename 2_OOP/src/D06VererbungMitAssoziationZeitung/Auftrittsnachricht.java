@@ -14,7 +14,7 @@ public class Auftrittsnachricht extends KuenstlerNachricht {
 
 	@Override
 	public String toString() {
-		return "Auftrittsnachricht [begin=" + begin + ", end=" + end + "]";
+		return "Auftrittsnachricht [begin=" + begin + ", end=" + end ;
 	}
 	
 	

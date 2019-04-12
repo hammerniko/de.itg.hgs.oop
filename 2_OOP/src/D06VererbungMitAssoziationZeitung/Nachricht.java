@@ -24,8 +24,12 @@ public class Nachricht {
 
 	@Override
 	public String toString() {
-		return "Nachricht [id=" + id + ", titel=" + titel + ", nachrichtenText=" + nachrichtenText + ", bild=" + bild
-				+ "]";
+		return "\n\t"+id + ". "+ titel + "\n\t"+ nachrichtenText +"\n";
+	}
+
+
+	public static void setAnzahl(int anzahl) {
+		Nachricht.anzahl = anzahl;
 	}
 	
 	

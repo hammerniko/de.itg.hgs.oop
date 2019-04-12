@@ -24,8 +24,7 @@ public class KuenstlerNachricht extends Nachricht {
 
 	@Override
 	public String toString() {
-		return "KuenstlerNachricht [name=" + name + ", auftrittsdatum=" + auftrittsdatum + ", eintrittspreis="
-				+ eintrittspreis + "]";
+		return super.toString()+"\n\t"+ name + " Date:" + auftrittsdatum + "Preis: "+ eintrittspreis ;
 	}
 
 	

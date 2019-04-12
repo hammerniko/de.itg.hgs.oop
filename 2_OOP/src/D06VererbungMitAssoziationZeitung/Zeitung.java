@@ -11,7 +11,7 @@ public abstract class Zeitung {
 
 	@Override
 	public String toString() {
-		return "Zeitung [titel=" + titel + "]";
+		return titel;
 	}
 	
 	
