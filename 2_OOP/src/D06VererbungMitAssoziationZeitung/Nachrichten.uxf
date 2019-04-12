@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.2.0">
-  <zoom_level>7</zoom_level>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>77</x>
-      <y>119</y>
-      <w>147</w>
-      <h>133</h>
+      <x>8</x>
+      <y>152</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>Infoblatt
 --
@@ -21,24 +21,24 @@ _anzahlInfoblaetter:int=0_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>84</x>
-      <y>0</y>
-      <w>147</w>
-      <h>70</h>
+      <x>16</x>
+      <y>16</y>
+      <w>168</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Zeitung {abstract}
 --
--titel:String
+#titel:String
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>63</y>
-      <w>21</w>
-      <h>70</h>
+      <x>80</x>
+      <y>88</y>
+      <w>24</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -46,27 +46,29 @@ _anzahlInfoblaetter:int=0_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>147</y>
-      <w>147</w>
-      <h>77</h>
+      <x>368</x>
+      <y>128</y>
+      <w>240</w>
+      <h>144</h>
     </coordinates>
     <panel_attributes>Nachricht
 --
 -id:int
 _anzahlNachrichten:int=0_
+-titel:text
+-nachrichtenText:txt
+-bild[]:image
 --
--nachtentext:txt
--bild[]:image</panel_attributes>
++Nachricht(titel:txt, nachricht:txt)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>217</x>
-      <y>175</y>
-      <w>189</w>
-      <h>35</h>
+      <x>168</x>
+      <y>216</y>
+      <w>216</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 r1=*
@@ -77,10 +79,10 @@ m1=dieNachrichten
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>280</y>
-      <w>217</w>
-      <h>98</h>
+      <x>304</x>
+      <y>336</y>
+      <w>392</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>KuenstlerNachricht
 --
@@ -88,17 +90,17 @@ m1=dieNachrichten
 -auftrittsdatum:date
 -eintrittspreis:double
 --
-+KuenstlerNachricht(name:txt, aDatum:date)
++KuenstlerNachricht(titel:txt, nachricht:txt, name:txt, aDatum:date)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
-      <y>217</y>
-      <w>21</w>
-      <h>77</h>
+      <x>432</x>
+      <y>264</y>
+      <w>24</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -106,27 +108,27 @@ m1=dieNachrichten
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>294</x>
-      <y>441</y>
-      <w>308</w>
-      <h>98</h>
+      <x>256</x>
+      <y>520</y>
+      <w>488</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>AuftrittsNachricht
 --
 -beginn:time
 -ende:time
 --
-+KuenstlerNachricht(name:txt, aDatum:date,beginn:time, end:time)
++AuftrittsNachricht(titel:txt, nachricht:txt, name:txt, aDatum:date,beginn:time, end:time)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>448</x>
-      <y>371</y>
-      <w>21</w>
-      <h>84</h>
+      <x>432</x>
+      <y>440</y>
+      <w>24</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
