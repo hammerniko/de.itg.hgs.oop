@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
+<diagram program="umlet" version="14.2.0">
   <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>63</x>
-      <y>161</y>
+      <x>35</x>
+      <y>119</y>
       <w>147</w>
       <h>133</h>
     </coordinates>
@@ -21,8 +21,8 @@ _anzahlInfoblaetter:int=0_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>42</y>
+      <x>42</x>
+      <y>0</y>
       <w>147</w>
       <h>70</h>
     </coordinates>
@@ -35,8 +35,8 @@ _anzahlInfoblaetter:int=0_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
-      <y>105</y>
+      <x>98</x>
+      <y>63</y>
       <w>21</w>
       <h>70</h>
     </coordinates>
@@ -46,8 +46,8 @@ _anzahlInfoblaetter:int=0_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>378</x>
-      <y>189</y>
+      <x>350</x>
+      <y>147</y>
       <w>147</w>
       <h>77</h>
     </coordinates>
@@ -63,8 +63,8 @@ _anzahlNachrichten:int=0_
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>203</x>
-      <y>217</y>
+      <x>175</x>
+      <y>175</y>
       <w>189</w>
       <h>35</h>
     </coordinates>
@@ -77,8 +77,8 @@ m1=dieNachrichten
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>322</x>
-      <y>322</y>
+      <x>294</x>
+      <y>280</y>
       <w>217</w>
       <h>98</h>
     </coordinates>
@@ -95,8 +95,8 @@ m1=dieNachrichten
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>434</x>
-      <y>259</y>
+      <x>406</x>
+      <y>217</y>
       <w>21</w>
       <h>77</h>
     </coordinates>
@@ -106,8 +106,8 @@ m1=dieNachrichten
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>483</y>
+      <x>252</x>
+      <y>441</y>
       <w>308</w>
       <h>98</h>
     </coordinates>
@@ -123,8 +123,8 @@ m1=dieNachrichten
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>434</x>
-      <y>413</y>
+      <x>406</x>
+      <y>371</y>
       <w>21</w>
       <h>84</h>
     </coordinates>
