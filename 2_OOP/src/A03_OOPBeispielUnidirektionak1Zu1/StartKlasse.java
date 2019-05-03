@@ -10,7 +10,7 @@ public class StartKlasse {
 		Schulklasse tg123 = new Schulklasse("TG12-3");
 		
 		//Assoziation herstellen
-		tg123.linkLehrer(hr);
+		tg123.linkKlassenlehrer(hr);
 		tg123.linkSchulart(gym);
 		
 		//Szenario Tg123 gibt Namen des Lehrers auf
@@ -22,7 +22,7 @@ public class StartKlasse {
 		//Testausgaben
 		testausgabe(hr, gym, tg123);
 		
-		tg123.unlinkLehrer();
+		tg123.unlinkKlassenlehrer();
 		tg123.unlinkSchulart();
 		
 		testausgabe(hr, gym, tg123);
