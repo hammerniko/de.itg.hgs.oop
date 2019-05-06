@@ -2,9 +2,7 @@ Aufgabe
 
 1.) Erstellen Sie ein UML Klassendiagramm mit den Klassen Lehrer, Schueler, Schulart und Schulklasse
 
-
 2.) Ergaenzen Sie Assoziationen mit Richtung, Rollennamen und Multiplizitäten.
-
 
 3.) Disktutieren Sie in der Klasse über sinnvolle Attribute in den Klassen und ergänzen sie diese.
 
@@ -12,9 +10,7 @@ Aufgabe
 
 5.) Disktutieren Sie in der Klasse über sinnvolle Getter und Setter in den Klassen und ergänzen sie diese.
 
-6.1) Erstellen Sie die Klassen gemäss dem Klassendiagramm
-
-6.2) Erstellen Sie eine ausführbare Startklasse
+6.) Erstellen Sie eine ausführbare Startklasse
 
 7.1) Erstellen Sie in der main()-Methode der StartKlasse Objekte für:
 	-1 Lehrer
