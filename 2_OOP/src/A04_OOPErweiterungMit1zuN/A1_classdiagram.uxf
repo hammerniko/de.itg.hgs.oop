@@ -7,9 +7,12 @@
       <x>40</x>
       <y>50</y>
       <w>210</w>
-      <h>80</h>
+      <h>100</h>
     </coordinates>
-    <panel_attributes>Lehrer</panel_attributes>
+    <panel_attributes>Lehrer
+--
+-name:txt
+-kuerzel:txt</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -20,7 +23,10 @@
       <w>210</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>Schueler</panel_attributes>
+    <panel_attributes>Schueler
+--
+-vorname:txt
+-name:txt</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -31,18 +37,24 @@
       <w>210</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>Schulklasse</panel_attributes>
+    <panel_attributes>Schulklasse
+--
+-bezeichnung:txt
+--
++getAnzahlSchueler():GZ</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
+      <x>440</x>
       <y>50</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>Schulart</panel_attributes>
+    <panel_attributes>Schulart
+--
+-bezeichnung:txt</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

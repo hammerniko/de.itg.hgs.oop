@@ -1,90 +1,139 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>400</y>
-      <w>210</w>
-      <h>80</h>
+      <x>336</x>
+      <y>544</y>
+      <w>216</w>
+      <h>192</h>
     </coordinates>
-    <panel_attributes>Lehrer</panel_attributes>
+    <panel_attributes>Lehrer
+--
+-name:txt
+-kuerzel:txt
+--
+&lt;&lt;contructor&gt;&gt;
++Lehrer(name:txt, vorname:txt) 
+
+&lt;&lt;getter / setter&gt;&gt;
++getName():txt
++setName(neuerName:txt)
++getKuerzel():txt
++setKuerzel(neuesKuerzel:txt)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>190</y>
-      <w>210</w>
-      <h>80</h>
+      <x>24</x>
+      <y>272</y>
+      <w>184</w>
+      <h>256</h>
     </coordinates>
-    <panel_attributes>Schueler</panel_attributes>
+    <panel_attributes>Schueler
+--
+-vorname:txt
+-name:txt
+--
+&lt;&lt;contructor&gt;&gt;
++Schueler(name:txt, vorname:txt) 
+
+&lt;&lt;getter / setter&gt;&gt;
++getName():txt
++setName(neuerName:txt)
++getVorname():txt
+
+&lt;&lt;verwaltungsmethoden&gt;&gt;
++addSchueler(s:Schueler)
++getSchueler(index:GZ):Schueler
++getSchueler(name:txt):Schueler
++removeSchueler(index:GZ)
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>190</y>
-      <w>210</w>
-      <h>80</h>
+      <x>344</x>
+      <y>272</y>
+      <w>168</w>
+      <h>160</h>
     </coordinates>
-    <panel_attributes>Schulklasse</panel_attributes>
+    <panel_attributes>Schulklasse
+--
+-bezeichnung:txt
+--
+&lt;&lt;contructor&gt;&gt;
++Schulklasse(bezeichnung:txt) 
+
+&lt;&lt;getter / setter&gt;&gt;
++getAnzahlSchueler():GZ
++getBezeichnung():txt
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>10</y>
-      <w>210</w>
-      <h>80</h>
+      <x>344</x>
+      <y>0</y>
+      <w>168</w>
+      <h>128</h>
     </coordinates>
-    <panel_attributes>Schulart</panel_attributes>
+    <panel_attributes>Schulart
+--
+-bezeichnung:txt
+--
+&lt;&lt;contructor&gt;&gt;
++Schulart(bezeichnung:txt) 
+
+&lt;&lt;getter / setter&gt;&gt;
++getBezeichnung():txt
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>200</x>
-      <y>210</y>
-      <w>170</w>
-      <h>50</h>
+      <y>288</y>
+      <w>160</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
 r1=dieSchueler[ ]
 </panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>260</y>
-      <w>90</w>
-      <h>160</h>
+      <x>424</x>
+      <y>424</y>
+      <w>72</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 r1=derLehrer
 </panel_attributes>
-    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>80</y>
-      <w>100</w>
-      <h>130</h>
+      <x>424</x>
+      <y>120</y>
+      <w>80</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 r1=dieSchulart
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
   </element>
 </diagram>
