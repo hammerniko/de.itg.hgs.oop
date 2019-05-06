@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>198</x>
-      <y>33</y>
+      <x>165</x>
+      <y>77</y>
       <w>231</w>
       <h>286</h>
     </coordinates>
@@ -31,8 +31,8 @@ bg=light_gray</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>583</x>
-      <y>44</y>
+      <x>550</x>
+      <y>88</y>
       <w>231</w>
       <h>209</h>
     </coordinates>
@@ -52,8 +52,8 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>418</x>
-      <y>110</y>
+      <x>385</x>
+      <y>154</y>
       <w>187</w>
       <h>55</h>
     </coordinates>
@@ -65,8 +65,8 @@ r1=dieSchulart</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>583</x>
-      <y>319</y>
+      <x>550</x>
+      <y>363</y>
       <w>231</w>
       <h>209</h>
     </coordinates>
@@ -88,8 +88,8 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>297</x>
-      <y>308</y>
+      <x>264</x>
+      <y>352</y>
       <w>308</w>
       <h>132</h>
     </coordinates>
@@ -101,8 +101,8 @@ r1=derKlassenlehrer</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>176</x>
-      <y>594</y>
+      <x>143</x>
+      <y>638</y>
       <w>176</w>
       <h>44</h>
     </coordinates>
@@ -113,8 +113,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>242</x>
-      <y>627</y>
+      <x>209</x>
+      <y>671</y>
       <w>33</w>
       <h>88</h>
     </coordinates>
@@ -124,8 +124,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>484</x>
-      <y>594</y>
+      <x>451</x>
+      <y>638</y>
       <w>209</w>
       <h>44</h>
     </coordinates>
@@ -136,8 +136,8 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>561</x>
-      <y>627</y>
+      <x>528</x>
+      <y>671</y>
       <w>33</w>
       <h>110</h>
     </coordinates>
@@ -147,8 +147,8 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>242</x>
-      <y>693</y>
+      <x>209</x>
+      <y>737</y>
       <w>22</w>
       <h>121</h>
     </coordinates>
@@ -159,8 +159,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
-      <y>693</y>
+      <x>231</x>
+      <y>737</y>
       <w>319</w>
       <h>44</h>
     </coordinates>
@@ -171,8 +171,8 @@ getName()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>561</x>
-      <y>715</y>
+      <x>528</x>
+      <y>759</y>
       <w>22</w>
       <h>55</h>
     </coordinates>
@@ -183,8 +183,8 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
-      <y>737</y>
+      <x>231</x>
+      <y>781</y>
       <w>319</w>
       <h>44</h>
     </coordinates>
@@ -195,8 +195,8 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>253</x>
-      <y>704</y>
+      <x>220</x>
+      <y>748</y>
       <w>22</w>
       <h>66</h>
     </coordinates>
@@ -207,8 +207,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>253</x>
-      <y>649</y>
+      <x>220</x>
+      <y>693</y>
       <w>275</w>
       <h>77</h>
     </coordinates>
@@ -219,8 +219,8 @@ getNameKlassenLehrer()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>253</x>
-      <y>759</y>
+      <x>220</x>
+      <y>803</y>
       <w>198</w>
       <h>77</h>
     </coordinates>
@@ -231,8 +231,8 @@ getNameKlassenLehrer()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>561</x>
-      <y>759</y>
+      <x>528</x>
+      <y>803</y>
       <w>33</w>
       <h>110</h>
     </coordinates>
@@ -242,8 +242,8 @@ getNameKlassenLehrer()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>242</x>
-      <y>803</y>
+      <x>209</x>
+      <y>847</y>
       <w>33</w>
       <h>88</h>
     </coordinates>
@@ -253,8 +253,8 @@ getNameKlassenLehrer()</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>44</x>
-      <y>539</y>
+      <x>11</x>
+      <y>583</y>
       <w>154</w>
       <h>44</h>
     </coordinates>
@@ -264,12 +264,35 @@ getNameKlassenLehrer()</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>33</x>
-      <y>0</y>
+      <x>0</x>
+      <y>44</y>
       <w>154</w>
       <h>44</h>
     </coordinates>
     <panel_attributes>Klassendiagramm</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>66</x>
+      <y>473</y>
+      <w>154</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>66</x>
+      <y>726</y>
+      <w>165</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+main(..)</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>

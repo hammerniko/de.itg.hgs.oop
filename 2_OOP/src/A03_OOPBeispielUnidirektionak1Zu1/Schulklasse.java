@@ -33,6 +33,8 @@ public class Schulklasse {
 	//Konstruktor
 	public Schulklasse(String name) {
 		this.name = name;
+		
+		
 	}
 
 	//getter und setter
