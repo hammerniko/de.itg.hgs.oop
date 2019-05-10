@@ -5,9 +5,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>165</x>
-      <y>77</y>
+      <y>44</y>
       <w>231</w>
-      <h>286</h>
+      <h>341</h>
     </coordinates>
     <panel_attributes>Schulklasse
 --
@@ -20,6 +20,10 @@
 &lt;&lt;Verwaltungsmethoden&gt;&gt;
 +linkLehrer(l:Lehrer)
 +unlinkLehrer()
++linkSchulart(sa:Schulart)
++unlinkSchulart()
++getSchulart():Schulart
++getKlassenlehrer():Lehrer
 
 &lt;&lt;Delegationsmehtoden&gt;&gt;
 +getNameKlassenLehrer():txt
@@ -32,9 +36,9 @@ bg=light_gray</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>550</x>
-      <y>88</y>
+      <y>55</y>
       <w>231</w>
-      <h>209</h>
+      <h>165</h>
     </coordinates>
     <panel_attributes>Schulart
 --
@@ -53,7 +57,7 @@ bg=pink</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>385</x>
-      <y>154</y>
+      <y>121</y>
       <w>187</w>
       <h>55</h>
     </coordinates>
@@ -66,19 +70,19 @@ r1=dieSchulart</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>550</x>
-      <y>363</y>
+      <y>330</y>
       <w>231</w>
       <h>209</h>
     </coordinates>
     <panel_attributes>Lehrer
 --
-name:txt
-kuerzel:txt
+-name:txt
+-kuerzel:txt
 --
 &lt;&lt;Konstruktor&gt;&gt;
 +Lehrer(name:txt, kuezel:txt)
 
-&lt;&lt;Gettter und Setter&gt;&gt;
+&lt;&lt;Getter und Setter&gt;&gt;
 +getName():txt
 
 +toString():txt
@@ -89,20 +93,20 @@ bg=green</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>264</x>
-      <y>352</y>
+      <y>374</y>
       <w>308</w>
-      <h>132</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
 r1=derKlassenlehrer</panel_attributes>
-    <additional_attributes>260.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+    <additional_attributes>260.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>143</x>
-      <y>638</y>
+      <y>605</y>
       <w>176</w>
       <h>44</h>
     </coordinates>
@@ -114,7 +118,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>209</x>
-      <y>671</y>
+      <y>638</y>
       <w>33</w>
       <h>88</h>
     </coordinates>
@@ -125,7 +129,7 @@ bg=yellow</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>451</x>
-      <y>638</y>
+      <y>605</y>
       <w>209</w>
       <h>44</h>
     </coordinates>
@@ -137,7 +141,7 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>528</x>
-      <y>671</y>
+      <y>638</y>
       <w>33</w>
       <h>110</h>
     </coordinates>
@@ -148,7 +152,7 @@ bg=orange</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>209</x>
-      <y>737</y>
+      <y>704</y>
       <w>22</w>
       <h>121</h>
     </coordinates>
@@ -160,7 +164,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>231</x>
-      <y>737</y>
+      <y>704</y>
       <w>319</w>
       <h>44</h>
     </coordinates>
@@ -172,7 +176,7 @@ getName()</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>528</x>
-      <y>759</y>
+      <y>726</y>
       <w>22</w>
       <h>55</h>
     </coordinates>
@@ -184,7 +188,7 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>231</x>
-      <y>781</y>
+      <y>748</y>
       <w>319</w>
       <h>44</h>
     </coordinates>
@@ -196,7 +200,7 @@ bg=orange</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>220</x>
-      <y>748</y>
+      <y>715</y>
       <w>22</w>
       <h>66</h>
     </coordinates>
@@ -208,7 +212,7 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>693</y>
+      <y>660</y>
       <w>275</w>
       <h>77</h>
     </coordinates>
@@ -220,7 +224,7 @@ getNameKlassenLehrer()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>803</y>
+      <y>770</y>
       <w>198</w>
       <h>77</h>
     </coordinates>
@@ -232,7 +236,7 @@ getNameKlassenLehrer()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>528</x>
-      <y>803</y>
+      <y>770</y>
       <w>33</w>
       <h>110</h>
     </coordinates>
@@ -243,7 +247,7 @@ getNameKlassenLehrer()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>209</x>
-      <y>847</y>
+      <y>814</y>
       <w>33</w>
       <h>88</h>
     </coordinates>
@@ -254,7 +258,7 @@ getNameKlassenLehrer()</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>11</x>
-      <y>583</y>
+      <y>550</y>
       <w>154</w>
       <h>44</h>
     </coordinates>
@@ -265,7 +269,7 @@ getNameKlassenLehrer()</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>0</x>
-      <y>44</y>
+      <y>11</y>
       <w>154</w>
       <h>44</h>
     </coordinates>
@@ -276,18 +280,7 @@ getNameKlassenLehrer()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>66</x>
-      <y>473</y>
-      <w>154</w>
-      <h>33</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>66</x>
-      <y>726</y>
+      <y>693</y>
       <w>165</w>
       <h>44</h>
     </coordinates>
