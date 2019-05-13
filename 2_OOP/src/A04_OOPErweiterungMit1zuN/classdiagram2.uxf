@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>312</x>
-      <y>544</y>
-      <w>216</w>
-      <h>192</h>
+      <x>484</x>
+      <y>400</y>
+      <w>108</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Lehrer
 --
@@ -27,10 +27,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>272</y>
-      <w>184</w>
-      <h>256</h>
+      <x>328</x>
+      <y>264</y>
+      <w>92</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>Schueler
 --
@@ -56,10 +56,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>272</y>
-      <w>168</w>
-      <h>160</h>
+      <x>488</x>
+      <y>264</y>
+      <w>84</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Schulklasse
 --
@@ -77,10 +77,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>0</y>
-      <w>168</w>
-      <h>128</h>
+      <x>488</x>
+      <y>128</y>
+      <w>84</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Schulart
 --
@@ -97,10 +97,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>176</x>
-      <y>288</y>
-      <w>160</w>
-      <h>40</h>
+      <x>416</x>
+      <y>272</y>
+      <w>80</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=*
@@ -111,10 +111,10 @@ r1=dieSchueler[ ]
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>424</y>
-      <w>72</w>
-      <h>136</h>
+      <x>528</x>
+      <y>340</y>
+      <w>36</w>
+      <h>68</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1
@@ -125,10 +125,10 @@ r1=derLehrer
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>120</y>
-      <w>80</w>
-      <h>168</h>
+      <x>528</x>
+      <y>188</y>
+      <w>40</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=1

@@ -53,8 +53,8 @@ public class MoorhuhnPanel extends JPanel implements MouseMotionListener, MouseL
 	 */
 	public MoorhuhnPanel() {
 		/**
-		 * Fügt dem Panelobjekt einen Listener hinzu, der auf Mausbewegungen hört.
-		 * Der Uebergabeparameter sorgt dafür, das ein erzeugtes MouseMotion Event-Objekt
+		 * Fuegt dem Panelobjekt einen Listener hinzu, der auf Mausbewegungen hört.
+		 * Der Uebergabeparameter sorgt dafuer, das ein erzeugtes MouseMotion Event-Objekt
 		 * an die Methoden mouseMoved bzw. mouseDragged uebergeben wird.
 		 * Die Methoden sind vorhanden, da das MouseMotionListener Interface implementiert wurde.
 		 */

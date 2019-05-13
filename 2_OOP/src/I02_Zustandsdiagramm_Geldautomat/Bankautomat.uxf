@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
+<diagram program="umlet" version="14.2.0">
   <zoom_level>6</zoom_level>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>78</x>
-      <y>54</y>
+      <x>174</x>
+      <y>42</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -20,8 +20,8 @@ do/ pullingmode()
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>0</x>
-      <y>66</y>
+      <x>96</x>
+      <y>54</y>
       <w>42</w>
       <h>42</h>
     </coordinates>
@@ -31,8 +31,8 @@ do/ pullingmode()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>36</x>
-      <y>78</y>
+      <x>132</x>
+      <y>66</y>
       <w>54</w>
       <h>18</h>
     </coordinates>
@@ -42,8 +42,8 @@ do/ pullingmode()
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>294</x>
-      <y>54</y>
+      <x>390</x>
+      <y>42</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -60,8 +60,8 @@ do/ pullingInput()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>72</y>
+      <x>276</x>
+      <y>60</y>
       <w>126</w>
       <h>24</h>
     </coordinates>
@@ -72,8 +72,8 @@ karte reingeschoben</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>528</x>
-      <y>54</y>
+      <x>624</x>
+      <y>42</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -89,8 +89,8 @@ do/ countMoney()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>72</y>
+      <x>492</x>
+      <y>60</y>
       <w>144</w>
       <h>24</h>
     </coordinates>
@@ -101,8 +101,8 @@ einzahlenGedrückt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
-      <y>114</y>
+      <x>438</x>
+      <y>102</y>
       <w>90</w>
       <h>138</h>
     </coordinates>
@@ -113,8 +113,8 @@ auszahlenGedrückt</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>288</x>
-      <y>240</y>
+      <x>384</x>
+      <y>228</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -131,8 +131,8 @@ exit/ karteDead()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
-      <y>300</y>
+      <x>438</x>
+      <y>288</y>
       <w>66</w>
       <h>90</h>
     </coordinates>
@@ -143,8 +143,8 @@ enterPressed</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>294</x>
-      <y>378</y>
+      <x>390</x>
+      <y>366</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -159,8 +159,8 @@ entry/checkPin()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
-      <y>300</y>
+      <x>420</x>
+      <y>288</y>
       <w>66</w>
       <h>90</h>
     </coordinates>
@@ -173,8 +173,8 @@ entry/checkPin()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>342</x>
-      <y>438</y>
+      <x>438</x>
+      <y>426</y>
       <w>60</w>
       <h>78</h>
     </coordinates>
@@ -185,8 +185,8 @@ entry/checkPin()</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>300</x>
-      <y>504</y>
+      <x>396</x>
+      <y>492</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -203,8 +203,8 @@ exit/ ausgabeBetrag()</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>522</x>
-      <y>246</y>
+      <x>618</x>
+      <y>234</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -218,8 +218,8 @@ entry/call police</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>264</y>
+      <x>486</x>
+      <y>252</y>
       <w>144</w>
       <h>24</h>
     </coordinates>
@@ -230,8 +230,8 @@ entry/call police</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>102</x>
-      <y>114</y>
+      <x>198</x>
+      <y>102</y>
       <w>480</w>
       <h>144</h>
     </coordinates>
@@ -242,8 +242,8 @@ securaty reset</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
-      <y>90</y>
+      <x>348</x>
+      <y>78</y>
       <w>72</w>
       <h>456</h>
     </coordinates>
@@ -254,8 +254,8 @@ enterGedrückt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>96</y>
+      <x>276</x>
+      <y>84</y>
       <w>126</w>
       <h>24</h>
     </coordinates>
@@ -266,8 +266,8 @@ exitGedrückt</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>90</y>
+      <x>492</x>
+      <y>78</y>
       <w>144</w>
       <h>24</h>
     </coordinates>
@@ -278,8 +278,8 @@ abbrechen</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>72</y>
+      <x>726</x>
+      <y>60</y>
       <w>114</w>
       <h>24</h>
     </coordinates>
@@ -290,8 +290,8 @@ geld auszahlen</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>732</x>
-      <y>54</y>
+      <x>828</x>
+      <y>42</y>
       <w>108</w>
       <h>66</h>
     </coordinates>
@@ -307,8 +307,8 @@ exit/betragAuzahlen()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
-      <y>12</y>
+      <x>402</x>
+      <y>0</y>
       <w>486</w>
       <h>54</h>
     </coordinates>
@@ -319,8 +319,8 @@ zurück zur auswahl</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>12</x>
-      <y>90</y>
+      <x>108</x>
+      <y>78</y>
       <w>12</w>
       <h>12</h>
     </coordinates>

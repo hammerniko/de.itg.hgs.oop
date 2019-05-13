@@ -3,7 +3,7 @@ package I02_Zustandsdiagramm_Geldautomat;
 import java.util.Scanner;
 /*
  * Ein Automtat muss immer nebenläufig implementiert werden, damit
- * die Bedienung des Hauptprogramms nicht blickiert wird.
+ * die Bedienung des Hauptprogramms nicht blockiert wird.
  * Hier wird das Interface Runnable verwendet. Dieses erzwingt die
  * Implementierung der run()-Methode. Diese run()-Methode soll nebenläufig
  * abgearbeitet werden.
