@@ -13,8 +13,8 @@ public class StartKlasse {
 			
 			@Override
 			public void run() {
-				Rechner r = new Rechner();
-				Gui gui = new Gui(r);
+				
+				Gui gui = new Gui();
 				gui.setVisible(true);
 				
 			}
