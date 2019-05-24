@@ -6,15 +6,12 @@ public class B {
     A einA;
     
     public B(A dasA){
+    	System.out.println("B erzeugt");
         einA = dasA;
     }
     
     public void  testeB(){
-        einA.zeigeMeldung("Teste B wurde gestartet...");
-        
-        System.out.println("testeB aufgerufen()");
-        
-        
+        einA.zeigeMeldung("B ruft A auf...");
     }
     
 

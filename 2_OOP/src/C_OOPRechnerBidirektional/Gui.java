@@ -22,6 +22,7 @@ public class Gui extends JFrame {
 	
 	//Komponenten die in der Klasse be�tigt werden
 	JButton btBerechnen;
+	JButton btAbbrechen;
 	JTextField tfZahlA;
 	JTextField tfZahlB;
 	JTextField tfErgebnis;
@@ -44,13 +45,13 @@ public class Gui extends JFrame {
 		this.setResizable(false);
 		this.setTitle("Rechner");
 		//Graue Flaeche/ Behaelter fuer Buttons, Textfelder ...
-		JPanel contenPane = new JPanel();
+		JPanel contentPane = new JPanel();
 		JPanel pEingabe = new JPanel();
 		JPanel pButtons = new JPanel();
 		
 		pEingabe.setLayout(new GridLayout(3,2));
 		this.setSize(600, 200);
-		this.setContentPane(contenPane);
+		this.setContentPane(contentPane);
 		
 		//Komponenten fuer PanelEingabe erstellen
 		tfZahlA = new JTextField();
@@ -78,18 +79,22 @@ public class Gui extends JFrame {
 		//Wenn der Button geklickt wird, soll die Methode
 		//clickedBerechnen() aufgerufen werden.
 		btBerechnen.addActionListener(new ActionListener() {
+			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				clickedBerechnen();
 			}
 		});
 		
-		JButton btAbbrechen = new JButton("Abbrechen");
+		
+		
+		
+		btAbbrechen = new JButton("Abbrechen");
 		btAbbrechen.addActionListener(new ActionListener() {
 			
 			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				System.out.println("Abbrechen geklickt");
+			public void actionPerformed(ActionEvent e) {
+				
 				
 			}
 		});
@@ -98,8 +103,8 @@ public class Gui extends JFrame {
 		pButtons.add(lbStatus);
 		pButtons.add(btAbbrechen);
 		pButtons.add(btBerechnen);
-		contenPane.add(pEingabe, BorderLayout.CENTER);
-		contenPane.add(pButtons, BorderLayout.SOUTH);
+		contentPane.add(pEingabe, BorderLayout.CENTER);
+		contentPane.add(pButtons, BorderLayout.SOUTH);
 		
 	}
 
@@ -159,6 +164,12 @@ public class Gui extends JFrame {
 	public void aktualisiereStatus(String msg) {
 		lbStatus.setText(msg);
 	}
+
+	
+		
+
+
+	
 
 	
 }

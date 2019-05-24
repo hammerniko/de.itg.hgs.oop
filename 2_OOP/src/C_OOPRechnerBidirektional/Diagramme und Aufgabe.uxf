@@ -26,13 +26,13 @@ bg=pink</panel_attributes>
     <coordinates>
       <x>744</x>
       <y>536</y>
-      <w>168</w>
+      <w>192</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>Rechner
 
 --
-+addiere(z1:FKZ, z2:FKZ)
++addiere(z1:FKZ, z2:FKZ):FKZ
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
@@ -259,7 +259,7 @@ addiere(3.0, 5.0)</panel_attributes>
       <w>192</w>
       <h>32</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
+    <panel_attributes>lt=&lt;&lt;&lt;-
 aktualisiereStatus("Berechne...")</panel_attributes>
     <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
@@ -365,5 +365,16 @@ der Oberfläche angezeigt.
 Vor jeder Berechnung wird die Statusmitteilung "berechne..."
 auf der Oberfläche ausgegeben</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>472</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>
