@@ -1,12 +1,14 @@
 package C_OOPPasswortPrueferBidirektional;
 
 public class Login {
-	Gui dieGui;
+	GuiNeu dieGui;
 	
 
-	public void linkGui(Gui gui) {
-		dieGui = gui;
+	public Login(GuiNeu g) {
+		dieGui = g;
 	}
+	
+	
 	
 	
 	

@@ -14,14 +14,14 @@ public class A {
     public A(){
     	System.out.println("A erzeugt");
         einB = new B(this);
-       
-        testeBObjekt();
+        
+        
+        System.out.println("A ruft B auf");
+        einB.testeB();
+        
     }
     
-    public void testeBObjekt(){
-        einB.testeB();
-        System.out.println("A ruft B auf...");
-    }
+    
     
     public void zeigeMeldung(String meldung){
         System.out.println(meldung);

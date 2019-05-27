@@ -4,9 +4,9 @@ public class StartKlasse {
 	 public static void main(String[] args) {
 		 
 		 
-		 Login l = new Login();
+		
 		 
-		 Gui g = new Gui(l);
+		 GuiNeu g = new GuiNeu();
 		 g.setVisible(true);
 		 
 		 
