@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>4</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>484</x>
+      <y>400</y>
+      <w>108</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Lehrer
+--
+-name:txt
+-kuerzel:txt
+--
+&lt;&lt;contructor&gt;&gt;
++Lehrer(name:txt, vorname:txt) 
+
+&lt;&lt;getter / setter&gt;&gt;
++getName():txt
++setName(neuerName:txt)
++getKuerzel():txt
++setKuerzel(neuesKuerzel:txt)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>328</x>
+      <y>264</y>
+      <w>92</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Schueler
+--
+-vorname:txt
+-name:txt
+--
+&lt;&lt;contructor&gt;&gt;
++Schueler(name:txt, vorname:txt) 
+
+&lt;&lt;getter / setter&gt;&gt;
++getName():txt
++setName(neuerName:txt)
++getVorname():txt
+
+&lt;&lt;verwaltungsmethoden&gt;&gt;
++addSchueler(s:Schueler)
++getSchueler(index:GZ):Schueler
++getSchueler(name:txt):Schueler
++removeSchueler(index:GZ)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>264</y>
+      <w>84</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Schulklasse
+--
+-bezeichnung:txt
+--
+&lt;&lt;contructor&gt;&gt;
++Schulklasse(bezeichnung:txt) 
+
+&lt;&lt;getter / setter&gt;&gt;
++getAnzahlSchueler():GZ
++getBezeichnung():txt
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>128</y>
+      <w>84</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Schulart
+--
+-bezeichnung:txt
+--
+&lt;&lt;contructor&gt;&gt;
++Schulart(bezeichnung:txt) 
+
+&lt;&lt;getter / setter&gt;&gt;
++getBezeichnung():txt
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>416</x>
+      <y>272</y>
+      <w>80</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=dieSchueler[ ]
+</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>340</y>
+      <w>36</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=derLehrer
+</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>188</y>
+      <w>40</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+r1=dieSchulart
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+</diagram>

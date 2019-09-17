@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="13.1">
-  <zoom_level>7</zoom_level>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>476</x>
-      <y>63</y>
-      <w>147</w>
-      <h>133</h>
+      <x>320</x>
+      <y>544</y>
+      <w>208</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>Gui
 --
@@ -24,25 +24,25 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>777</x>
-      <y>56</y>
-      <w>147</w>
-      <h>133</h>
+      <x>744</x>
+      <y>536</y>
+      <w>192</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>Rechner
 
 --
-+addiere(z1:FKZ, z2:FKZ)
++addiere(z1:FKZ, z2:FKZ):FKZ
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>616</x>
-      <y>119</y>
-      <w>175</w>
-      <h>35</h>
+      <x>520</x>
+      <y>608</y>
+      <w>240</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 r1=1
@@ -50,15 +50,15 @@ m1=derRechner
 r2=1
 m2=dieGui
 </panel_attributes>
-    <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>280.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>203</x>
-      <y>112</y>
-      <w>21</w>
-      <h>49</h>
+      <x>192</x>
+      <y>72</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -66,10 +66,10 @@ m2=dieGui
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>175</x>
-      <y>98</y>
-      <w>70</w>
-      <h>21</h>
+      <x>160</x>
+      <y>56</y>
+      <w>80</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>_dieGui:Gui_
 bg=pink</panel_attributes>
@@ -78,10 +78,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>203</x>
-      <y>147</y>
-      <w>14</w>
-      <h>406</h>
+      <x>192</x>
+      <y>112</y>
+      <w>16</w>
+      <h>464</h>
     </coordinates>
     <panel_attributes>
 bg=pink</panel_attributes>
@@ -90,10 +90,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>336</x>
-      <y>98</y>
-      <w>98</w>
-      <h>21</h>
+      <x>344</x>
+      <y>56</y>
+      <w>112</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>_derRechner:Rechner_
 bg=orange</panel_attributes>
@@ -102,10 +102,10 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>371</x>
-      <y>112</y>
-      <w>21</w>
-      <h>259</h>
+      <x>384</x>
+      <y>72</y>
+      <w>24</w>
+      <h>296</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;350.0</additional_attributes>
@@ -113,10 +113,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>371</x>
-      <y>357</y>
-      <w>14</w>
-      <h>112</h>
+      <x>384</x>
+      <y>352</y>
+      <w>16</w>
+      <h>128</h>
     </coordinates>
     <panel_attributes>
 bg=orange</panel_attributes>
@@ -125,10 +125,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>35</x>
-      <y>56</y>
-      <w>42</w>
-      <h>70</h>
+      <x>0</x>
+      <y>8</y>
+      <w>48</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>Actor</panel_attributes>
     <additional_attributes/>
@@ -136,10 +136,10 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>49</x>
-      <y>112</y>
-      <w>21</w>
-      <h>49</h>
+      <x>16</x>
+      <y>72</y>
+      <w>24</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -147,10 +147,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>49</x>
-      <y>147</y>
-      <w>14</w>
-      <h>406</h>
+      <x>16</x>
+      <y>112</y>
+      <w>16</w>
+      <h>464</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -158,10 +158,10 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>56</x>
-      <y>140</y>
-      <w>161</w>
-      <h>28</h>
+      <x>24</x>
+      <y>104</y>
+      <w>184</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 clickedBerechnen()</panel_attributes>
@@ -170,10 +170,10 @@ clickedBerechnen()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>147</y>
-      <w>49</w>
-      <h>35</h>
+      <x>200</x>
+      <y>112</y>
+      <w>88</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
   leseZ1()</panel_attributes>
@@ -182,10 +182,10 @@ clickedBerechnen()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>210</x>
-      <y>161</y>
-      <w>14</w>
-      <h>42</h>
+      <x>200</x>
+      <y>128</y>
+      <w>16</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>
 bg=pink</panel_attributes>
@@ -194,10 +194,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>196</y>
-      <w>49</w>
-      <h>35</h>
+      <x>200</x>
+      <y>168</y>
+      <w>72</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
    3.0</panel_attributes>
@@ -206,10 +206,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>231</y>
-      <w>49</w>
-      <h>35</h>
+      <x>200</x>
+      <y>208</y>
+      <w>88</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
   leseZ2()</panel_attributes>
@@ -218,10 +218,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>280</y>
-      <w>49</w>
-      <h>35</h>
+      <x>200</x>
+      <y>264</y>
+      <w>72</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
    5.0</panel_attributes>
@@ -230,10 +230,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>210</x>
-      <y>245</y>
-      <w>14</w>
-      <h>42</h>
+      <x>200</x>
+      <y>224</y>
+      <w>16</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>
 bg=pink</panel_attributes>
@@ -242,10 +242,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>343</y>
-      <w>175</w>
-      <h>28</h>
+      <x>200</x>
+      <y>336</y>
+      <w>200</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 addiere(3.0, 5.0)</panel_attributes>
@@ -254,22 +254,22 @@ addiere(3.0, 5.0)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>217</x>
-      <y>371</y>
-      <w>168</w>
-      <h>28</h>
+      <x>208</x>
+      <y>368</y>
+      <w>192</w>
+      <h>32</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
+    <panel_attributes>lt=&lt;&lt;&lt;-
 aktualisiereStatus("Berechne...")</panel_attributes>
     <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>217</x>
-      <y>399</y>
-      <w>168</w>
-      <h>28</h>
+      <x>208</x>
+      <y>400</y>
+      <w>192</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 </panel_attributes>
@@ -278,10 +278,10 @@ aktualisiereStatus("Berechne...")</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>210</x>
-      <y>378</y>
-      <w>14</w>
-      <h>42</h>
+      <x>200</x>
+      <y>376</y>
+      <w>16</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>
 bg=pink</panel_attributes>
@@ -290,10 +290,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>448</y>
-      <w>175</w>
-      <h>28</h>
+      <x>200</x>
+      <y>456</y>
+      <w>200</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 8.0
@@ -303,10 +303,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>210</x>
-      <y>483</y>
-      <w>14</w>
-      <h>42</h>
+      <x>200</x>
+      <y>496</y>
+      <w>16</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>
 bg=pink</panel_attributes>
@@ -315,22 +315,22 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>189</x>
-      <y>469</y>
-      <w>105</w>
-      <h>35</h>
+      <x>200</x>
+      <y>480</y>
+      <w>168</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
   aktualisiereErgebnis(8.0)</panel_attributes>
-    <additional_attributes>50.0;30.0;70.0;30.0;70.0;10.0;40.0;10.0</additional_attributes>
+    <additional_attributes>20.0;30.0;40.0;30.0;40.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
-      <y>518</y>
-      <w>49</w>
-      <h>35</h>
+      <x>200</x>
+      <y>536</y>
+      <w>56</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
  </panel_attributes>
@@ -339,10 +339,10 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>56</x>
-      <y>532</y>
-      <w>161</w>
-      <h>28</h>
+      <x>24</x>
+      <y>552</y>
+      <w>184</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 </panel_attributes>
@@ -351,10 +351,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>469</x>
-      <y>224</y>
-      <w>287</w>
-      <h>161</h>
+      <x>520</x>
+      <y>0</y>
+      <w>328</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>Szenario:
 bg=yellow
@@ -365,5 +365,16 @@ der Oberfläche angezeigt.
 Vor jeder Berechnung wird die Statusmitteilung "berechne..."
 auf der Oberfläche ausgegeben</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>472</y>
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>

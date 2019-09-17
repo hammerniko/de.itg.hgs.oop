@@ -7,16 +7,16 @@ public class Schulklasse {
 	private String beschreibung;
 	
 	//Assoziation
-	Lehrer derLehrer;
+	Lehrer derKlassenlehrer;
 	Schulart dieSchulart;
 	
 	//Verwaltungsmetghoden
-	public void linkLehrer(Lehrer l){
-		derLehrer = l;
+	public void linkKlassenlehrer(Lehrer l){
+		derKlassenlehrer = l;
 	}
 	
-	public void unlinkLehrer(){
-		derLehrer = null;
+	public void unlinkKlassenlehrer(){
+		derKlassenlehrer = null;
 	}
 	
 	public void linkSchulart(Schulart s){
@@ -33,6 +33,8 @@ public class Schulklasse {
 	//Konstruktor
 	public Schulklasse(String name) {
 		this.name = name;
+		
+		
 	}
 
 	//getter und setter
@@ -54,11 +56,11 @@ public class Schulklasse {
 	}
 
 	public Lehrer getDerLehrer() {
-		return derLehrer;
+		return derKlassenlehrer;
 	}
 
 	public void setDerLehrer(Lehrer derLehrer) {
-		this.derLehrer = derLehrer;
+		this.derKlassenlehrer = derLehrer;
 	}
 
 	public Schulart getDieSchulart() {
@@ -74,14 +76,14 @@ public class Schulklasse {
 	
 	//Delegationsmethode
 	public String getNameKlassenlehrer(){
-		return derLehrer.getName();
+		return derKlassenlehrer.getName();
 	}
 	
 	
 	@Override
 	public String toString() {
 		return "Schulklasse [name=" + name + ", beschreibung=" + beschreibung
-				+ ", derLehrer=" + derLehrer + ", dieSchulart=" + dieSchulart
+				+ ", derLehrer=" + derKlassenlehrer + ", dieSchulart=" + dieSchulart
 				+ "]";
 	}
 

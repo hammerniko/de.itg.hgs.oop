@@ -18,7 +18,7 @@ import javax.swing.table.TableModel;
  * @author nh
  */
 public class Gui extends javax.swing.JFrame {
-    DefaultTableModel m;
+    DefaultTableModel tablemodel;
     
     /**
      * Creates new form Gui
@@ -259,19 +259,19 @@ public class Gui extends javax.swing.JFrame {
 
     private void clickedAdd() {
        
-        m = (DefaultTableModel) jTable2.getModel();
+        tablemodel = (DefaultTableModel) jTable2.getModel();
         
         String name = jTextFieldName.getText();
         String vorname = jTextFieldVorname.getText();
         String email = jTextFieldEmail.getText();
         
-        m.addRow(new Object[]{name,vorname,email});
+        tablemodel.addRow(new Object[]{name,vorname,email});
        
     }
 
     private void clickedRemove() {
-        m = (DefaultTableModel) jTable2.getModel();
-        m.removeRow(jTable2.getSelectedRow());
+        tablemodel = (DefaultTableModel) jTable2.getModel();
+        tablemodel.removeRow(jTable2.getSelectedRow());
         
         
     }

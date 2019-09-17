@@ -12,13 +12,16 @@ public class A {
     
     //Konstruktor
     public A(){
+    	System.out.println("A erzeugt");
         einB = new B(this);
+        
+        
+        System.out.println("A ruft B auf");
+        einB.testeB();
+        
     }
     
-    public void testeBObjekt(){
-        einB.testeB();
-        System.out.println("ich bin wieder in A");
-    }
+    
     
     public void zeigeMeldung(String meldung){
         System.out.println(meldung);

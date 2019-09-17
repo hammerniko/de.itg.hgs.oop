@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 public class Gui extends JFrame implements ActionListener {
 
-    // Attribut f?r die Assoziation von Gui auf Steuerung
+    // Attribut für die Assoziation von Gui auf Steuerung
     Steuerung dieSteuerung;
 
     JPanel contentPane;

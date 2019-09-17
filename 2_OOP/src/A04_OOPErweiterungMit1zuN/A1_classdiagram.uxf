@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>50</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Lehrer
+--
+-name:txt
+-kuerzel:txt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>240</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Schueler
+--
+-vorname:txt
+-name:txt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>240</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Schulklasse
+--
+-bezeichnung:txt
+--
++getAnzahlSchueler():GZ</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>50</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Schulart
+--
+-bezeichnung:txt</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
