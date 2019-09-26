@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="13.0">
+<diagram program="umlet" version="14.3.0">
   <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>8</x>
-      <y>40</y>
+      <x>64</x>
+      <y>56</y>
       <w>272</w>
-      <h>304</h>
+      <h>392</h>
     </coordinates>
-    <panel_attributes>Wetter
+    <panel_attributes>Wetterstation
 --
-_+SUED:GZ=0_
-_+NORD:GZ=1_
-_+OST:GZ=2_
-_+WEST:GZ=3_
-_+anzahl:GZ=0_
+
+_+anzahlWetterstationen:GZ=0_
+_+anzahlgeloeschteWetterstationen:GZ=0_
+
 -id:GZ=0
--ort:Text=null
--date:Datum=null
--temperatur:FKZ=0
--niederschlagsmenge:GZ = 0
--regenwahrscheinlichkeit:GZ = 0
--windrichtung:GZ=0
+-langenGrad:FKZ
+-breitenGrad:FKZ
+-temperatur:FKZ
+-niederschlagsmenge:GZ 
+-regenwahrscheinlichkeit:GZ 
+-windrichtung:GZ
+-windrichtungInGrad:GZ
 --
-+Wetter(ort:Text)
-+Wetter(ort:Text, temp:FKZ)
-+Wetter(ort:Text, temp:FKZ, niederschlagsmenge:FKZ)
++Wetter(laengenGrad:FKZ, breitenGrad:FKZ)
 ...
 +getTemperatur():FKZ
 #finalize()
@@ -43,7 +41,7 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>408</x>
+      <x>448</x>
       <y>120</y>
       <w>272</w>
       <h>128</h>
@@ -65,18 +63,18 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>272</x>
-      <y>128</y>
-      <w>152</w>
-      <h>80</h>
+      <x>328</x>
+      <y>144</y>
+      <w>136</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;170.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>384</x>
+      <x>424</x>
       <y>304</y>
       <w>184</w>
       <h>96</h>

@@ -1,27 +1,26 @@
-Für Wetterstationen sollen die Wetterdaten für 
-verschiedene Orte erfasst werden.
+Für eine Wetterstationen sollen die Wetterdaten des derzeitigen
+Standortes erfasst werden.
 Dabei werden zu bestimmten Zeiten Niederschlagsmengen, 
 Windstaerke und -richtung 
 sowie die Regenwahrscheinlichkeit erfasst.
-Jede Wetterstation hat eine eigene Id.
+Jede Wetterstation hat eine eigene Id. Der Stand wird mit Längen und Breitengrad erfasst.
 
 Klasse Wetterdaten:
 1. Erzeugen Sie die Klasse Wetter, 
    welche für jeden erfassten Ort ein Wetterobjekt 
    erzeugen kann.
    
-2. Die Anzahl der erfassten Wetterobjekte 
+2. Die Anzahl der erfassten Wetterstationsobjekte 
    soll mitgezählt werden. 
    (Hinweis: finalize() überschreiben.)
    
 3. Alle Daten eines Wetterbjektes sollen über
    die toString()-Methode ausgegeben werden.
    
-4. Die Wetterdaten sind lesbar aber nicht veränderbar.
+4. Die Wetterdaten sind lesbar und nicht veränderbar.
 
-5. Auch wenn ein Sensor der WS ausfällt, soll
-   ein Wetterobjekt erstellt werden können.
-   Es muss mindestens ein Sensor Daten liefern.
+5. Für das erstellen einer Wetterstantion ist der Standort
+   zwingend erfordelich. Ergänzen Sie die Klasse entsprechend
 
 Klasse ErzeugeWetterobjekte:
 6. Erzeugen Sie ein array für 3 Wetterobjekte
