@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>8</zoom_level>
+  <zoom_level>17</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>64</x>
-      <y>56</y>
-      <w>272</w>
-      <h>392</h>
+      <x>527</x>
+      <y>51</y>
+      <w>697</w>
+      <h>731</h>
     </coordinates>
     <panel_attributes>Wetterstation
 --
-
+&lt;&lt;Klassenattribute&gt;&gt;
 _+anzahlWetterstationen:GZ=0_
 _+anzahlgeloeschteWetterstationen:GZ=0_
 
--id:GZ=0
--langenGrad:FKZ
--breitenGrad:FKZ
+&lt;&lt;Objektattribute&gt;&gt;
+-id:GZ
+
 -temperatur:FKZ
 -niederschlagsmenge:GZ 
 -regenwahrscheinlichkeit:GZ 
 -windrichtung:GZ
 -windrichtungInGrad:GZ
+-windstaerke:GZ
 --
-+Wetter(laengenGrad:FKZ, breitenGrad:FKZ)
-...
-+getTemperatur():FKZ
-#finalize()
-+getDate():Datum
-+toString():Text
+&lt;&lt;Konstruktor&gt;&gt;
++Wetterstation(standort:Standort)
 
+&lt;&lt;getter und setter&gt;&gt;
++getTemperatur():FKZ
++setTemperatur(tempNeu:FKZ):boolean
+...
+
+#finalize()
++toString():Text
 
 
 
@@ -41,19 +45,16 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>448</x>
-      <y>120</y>
-      <w>272</w>
-      <h>128</h>
+      <x>1615</x>
+      <y>0</y>
+      <w>578</w>
+      <h>272</h>
     </coordinates>
     <panel_attributes>ErzeugeWetterobjekte
 --
 
 --
 _+main(args:Text[])_
--erstelleObjekte(wetterliste:Wetter[])
--modifiziereObjekte(wetterlIste:Wetter[])
--ausgabeObjekte(wetterliste:Wetter[])
 
 
 
@@ -63,26 +64,57 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>328</x>
-      <y>144</y>
-      <w>136</w>
-      <h>64</h>
+      <x>1207</x>
+      <y>136</y>
+      <w>442</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;60.0</additional_attributes>
+    <additional_attributes>10.0;70.0;240.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>424</x>
-      <y>304</y>
-      <w>184</w>
-      <h>96</h>
+      <x>0</x>
+      <y>612</y>
+      <w>391</w>
+      <h>204</h>
     </coordinates>
     <panel_attributes>Die Beziehung zwischen der Klasse 
 ErzeugeWetterobjekte und der Klasse Wetter
 wird "Dependency" genannt.
 bg=yellow</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1496</x>
+      <y>374</y>
+      <w>561</w>
+      <h>289</h>
+    </coordinates>
+    <panel_attributes>Standort
+--
+-laengenGrad:FKZ
+-breitenGrad:FKZ
+--
++Standort(laengengrad:FKZ, breitengrad:FKZ)
++getLaengengrad():FKZ
++getBreitengrad():FKZ</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1207</x>
+      <y>374</y>
+      <w>323</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+r1=derStandort
+m1=1</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>

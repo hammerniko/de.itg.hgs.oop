@@ -2,21 +2,20 @@ package A02_Klassen_Uebung_Wetter;
 
 public class Wetterstation {
 
-	// Wetterdaten
+	// Klassenattribute
+	public static int anzahlWetterstationen = 0;
+	private static int anzahlGeloeschteStationen = 0;
+
+	// Objektattribute
+	private int id;
 	private double niederschlagsmenge;
 	private double regenwahscheinlichkeit;
 	private int windstarke; // bft 1-12
 	private Windrichtung aktuelleWindrichtung;
 	private int windrichungInGrad; // 0 = Nord bis 359°
 
-	// id
-	public static int anzahlWetterstationen = 0;
-	private static int anzahlGeloeschteStationen = 0;
-	private int id;
-
-	// Ort
-	private double breitenGrad;
-	private double laengenGrad;
+	//Assoziation
+	private Standort derStandort;
 
 	@Override
 	protected void finalize() throws Throwable {
@@ -68,45 +67,39 @@ public class Wetterstation {
 	}
 
 	public double getBreitenGrad() {
-		return breitenGrad;
+		return derStandort.getBreitenGrad();
 	}
 
 	public void setBreitenGrad(double breitenGrad) {
-		this.breitenGrad = breitenGrad;
+		derStandort.setBreitenGrad(breitenGrad);
 	}
 
 	public double getLaengenGrad() {
-		return laengenGrad;
-	}
-
-	public void setLaengenGrad(double laengenGrad) {
-		this.laengenGrad = laengenGrad;
+		return derStandort.getLaengenGrad();
 	}
 
 	public int getId() {
 		return id;
 	}
 
+	
+	
+
 	@Override
 	public String toString() {
-		return "Wetterstation [niederschlagsmenge=" + niederschlagsmenge + ", regenwahscheinlichkeit="
+		return "Wetterstation [id=" + id + ", niederschlagsmenge=" + niederschlagsmenge + ", regenwahscheinlichkeit="
 				+ regenwahscheinlichkeit + ", windstarke=" + windstarke + ", aktuelleWindrichtung="
-				+ aktuelleWindrichtung + ", windrichungInGrad=" + windrichungInGrad + ", id=" + id + ", breitenGrad="
-				+ breitenGrad + ", laengenGrad=" + laengenGrad + "]";
+				+ aktuelleWindrichtung + ", windrichungInGrad=" + windrichungInGrad + ", derStandort=" + derStandort
+				+ "]";
 	}
 
-	public Wetterstation(double breitenGrad, double laengenGrad) {
+	public Wetterstation(Standort standort) {
 		super();
-		this.breitenGrad = breitenGrad;
-		this.laengenGrad = laengenGrad;
+		derStandort = standort;
 
 		// Anzahl und Id
 		anzahlWetterstationen++;
 		id = anzahlWetterstationen + anzahlGeloeschteStationen;
-
-		// Singen HGS
-		breitenGrad = 47.768317;
-		laengenGrad = 8.8336063;
 
 		aktuelleWindrichtung = null;
 		windrichungInGrad = 0;
