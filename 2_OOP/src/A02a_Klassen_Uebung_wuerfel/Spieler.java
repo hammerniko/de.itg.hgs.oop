@@ -3,12 +3,14 @@ package A02a_Klassen_Uebung_wuerfel;
 public class Spieler {
 
 	String name;
-
+	int letzerWurf[];
+	
 	// Array für die Assoziation deklarieren
 	Wuerfel dieWuerfel[];
 
 	public Spieler(String name) {
 		this.name = name;
+		letzerWurf = new int[3];
 
 		// Spieler hat 3 Wuerfel
 		// Array für die Wuerfelobjekte erstellen
@@ -21,11 +23,22 @@ public class Spieler {
 	}
 
 	// Evtl. mit Rückgabewert, wenn GUI-Ausgabe erwünscht ist
-	public void wuerfeln() {
+	public int[] wuerfeln() {
 		for (int i = 0; i < dieWuerfel.length; i++) {
-			System.out.print(dieWuerfel[i].gibWuerfelzahl()+" / ");
+			letzerWurf[i]= dieWuerfel[i].gibWuerfelzahl();
 		}
 
+		return letzerWurf;
+	}
+	
+	public String gibLetztenWurf(){
+		return null;
+	}
+	
+	@Override
+	public String toString() {
+	
+		return name + " " + letzerWurf;
 	}
 	
 	

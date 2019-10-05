@@ -4,6 +4,7 @@ public class Wuerfel {
 
 	private int wert;
 	
+	//Konstruktor
 	public Wuerfel() {
 		wert = 0; //noch nicht gewuerfelt
 	}
