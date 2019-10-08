@@ -8,9 +8,11 @@ public class StartKlasse {
 		Wuerfel w1 = new Wuerfel();
 		Wuerfel60 w2 = new Wuerfel60();
 		
-		
 		w1.gibWuerfelzahl();
-		w2.gibWuerfelzahl();
+		for (int i = 0; i < 200; i++) {
+			System.out.println(w2.gibWuerfelzahl());
+		}
+		
 		
 
 	}
