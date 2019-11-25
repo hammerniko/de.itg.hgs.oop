@@ -28,21 +28,27 @@ public class Spielsteuerung {
 	}
 
 	public void spieleZug(int xpos, int ypos) {
+		
 		analyseErgebnis = analysiereSpielZug(xpos, ypos);
 		switch (analyseErgebnis) {
 		case -1:
-			dieOberflaeche.zeigeMeldung("Mine Gewählt");
+			dieOberflaeche.zeigeMeldung("Mine Gewaehlt");
 			break;
 		case -2:
-			dieOberflaeche.zeigeMeldung("Feld bereits gewählt");
+			dieOberflaeche.zeigeMeldung("Feld bereits gewaehlt");
 			break;
 		case -3:
-			dieOberflaeche.zeigeMeldung("ungültige Auswahl");
+			dieOberflaeche.zeigeMeldung("ungaeltige Auswahl");
 			break;
 
 		default:
+			//FÃ¼r alle anderen Faelle ist das ergebnis
+			//gleich der Anzahl der Nachbarminen
+			dieSpieldaten.schreibeDatenFeld(xpos, ypos, analyseErgebnis);
 			break;
 		}
+		
+		
 	}
 
 	private int analysiereSpielZug(int xpos, int ypos) {
