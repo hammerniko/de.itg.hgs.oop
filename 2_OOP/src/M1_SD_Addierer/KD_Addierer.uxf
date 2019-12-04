@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>147</x>
+      <y>35</y>
+      <w>217</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Gui
+--
+
+--
++Gui()
++clickedAddiere()
+-leseZahlA():FKZ
+-leseZahlB():FKZ
+-zeigeErgebnis(zahl:FKZ)
++zeigeAnzahlRechnungen(anzahl:GZ)
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>56</y>
+      <w>217</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Rechner
+--
+-anzahlBerechnungen:GZ
+--
++Rechner(g:Gui)
++berechneSumme(z1:FKZ, z2:FKZ):FKZ
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>77</y>
+      <w>273</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+r1=dieGui
+m2=1
+r2=derRechner
+</panel_attributes>
+    <additional_attributes>10.0;20.0;370.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>322</x>
+      <y>245</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>_dieGui:Gui_
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>259</y>
+      <w>21</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>350</x>
+      <y>357</y>
+      <w>14</w>
+      <h>490</h>
+    </coordinates>
+    <panel_attributes>bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>119</x>
+      <y>329</y>
+      <w>42</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Actor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>343</y>
+      <w>224</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+clickedAddiere()</panel_attributes>
+    <additional_attributes>300.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>364</x>
+      <y>455</y>
+      <w>141</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+m1=leseZahlB()
+r1=3
+bg=yellow
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+int y=textHeight();
+
+//drawRectangle(0,0,width,height);
+//Linien Methodenaufruf
+setLineType(0);
+drawLine(0, 20, 30, 20);
+drawLine(30, 20, 30, 40);
+drawLine(15, 40, 30, 40);
+drawLine(15, 40, 20, 35);
+drawLine(15, 40, 20, 45);
+
+//Rechteck
+drawRectangle(0,35,15,height-70);
+
+//Linien Rückgabe
+setLineType(1);
+drawLine(15,  height-40, 30,  height-40);
+drawLine(0, height-20, 30, height-20);
+drawLine(30,  height-40, 30, height-20);
+drawLine(0, height-20, 5, height-25);
+drawLine(0, height-20, 5, height-15);
+
+int laenge;
+
+for(String textline : textlines) {
+	//Wenn der Text m1= eingegeben wird
+	//soll eine private Methode folgen
+	if(textline.contains("m1=")){
+		print(textline.substring(3,textline.length()), 35, 30);
+	}
+
+	//Wenn der Text r1= eingegeben wird
+	//soll der Rückgabewert folgen
+	else if(textline.contains("r1=")){
+		print(textline.substring(3,textline.length()), 35, height-30);
+	}
+	else{
+		y += printCenter(textline,y);
+	}
+	
+}
+
+</custom_code>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>616</x>
+      <y>238</y>
+      <w>140</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>_derRechner:Rechner_
+bg=green
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>679</x>
+      <y>259</y>
+      <w>21</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;420.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>539</y>
+      <w>336</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+berechneSumme(5.1,3)</panel_attributes>
+    <additional_attributes>460.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>679</x>
+      <y>553</y>
+      <w>14</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>357</x>
+      <y>721</y>
+      <w>336</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+summe = 8.1</panel_attributes>
+    <additional_attributes>460.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>567</y>
+      <w>322</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+zeigeAnzahlRechnungen(1)</panel_attributes>
+    <additional_attributes>10.0;20.0;440.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>364</x>
+      <y>364</y>
+      <w>141</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+m1=leseZahlA()
+r1=5.1
+bg=yellow
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+int y=textHeight();
+
+//drawRectangle(0,0,width,height);
+//Linien Methodenaufruf
+setLineType(0);
+drawLine(0, 20, 30, 20);
+drawLine(30, 20, 30, 40);
+drawLine(15, 40, 30, 40);
+drawLine(15, 40, 20, 35);
+drawLine(15, 40, 20, 45);
+
+//Rechteck
+drawRectangle(0,35,15,height-70);
+
+//Linien Rückgabe
+setLineType(1);
+drawLine(15,  height-40, 30,  height-40);
+drawLine(0, height-20, 30, height-20);
+drawLine(30,  height-40, 30, height-20);
+drawLine(0, height-20, 5, height-25);
+drawLine(0, height-20, 5, height-15);
+
+int laenge;
+
+for(String textline : textlines) {
+	//Wenn der Text m1= eingegeben wird
+	//soll eine private Methode folgen
+	if(textline.contains("m1=")){
+		print(textline.substring(3,textline.length()), 35, 30);
+	}
+
+	//Wenn der Text r1= eingegeben wird
+	//soll der Rückgabewert folgen
+	else if(textline.contains("r1=")){
+		print(textline.substring(3,textline.length()), 35, height-30);
+	}
+	else{
+		y += printCenter(textline,y);
+	}
+	
+}
+
+</custom_code>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>364</x>
+      <y>581</y>
+      <w>14</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>371</x>
+      <y>602</y>
+      <w>322</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;20.0;440.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>840</y>
+      <w>21</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>679</x>
+      <y>728</y>
+      <w>21</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>364</x>
+      <y>749</y>
+      <w>141</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+m1=zeigeErgebnis(summe)
+r1=
+bg=yellow
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+int y=textHeight();
+
+//drawRectangle(0,0,width,height);
+//Linien Methodenaufruf
+setLineType(0);
+drawLine(0, 20, 30, 20);
+drawLine(30, 20, 30, 40);
+drawLine(15, 40, 30, 40);
+drawLine(15, 40, 20, 35);
+drawLine(15, 40, 20, 45);
+
+//Rechteck
+drawRectangle(0,35,15,height-70);
+
+//Linien Rückgabe
+setLineType(1);
+drawLine(15,  height-40, 30,  height-40);
+drawLine(0, height-20, 30, height-20);
+drawLine(30,  height-40, 30, height-20);
+drawLine(0, height-20, 5, height-25);
+drawLine(0, height-20, 5, height-15);
+
+int laenge;
+
+for(String textline : textlines) {
+	//Wenn der Text m1= eingegeben wird
+	//soll eine private Methode folgen
+	if(textline.contains("m1=")){
+		print(textline.substring(3,textline.length()), 35, 30);
+	}
+
+	//Wenn der Text r1= eingegeben wird
+	//soll der Rückgabewert folgen
+	else if(textline.contains("r1=")){
+		print(textline.substring(3,textline.length()), 35, height-30);
+	}
+	else{
+		y += printCenter(textline,y);
+	}
+	
+}
+
+</custom_code>
+  </element>
+</diagram>
