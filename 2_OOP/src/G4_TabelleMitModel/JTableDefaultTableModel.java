@@ -18,14 +18,14 @@ public class JTableDefaultTableModel{
 		String[] titles = new String[]{ "A", "B", "C", "D" };
  
 		// Das Model das wir verwenden werden. Hier setzten wir gleich die
-		// Titel, aber es ist später immer noch möglich weitere Columns oder
-		// Rows hinzuzufügen.
+		// Titel, aber es ist spaeter immer noch moeglich weitere Columns oder
+		// Rows hinzuzufuegen.
 		final DefaultTableModel model = new DefaultTableModel( titles, 0 );
  
 		// Das JTable initialisieren
 		JTable table = new JTable( model );
  
-		// Buttons, damit das alles schöner aussieht.
+		// Buttons, damit das alles schoener aussieht.
 		final JButton buttonAddRow = new JButton( "add row" );
 		final JButton buttonRemRow = new JButton( "remove row" );
 		final JButton buttonAddCol = new JButton( "add column" );
@@ -80,7 +80,7 @@ public class JTableDefaultTableModel{
 		// einen neuen Vector mit Daten herstellen
 		Vector newDatas = createDataVector( "row", size );
  
-		// eine neue Row hinzufügen
+		// eine neue Row hinzufuegen
 		model.addRow( newDatas );
  
  

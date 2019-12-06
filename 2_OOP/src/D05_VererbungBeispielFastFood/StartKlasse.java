@@ -3,7 +3,7 @@ package D05_VererbungBeispielFastFood;
 public class StartKlasse {
 
 	public static void main(String[] args) {
-		//1. Schichtführer und 1 Kuechenmitarbeiter erstellen
+		//1. Schichtfuehrer und 1 Kuechenmitarbeiter erstellen
 		Schichtfuehrer s1 = new Schichtfuehrer("Peter", "Hans");
 		KuechenMitarbeiter k1 = new KuechenMitarbeiter("Bolika", "Anna");
 		Reinigungskraft r1 = new Reinigungskraft("Macht", "Sauber");
@@ -11,7 +11,7 @@ public class StartKlasse {
 		DriveInMitarbeiter d1 = new DriveInMitarbeiter("Speck", "Carsten");
 		MacCoffeeMitarbeiter m1 = new MacCoffeeMitarbeiter("Berg", "Ben");
 	
-		//2. Überstunden setzen
+		//2. Ueberstunden setzen
 		k1.setUeberstunden(3);
 		k2.setStundenlohn(9);
 		s1.setStundenlohn(12.5);
