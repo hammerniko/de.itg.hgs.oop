@@ -4,7 +4,7 @@ public class StartKlasse {
 
 	public static void main(String[] args) {
 		
-		//Objekte für Szenario erzeugen
+		//Objekte fuer Szenario erzeugen
 		Schulklasse tg123 = new Schulklasse("TG Informationstechnik JS1", "TG12-3");
 		Schueler s1 = new Schueler("Mueller","Det", tg123);
 		

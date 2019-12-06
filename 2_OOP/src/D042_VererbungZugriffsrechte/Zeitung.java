@@ -27,7 +27,7 @@ public abstract class Zeitung {
 	}
 
 	/**
-	 * Konstruktor wird ausgeführt, auch wenn die Klasse Zeitung abstract ist,
+	 * Konstruktor wird ausgefuehrt, auch wenn die Klasse Zeitung abstract ist,
 	 * da in den Unterklassen dieser
 	 * mit super(rd); aufgerufen wird.
 	 * @param rd
@@ -38,22 +38,22 @@ public abstract class Zeitung {
 		derRedakteur = rd;
 
 		// der Wert kann von einem Objekt einer erbenden
-		// Klasse direkt wieder geändert werden -> evtl. Sicherheitsrisiko.
+		// Klasse direkt wieder geaendert werden -> evtl. Sicherheitsrisiko.
 		anzahlZeitungen++;
 		id = anzahlZeitungen;
 	}
 
 	/**
-	 * Diese Methode ist ohne Implementierung. Alle erbenden Klassen müssen
+	 * Diese Methode ist ohne Implementierung. Alle erbenden Klassen muessen
 	 * diese Methode implementieren.
 	 * 
 	 */
 	public abstract void test();
 
 	/**
-	 * Delegationsmethode. Ohne diese Delegation müsste ein Objekt einer
+	 * Delegationsmethode. Ohne diese Delegation muesste ein Objekt einer
 	 * Unterklasse objektname.derRedakteur.getName(); aufrufen. Die ist
-	 * unübersichtlich. Diese Methode erlaubt dagegen den Aufruf
+	 * unuebersichtlich. Diese Methode erlaubt dagegen den Aufruf
 	 * 
 	 * @return der Name des Redakteurs
 	 */

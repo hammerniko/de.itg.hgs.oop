@@ -12,7 +12,7 @@ public class Wetterstation {
 	private double regenwahscheinlichkeit;
 	private int windstarke; // bft 1-12
 	private Windrichtung aktuelleWindrichtung;
-	private int windrichungInGrad; // 0 = Nord bis 359°
+	private int windrichungInGrad; // 0 = Nord bis 359grad
 
 	//Assoziation
 	private Standort derStandort;
