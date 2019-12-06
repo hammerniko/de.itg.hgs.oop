@@ -40,14 +40,14 @@ public class Schueler {
 	
 	public void setDieKlasse(Schulklasse klasse) {
 		
-		//Wenn der Schüler bereits einer Klasse zugeordnet wurde
+		//Wenn der Schueler bereits einer Klasse zugeordnet wurde
 		if(dieKlasse!=null){
 			
-			//Entferne den Schüler aus der alten Klasse
+			//Entferne den Schueler aus der alten Klasse
 			dieKlasse.removeSchueler(this);
 			dieKlasse = null;
 			
-			//Füge den Schüler in der neuen Klasse hinzu
+			//Fuege den Schueler in der neuen Klasse hinzu
 			klasse.addSchueler(this);
 		}
 		else{

@@ -15,10 +15,10 @@ public class StartKlasse {
         diePersonen[1] = new Schueler("Nothe");
         diePersonen[2] = new Lehrer("Grobian", "Gr");
         
-        //Assoziation setzen für ein LehrerObjekt
+        //Assoziation setzen fuer ein LehrerObjekt
         diePersonen[2].setParkplatz(p1);
         
-        //Ausgabe über toString Methode
+        //Ausgabe ueber toString Methode
         //und Aufruf der Methode Test -> Polymorphie
         for (int i = 0;  i < diePersonen.length; i++) {
         	System.out.println(diePersonen[i]);

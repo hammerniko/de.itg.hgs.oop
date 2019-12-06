@@ -49,7 +49,7 @@ public class Kunde {
 		// TODO Auto-generated method stub
 		super.finalize();
 		
-		System.out.println("Kunde gelöscht");
+		System.out.println("Kunde geloescht");
 		
 	} 
 	
