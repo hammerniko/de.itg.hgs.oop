@@ -3,13 +3,13 @@ package L1_Baeume;
 import java.util.LinkedList;
 
 /**
- * Iterator für Tiefendurchlauf des Baumes
+ * Iterator fuer Tiefendurchlauf des Baumes
  * 
  * @author hr
  *
  */
 public class DFIterator {
-// Liste der Wurzeln aller noch zu besuchender Teilbäume,
+// Liste der Wurzeln aller noch zu besuchender Teilbaeume,
 // in der Reihenfolge, in der sie besucht werden sollen.
 	LinkedList<Node> toVisit;
 
@@ -28,15 +28,15 @@ public class DFIterator {
 
 	// Die Methode soll nur aufgerufen werden, wenn vorher mit hasNext() getestet
 	// wurde,
-	// dass es ein nächstes Element gibt.
+	// dass es ein naechstes Element gibt.
 	public double next() {
 		// Das erste Element der Liste toVisit ist die Wurzel des
-		// nächsten zu besuchenden Baums. Beim Tiefendurchlauf
-		// soll diese Wurzel als nächster Knoten besucht werden.
+		// naechsten zu besuchenden Baums. Beim Tiefendurchlauf
+		// soll diese Wurzel als naechster Knoten besucht werden.
 		Node n = toVisit.removeFirst();
 		Node left = n.getLeft();
 		Node right = n.getRight();
-		// Als nächstes muss der Baum mit Wurzel left besucht werden
+		// Als naechstes muss der Baum mit Wurzel left besucht werden
 		// und danach der Baum mit Wurzel right.
 		if (right != null) {
 			toVisit.addFirst(right);
@@ -45,6 +45,6 @@ public class DFIterator {
 			toVisit.addFirst(left);
 		}
 		// Nun ist left ganz vorne in toVisit, gefolgt von right.
-		return n.getValue(); // Rückgabe des Werts der aktuellen Wurzel
+		return n.getValue(); // Rueckgabe des Werts der aktuellen Wurzel
 	}
 }
