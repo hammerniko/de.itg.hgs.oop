@@ -137,7 +137,7 @@ public class TestJTable extends JFrame implements ActionListener, KeyListener,
 			} else {
 				jTable.setValueAt(jTable.getValueAt(row,col)+letzteEingabe,row,col);
 			}
-			jLabelStatus.setText("Übernommen:" + jTable.getValueAt(row, col));
+			jLabelStatus.setText("uebernommen:" + jTable.getValueAt(row, col));
 			jTable.revalidate();
 			this.repaint();
 			
@@ -166,12 +166,12 @@ public class TestJTable extends JFrame implements ActionListener, KeyListener,
 
 	public void mouseClicked(MouseEvent e) {
 		letzteEingabe = "";
-		jLabelStatus.setText("letzteEingabe gelöscht");
+		jLabelStatus.setText("letzteEingabe geloescht");
 	}
 
 	public void mousePressed(MouseEvent e) {
 		letzteEingabe = "";
-		jLabelStatus.setText("letzteEingabe gelöscht");
+		jLabelStatus.setText("letzteEingabe geloescht");
 
 	}
 

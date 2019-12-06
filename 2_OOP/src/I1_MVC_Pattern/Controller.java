@@ -16,7 +16,7 @@ public class Controller implements ActionListener,UpAndDown {
         this.view2 = new View(this);
         this.view3 = new View(this);
          
-        // Observer zu den Modellen hinzufügen.
+        // Observer zu den Modellen hinzufuegen.
         this.decinc.addObserver(this.view);
         this.decinc.addObserver(this.view2);
         this.decinc.addObserver(this.view3);
