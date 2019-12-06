@@ -2,24 +2,24 @@ package I02_Zustandsdiagramm_Geldautomat;
 
 import java.util.Scanner;
 /*
- * Ein Automtat muss immer nebenläufig implementiert werden, damit
+ * Ein Automtat muss immer nebenlaeufig implementiert werden, damit
  * die Bedienung des Hauptprogramms nicht blockiert wird.
  * Hier wird das Interface Runnable verwendet. Dieses erzwingt die
- * Implementierung der run()-Methode. Diese run()-Methode soll nebenläufig
+ * Implementierung der run()-Methode. Diese run()-Methode soll nebenlaeufig
  * abgearbeitet werden.
  * Dazu wird in der Klasse ein Thread-Objekt deklariert und im Konstruktor erzeugt.
- * Der Aufruf der run()-Methode erfolgt indirekt über den Aufruf der start()-Methode des
+ * Der Aufruf der run()-Methode erfolgt indirekt ueber den Aufruf der start()-Methode des
  * Thread-Objektes.
  */
 public class Geldautomat implements Runnable {
 
 	//Objektvariablen des Geldautomaten
 	private int zustand; 					//aktueller Zustand des Geldautomaten
-	private Thread thread;					//Thread Objekt für Nebenläufigkeit
+	private Thread thread;					//Thread Objekt fuer Nebenlaeufigkeit
 	private boolean istKarteGueltig;		//wird gesetzt, wenn Karte gueltig ist 
 	private boolean istPinGueltig;			//wird gesetzt, wenn PIN gueltig ist
 	private boolean karteErkannt;			//wird gesetzt, wenn eine Karte eingeschoben wurde
-	private boolean bestaetigenGedrueckt;	//wird gesetzt, wenn "bestätigen" gedrückt wurde 
+	private boolean bestaetigenGedrueckt;	//wird gesetzt, wenn "bestaetigen" gedrueckt wurde 
 	private Karte karte;
 
 	//Zustandsvariablen als Konstanten
@@ -39,14 +39,14 @@ public class Geldautomat implements Runnable {
 		bestaetigenGedrueckt = false;
 		zustand = START; // Anfagszustand
 		
-		//Thread Objekt für Nebenläufigkeit erzeugen
+		//Thread Objekt fuer Nebenlaeufigkeit erzeugen
 		thread = new Thread(this);
 		
 	}
 
 	/**
 	 * Die run()-Methode beinhaltet den Lebenszyklus des Geldautomaten.
-	 * Sie wird indirekt über die start()-Methode Thread-Objekts der Klasse aufgerufen.
+	 * Sie wird indirekt ueber die start()-Methode Thread-Objekts der Klasse aufgerufen.
 	 * Dieser Aufruf sollte von aussen erfolgen, um Laufzeitprobleme zu verhindern.
 	 * @see startGeldautomat.java
 	 */
@@ -54,15 +54,15 @@ public class Geldautomat implements Runnable {
 	public void run() {
 
 		// Switch-While-IDIOM - Lebenszyklus des Geldautomaten
-		// Solange die äussere While-Schleife lüft, ist der Automat aktiv
+		// Solange die aeussere While-Schleife laeft, ist der Automat aktiv
 		while (zustand != AUS) {
 			
 			//Hier wird zum aktuellen Zustand gesprungen. Jedem Zustand ist eine
-			//Methode zugeordnet, welche den jeweiligen Zustand bearbeitet und Folgezustände
-			//gemäß dem Zustandsdiagramm festlegt.
-			//Ist ein Zustand zuende, sorgt der break Befehl dafür, das die Switch-Case
+			//Methode zugeordnet, welche den jeweiligen Zustand bearbeitet und Folgezustaende
+			//gemaess dem Zustandsdiagramm festlegt.
+			//Ist ein Zustand zuende, sorgt der break Befehl dafuer, das die Switch-Case
 			//Anweisung verlassen wird. D.h. der Thread befindet sich dann wieder in der
-			//äusseren while-Schleife und die switch-case Anweisung wird erneut aufgerufen.
+			//aeusseren while-Schleife und die switch-case Anweisung wird erneut aufgerufen.
 			switch (zustand) {
 			case START:       		zustandStart(); break;
 
@@ -78,11 +78,11 @@ public class Geldautomat implements Runnable {
 	}
 
 	private void zustandPruefeKarte() {
-		//Prüfen ob die Karte gültig ist
+		//Pruefen ob die Karte gueltig ist
 		if (pruefeKarte(karte)) {
 			istKarteGueltig = true;
 
-			System.out.println("Karte gültig");
+			System.out.println("Karte gueltig");
 			zustand = PIN_EINGABE;
 		} else {
 			istKarteGueltig = false;
@@ -96,7 +96,7 @@ public class Geldautomat implements Runnable {
 		while (!karteErkannt) {
 			warte();
 			warte();
-			// Für Beispielszenario karte wird nach einem wartezyklus erkannt
+			// Fuer Beispielszenario karte wird nach einem wartezyklus erkannt
 			karteErkannt = true;
 			
 			//Daten der Karte werden eingelesen und es wird ein Objekt erstellt,
@@ -125,7 +125,7 @@ public class Geldautomat implements Runnable {
 
 				if (strPin.length() == 4) {
 					pin = Integer.parseInt(strPin);
-					prüfePin(pin);
+					pruefePin(pin);
 					anzahlVersuche++;
 					anzZiffern = 0;
 					strPin = "";
@@ -148,7 +148,7 @@ public class Geldautomat implements Runnable {
 		s = null;
 	}
 
-	private void prüfePin(int pin) {
+	private void pruefePin(int pin) {
 
 		if (pin == karte.getPin()) {
 			istPinGueltig = true;
@@ -176,7 +176,7 @@ public class Geldautomat implements Runnable {
 	}
 
 	private boolean pruefeKarte(Karte karte) {
-		System.out.println("Prüfe Karte");
+		System.out.println("Pruefe Karte");
 
 		if (karte.istGueltig) {
 			return true;
@@ -201,7 +201,7 @@ public class Geldautomat implements Runnable {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("1. Betrag auszahlen");
-		System.out.println("2. Betrag überweisen");
+		System.out.println("2. Betrag ueberweisen");
 
 		wahl = sc.nextInt();
 
@@ -220,14 +220,14 @@ public class Geldautomat implements Runnable {
 	}
 
 	private void zustandAuszahlen() {
-		System.out.println("Auszahlen gewählt");
+		System.out.println("Auszahlen gewaehlt");
 		do {
 			warte();
 		} while (!bestaetigenGedrueckt);
 	}
 
 	private void zustandUeberweisen() {
-		System.out.println("Überweisen gewählt");
+		System.out.println("ueberweisen gewaehlt");
 		do {
 			warte();
 		} while (!bestaetigenGedrueckt);
