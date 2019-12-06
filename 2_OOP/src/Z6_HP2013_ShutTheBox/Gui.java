@@ -41,7 +41,7 @@ public class Gui extends JFrame {
 	
 	
 	public static final String TITEL = "Shut the Box";
-	private static final String WUERFELN = "würfeln";
+	private static final String WUERFELN = "wuerfeln";
 	private static final String SPIELER_WECHSELN = "Spielerwechsel";
 	
 	public Gui(String pName1, String pName2) {
@@ -164,7 +164,7 @@ public class Gui extends JFrame {
 	
 	public void oeffneAlleKlappen() {
 		
-		//alle Klappen öffnen
+		//alle Klappen oeffnen
 		
 	}
 	

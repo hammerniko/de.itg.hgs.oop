@@ -3,7 +3,7 @@ package L1_Baeume;
 import java.util.LinkedList;
 
 public class BFIterator {
-// Liste der Wurzeln aller noch zu besuchender Teilbäume,
+// Liste der Wurzeln aller noch zu besuchender Teilbaeume,
 // in der Reihenfolge, in der sie besucht werden sollen.
 	LinkedList<Node> toVisit;
 
@@ -25,7 +25,7 @@ public class BFIterator {
 		Node left = n.getLeft();
 		Node right = n.getRight();
 		// Im Unterschied zum Tiefendurchlauf werden die beiden
-		// Teilbäume von n hier hinten angefügt.
+		// Teilbaeume von n hier hinten angefuegt.
 		if (left != null) {
 		toVisit.addLast(left);
 		}
