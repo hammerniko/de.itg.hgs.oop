@@ -115,8 +115,8 @@ public class Steuerung {
 					
 			klappe.setzeZustand(1);
 			
-			// Prüfungob Summe der Augenzahlen
-			// dem Wert der gewählten Klappe entspricht
+			// Pruefungob Summe der Augenzahlen
+			// dem Wert der gewaehlten Klappe entspricht
 			if (aAugensumme == klappe.gibWert()) {
 				setzeKlappenEndgueltigGeschlossen();
 				
