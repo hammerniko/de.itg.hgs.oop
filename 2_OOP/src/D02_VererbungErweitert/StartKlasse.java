@@ -23,7 +23,7 @@ public class StartKlasse {
         //Einer Person einen Parkplatz zuweisen
         diePersonen[2].setParkplatz(p1);
         
-        //Ausgabe über toString Methode
+        //Ausgabe ueber toString Methode
         for (int i = 0;  i < diePersonen.length; i++) {
         	System.out.println(diePersonen[i]);
 		}

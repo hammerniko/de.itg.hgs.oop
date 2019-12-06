@@ -31,7 +31,7 @@ public class Versicherung {
 	
 	//Verwaltungsmethoden
 	
-	//Hinzufügen eines Kunden
+	//Hinzufuegen eines Kunden
 	public void addKunde(Kunde k) {
 		
 		dieKunden.add(k);

@@ -17,12 +17,12 @@ public class StartKlasse {
 		tg123.linkLehrer(hr);
 		tg123.linkSchulart(gym);
 		
-		//Schüler einer Klasse hinzufügen
+		//Schueler einer Klasse hinzufuegen
 		tg123.addSchueler(s1);
 		tg123.addSchueler(s2);
 		tg123.addSchueler(s3);
 		
-		//Einem Schüler eine neue Klasse zuweisen
+		//Einem Schueler eine neue Klasse zuweisen
 		s1.setDieKlasse(tg124);
 					
 		//Szenario Tg123 gibt Namen des Lehrers auf
