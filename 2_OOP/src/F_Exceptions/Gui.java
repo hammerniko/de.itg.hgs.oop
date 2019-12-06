@@ -7,11 +7,11 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 /**
- * Einfache Oberfläche zur Demonstration von Exceptions.
- * In das Textfeld soll eine Würelzahl eingegeben werden.
+ * Einfache Oberflaeche zur Demonstration von Exceptions.
+ * In das Textfeld soll eine Wuerfelzahl eingegeben werden.
  * Wird statt einer Zahl Buchstabe eingegeben, wirft die Methode
  * {@link #zeigeWuerfelzahl(int)} eine NumberformatException.
- * Wird eine ungültige Zahl die kleiner 1 oder größer 6 ist eingegeben,
+ * Wird eine ungueltige Zahl die kleiner 1 oder groesser 6 ist eingegeben,
  * wird eine selbst erzeugte Exception geworfen.
  * 
  * @author hr
@@ -30,7 +30,7 @@ public class Gui extends JFrame {
 	JLabel label;
 	
 	/**
-	 * Button um die Eingebene Ziffer zu übernehmen.
+	 * Button um die Eingebene Ziffer zu uebernehmen.
 	 * Durch einen klick auf diesen Button, wird die 
 	 * Methode {@link #buttonUebernehmenGeklickt()} 
 	 * aufgerufen
@@ -43,20 +43,20 @@ public class Gui extends JFrame {
 	public Gui(){
 		
 		/**
-		 * Sorgt dafür das der Prozess beendet wird, mit welchem das
-		 * Gui Objekt erstellt wurde, wenn man auf die Schaltfläche Schliessen
+		 * Sorgt dafuer das der Prozess beendet wird, mit welchem das
+		 * Gui Objekt erstellt wurde, wenn man auf die Schaltflaeche Schliessen
 		 * des Fensters klickt.
 		 */
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
 		/**
-		 * Das JPanel Objekt für den Hauptcontainer
+		 * Das JPanel Objekt fuer den Hauptcontainer
 		 * wird erzeugt.
 		 */
 		contentPane = new JPanel();
 		
 		/**
-		 * Das Layout für den Hauptcontainer wird auf Flowlayout gestellt.
+		 * Das Layout fuer den Hauptcontainer wird auf Flowlayout gestellt.
 		 * Dies bewirkt, das alle Komponenten nebeneinander mit einem
 		 * definierten Abstand platziert werden.
 		 */
@@ -72,15 +72,15 @@ public class Gui extends JFrame {
 		
 		/**
 		 * Ein Textfeld mit einer Breite von 10 Spalten
-		 * wird erzeugt, um eine Würfelzahl eingeben zu können.
+		 * wird erzeugt, um eine Wuerfelzahl eingeben zu koennen.
 		 */
 		textfield = new JTextField(10);
 		label = new JLabel("Wuerfelzahl");
 		
 		/**
-		 * Ein Objekt des Übernehmen Buttons wird erstellt.
+		 * Ein Objekt des uebernehmen Buttons wird erstellt.
 		 */
-		btEingabe = new JButton("Übernehmen");
+		btEingabe = new JButton("uebernehmen");
 		
 		
 		/**
@@ -90,9 +90,9 @@ public class Gui extends JFrame {
 		 * Mit new ActionListener()... wird eine anonyme ActionListener Klasse mit
 		 * einer implementierten actionPerformed()... Methode erzeugt.
 		 * An diese Methode wird das erzeugte ActionEvent Objekt als parameter e
-		 * übergeben. Der Inhalt dieser Methode wird abgearbeitet, wenn der 
+		 * uebergeben. Der Inhalt dieser Methode wird abgearbeitet, wenn der 
 		 * Button geklickt wurde.
-		 * Damit der Code übersichtlicher bleibt, rufen wir an dieser Stelle
+		 * Damit der Code uebersichtlicher bleibt, rufen wir an dieser Stelle
 		 * die Methode @see {@link #buttonUebernehmenGeklickt()} aufgerufen,
 		 * welche im Codeblock der Klasse steht.
 		 */
@@ -105,7 +105,7 @@ public class Gui extends JFrame {
 		});
 			
 		/**
-		 * Hinzufügen der Komponenten zum Hauptcontainer des Fensters.
+		 * Hinzufuegen der Komponenten zum Hauptcontainer des Fensters.
 		 * HIerbei ist die Reihenfolge zu beachten.
 		 */
 		contentPane.add(label);
@@ -113,8 +113,8 @@ public class Gui extends JFrame {
 		contentPane.add(btEingabe);
 		
 		/**
-		 * Stellt das erzeugte Fensterobjekt in der kleinstmöglichen
-		 * Größe mit allen sichbaren Komponenten dar.
+		 * Stellt das erzeugte Fensterobjekt in der kleinstmoeglichen
+		 * Groesse mit allen sichbaren Komponenten dar.
 		 */
 		pack();
 	}
@@ -128,7 +128,7 @@ public class Gui extends JFrame {
 	 *  
 	 */
 	public void buttonUebernehmenGeklickt() {
-		System.out.println("Übernehmen geklickt");
+		System.out.println("uebernehmen geklickt");
 			
 			try {
 				int zahl = Integer.parseInt(textfield.getText());
@@ -145,7 +145,7 @@ public class Gui extends JFrame {
 
 	/**
 	 * @param zahl
-	 * ist die zu prüfende Zahl
+	 * ist die zu pruefende Zahl
 	 * 
 	 * @throws WuerfelOutOfRangeException
 	 * Diese Exception wird ausgeloest, wenn zahl
