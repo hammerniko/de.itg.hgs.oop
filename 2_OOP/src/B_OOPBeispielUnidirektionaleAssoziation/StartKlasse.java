@@ -17,7 +17,7 @@ public class StartKlasse {
     	klassen[2].setBeschreibung("Einstiegsklasse des ITG");
     	klassen[3] = new Schulklasse("TG11-4");
     	klassen[4] = new Schulklasse("BKTK");
-    	klassen[4].setBeschreibung("Berufskolleg für Technische Kommunikation");
+    	klassen[4].setBeschreibung("Berufskolleg fuer Technische Kommunikation");
     	
         schueler[0] = new Schueler("Mike","Mueller",klassen[0]);
         schueler[1] = new Schueler("Max","Bohr",klassen[0]);

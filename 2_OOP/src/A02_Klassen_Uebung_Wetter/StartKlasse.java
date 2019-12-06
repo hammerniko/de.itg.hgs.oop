@@ -25,7 +25,7 @@ public class StartKlasse {
 		wetterstationen.add(new Wetterstation(maegdeberg));
 		wetterstationen.add(new Wetterstation(hohenhewen));
 		
-		//aufräumen mit dem Garbage Collector
+		//aufraeumen mit dem Garbage Collector
 		System.gc();
 		
 		//Dem gc() etwas Zeit geben

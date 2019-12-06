@@ -1,15 +1,15 @@
 package C1a_BidirektionaleAssoziation_n_m_;
 
 /**
- * Bidirektionale Assoziation mit m:n Multiplizitäten
- * ohne eine zusätzliche Zuordnungsklasse.
+ * Bidirektionale Assoziation mit m:n Multiplizitaeten
+ * ohne eine zusaetzliche Zuordnungsklasse.
  * 
  * Wenn eine Person eine neue Adresse bekommt, 
  * muss darauf geachtet werden, dass auch bei der Adresse
- * die neue Person hinzugefügt wird.
+ * die neue Person hinzugefuegt wird.
  * 
  * Umgekehrt kann an einer Adresse eine neue Person einziehen.
- * Hier muss bei der Person ebenfalls die Adresse aktualisiert / hinzugefügt werden.
+ * Hier muss bei der Person ebenfalls die Adresse aktualisiert / hinzugefuegt werden.
  * 
  * @author hr
  *

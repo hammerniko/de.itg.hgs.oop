@@ -1,6 +1,6 @@
 package G5_JTableModelDemo;
 
-//Das Vehikel ist eine total unabhängige Klasse, die mit einer
+//Das Vehikel ist eine total unabhaengige Klasse, die mit einer
 //Tabelle eigentlich gar nichts zu tun hat.
 class Vehicel{
 	private String name;

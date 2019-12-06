@@ -21,7 +21,7 @@ public class Schueler extends Person {
 	public void test(int wert) {
 		
 		
-		System.out.println("test in Schüler"+(wert*2));
+		System.out.println("test in Schueler"+(wert*2));
 	}
 	
 	
