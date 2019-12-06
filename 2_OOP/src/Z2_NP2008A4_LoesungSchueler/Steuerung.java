@@ -60,10 +60,10 @@ public class Steuerung {
 					System.out.print("2.Button nicht in Gruppe; ");
 					if (reichweite(btn, markedbtn)) {
 						if (wert(markedbtn.getWert(), btn.getWert())) {
-							System.out.print("Übersteigt nicht 15 \n");
+							System.out.print("uebersteigt nicht 15 \n");
 							neueGruppe(markedbtn, btn);
 						} else {
-							System.out.print("Übersteigt 15 \n");
+							System.out.print("uebersteigt 15 \n");
 							setAnzeige(6);
 						}
 					}
@@ -115,10 +115,10 @@ public class Steuerung {
 		if (reichweite(btn1, btn2)) {
 			System.out.println("Button anliegend");
 			if (wert(gruppe.getMwert(), btn2.getWert())) {
-				System.out.println("übersteigt nicht 15");
+				System.out.println("uebersteigt nicht 15");
 				addbtn(btn2, gruppe);
 			} else {
-				System.out.println("übersteigt 15");
+				System.out.println("uebersteigt 15");
 				setAnzeige(6);
 			}
 
@@ -131,11 +131,11 @@ public class Steuerung {
 				if (reichweite(btns.get(i), btn2)) {
 					System.out.print("anliegend; ");
 					if (wert(gruppe.getMwert(), btn2.getWert())) {
-						System.out.print("übersteigt nicht 15");
+						System.out.print("uebersteigt nicht 15");
 						addbtn(btn2, gruppe);
 						break;
 					} else {
-						System.out.print("übersteigt 15");
+						System.out.print("uebersteigt 15");
 						setAnzeige(6);
 						break;
 					}
@@ -164,7 +164,7 @@ public class Steuerung {
 	}
 
 	private void addbtn(Button btn, Gruppe gruppe) {
-		System.out.println("-Button hinzugefügt-");
+		System.out.println("-Button hinzugefuegt-");
 		gruppe.addButton(btn);
 		markedbtn = null;
 		// ---------------------------------------------------------------------------------------------------------------------
@@ -173,7 +173,7 @@ public class Steuerung {
 	}
 
 	private void addbtnErstellNeueGruppe(Button btn, Gruppe gruppe) {
-		System.out.println("-Button hinzugefügt-");
+		System.out.println("-Button hinzugefuegt-");
 		gruppe.addButton(btn);
 		markedbtn = null;
 		// ---------------------------------------------------------------------------------------------------------------------

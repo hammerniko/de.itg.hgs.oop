@@ -26,7 +26,7 @@ public class Gui extends JFrame {
 			"Gruppe erweitert.",
 			"15 sind voll!",
 			"Welcher Gruppe soll dass Feld zugeordnet werden? Klicke auf Gruppe!",
-			"Beide schon in einer Gruppe!", "Übersteigt 15!", "Nicht anliegend!" };
+			"Beide schon in einer Gruppe!", "uebersteigt 15!", "Nicht anliegend!" };
 
 	int x, y = 50;
 
