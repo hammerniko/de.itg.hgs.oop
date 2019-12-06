@@ -15,7 +15,7 @@ public class GUI extends JFrame {
 	private static final String TITEL = "Organisation Ballsportturnier in der Schule";
 	private static final String EINST = "Einstellungen";
 	private static final String HEADER = "Turnierplanung, Organisation, Auswertung";
-	private static final String RESET = "Programm zurücksetzen";
+	private static final String RESET = "Programm zuruecksetzen";
 	private static final String CLOSE = "Programm beenden";
 
 	Container cp = getContentPane();

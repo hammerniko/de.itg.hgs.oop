@@ -52,7 +52,7 @@ public class Gui extends JFrame {
 		this.setSize(300,300);
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		this.setVisible(true);
-		this.setTitle("Schülerdaten lesen");
+		this.setTitle("Schuelerdaten lesen");
 		
 		//Listener
 		btOk.addActionListener(new ActionListener() {

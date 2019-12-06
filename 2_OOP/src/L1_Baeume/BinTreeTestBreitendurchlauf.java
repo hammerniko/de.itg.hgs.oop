@@ -2,18 +2,18 @@ package L1_Baeume;
 
 /*
  * Beispiel eines Binaerbaumes mit der Huffmann 
- * Kodierung. Bei dieser Kodierung wird häufig vorkommenden
+ * Kodierung. Bei dieser Kodierung wird haeufig vorkommenden
  * Buchstaben ein kurzer Code zugewiesen, seltener vorkommenden Buchstaben 
- * wird ein längerer Code zugewiesen.
+ * wird ein laengerer Code zugewiesen.
  * 
  * isEmpty() testet, ob ein Baum leer ist.
  * 
  *  Selektoren:
- *  getLeft() gibt den linken Teilbaum zurück.
+ *  getLeft() gibt den linken Teilbaum zurueck.
  *  
- *  getRoot() gibt den Wert an der Wurzel zurück.
+ *  getRoot() gibt den Wert an der Wurzel zurueck.
  *  
- *  getRight() gibt den rechten Teilbaum zurück.
+ *  getRight() gibt den rechten Teilbaum zurueck.
  *  
  *  size() berechnet die Anzahl der Knoten im Baum.
  *  

@@ -42,8 +42,8 @@ class Model implements TableModel{
 	public String getColumnName(int column) {
 		switch( column ){
 			case 0: return "Name";
-			case 1: return "Fahrgäste";
-			case 2: return "Räder";
+			case 1: return "Fahrgaeste";
+			case 2: return "Raeder";
 			case 3: return "Besitzt Motor";
 			default: return null;
 		}
