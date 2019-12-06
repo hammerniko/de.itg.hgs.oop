@@ -13,7 +13,7 @@ public class Startklasse {
 		Schulklasse k1 = new Schulklasse("TG 11-3");
 		Raum r1 = new Raum("A307");
 		
-		//Objekte den Listen hinzufügen
+		//Objekte den Listen hinzufuegen
 		dieSchulklassen.add(k1);
 		dieRaeume.add(r1);
 		

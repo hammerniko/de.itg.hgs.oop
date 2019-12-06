@@ -60,7 +60,7 @@ public class JPanelRegTabelle extends JPanelReg {
 			}
 		});
 
-		btReset = new JButton("Alles Zurücksetzen");
+		btReset = new JButton("Alles Zuruecksetzen");
 		btReset.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

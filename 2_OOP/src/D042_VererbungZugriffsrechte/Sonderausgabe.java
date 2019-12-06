@@ -2,7 +2,7 @@ package D042_VererbungZugriffsrechte;
 
 /**
  * Eine Sonderausgabe ist eine spezielle Zeitung, welche 
- * zusätzlich das Attribut witz enthält.
+ * zusaetzlich das Attribut witz enthaelt.
  * 
  * @author hr
  *
@@ -30,7 +30,7 @@ public class Sonderausgabe extends Zeitung {
 
 	@Override
 	public void test() {
-		System.out.println("Test SA überschrieben");
+		System.out.println("Test SA ueberschrieben");
 	}
 
 	
