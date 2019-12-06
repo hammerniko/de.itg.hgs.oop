@@ -12,7 +12,7 @@ public class StartKlasse {
 		Raum raumTG11_3 = new Raum(30, "307", a);
 		
 		//Einer Klasse kann das Klassenzimmer auch
-		//zu einem späteren Zeitpunkt zugewiesen werden
+		//zu einem spaeteren Zeitpunkt zugewiesen werden
 		//Exisitiert kein Klassenzimmer, wird die Klasse zur Wanderklasse
 		Schulklasse tg11_3 = new Schulklasse("TG 11-3");
 		tg11_3.linkKlassenzimmer(raumTG11_3);

@@ -16,7 +16,7 @@ public class BinTree {
 	}
 
 	/**
-	 * Konstruiert einen Baum, aus zwei gegebenen Teilbäumen und einer neuen Wurzel
+	 * Konstruiert einen Baum, aus zwei gegebenen Teilbaeumen und einer neuen Wurzel
 	 * mit Wert v.
 	 */
 	public BinTree(BinTree left, double v, BinTree right) {
