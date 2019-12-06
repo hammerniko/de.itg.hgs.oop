@@ -88,10 +88,10 @@ public class JPanelEinstellungen extends JPanel {
 		pButton = new JPanel(new FlowLayout());
 
 		lbEinst = new JLabel("Einstellungen");
-		lbSportart = new JLabel("Sportart w‰hlen");
+		lbSportart = new JLabel("Sportart waehlen");
 		lbAnzMann = new JLabel("        Anz. Mannsch. (3..6): ");
 
-		rbFussball = new JRadioButton("Fuﬂball (3-Punkte-Regel)");
+		rbFussball = new JRadioButton("Fussball (3-Punkte-Regel)");
 		// rbFussball.setHorizontalAlignment(SwingConstants.CENTER);
 		rbHandball = new JRadioButton("Handball (2-Punkte-Regel)");
 		// rbHandball.setHorizontalAlignment(SwingConstants.CENTER);

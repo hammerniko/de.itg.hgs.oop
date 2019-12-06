@@ -10,7 +10,7 @@ public class Schueler {
     
     
     /**
-     * Konstruktor für Schülerobjekte.
+     * Konstruktor fuer Schuelerobjekte.
      * @param name
      * @param vorname
      * @param schulklasse
@@ -24,7 +24,7 @@ public class Schueler {
 
 	//Getter und Setter
     /**
-     * Versetzt einen Schüler in eine neue Klasse
+     * Versetzt einen Schueler in eine neue Klasse
      * @param schulklasse
      */
     public void setSchulklasse(Schulklasse schulklasse){
@@ -58,10 +58,10 @@ public class Schueler {
 
 
 	/**
-     * Gibt alle Daten eines Schülers als Text zurück.
+     * Gibt alle Daten eines Schuelers als Text zurueck.
      * Da die Informationen der Schulklasse mit ausgegeben werden,
      * muss in der Klasse Schulklasse ebenfalls die toString Methode
-     * überschrieben werden.
+     * ueberschrieben werden.
      */
 	@Override
 	public String toString() {

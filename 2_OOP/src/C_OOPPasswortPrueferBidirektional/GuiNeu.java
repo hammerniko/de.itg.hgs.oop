@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 
 public class GuiNeu extends JFrame {
 
-	//Container für Meldungen
+	//Container fuer Meldungen
 	String[] meldung;
 	
 	//Assoziation
@@ -81,7 +81,7 @@ public class GuiNeu extends JFrame {
 	private void initTextMeldungen() {
 		meldung = new String[3];
 		meldung[0]="Bitte geben Sie Ihren Benutzernamen und das Passwort ein";
-		meldung[1]="Passwort oder Benutzername ungültig";
+		meldung[1]="Passwort oder Benutzername ungueltig";
 		meldung[2]="Login erfolgreich";
 	}
 
@@ -137,7 +137,7 @@ public class GuiNeu extends JFrame {
 		//Lese Passwort
 		String pw =  passwordField.getText();
 		
-		//Prüfe Passwort & Benutzername
+		//Pruefe Passwort & Benutzername
 		login.pruefeLogin(bn, pw);
 		
 	}
