@@ -22,7 +22,7 @@ public class JTableDemo{
 		// Das JTable initialisieren
 		JTable table = new JTable( model );
  
-		// Buttons, damit das alles schöner aussieht.
+		// Buttons, damit das alles schoener aussieht.
 		final JButton buttonVehicel = new JButton( "add vehicel" );
  
 		// Den Buttons ein paar Reaktionen geben
@@ -34,7 +34,7 @@ public class JTableDemo{
 				// einen neuen Vector mit Daten herstellen
 				Vehicel vehicel = createVehicel( size );
  
-				// ein neues Vehikel hinzufügen
+				// ein neues Vehikel hinzufuegen
 				model.addVehicle( vehicel );
 			}
 		});

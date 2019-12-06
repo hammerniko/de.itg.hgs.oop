@@ -20,10 +20,10 @@ public class StartKlasse {
 		
 		//Zugriff auf set-Methoden
 		Sonderausgabe wz =  (Sonderausgabe) zeitungen[0];
-		wz.setWitz("Was ist weiß und rennt bergauf? Ne Lawine mit Heimweh.");
+		wz.setWitz("Was ist weiss und rennt bergauf? Ne Lawine mit Heimweh.");
 		
 		//Ausgabe einer Methode, die in allen Zeitungsklassen
-		//vorhanden ist (geerbt oder überschrieben)
+		//vorhanden ist (geerbt oder ueberschrieben)
 		for (int i = 0; i < zeitungen.length; i++) {
 			zeitungen[i].test();
 		}
