@@ -14,7 +14,7 @@ public class Person {
     	System.out.println("test aus Person");
     }
     
-    //überladene Testmethode
+    //ueberladene Testmethode
     public void test(int wert){
     	System.out.println("test "+wert+" aus Person");
     }
