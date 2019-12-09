@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import javafx.scene.layout.Border;
+//import javafx.scene.layout.Border;
 
 public class Gui extends JFrame {
 	
