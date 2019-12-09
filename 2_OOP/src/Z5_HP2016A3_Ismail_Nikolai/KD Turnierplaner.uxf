@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>896</x>
+      <y>768</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Tab_3PktRegel
+
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>176</x>
+      <y>264</y>
+      <w>288</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Gui
+--
+
+--
++gibPunkteRegel():GZ
++gibAnzahlMannschaften():GZ
++eintragenReg1_Index(pAnzahlMannschaften:GZ)
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>8</y>
+      <w>288</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Paarung
+--
+-index_M1:GZ
+-index_M2:GZ
+-tore_M1:GZ
+-tore_M2:GZ
+--
++Paarung(pindexM1:GZ, pindexM2:GZ)
++eintragenErgebnis(pTore_M1:GZ, pTore_M2:GZ)
++gibIndex_Mx(x:GZ):GZ
++gibTore_Mx(x:GZ):GZ
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>272</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Steuerung
+--
+
+--
++resetProg()
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>520</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Mannschaft
+--
+
+--
+-setzeAttributeAufNull()
+
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>776</x>
+      <y>512</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Tabelle {abstract}
+
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>664</x>
+      <y>760</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>Tab_2PktRegel
+
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>320</y>
+      <w>328</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=dieSteuerung
+m2=1
+r1=dieGui
+m1=1</panel_attributes>
+    <additional_attributes>10.0;20.0;390.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>376</y>
+      <w>432</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+r1=dieMannschaft[ ]
+m1=3..6</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;110.0;520.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>848</x>
+      <y>416</y>
+      <w>72</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+r1=dieTabelle
+m1=1</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>656</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>872</x>
+      <y>656</y>
+      <w>112</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>568</y>
+      <w>352</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+r1=inTabZeile[ ]
+m1=3..6</panel_attributes>
+    <additional_attributes>10.0;20.0;420.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>152</y>
+      <w>88</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+
+r2=diePaarung[ ]
+m2=3..15</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
