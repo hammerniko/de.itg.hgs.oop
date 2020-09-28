@@ -1,0 +1,26 @@
+
+1. Projektdaten speichern 
+   - Name
+   - Klasse des Schuelers
+   - Beschreibung
+   - Datum von
+   - Datum bis
+   - Uhrzeit von
+   - Uhrzeit bis
+   - Mitzubringende Materialien
+   - Projektort
+   - Betreuer
+   - minTeinehmer
+   - maxTeilnehmer > als minTeilnehmer
+   - Vorbesprechungstermin
+   - Vorbesprechungsort
+   - Mindestvoraussetzung
+   - Erst-, Zweit- und Drittwunsch von Schuelern realisieren
+   - id
+   - Feste ZUordnung von Schuelern zu Projekten
+
+2. In UMLET Klassen erstellen, welche oben genannte Atrribute enthält
+3. Konstruktor ertsellen -> welche Daten sind zwingend notwendig
+4. Getter und Setter einfügen
+
+ 

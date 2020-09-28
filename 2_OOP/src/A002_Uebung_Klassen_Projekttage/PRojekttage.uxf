@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>297</x>
+      <y>66</y>
+      <w>385</w>
+      <h>495</h>
+    </coordinates>
+    <panel_attributes>Projekt
+--
+-id:GZ
+_-anzahlProjekte:GZ=0_
+-name:txt
+-beschreibung:txt
+-von:Datum
+-bis:Datum
+-material:txt
+-ortNr:GZ
++ORTLISTE[ ]:txt
+-minTeilnehmer:GZ
+-maxTeilnehmer:GZ
+-vorbesprechung:Datum
+-vorbesprechungsRaum:txt
+-mindestvoraussetzung:txt
+-betreuer:Person
+
+--
++Projekt(name:txt, betreuer:Person)
++getName():txt
++setBeschreibung(beschreibung:txt)
++getDatumVon():Datum
++getDatumBis():Datum
++setMaterial(material:txt)
++getMaterial():txt
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>44</x>
+      <y>55</y>
+      <w>231</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-name:txt
+-vorname:txt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>44</x>
+      <y>165</y>
+      <w>231</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Lehrer
+--
+-name:txt
+-vorname:txt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>44</x>
+      <y>275</y>
+      <w>231</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Schueler
+--
+-name:txt
+-vorname:txt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>44</x>
+      <y>385</y>
+      <w>231</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Betreuer
+--
+-name:txt
+-vorname:txt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>44</x>
+      <y>495</y>
+      <w>231</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Schulklasse
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
