@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>17</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>34</x>
+      <y>221</y>
+      <w>935</w>
+      <h>323</h>
+    </coordinates>
+    <panel_attributes>Lehrer
+--
+-name:txt
+-vorname:txt
+-kuerzel:Zeichen[2]
+--
++Lehrer(pName:txt, pVorname:txt) &lt;&lt;Konstruktor&gt;&gt;
++Lehrer(pName:txt, pVorname:txt, pKuerzel:Zeichen[ ]) &lt;&lt;Konstruktor&gt;&gt;
++getName():txt
++getVorname():txt
++getKuerzel():txt
++setKuerzel(pKuerzel:Zeichen[ ])
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>748</x>
+      <y>34</y>
+      <w>442</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Note..
+
+Kuerzel maximal 2 Zeichen lang
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

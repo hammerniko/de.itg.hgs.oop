@@ -1,0 +1,22 @@
+1.) Erstellen Sie eine Klasse Lehrer mit den Attributen
+     Name, Vorname, Kurzel
+     
+    
+2.) Ein Lehrer soll nur erstellt werden können, wenn Name
+    und Vorname bekannt sind.
+    
+3.) Alle Attribute sollen lesbar sein. Das Prinzip der Datenkapselung soll
+    angewendet werden.
+
+4.) Das Kuerzel eines Lehrers soll änderbar sein.
+
+5.) Ein Kuerzel darf hoechstens 2 Zeichen lang sein.    
+    An welcher Stelle der Klasse Lehrer muss der Code verändert werden? 
+    
+6.) Ein Lehrer soll auch mit allen Attributen erstellt werden können.
+
+7.) Erstellen Sie zwei Lehrerobjekte in einer lauffähigen Java-Klasse
+
+8.) Überschreiben die toString-Methode in der Klasse Lehrer
+
+9.) Alle Lehrerobjekte sollen in einem Array verwaltet werden 
