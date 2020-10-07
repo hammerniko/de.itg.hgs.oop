@@ -1,9 +1,10 @@
-1.) Erstellen Sie eine Klasse Lehrer mit den Attributen
-     Name, Vorname, Kurzel
-     
+1.) Erstellen Sie in UMLET eine Klasse Lehrer mit den Attributen
+     Name, Vorname, Kuerzel
     
+         
 2.) Ein Lehrer soll nur erstellt werden können, wenn Name
     und Vorname bekannt sind.
+    
     
 3.) Alle Attribute sollen lesbar sein. Das Prinzip der Datenkapselung soll
     angewendet werden.
@@ -15,8 +16,11 @@
     
 6.) Ein Lehrer soll auch mit allen Attributen erstellt werden können.
 
-7.) Erstellen Sie zwei Lehrerobjekte in einer lauffähigen Java-Klasse
+7.) Erstellen Sie die Klasse in Java. (Nur Attribute) 
 
-8.) Überschreiben die toString-Methode in der Klasse Lehrer
+8.) Erstellen Sie zwei Lehrerobjekte in einer lauffähigen Java-Klasse
 
-9.) Alle Lehrerobjekte sollen in einem Array verwaltet werden 
+
+9.) Überschreiben die toString-Methode in der Klasse Lehrer
+
+10.) Alle Lehrerobjekte sollen in einem Array verwaltet werden 
