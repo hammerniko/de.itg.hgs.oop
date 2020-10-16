@@ -21,7 +21,7 @@ public class Schueler extends Person {
 	@Override
 	public String toString() {
 		
-		return super.toString() +" gebDatum"+gebDatum;
+		return super.toString() +" gebDatum "+gebDatum;
 	}
 	
 

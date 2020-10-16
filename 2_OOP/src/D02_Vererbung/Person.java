@@ -19,7 +19,8 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person:"+name + " " + vorname;
+		// TODO Auto-generated method stub
+		return name+" "+vorname;
 	}
 	
 	
