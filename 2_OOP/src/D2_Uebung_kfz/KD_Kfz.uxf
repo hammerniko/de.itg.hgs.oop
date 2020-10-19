@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>403</x>
+      <y>65</y>
+      <w>273</w>
+      <h>221</h>
+    </coordinates>
+    <panel_attributes>/Mitarbeiter {abstract}/
+--
+-name:txt
+-vorname:txt
+-stundenlohn:FKZ
+-ueberstundenInMin:GZ
+-stundenProWoche:GZ
+-zulage:FKZ
+--
++berechneGehalt():FKZ
++toString()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>494</y>
+      <w>273</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Kfz_Meister
+--
+
+--
++berechneGehalt():FKZ
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>416</x>
+      <y>494</y>
+      <w>273</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Kfz_Mechaniker
+--
+-ueberStundenAmWE:GZ
+--
++berechneGehalt():FKZ
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>91</x>
+      <y>494</y>
+      <w>273</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Sekretärin
+--
+-bueroZulage:FKZ
+--
++berechneGehalt():FKZ</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>273</y>
+      <w>260</w>
+      <h>247</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>507</x>
+      <y>273</y>
+      <w>78</w>
+      <h>247</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>559</x>
+      <y>273</y>
+      <w>429</w>
+      <h>247</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;310.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1144</x>
+      <y>494</y>
+      <w>273</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Abteilungsleiter
+--
+
+--
++berechneGehalt():FKZ
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>273</y>
+      <w>663</w>
+      <h>247</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;490.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>767</x>
+      <y>78</y>
+      <w>468</w>
+      <h>169</h>
+    </coordinates>
+    <panel_attributes>von abstracten Klassen können 
+keine Objekte erzeugt werden.
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
