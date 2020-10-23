@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>403</x>
-      <y>65</y>
-      <w>273</w>
-      <h>221</h>
+      <x>143</x>
+      <y>39</y>
+      <w>468</w>
+      <h>286</h>
     </coordinates>
     <panel_attributes>/Mitarbeiter {abstract}/
 --
@@ -18,19 +18,38 @@
 -stundenProWoche:GZ
 -zulage:FKZ
 --
++Mitarbeiter(name:txt, vorname:txt)
 +berechneGehalt():FKZ
++setUeberstunden(anzahl:GZ, faktor:FKZ)
 +toString()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>819</x>
-      <y>494</y>
+      <x>689</x>
+      <y>520</y>
+      <w>637</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>KfzMeister
+--
+
+--
++KfzMeister(name:txt, vorname:txt,stundenlohn:FKZ, stundenProWoche:GZ)
++berechneGehalt():FKZ
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>520</y>
       <w>273</w>
       <h>156</h>
     </coordinates>
-    <panel_attributes>Kfz_Meister
+    <panel_attributes>Kfz_Mechaniker
 --
 
 --
@@ -41,72 +60,57 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>416</x>
-      <y>494</y>
-      <w>273</w>
-      <h>156</h>
-    </coordinates>
-    <panel_attributes>Kfz_Mechaniker
---
--ueberStundenAmWE:GZ
---
-+berechneGehalt():FKZ
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>91</x>
-      <y>494</y>
-      <w>273</w>
+      <x>13</x>
+      <y>520</y>
+      <w>325</w>
       <h>156</h>
     </coordinates>
     <panel_attributes>Sekretärin
 --
 -bueroZulage:FKZ
 --
++Sekretärin(name:txt, vorname:txt)
 +berechneGehalt():FKZ</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>273</y>
-      <w>260</w>
-      <h>247</h>
+      <x>182</x>
+      <y>312</y>
+      <w>221</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>180.0;10.0;10.0;170.0</additional_attributes>
+    <additional_attributes>150.0;10.0;10.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>507</x>
-      <y>273</y>
-      <w>78</w>
-      <h>247</h>
+      <x>442</x>
+      <y>312</y>
+      <w>117</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;40.0;170.0</additional_attributes>
+    <additional_attributes>10.0;10.0;70.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>559</x>
-      <y>273</y>
-      <w>429</w>
-      <h>247</h>
+      <x>494</x>
+      <y>312</y>
+      <w>416</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;310.0;170.0</additional_attributes>
+    <additional_attributes>10.0;10.0;300.0;160.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1144</x>
-      <y>494</y>
+      <x>1365</x>
+      <y>520</y>
       <w>273</w>
       <h>156</h>
     </coordinates>
@@ -121,19 +125,19 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>624</x>
-      <y>273</y>
-      <w>663</w>
-      <h>247</h>
+      <x>559</x>
+      <y>312</y>
+      <w>949</w>
+      <h>234</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;490.0;170.0</additional_attributes>
+    <additional_attributes>10.0;10.0;710.0;160.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>767</x>
-      <y>78</y>
+      <x>442</x>
+      <y>754</y>
       <w>468</w>
       <h>169</h>
     </coordinates>
@@ -141,5 +145,31 @@
 keine Objekte erzeugt werden.
 bg=green</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>962</x>
+      <y>52</y>
+      <w>273</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Zulagen
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>598</x>
+      <y>78</y>
+      <w>390</w>
+      <h>65</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+r2=dieZulagen[]
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
   </element>
 </diagram>
