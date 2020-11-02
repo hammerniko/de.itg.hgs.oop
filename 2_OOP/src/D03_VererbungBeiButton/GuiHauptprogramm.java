@@ -11,17 +11,22 @@ public class GuiHauptprogramm extends JFrame {
     JPanel contentPane;
     JLabel lbBegruessung;
     MeinButton derButton;
+    MeinButton derButton2;
+    
     
     public GuiHauptprogramm(){
         setExtendedState(JFrame.MAXIMIZED_BOTH);
-        derButton = new MeinButton();  
+        derButton = new MeinButton(); 
+        derButton2 = new MeinButton();  
         contentPane = new JPanel();
         
         lbBegruessung = new JLabel("Hallole");
         
         contentPane.setLayout(new FlowLayout());
+        
         contentPane.add(lbBegruessung);
         contentPane.add(derButton);
+        contentPane.add(derButton2);
         
         setContentPane(contentPane);
         

@@ -7,6 +7,11 @@ import javax.swing.JButton;
 
 public class MeinButton extends JButton implements ActionListener{
     
+	
+	private static final int SPIELER_1  = -1;
+	private static final int SPIELER_2  = 1;
+	private static final int LEER  = 0;
+	
     private int wert;
     
     public int getWert() {
@@ -18,16 +23,16 @@ public class MeinButton extends JButton implements ActionListener{
     }
 
     public MeinButton(){
-        wert =-1;
+        wert =SPIELER_1;
         setZustand();
         addActionListener(this);
     }
 
     private void setZustand() {
         switch (wert) {
-        case 1: setText("X"); break;
-        case -1: setText("O");break;
-        case 0: setText("");break;
+        case SPIELER_1: setText("X"); break;
+        case SPIELER_2: setText("O");break;
+        case LEER: setText("");break;
 
 
         default:
