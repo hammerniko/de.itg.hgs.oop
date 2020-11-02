@@ -34,6 +34,8 @@ public class MeinButton extends JButton implements ActionListener{
             break;
         }
         
+        revalidate();
+        
     }
 
     @Override
@@ -41,6 +43,7 @@ public class MeinButton extends JButton implements ActionListener{
         System.out.println("action");
         wert = wert * -1;
         setZustand();
+        
         repaint();
         
     }
