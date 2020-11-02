@@ -20,7 +20,7 @@
       <x>220</x>
       <y>210</y>
       <w>210</w>
-      <h>190</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>Gui
 --
@@ -48,7 +48,7 @@ bg=yellow</panel_attributes>
       <x>650</x>
       <y>210</y>
       <w>210</w>
-      <h>190</h>
+      <h>170</h>
     </coordinates>
     <panel_attributes>MeinButton
 --
@@ -96,15 +96,15 @@ bg=yellow</panel_attributes>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-r2=derButton
-m2=1</panel_attributes>
+r2=dieButtons[ ]
+m2=*</panel_attributes>
     <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
-      <y>530</y>
+      <x>120</x>
+      <y>540</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
@@ -119,13 +119,13 @@ bg=light_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>310</x>
-      <y>390</y>
-      <w>30</w>
-      <h>160</h>
+      <x>210</x>
+      <y>360</y>
+      <w>130</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+    <additional_attributes>110.0;10.0;10.0;180.0</additional_attributes>
   </element>
 </diagram>
