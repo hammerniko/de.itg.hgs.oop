@@ -70,6 +70,8 @@ public class MeinButton extends JButton implements ActionListener{
         repaint();
         getParent().revalidate();
         
+        
+        
     }
     
    

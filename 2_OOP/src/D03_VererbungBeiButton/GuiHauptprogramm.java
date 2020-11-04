@@ -1,42 +1,31 @@
 package D03_VererbungBeiButton;
 
-import java.awt.FlowLayout;
-
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/**
+ * Gui.. ist ein spezieller JFrame und zeigt einen
+ * Button der Selbsterstellen Klasse MeinButton1
+ * @author hr
+ *
+ */
 public class GuiHauptprogramm extends JFrame {
     
-    JPanel contentPane;
-    JLabel lbBegruessung;
-    MeinButton derButton;
-    MeinButton derButton2;
+	//Inhaltsfenster
+    MeinPanel contentPane;
+  
     
     
+    //Konstruktor
     public GuiHauptprogramm(){
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-        derButton = new MeinButton(); 
-        derButton2 = new MeinButton();  
-        contentPane = new JPanel();
+       
+        contentPane = new MeinPanel();
         
-        lbBegruessung = new JLabel("Hallole");
-        
-        contentPane.setLayout(new FlowLayout());
-        
-        contentPane.add(lbBegruessung);
-        contentPane.add(derButton);
-        contentPane.add(derButton2);
-        
+        //Setzt das Inhaltsfenter der Gui
         setContentPane(contentPane);
         
+        //Schliesst den Java Prozess, wenn die Schliessen-Schaltfläche geklickt wurde
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         
-        
-        
     }
-
-    
-    
-    
 }

@@ -1,0 +1,18 @@
+Aufgabe:
+
+TEIL I
+------
+1. Erstellen Sie einen speziellen Button in der Klasse MeinButton
+
+2. Der Button soll nach einem  Klick den Text "X" auf der Konsole ausgeben
+ 
+3. Erstellen sie eine Gui welche ein JLabel und eine Komponente der 
+   Klasse MeinButton zeigt und testen Sie den Button.
+   
+TEIL II
+-------
+1. Der Button soll seine Beschriftung beim Klicken zwischen  "X" und "O" wechseln
+
+2. Ein eigenes JPanel soll zwei dieser Buttons beinhalten
+
+3. Die Gui soll das eigene Panel verwenden
