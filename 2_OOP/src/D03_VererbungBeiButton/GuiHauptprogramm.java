@@ -13,9 +13,7 @@ public class GuiHauptprogramm extends JFrame {
     
 	//Inhaltsfenster
     MeinPanel contentPane;
-  
-    
-    
+     
     //Konstruktor
     public GuiHauptprogramm(){
        
@@ -26,6 +24,5 @@ public class GuiHauptprogramm extends JFrame {
         
         //Schliesst den Java Prozess, wenn die Schliessen-Schaltfläche geklickt wurde
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        
     }
 }
