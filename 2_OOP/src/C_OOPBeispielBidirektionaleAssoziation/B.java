@@ -16,5 +16,14 @@ public class B {
     public void testeB() {
     	einA.zeigeMeldung("B ruft A auf...");
     }
+    
+    protected void testeBProtected() {
+    	System.out.println("B protected");
+    }
+    
+    private void testeBPrivate() {
+    	System.out.println("B protected");
+    }
+
 
 }
