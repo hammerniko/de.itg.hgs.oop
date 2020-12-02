@@ -8,6 +8,8 @@ public class Rechner {
 	public Rechner(Gui gui) {
 		//Assoziation herstellen
 		dieGui = gui;
+		
+		
 	}
 
 	public double addiere(double zahlA, double zahlB){

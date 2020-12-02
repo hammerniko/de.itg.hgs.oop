@@ -19,7 +19,7 @@ public class A {
         System.out.println("A ruft B auf");
         einB.testeB();
         
-        einB.testeBProtected();
+       
         
         
     }

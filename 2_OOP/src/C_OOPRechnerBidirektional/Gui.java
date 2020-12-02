@@ -36,6 +36,9 @@ public class Gui extends JFrame {
 		//beiden Klassen hergestellt werden.
 		derRechner = new Rechner(this);
 		
+		
+		
+		
 		init();
 		
 	}
@@ -127,6 +130,16 @@ public class Gui extends JFrame {
 		aktualisiereErgebnis(erg);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private double leseZ2() {
 		double b=0;
 		try {
@@ -144,7 +157,7 @@ public class Gui extends JFrame {
 		
 			try {
 				String strA = tfZahlA.getText();
-				a = Double.parseDouble(tfZahlA.getText());
+				a = Double.parseDouble(strA);
 				
 			} catch (NumberFormatException e) {
 				JOptionPane.showMessageDialog(this, FEHLER, FORMATFEHLER, 0);
@@ -155,6 +168,21 @@ public class Gui extends JFrame {
 		
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private void aktualisiereErgebnis(double erg) {
 		tfErgebnis.setText(""+erg);
 	}
