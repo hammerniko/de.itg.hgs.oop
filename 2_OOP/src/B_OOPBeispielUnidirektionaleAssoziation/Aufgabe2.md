@@ -7,7 +7,7 @@
    jeweils ein Array an.
 
 3. Geben Sie die Daten aller Schüler mithilfe einer 
-   for-Schleife aus.
+  `for`-Schleife aus.
 
 4. Ändern Sie die to-String Methodeder Klasse Schueler so ab, 
    das folgende Ausgabeform erreicht wird.
