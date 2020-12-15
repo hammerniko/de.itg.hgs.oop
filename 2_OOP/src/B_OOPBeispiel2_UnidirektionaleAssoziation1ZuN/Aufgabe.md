@@ -29,11 +29,13 @@ Er zahlt gleich zu Beginn 200 Euro ein.
 Erweitern Sie das Klassendiagramm entsprechend.
 
 ## Implementieren des Sparbuches (15min)
-Erstellen Sie die notwenigen Java-Klasse für das Sparbuch. Testen Sie eine Abhebung mit 250 Euro. 
+Erstellen Sie die notwenige Java-Klasse für das Sparbuch. Testen Sie eine Abhebung mit 250 Euro. 
 
 ## Fragen  (20min)
+
 Beantworten Sie folgende Fragen schriftlich in Ihrem Notizbuch zu diesem
 Thema. 
+
 -wie nennt man die Assoziation zwischen Kunde und Konto?
 -welche Methoden der Klasse `Kunde` nennt man Verwaltungsmethoden?
 -welche Methoden wurden überschrieben?
