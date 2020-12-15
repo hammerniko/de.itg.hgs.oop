@@ -34,8 +34,7 @@ Erstellen Sie die notwenige Java-Klasse für das Sparbuch. Testen Sie eine Abhebu
 ## Fragen  (20min)
 
 Beantworten Sie folgende Fragen schriftlich in Ihrem Notizbuch zu diesem
-Thema. 
-
+Thema:
 -wie nennt man die Assoziation zwischen Kunde und Konto?
 -welche Methoden der Klasse `Kunde` nennt man Verwaltungsmethoden?
 -welche Methoden wurden überschrieben?
