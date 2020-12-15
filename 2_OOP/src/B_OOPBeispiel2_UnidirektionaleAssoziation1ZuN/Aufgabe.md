@@ -16,7 +16,7 @@ Erstellen Sie dazu in Umlet eine neue Datei `Klassendiagramm.uxf`. Achten Sie da
 - Attribute  
 
 ## Implementieren der Klassen (25min)
-Implementieren Sie die Klassen `Konto` und `Kunde` mithilfe des gegebenen Klassendiagramms.
+Implementieren Sie die Klassen `Konto` und `Kunde` mithilfe des Klassendiagramms.
 Wenden Sie auf alle Attribute die Datenkapselung an. Gehen Sie davon aus, dass alle Attribute gelesen und geändert werden können.
 
 ## Testen des Szenarios (15min)
@@ -37,7 +37,7 @@ Thema.
 - wie nennt man die Assoziation zwischen Kunde und Konto
 - zählen Sie die Methoden der Klasse `Kunde` auf, die Verwaltungsmethoden für seine Konten sind?
 - nennen Sie Methoden die überschrieben wurden?
-- Gibt es überladene Methoden? Wenn ja welche? 
+- Gibt es überladene Methoden? Wenn ja, welche? 
 
 
 
