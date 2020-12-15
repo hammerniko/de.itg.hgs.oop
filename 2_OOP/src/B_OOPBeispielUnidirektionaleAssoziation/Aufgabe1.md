@@ -1,3 +1,5 @@
+# Aufgabe 1
+
 1. Zeichnen Sie das UML Diagramm mit dem UMLET-Plugin nach
 
 2. Erstellen Sie die Klassen Schueler und Schulklasse
