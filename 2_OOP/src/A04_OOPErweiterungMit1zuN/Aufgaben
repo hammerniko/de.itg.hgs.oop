@@ -3,32 +3,32 @@ Aufgabe
 1.) Erstellen Sie ein UML Klassendiagramm mit den Klassen Lehrer, Schueler, Schulart und Schulklasse
 
 
-2.) Ergaenzen Sie Assoziationen mit Richtung, Rollennamen und Multiplizitäten.
+2.) Ergaenzen Sie Assoziationen mit Richtung, Rollennamen und Multiplizitaeten.
 
 
-3.) Disktutieren Sie in der Klasse über sinnvolle Attribute in den Klassen und ergänzen sie diese.
+3.) Disktutieren Sie in der Klasse ueber sinnvolle Attribute in den Klassen und ergaenzen sie diese.
 
-4.) Disktutieren Sie in der Klasse über sinnvolle Konstruktoren in den Klassen und ergänzen sie diese.
+4.) Disktutieren Sie in der Klasse ueber sinnvolle Konstruktoren in den Klassen und ergaenzen sie diese.
 
-5.) Disktutieren Sie in der Klasse über sinnvolle Getter und Setter in den Klassen und ergänzen sie diese.
+5.) Disktutieren Sie in der Klasse ueber sinnvolle Getter und Setter in den Klassen und ergaenzen sie diese.
 
-6.1) Erstellen Sie die Klassen gemäss dem Klassendiagramm.
+6.1) Erstellen Sie die Klassen gemaess dem Klassendiagramm.
 
-6.2) Erstellen Sie eine ausführbare Startklasse
+6.2) Erstellen Sie eine ausfuehrbare Startklasse
 
-7.1) Erstellen Sie in der main()-Methode der StartKlasse Objekte für:
+7.1) Erstellen Sie in der main()-Methode der StartKlasse Objekte fuer:
 	-1 Lehrer
 	-2 Schulklassen
 	-1 Schulart
-	-3 Schüler
+	-3 Schueler
 	
-7.2) Stellen Sie die Assoziationen der Klassen über link-Methoden her.
+7.2) Stellen Sie die Assoziationen der Klassen ueber link-Methoden her.
 
-7.3) Fügen Sie die 3 Schüler einer Schulklasse mithilfe einer add()-Methode in der Klasse "Schulklasse.java" hinzu
+7.3) Fuegen Sie die 3 Schueler einer Schulklasse mithilfe einer add()-Methode in der Klasse "Schulklasse.java" hinzu
 
-7.4) Ändern Sie die Klasse eines Schülers über den Aufruf einer set-()-Methode der Klasse Schueler
+7.4) uendern Sie die Klasse eines Schuelers ueber den Aufruf einer set-()-Methode der Klasse Schueler
 
-8.) Geben Sie Daten von Lehrer und Schülern mithilfe der toString-Methode auf der Konsole aus 
+8.) Geben Sie Daten von Lehrer und Schuelern mithilfe der toString-Methode auf der Konsole aus 
 
 
 

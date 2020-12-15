@@ -17,8 +17,6 @@ public class StartKlasse {
 		//der Konsole aus
 		System.out.println(tg123.getNameKlassenlehrer());
 		
-		
-				
 		//Testausgaben
 		testausgabe(hr, gym, tg123);
 		
