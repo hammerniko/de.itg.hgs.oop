@@ -31,14 +31,17 @@ Erweitern Sie das Klassendiagramm entsprechend.
 ## Implementieren des Sparbuches (15min)
 Erstellen Sie die notwenige Java-Klasse für das Sparbuch. Testen Sie eine Abhebung mit 250 Euro. 
 
-## Fragen  (20min)
-
+## Fragen (20min)
 Beantworten Sie folgende Fragen schriftlich in Ihrem Notizbuch zu diesem
-Thema:
--wie nennt man die Assoziation zwischen Kunde und Konto?
--welche Methoden der Klasse `Kunde` nennt man Verwaltungsmethoden?
--welche Methoden wurden überschrieben?
--welche Methoden wurden überladen?
+Thema.
+- wie nennt man die Assoziation zwischen Kunde und Konto
+- zählen Sie die Methoden der Klasse `Kunde` auf, die Verwaltungsmethoden für seine Konten sind?
+- nennen Sie Methoden die überschrieben wurden?
+- Gibt es überladene Methoden? Wenn ja welche? 
+
+
+
+
 -
 
 
