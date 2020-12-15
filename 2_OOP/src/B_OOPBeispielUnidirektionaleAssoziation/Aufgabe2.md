@@ -11,11 +11,12 @@
 
 4. Ändern Sie die to-String Methodeder Klasse Schueler so ab, 
    das folgende Ausgabeform erreicht wird.
-   ------------------------
-   |TG113    | Max, Maier  |
-   ------------------------
-   |Bktk     | Dirk, Bach  |
-   ------------------------
+
+
+  |TG113|Max, Maier|
+  |---|---|
+  |Bktk|Dirk, Bach|
+
 
 5. Passen Sie die `toString()`-Methode der  Klasse   `Schulklasse` an,
    so dass die Schulklasse und die Beschreibung angezeigt wird.
