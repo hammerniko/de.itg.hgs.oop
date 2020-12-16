@@ -16,4 +16,4 @@ Beachten Sie dabei:
 Implementieren Sie die notwendigen Klassen gemäß dem erstellten Klassendiagramm.
 
 ## Testen des Szenarios
-Erstellen Sie eine ausführbare Java Datei um das dargestellte Szenario zu testen.
+Erstellen Sie eine ausführbare Java-Datei um das dargestellte Szenario zu testen.
