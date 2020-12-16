@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
-  <zoom_level>14</zoom_level>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>952</x>
-      <y>154</y>
-      <w>294</w>
-      <h>266</h>
+      <x>540</x>
+      <y>150</y>
+      <w>210</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>Konto
 --
@@ -21,10 +21,10 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>98</x>
-      <y>140</y>
-      <w>336</w>
-      <h>378</h>
+      <x>90</x>
+      <y>100</y>
+      <w>240</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>Kunde
 --
