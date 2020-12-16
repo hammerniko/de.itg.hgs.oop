@@ -25,6 +25,14 @@ public class Konto {
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
+	
+	public void abheben(double betrag){
+		saldo = saldo -betrag;
+	}
+	
+	public void einzahlen(double betrag){
+		saldo = saldo + betrag;
+	}
 
 	@Override
 	public String toString() {
