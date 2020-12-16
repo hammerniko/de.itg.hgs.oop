@@ -1,7 +1,7 @@
 # Aufgabe
 Gegeben ist die Datei `Sequendiagramm.png` in welcher ein Szenario dargestellt ist.
 
-## Klassendiagramms `20min`
+## Klassendiagramm `20min`
 Erstellen Sie mithilfe des Sequenzdiagramms ein vollständiges UML-Klassendiagramm.
 Beachten Sie dabei:
 - Konstruktoren
