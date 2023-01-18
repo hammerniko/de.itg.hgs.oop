@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>50</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Auto &lt;&lt;interface&gt;&gt;
+--
+
+--
++beschleunigen(wert:FKZ)
++bremsen(wert:FKZ)
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>50</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>MouseListener &lt;&lt;interface&gt;&gt;
+--
+
+--
++klicked(event:MouseEvent)
++... 
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>370</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>MeinAuto
+--
+
+--
++beschleunigen(wert:FKZ)
++bremsen(wert:FKZ)
++klicked(event:MouseEvent)
++... 
+
+bg=YELLOW</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>150</x>
+      <y>160</y>
+      <w>160</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>160</y>
+      <w>120</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>660</x>
+      <y>60</y>
+      <w>380</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>
+bg=green
+Interfaces können beinhalten:
+-Konstanten
+-abstrakte Methoden
+
+Klassen:
+-verwenden Interfaces über implements ...
+-können mehrer Interfaces verwenden
+
+Vorsicht:
+-bei gleichnamigen Methoden in 2 Interfaces
+ gibt es nur eine Implementierung -&gt; problematisch
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
