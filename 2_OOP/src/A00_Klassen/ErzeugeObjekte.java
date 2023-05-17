@@ -5,7 +5,7 @@ import java.util.Date;
 public class ErzeugeObjekte {
 
 	public static void main(String[] args) {
-		
+		//XXX
 		
 		//Array von Sch?lerobjekten anlegen
 		Schueler dieSchueler[] = new Schueler[3];
